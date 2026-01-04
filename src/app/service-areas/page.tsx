@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Plumber in Central New Jersey",
+  title: "Service Areas - Plumber in Central New Jersey",
   description: "Illyrian Plumber serves East Brunswick, New Brunswick, Edison, and surrounding areas in Central New Jersey. 24/7 plumbing service. Call (718) 427-4396.",
   keywords: [
     "plumber near me",
@@ -16,18 +16,14 @@ export const metadata: Metadata = {
 };
 
 const serviceAreaDetails = [
-  { name: "East Brunswick", slug: "plumber-east-brunswick", county: "Middlesex", description: "Our home base. Fast response times for all East Brunswick plumbing needs." },
-  { name: "New Brunswick", slug: "plumber-new-brunswick", county: "Middlesex", description: "Serving New Brunswick homes and businesses with reliable plumbing." },
-  { name: "South River", slug: "plumber-south-river", county: "Middlesex", description: "Complete plumbing services for South River residents." },
-  { name: "North Brunswick", slug: "plumber-north-brunswick", county: "Middlesex", description: "Professional plumbing throughout North Brunswick Township." },
-  { name: "Edison", slug: "plumber-edison", county: "Middlesex", description: "Serving Edison with residential and commercial plumbing." },
-  { name: "Sayreville", slug: "plumber-sayreville", county: "Middlesex", description: "Reliable plumbing services for Sayreville homes." },
-  { name: "Old Bridge", slug: "plumber-old-bridge", county: "Middlesex", description: "Expert plumbing for Old Bridge Township." },
-  { name: "Monroe Township", slug: "plumber-monroe-township", county: "Middlesex", description: "Quality plumbing services in Monroe Township." },
-  { name: "South Brunswick", slug: "plumber-south-brunswick", county: "Middlesex", description: "Serving South Brunswick with professional plumbing." },
-  { name: "Milltown", slug: "plumber-milltown", county: "Middlesex", description: "Fast, reliable plumbing for Milltown residents." },
-  { name: "Highland Park", slug: "plumber-highland-park", county: "Middlesex", description: "Complete plumbing services in Highland Park." },
-  { name: "Spotswood", slug: "plumber-spotswood", county: "Middlesex", description: "Professional plumbing for Spotswood Borough." },
+  { name: "East Brunswick", slug: "east-brunswick", county: "Middlesex", description: "Our home base. Fast response times for all East Brunswick plumbing needs." },
+  { name: "North Brunswick", slug: "north-brunswick", county: "Middlesex", description: "Professional plumbing throughout North Brunswick Township." },
+  { name: "South Brunswick", slug: "south-brunswick", county: "Middlesex", description: "Serving South Brunswick with professional plumbing." },
+  { name: "Edison", slug: "edison", county: "Middlesex", description: "Serving Edison with residential and commercial plumbing." },
+  { name: "Old Bridge", slug: "old-bridge", county: "Middlesex", description: "Expert plumbing for Old Bridge Township." },
+  { name: "Sayreville", slug: "sayreville", county: "Middlesex", description: "Reliable plumbing services for Sayreville homes." },
+  { name: "Monroe Township", slug: "monroe-township", county: "Middlesex", description: "Quality plumbing services in Monroe Township." },
+  { name: "Middlesex County", slug: "middlesex-county", county: "Middlesex", description: "County-wide plumbing services throughout Middlesex." },
 ];
 
 export default function ServiceAreasPage() {
@@ -54,20 +50,10 @@ export default function ServiceAreasPage() {
                   href={`/service-areas/${area.slug}`}
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-red-200 transition group"
                 >
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-red-700 transition">
-                        {area.name}, NJ
-                      </h2>
-                      <span className="text-sm text-gray-500">{area.county} County</span>
-                    </div>
-                  </div>
+                  <h2 className="text-lg font-bold text-gray-900 group-hover:text-red-700 transition mb-1">
+                    {area.name}, NJ
+                  </h2>
+                  <span className="text-sm text-gray-500 block mb-2">{area.county} County</span>
                   <p className="text-gray-600 text-sm">{area.description}</p>
                 </Link>
               ))}
@@ -81,10 +67,8 @@ export default function ServiceAreasPage() {
               </p>
               <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
                 <div className="text-center">
-                  <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                  </svg>
-                  <p className="text-gray-500">Serving Central New Jersey</p>
+                  <p className="text-gray-500 text-lg font-medium">Serving Central New Jersey</p>
+                  <p className="text-gray-400 text-sm mt-2">Based in East Brunswick, Middlesex County</p>
                 </div>
               </div>
             </div>
@@ -95,15 +79,14 @@ export default function ServiceAreasPage() {
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {[
                   { name: "Emergency Plumbing", href: "/services/emergency-plumbing" },
-                  { name: "Water Heater Services", href: "/services/water-heater" },
-                  { name: "Drain Cleaning", href: "/services/drain-sewer" },
-                  { name: "Leak Detection", href: "/services/emergency-plumbing/water-leak-detection" },
-                  { name: "Kitchen & Bathroom", href: "/services/kitchen-bathroom" },
-                  { name: "Commercial Plumbing", href: "/services/commercial" },
+                  { name: "Water Heater Services", href: "/services/water-heater-repair" },
+                  { name: "Boiler Repair", href: "/services/boiler-repair-service" },
+                  { name: "Whole House Repiping", href: "/services/whole-house-repiping" },
+                  { name: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
+                  { name: "Gas Line Services", href: "/services/gas-line-repair-installation" },
                 ].map((service, index) => (
-                  <Link key={index} href={service.href} className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    {service.name}
+                  <Link key={index} href={service.href} className="text-red-700 hover:text-red-800 font-medium">
+                    {service.name} →
                   </Link>
                 ))}
               </div>

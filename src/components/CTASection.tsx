@@ -61,7 +61,7 @@ export default function CTASection({
             </a>
             {showContactLink && (
               <Link
-                href="/contact"
+                href="/contact-us"
                 className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm transition border-2 ${buttonSecondary}`}
               >
                 Free Estimate

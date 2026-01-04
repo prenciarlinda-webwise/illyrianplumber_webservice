@@ -1,279 +1,346 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import CTASection from "@/components/CTASection";
-import FAQSection from "@/components/FAQSection";
-import ServiceSchema from "@/components/ServiceSchema";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "24/7 Emergency Plumber | Emergency Plumbing Services NJ",
-  description: "24-hour emergency plumber in East Brunswick, NJ. Fast response for burst pipes, water leaks, gas leaks, and plumbing emergencies. Call (718) 427-4396 now.",
+  title: "24/7 Emergency Plumber Near Me - Same Day Plumber East Brunswick NJ",
+  description: "Need a 24 hour plumber near me? Illyrian Group Corp provides 24/7 emergency plumbing services in East Brunswick & Middlesex County NJ. Same day plumber service for burst pipes, gas leaks, water heater failures. Call (347) 461-4856.",
   keywords: [
-    "emergency plumber",
+    "24 7 plumber near me",
+    "same day plumber near me",
+    "24 hour plumber near me",
     "emergency plumber near me",
-    "24 hour plumber",
-    "emergency plumbing services",
     "24/7 plumber",
-    "plumbing emergency",
-    "emergency plumber NJ",
+    "local emergency plumber",
+    "24 hour emergency plumber",
+    "same day plumber",
+    "after hours plumber",
+    "emergency gas plumber",
+    "plumber 24 hour service",
+    "need a plumber today",
   ],
-  alternates: {
-    canonical: "https://www.illyrianplumber.com/services/emergency-plumbing",
-  },
 };
 
-const emergencyServices = [
+const faqData = [
   {
-    title: "Burst Pipe Repair",
-    href: "/services/emergency-plumbing/burst-pipe-repair",
-    description: "Immediate response to burst or broken pipes. We stop the water, repair the damage, and prevent further destruction to your home.",
-    urgent: true,
+    question: "Do you have a 24/7 plumber near me available right now?",
+    answer: "Yes! Illyrian Group Corp provides 24/7 emergency plumbing services throughout East Brunswick, Edison, Old Bridge, Sayreville, and all of Middlesex County, NJ. Our emergency plumbers are available nights, weekends, and holidays. Call us any time at (347) 461-4856 or (718) 427-4396 for immediate assistance.",
   },
   {
-    title: "Water Leak Detection",
-    href: "/services/emergency-plumbing/water-leak-detection",
-    description: "Advanced technology to find hidden leaks in walls, floors, ceilings, and underground. Stop water damage before it spreads.",
-    urgent: true,
+    question: "Can I get a same day plumber for my emergency?",
+    answer: "Absolutely. We offer same day plumber service for all plumbing emergencies. When you call our emergency line, we dispatch a licensed plumber immediately. Most emergency calls in our service area receive a response within 30-60 minutes, depending on your location and current demand.",
   },
-  {
-    title: "Slab Leak Detection",
-    href: "/services/emergency-plumbing/slab-leak-detection",
-    description: "Specialized detection for leaks under concrete foundations. Non-invasive methods to locate and repair slab leaks.",
-    urgent: false,
-  },
-  {
-    title: "Gas Leak Repair",
-    href: "/services/emergency-plumbing/gas-leak-repair",
-    description: "Licensed gas leak detection and repair. Your safety is our priority. Available 24/7 for gas emergencies.",
-    urgent: true,
-  },
-  {
-    title: "Emergency Drain Cleaning",
-    href: "/services/emergency-plumbing/emergency-drain-cleaning",
-    description: "Severe clogs and backups can't wait. Emergency drain clearing to restore flow and prevent sewage backup.",
-    urgent: false,
-  },
-];
-
-const faqs = [
   {
     question: "What qualifies as a plumbing emergency?",
-    answer: "Plumbing emergencies include: burst or leaking pipes, sewage backups, no water, gas leaks, overflowing toilets that won't stop, water heater failures (especially in cold weather), and any situation causing active water damage. When in doubt, call us—we'll help you assess the situation.",
+    answer: "A plumbing emergency is any situation that could cause significant property damage, health hazards, or leave you without essential services. This includes burst pipes, major water leaks, sewer backups, gas leaks, complete loss of water, water heater failures (especially in winter), and flooding. If you're unsure, call us - we're happy to assess your situation.",
   },
   {
-    question: "How fast can you respond to an emergency?",
-    answer: "We prioritize emergencies and typically arrive within 30-60 minutes in our service area. Response times may vary based on current call volume and your location, but we always dispatch as quickly as possible for true emergencies.",
+    question: "How much does a 24 hour emergency plumber cost?",
+    answer: "Emergency plumbing costs vary based on the type of repair needed, not just the time of day. While after-hours service may include a trip charge, we always provide upfront pricing before starting any work. We believe in fair, transparent pricing - you'll know exactly what you're paying before we begin. Call us for a free assessment of your emergency.",
   },
   {
-    question: "Do you charge extra for emergency calls?",
-    answer: "We have transparent pricing for emergency services. While emergency calls may have a service fee due to the urgent nature and after-hours availability, we always provide upfront pricing before starting any work. No surprises.",
+    question: "Do you provide emergency gas plumber services?",
+    answer: "Yes, we handle emergency gas plumber calls for gas leaks and gas line issues. If you smell gas, evacuate immediately and call your gas company first, then call us. Our licensed plumbers are trained in gas line repair and can respond quickly to make your home safe again.",
   },
   {
     question: "What should I do while waiting for the emergency plumber?",
-    answer: "For water emergencies: Shut off the main water valve if possible. For gas leaks: Leave the house, don't operate switches, and call from outside. For sewage: Avoid using water fixtures. We'll guide you over the phone if needed.",
+    answer: "For water emergencies: Shut off the main water valve (usually near your water meter). For water heater issues: Turn off power (electric) or gas supply. For gas leaks: Evacuate, don't use electronics, and call from outside. For sewer backups: Stop using water and plumbing fixtures. These steps can minimize damage while you wait for our arrival.",
   },
   {
-    question: "Are you available on holidays?",
-    answer: "Yes, we provide 24/7 emergency plumbing service 365 days a year, including all holidays. Plumbing emergencies don't take days off, and neither do we.",
+    question: "Do you offer after hours plumber service on weekends and holidays?",
+    answer: "Yes, we're a true 24/7 plumbing service. Our after hours plumber service is available every night, every weekend, and every holiday - including Christmas, Thanksgiving, and New Year's. Plumbing emergencies don't take holidays, and neither do we.",
+  },
+  {
+    question: "How fast can you get a plumber to my house?",
+    answer: "For emergencies in East Brunswick and nearby areas, we typically arrive within 30-60 minutes. Response times for Edison, Sayreville, Old Bridge, and other Middlesex County towns may vary slightly based on distance and traffic. When you call, we'll give you an estimated arrival time.",
   },
 ];
+
+// FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+// Service Schema
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "24/7 Emergency Plumbing Service",
+  description: "24 hour emergency plumber services including burst pipe repair, water heater emergencies, gas leak response, sewer backup, and flooding repair. Same day plumber service available.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: BUSINESS_INFO.name,
+    telephone: BUSINESS_INFO.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: BUSINESS_INFO.address.street,
+      addressLocality: BUSINESS_INFO.address.city,
+      addressRegion: BUSINESS_INFO.address.state,
+      postalCode: BUSINESS_INFO.address.zip,
+    },
+  },
+  areaServed: {
+    "@type": "State",
+    name: "New Jersey",
+  },
+  availableChannel: {
+    "@type": "ServiceChannel",
+    servicePhone: BUSINESS_INFO.phone,
+    availableLanguage: "English",
+  },
+  hoursAvailable: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "00:00",
+    closes: "23:59",
+  },
+};
 
 export default function EmergencyPlumbingPage() {
   return (
     <>
-      <ServiceSchema
-        serviceName="24/7 Emergency Plumbing Services"
-        serviceDescription="Professional emergency plumber available 24 hours a day, 7 days a week in East Brunswick, NJ and Central New Jersey. Fast response for burst pipes, water leaks, gas leaks, sewer backups, and all plumbing emergencies."
-        serviceUrl="/services/emergency-plumbing"
-        serviceImage="https://www.illyrianplumber.com/images/emergency-plumbing-services-nj.jpg"
-        serviceType="Emergency Plumbing"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Hero - Emergency Focused */}
-      <section className="relative bg-gray-900 text-white py-16 md:py-24 overflow-hidden">
-        {/* Background Image */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">
           <Image
             src="/images/emergency-plumbing-services-nj.jpg"
-            alt="24/7 Emergency plumbing services in East Brunswick NJ"
+            alt="24/7 Emergency plumber responding to plumbing emergency in East Brunswick NJ"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-red-900/70 via-red-800/50 to-red-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <Breadcrumbs items={[
-            { label: "Services", href: "/services" },
-            { label: "Emergency Plumbing" }
-          ]} />
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-              Available 24/7 - Plumber On Call Now
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-yellow-400 font-bold mb-4 text-lg">24/7 EMERGENCY PLUMBER AVAILABLE NOW</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              24/7 Emergency Plumber
+              24 Hour Emergency Plumber Near Me in East Brunswick, NJ
             </h1>
-            <p className="text-xl text-red-100 mb-8 max-w-2xl">
-              Plumbing emergency? Don&apos;t panic. Our emergency plumbers respond fast to burst pipes, water leaks, gas leaks, and sewage backups. We&apos;re here when you need us most.
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
+              Need a plumber right now? Our 24/7 emergency plumbers respond fast to burst pipes, water heater failures, gas leaks, and flooding. Same day plumber service throughout Middlesex County - we arrive when you need us most.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a
-                href={BUSINESS_INFO.phoneLink}
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-red-700 px-5 py-3 rounded-lg font-semibold text-sm transition transform hover:scale-105 shadow-lg"
-              >
-                <svg className="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                CALL NOW: {BUSINESS_INFO.phone}
+            <div className="flex flex-wrap gap-4 mb-6">
+              <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+                Call Now: {BUSINESS_INFO.phone}
+              </a>
+              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
+                Or Call: {BUSINESS_INFO.phone2}
               </a>
             </div>
-            <div className="flex flex-wrap gap-4 text-red-100 text-sm">
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                30-60 Minute Response
-              </span>
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Licensed & Insured
-              </span>
-              <span className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Upfront Pricing
-              </span>
+            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
+              <span>✓ 24/7 Availability</span>
+              <span>✓ Same Day Service</span>
+              <span>✓ Licensed & Insured</span>
+              <span>✓ Fast Response</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Actions */}
-      <section className="bg-gray-900 py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-gray-800 rounded-lg p-5 text-center">
-              <h3 className="text-white font-semibold mb-2">Water Emergency?</h3>
-              <p className="text-gray-400 text-sm mb-3">Shut off main water valve</p>
-              <Link href="/services/emergency-plumbing/burst-pipe-repair" className="text-red-400 hover:text-red-300 font-medium text-sm">
-                Burst Pipe Help →
-              </Link>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-5 text-center">
-              <h3 className="text-white font-semibold mb-2">Smell Gas?</h3>
-              <p className="text-gray-400 text-sm mb-3">Leave home immediately</p>
-              <Link href="/services/emergency-plumbing/gas-leak-repair" className="text-red-400 hover:text-red-300 font-medium text-sm">
-                Gas Leak Help →
-              </Link>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-5 text-center">
-              <h3 className="text-white font-semibold mb-2">Sewage Backup?</h3>
-              <p className="text-gray-400 text-sm mb-3">Stop using water fixtures</p>
-              <Link href="/services/emergency-plumbing/emergency-drain-cleaning" className="text-red-400 hover:text-red-300 font-medium text-sm">
-                Drain Emergency Help →
-              </Link>
-            </div>
-          </div>
+      {/* Urgency Banner */}
+      <section className="bg-yellow-500 py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-900 font-bold text-lg">
+            Plumbing Emergency? Don&apos;t Wait - Call Our 24 Hour Plumber Hotline: <a href={BUSINESS_INFO.phoneLink} className="underline">{BUSINESS_INFO.phone}</a>
+          </p>
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumbing Services</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              When plumbing disasters strike, every minute counts. Our emergency plumbers are equipped to handle the most urgent situations, arriving quickly with the tools and expertise to stop damage and restore your plumbing.
-            </p>
 
-            <div className="space-y-4 mb-12">
-              {emergencyServices.map((service) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-red-200 transition group"
-                >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 ${service.urgent ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-700'}`}>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-700 transition">
-                        {service.title}
-                      </h3>
-                      {service.urgent && (
-                        <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded">URGENT</span>
-                      )}
-                    </div>
-                    <p className="text-gray-600">{service.description}</p>
-                  </div>
-                  <svg className="w-5 h-5 text-gray-400 group-hover:text-red-700 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+            {/* Intro Content */}
+            <div className="prose prose-lg max-w-none mb-12">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                When you search for a <strong>24/7 plumber near me</strong> at 2 AM with water flooding your basement, you need a plumber who answers the phone and shows up fast. Illyrian Group Corp is your <strong>local emergency plumber</strong> serving East Brunswick, Edison, Sayreville, Old Bridge, and all of Middlesex County, NJ.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We understand that plumbing emergencies don&apos;t wait for convenient business hours. That&apos;s why we offer true <strong>24 hour emergency plumber</strong> service - nights, weekends, and holidays. When you need a <strong>same day plumber</strong>, we dispatch immediately and arrive quickly.
+              </p>
+            </div>
+
+            {/* Emergency Situations */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">When to Call a 24/7 Emergency Plumber</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Not sure if your situation requires an <strong>after hours plumber</strong>? These situations warrant an immediate call to our emergency line:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-12">
+              {[
+                { situation: "Burst or Frozen Pipes", desc: "Water spraying or no water flow in winter" },
+                { situation: "Major Water Leaks", desc: "Visible flooding or water damage spreading" },
+                { situation: "Gas Leak or Gas Smell", desc: "Evacuate first, then call for emergency gas plumber" },
+                { situation: "Sewer Line Backup", desc: "Sewage coming up through drains or toilets" },
+                { situation: "Water Heater Failure", desc: "No hot water, leaking tank, or strange noises" },
+                { situation: "Complete Loss of Water", desc: "No water anywhere in your home" },
+                { situation: "Flooding from Any Source", desc: "Appliance failure, pipe break, or unknown source" },
+                { situation: "Boiler Breakdown", desc: "No heat from boiler system in cold weather" },
+              ].map((item, index) => (
+                <div key={index} className="bg-red-50 border-l-4 border-red-600 rounded-lg p-4">
+                  <h3 className="font-bold text-gray-900">{item.situation}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
               ))}
             </div>
 
-            {/* Related Services - Cross-Silo */}
-            <div className="bg-gray-50 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Non-Emergency Services</h3>
-              <p className="text-gray-600 mb-4">
-                For non-urgent plumbing needs, explore our other services:
+            {/* What To Do */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">What To Do While Waiting for the Emergency Plumber</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              When you call our <strong>24 hour plumber hotline</strong>, we&apos;ll guide you through these steps to minimize damage while we&apos;re on our way:
+            </p>
+            <div className="space-y-4 mb-12">
+              {[
+                { step: "1", title: "Shut Off the Main Water Valve", desc: "Located near your water meter (usually in the basement or outside). Turn clockwise to close. This stops all water flow to your home and prevents further flooding." },
+                { step: "2", title: "Turn Off Your Water Heater", desc: "For electric heaters, flip the breaker. For gas heaters, turn the gas valve to 'off' position. Never leave a water heater running without water supply." },
+                { step: "3", title: "For Gas Leaks - Evacuate Immediately", desc: "Leave the house, don't flip any switches or use electronics, and call your gas company from outside. Then call us. Our emergency gas plumber will respond quickly." },
+                { step: "4", title: "Document the Damage", desc: "Take photos and videos for insurance purposes. Note when you first noticed the problem and what you did to mitigate it." },
+                { step: "5", title: "Clear the Area", desc: "Move furniture, electronics, and valuables away from water if safe to do so. Place towels or buckets to contain spreading water." },
+              ].map((item, index) => (
+                <div key={index} className="flex gap-4 bg-gray-50 rounded-lg p-5">
+                  <div className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    {item.step}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                    <p className="text-gray-600">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Why Choose Us */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our 24/7 Emergency Plumbing Service</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              When you <strong>need a plumber today</strong>, you need someone reliable, fast, and professional. Here&apos;s what sets our emergency plumbing service apart:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {[
+                { title: "True 24/7 Availability", desc: "Our phone is answered by a real person 24 hours a day, 7 days a week, 365 days a year. We don't use answering services that take messages - when you call, you reach us directly." },
+                { title: "Fast Response Times", desc: "For East Brunswick and nearby towns, we typically arrive within 30-60 minutes. We dispatch the closest available plumber to your location immediately." },
+                { title: "Same Day Plumber Service", desc: "Every emergency call gets same day service. We don't schedule you for 'the next available appointment' - we come now, when you need us." },
+                { title: "Upfront Emergency Pricing", desc: "We provide clear pricing before starting any work. No surprise fees, no bait-and-switch tactics. You'll know exactly what you're paying." },
+                { title: "Licensed Master Plumbers", desc: "Every emergency technician is a fully licensed NJ plumber with experience handling high-pressure situations. We arrive prepared with the tools and parts for most common emergencies." },
+                { title: "Local to Middlesex County", desc: "Based in East Brunswick, we're your local emergency plumber - not a national call center. We know the area, the homes, and the common plumbing issues in Central NJ." },
+              ].map((item, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-5">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Gallery Section */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Emergency Plumbing Work</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              From burst pipe repairs to water heater emergencies, see examples of our professional plumbing work throughout Middlesex County.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+              {[
+                { src: "/images/copper-pipe-repiping-service.jpg", alt: "Emergency pipe repair service" },
+                { src: "/images/water-heater-repair-service.jpg", alt: "Emergency water heater repair" },
+                { src: "/images/boiler-repair-service-nj.jpg", alt: "Emergency boiler repair" },
+                { src: "/images/pex-water-line-rough-in.jpg", alt: "Water line repair and installation" },
+                { src: "/images/gas-line-pressure-gauge-installation.jpg", alt: "Gas line emergency service" },
+                { src: "/images/commercial-copper-pipe-installation.jpg", alt: "Professional pipe installation" },
+              ].map((image, index) => (
+                <div key={index} className="rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Service Areas */}
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">24/7 Emergency Plumber Service Areas</h3>
+              <p className="text-gray-700 mb-4">
+                Our <strong>24 hour plumber near me</strong> service covers all of Middlesex County, NJ:
               </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-700">
+                <span>East Brunswick</span>
+                <span>Edison</span>
+                <span>Old Bridge</span>
+                <span>Sayreville</span>
+                <span>South Brunswick</span>
+                <span>North Brunswick</span>
+                <span>Monroe Township</span>
+                <span>And surrounding areas</span>
+              </div>
+            </div>
+
+            {/* FAQ Section */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumber FAQs</h2>
+            <div className="space-y-4 mb-12">
+              {faqData.map((faq, index) => (
+                <details key={index} className="group bg-gray-50 rounded-lg">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <h3 className="font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                    <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">+</span>
+                  </summary>
+                  <div className="px-5 pb-5">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+
+            {/* Related Services */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Related Emergency Services</h3>
               <div className="grid sm:grid-cols-2 gap-3">
-                <Link href="/services/water-heater" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Water Heater Services
-                </Link>
-                <Link href="/services/drain-sewer" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Drain & Sewer Services
-                </Link>
-                <Link href="/services/kitchen-bathroom" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Kitchen & Bathroom Plumbing
-                </Link>
-                <Link href="/services/commercial" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Commercial Plumbing
-                </Link>
+                <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800 font-medium">Emergency Water Heater Repair →</Link>
+                <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800 font-medium">Emergency Gas Line Services →</Link>
+                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Emergency →</Link>
+                <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800 font-medium">Emergency Boiler Repair →</Link>
+                <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection →</Link>
+                <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800 font-medium">Pipe Repair & Repiping →</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <FAQSection title="Emergency Plumbing FAQ" faqs={faqs} />
-
-      {/* Service Areas */}
-      <section className="py-12 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Emergency Service Areas</h2>
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {BUSINESS_INFO.serviceAreas.map((area, index) => (
-              <Link key={index} href={`/service-areas/plumber-${area.toLowerCase().replace(/\s+/g, "-")}`} className="bg-gray-100 hover:bg-red-50 hover:text-red-700 px-4 py-2 rounded-full text-sm font-medium transition">
-                {area}, NJ
-              </Link>
-            ))}
+      {/* Final CTA */}
+      <section className="py-12 bg-red-700 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Need a 24/7 Plumber Right Now?</h2>
+          <p className="text-xl text-red-100 mb-8">Don&apos;t wait - our same day plumber service is standing by.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition">
+              Call {BUSINESS_INFO.phone}
+            </a>
+            <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-800 transition">
+              Call {BUSINESS_INFO.phone2}
+            </a>
           </div>
+          <p className="mt-6 text-red-200">Available 24 hours a day, 7 days a week, including holidays</p>
         </div>
       </section>
-
-      {/* Emergency CTA */}
-      <CTASection
-        title="Plumbing Emergency? Call Now!"
-        description="Our emergency plumbers are standing by 24/7. Fast response, professional service, guaranteed."
-        variant="default"
-      />
     </>
   );
 }

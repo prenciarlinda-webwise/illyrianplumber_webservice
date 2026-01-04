@@ -79,9 +79,9 @@ export default function Header() {
                           <div className="grid grid-cols-5 gap-6">
                             {SERVICE_SILOS.map((silo) => (
                               <div key={silo.id}>
-                                <Link href={silo.href} className="text-red-700 font-semibold text-sm hover:text-red-800 block mb-3">
+                                <span className="text-red-700 font-semibold text-sm block mb-3">
                                   {silo.title}
-                                </Link>
+                                </span>
                                 <ul className="space-y-1.5">
                                   {silo.services.slice(0, 5).map((service) => (
                                     <li key={service.href}>
@@ -177,14 +177,23 @@ export default function Header() {
                             All Services
                           </Link>
                           {SERVICE_SILOS.map((silo) => (
-                            <Link
-                              key={silo.id}
-                              href={silo.href}
-                              className="block py-1.5 text-gray-600 text-sm hover:text-red-700"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {silo.title}
-                            </Link>
+                            <div key={silo.id} className="py-1.5">
+                              <span className="text-gray-800 font-medium text-sm block mb-1">
+                                {silo.title}
+                              </span>
+                              <div className="pl-2 space-y-1">
+                                {silo.services.map((service) => (
+                                  <Link
+                                    key={service.href}
+                                    href={service.href}
+                                    className="block text-gray-600 text-xs hover:text-red-700"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    {service.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           ))}
                         </div>
                       )}

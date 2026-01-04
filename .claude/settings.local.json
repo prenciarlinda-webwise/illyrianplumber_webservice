@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
-      "Bash(ren:*)"
+      "Bash(ren:*)",
+      "Bash(mv:*)",
+      "Bash(find:*)"
     ]
   }
 }

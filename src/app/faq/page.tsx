@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Plumbing FAQ | Common Questions Answered",
+  title: "Plumbing FAQ - Common Questions Answered",
   description: "Answers to frequently asked plumbing questions. Learn about our services, pricing, emergency response, and more. Illyrian Plumber - East Brunswick, NJ.",
   keywords: [
     "plumbing faq",
@@ -81,7 +81,7 @@ const faqCategories = [
     faqs: [
       {
         question: "What plumbing services do you offer?",
-        answer: "We offer comprehensive plumbing services including: water heater repair/replacement, drain cleaning, leak detection and repair, bathroom and kitchen plumbing, sewer line services, commercial plumbing, and 24/7 emergency service.",
+        answer: "We offer comprehensive plumbing services including: water heater repair/replacement, tankless water heater installation, boiler repair, leak detection and repair, bathroom and kitchen plumbing, whole house repiping, gas line services, and 24/7 emergency service.",
       },
       {
         question: "Do you work on commercial properties?",
@@ -115,19 +115,19 @@ const faqCategories = [
     ],
   },
   {
-    category: "Drains & Sewers",
+    category: "Gas Lines & Boilers",
     faqs: [
       {
-        question: "How often should drains be cleaned?",
-        answer: "For preventive maintenance, we recommend annual drain cleaning for kitchen drains and every 2-3 years for main lines. If you're experiencing slow drains, don't wait—call before a complete backup occurs.",
+        question: "How do I know if I have a gas leak?",
+        answer: "Signs of a gas leak include the smell of rotten eggs, hissing sounds near gas lines, dead vegetation near gas pipes, or higher than normal gas bills. If you suspect a gas leak, evacuate immediately and call your gas company, then call us for repairs.",
       },
       {
-        question: "Are chemical drain cleaners safe?",
-        answer: "We don't recommend chemical drain cleaners. They can damage pipes, harm septic systems, and create hazardous fumes. Professional cleaning is safer and more effective for clearing clogs.",
+        question: "How often should my boiler be serviced?",
+        answer: "We recommend annual boiler maintenance to ensure safe and efficient operation. Regular service can extend the life of your boiler and prevent costly emergency repairs during the heating season.",
       },
       {
-        question: "What's the difference between snaking and hydro jetting?",
-        answer: "Snaking punches through clogs to restore flow. Hydro jetting uses high-pressure water to completely clean pipe walls, removing grease, roots, and buildup. Hydro jetting is more thorough and results last longer.",
+        question: "Can you install new gas lines for appliances?",
+        answer: "Yes, we are licensed for gas line installation and can run new gas lines for stoves, dryers, water heaters, outdoor grills, and other gas appliances. All work is done to code with proper permits.",
       },
     ],
   },
@@ -215,23 +215,23 @@ export default function FAQPage() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   Emergency Plumbing
                 </Link>
-                <Link href="/services/water-heater" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+                <Link href="/services/water-heater-repair" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   Water Heater Services
                 </Link>
-                <Link href="/services/drain-sewer" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+                <Link href="/services/boiler-repair-service" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Drain & Sewer Services
+                  Boiler Repair
                 </Link>
-                <Link href="/services/kitchen-bathroom" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+                <Link href="/services/bathroom-remodeling" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Kitchen & Bathroom
+                  Bathroom Remodeling
                 </Link>
-                <Link href="/services/commercial" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+                <Link href="/services/whole-house-repiping" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  Commercial Plumbing
+                  Whole House Repiping
                 </Link>
-                <Link href="/contact" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
+                <Link href="/contact-us" className="flex items-center gap-2 text-red-700 hover:text-red-800 font-medium">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                   Contact Us
                 </Link>

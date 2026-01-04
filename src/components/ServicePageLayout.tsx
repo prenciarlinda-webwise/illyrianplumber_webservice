@@ -89,7 +89,7 @@ export default function ServicePageLayout({
                 Call {BUSINESS_INFO.phone}
               </a>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition"
               >
                 Get Free Estimate

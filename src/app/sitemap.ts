@@ -6,84 +6,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Main pages
   const mainPages = [
     { url: "", priority: 1.0, changeFrequency: "weekly" as const },
-    { url: "/services", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/about", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/about-us", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/contact-us", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/faq", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/services", priority: 0.9, changeFrequency: "weekly" as const },
     { url: "/service-areas", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
     { url: "/tools", priority: 0.7, changeFrequency: "monthly" as const },
   ];
 
-  // Service silo pages
-  const servicePages = [
-    // Water Heater Silo
-    { url: "/services/water-heater", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/services/water-heater/repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/water-heater/replacement", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/water-heater/installation", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/water-heater/tankless", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/water-heater/gas-water-heater", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/water-heater/electric-water-heater", priority: 0.8, changeFrequency: "monthly" as const },
-
-    // Emergency Plumbing Silo
-    { url: "/services/emergency-plumbing", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/services/emergency-plumbing/burst-pipe-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/emergency-plumbing/water-leak-detection", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/emergency-plumbing/gas-leak-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/emergency-plumbing/slab-leak-detection", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/emergency-plumbing/emergency-drain-cleaning", priority: 0.8, changeFrequency: "monthly" as const },
-
-    // Kitchen & Bathroom Silo
-    { url: "/services/kitchen-bathroom", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/services/kitchen-bathroom/faucet-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/kitchen-bathroom/toilet-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/kitchen-bathroom/garbage-disposal", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/kitchen-bathroom/sink-installation", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/kitchen-bathroom/shower-tub", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/kitchen-bathroom/bathroom-remodel", priority: 0.8, changeFrequency: "monthly" as const },
-
-    // Drain & Sewer Silo
-    { url: "/services/drain-sewer", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/services/drain-sewer/drain-cleaning", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/drain-sewer/hydro-jetting", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/drain-sewer/sewer-line-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/drain-sewer/camera-inspection", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/drain-sewer/sump-pump", priority: 0.8, changeFrequency: "monthly" as const },
-
-    // Commercial Silo
-    { url: "/services/commercial", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/services/commercial/restaurant-plumbing", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/commercial/backflow-testing", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/commercial/boiler-repair", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/commercial/grease-trap", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/services/commercial/plumbing-inspections", priority: 0.8, changeFrequency: "monthly" as const },
+  const featuredServices = [
+    { url: "/services/tankless-water-heater-installation", priority: 0.95, changeFrequency: "weekly" as const },
+    { url: "/services/sewer-line-repair-replacement", priority: 0.95, changeFrequency: "weekly" as const },
+    { url: "/services/boiler-repair-service", priority: 0.95, changeFrequency: "weekly" as const },
+    { url: "/services/gas-line-repair-installation", priority: 0.95, changeFrequency: "weekly" as const },
+    { url: "/services/whole-house-repiping", priority: 0.95, changeFrequency: "weekly" as const },
+    { url: "/services/emergency-plumbing", priority: 0.95, changeFrequency: "weekly" as const },
   ];
 
-  // Service area pages
-  const serviceAreaSlugs = [
-    "plumber-east-brunswick",
-    "plumber-new-brunswick",
-    "plumber-south-river",
-    "plumber-north-brunswick",
-    "plumber-edison",
-    "plumber-sayreville",
-    "plumber-old-bridge",
-    "plumber-monroe-township",
-    "plumber-south-brunswick",
-    "plumber-milltown",
-    "plumber-highland-park",
-    "plumber-spotswood",
+  const residentialPages = [
+    { url: "/services/water-heater-repair", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "/services/water-heater-replacement", priority: 0.9, changeFrequency: "weekly" as const },
+    { url: "/services/water-leak-detection", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/services/sump-pump-repair-install", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/water-filtration-system", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/radiant-heating-plumbing", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/bathroom-remodeling", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/services/toilet-and-faucet-installation", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/plumbing-safety-inspections", priority: 0.8, changeFrequency: "monthly" as const },
   ];
 
-  const serviceAreaPages = serviceAreaSlugs.map((slug) => ({
-    url: `/service-areas/${slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
+  // Service area pages (Middlesex County focus)
+  const serviceAreaPages = [
+    { url: "/service-areas/middlesex-county", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/service-areas/east-brunswick", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/service-areas/edison", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/service-areas/sayreville", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/service-areas/old-bridge", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/service-areas/monroe-township", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/service-areas/south-brunswick", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/service-areas/north-brunswick", priority: 0.75, changeFrequency: "monthly" as const },
+  ];
 
-  // Combine all pages
-  const allPages = [...mainPages, ...servicePages, ...serviceAreaPages];
+  const allPages = [...mainPages, ...featuredServices, ...residentialPages, ...serviceAreaPages];
 
   return allPages.map((page) => ({
     url: `${baseUrl}${page.url}`,

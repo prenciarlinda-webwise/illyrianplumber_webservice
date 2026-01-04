@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Plumbing Tools & Resources | Illyrian Plumber",
+  title: "Plumbing Tools & Resources - Illyrian Plumber",
   description: "Free plumbing calculators, maintenance checklists, emergency guides, and helpful resources from Illyrian Plumber Corp. Everything you need to maintain your home plumbing.",
   keywords: [
     "plumbing calculator",
@@ -78,8 +78,8 @@ const faqs = [
     answer: "A sudden spike usually indicates a leak. Check toilets (put food coloring in the tank), look for wet spots, and monitor your water meter. Call us for leak detection if needed.",
   },
   {
-    question: "Can I use chemical drain cleaners?",
-    answer: "We don't recommend them. They can damage pipes and are harmful to the environment. Try a plunger first, or call us for professional drain cleaning.",
+    question: "How do I know if my water heater needs replacing?",
+    answer: "Signs include: age over 10 years, rusty water, rumbling noises, inconsistent temperature, or frequent repairs needed. We offer free water heater assessments.",
   },
   {
     question: "How do I know if I need a new water heater?",

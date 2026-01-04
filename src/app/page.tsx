@@ -128,7 +128,7 @@ function HeroSection() {
           </h1>
 
           <p className="text-lg text-gray-300 mb-8 max-w-xl">
-            24-hour emergency plumber serving Central New Jersey. Water heater repair, drain cleaning, gas line services, and more.
+            24-hour emergency plumber serving Central New Jersey. Water heater repair, boiler service, gas line installation, and more.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -151,7 +151,7 @@ function HeroSection() {
               Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
             </a>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-5 py-3 rounded-lg font-medium text-sm transition-all"
             >
               Free Estimate
@@ -212,9 +212,9 @@ function ServicesSection() {
   const siloImages: Record<string, string> = {
     emergency: "/images/emergency-plumbing-services-nj.jpg",
     "water-heater": "/images/tankless-water-heater-installation.jpg",
-    "kitchen-bathroom": "/images/modern-bathroom-shower-remodel.jpg",
-    "drain-sewer": "/images/drain-vent-pipe-installation.jpg",
-    commercial: "/images/commercial-copper-pipe-installation.jpg",
+    mechanical: "/images/boiler-repair-service-nj.jpg",
+    residential: "/images/modern-bathroom-shower-remodel.jpg",
+    sewer: "/images/copper-pipe-repiping-service.jpg",
   };
 
   return (
@@ -225,7 +225,7 @@ function ServicesSection() {
             Professional Plumbing Services in East Brunswick, NJ
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From 24-hour emergency repairs to water heater installation, we handle all your residential and commercial plumbing needs in Middlesex County.
+            From 24-hour emergency repairs to water heater installation, we handle all your residential plumbing needs in Middlesex County.
           </p>
         </div>
 
@@ -233,7 +233,7 @@ function ServicesSection() {
           {SERVICE_SILOS.map((silo) => (
             <div key={silo.id} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group">
               {/* Service Image */}
-              <Link href={silo.href} className="block relative h-48 overflow-hidden">
+              <Link href={silo.services[0]?.href || "/services"} className="block relative h-48 overflow-hidden">
                 <Image
                   src={siloImages[silo.id] || "/images/plumbing-services.jpg"}
                   alt={`${silo.title} in East Brunswick NJ`}
@@ -260,8 +260,8 @@ function ServicesSection() {
                     </li>
                   ))}
                 </ul>
-                <Link href={silo.href} className="inline-flex items-center text-red-700 font-semibold text-sm hover:text-red-800">
-                  View All {silo.shortTitle} Services
+                <Link href="/services" className="inline-flex items-center text-red-700 font-semibold text-sm hover:text-red-800">
+                  View All Services
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -290,38 +290,18 @@ function ServicesSection() {
 function WhyChooseUsSection() {
   const reasons = [
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
       title: "24/7 Emergency Response",
       description: "Plumbing emergencies don't wait. We're available around the clock, every day of the year.",
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
       title: "Licensed & Insured",
       description: "Fully licensed master plumbers with comprehensive insurance. Your property is protected.",
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
       title: "Upfront Pricing",
       description: "No hidden fees. Get a detailed quote before we start. What we quote is what you pay.",
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
       title: "100% Satisfaction Guarantee",
       description: "We stand behind our work. Not satisfied? We'll make it right, guaranteed.",
     },
@@ -385,14 +365,9 @@ function WhyChooseUsSection() {
             </p>
             <div className="grid sm:grid-cols-2 gap-6">
               {reasons.map((reason, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-700">
-                    {reason.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{reason.title}</h3>
-                    <p className="text-sm text-gray-600">{reason.description}</p>
-                  </div>
+                <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
+                  <h3 className="font-semibold text-gray-900 mb-1">{reason.title}</h3>
+                  <p className="text-sm text-gray-600">{reason.description}</p>
                 </div>
               ))}
             </div>
@@ -440,7 +415,7 @@ function WorkGallerySection() {
         </div>
 
         <div className="text-center mt-10">
-          <Link href="/services/kitchen-bathroom/bathroom-remodel" className="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800">
+          <Link href="/services/bathroom-remodeling" className="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800">
             View More Bathroom Remodel Projects
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -526,7 +501,7 @@ function ServiceAreasSection() {
           {BUSINESS_INFO.serviceAreas.map((area, index) => (
             <Link
               key={index}
-              href={`/service-areas/plumber-${area.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`}
               className="bg-gray-100 hover:bg-red-50 rounded-lg p-4 text-center transition group"
             >
               <span className="text-gray-700 group-hover:text-red-700 font-medium">
@@ -593,7 +568,7 @@ function EmergencyCTASection() {
               Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
             </a>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white hover:bg-white hover:text-red-700 text-white px-5 py-3 rounded-lg font-medium text-sm transition-all"
             >
               Schedule Service

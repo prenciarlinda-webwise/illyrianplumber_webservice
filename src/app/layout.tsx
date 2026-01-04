@@ -23,15 +23,13 @@ export const metadata: Metadata = {
     "emergency plumber New Jersey",
     "24 hour plumber NJ",
     "water heater repair East Brunswick",
-    "drain cleaning NJ",
-    "boiler installation New Jersey",
-    "commercial plumber NJ",
-    "residential plumbing services",
+    "tankless water heater installation",
+    "boiler repair New Jersey",
     "gas line repair NJ",
     "sump pump installation",
     "water leak detection",
+    "whole house repiping",
     "bathroom plumbing",
-    "kitchen plumbing",
   ],
   authors: [{ name: BUSINESS_INFO.name }],
   creator: BUSINESS_INFO.name,
@@ -74,16 +72,19 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
-// Enhanced Schema Markup for LLM SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   "@id": "https://www.illyrianplumber.com/#organization",
   name: BUSINESS_INFO.name,
   alternateName: "Illyrian Plumber",
-  description: "Professional 24/7 emergency plumbing services in East Brunswick, NJ and Central New Jersey. Licensed master plumbers providing water heater repair, drain cleaning, bathroom plumbing, and commercial plumbing services to Middlesex County homeowners and businesses.",
+  description: "Professional 24/7 emergency plumbing services in East Brunswick, NJ and Central New Jersey. Licensed master plumbers providing water heater repair, boiler service, gas line installation, and whole house repiping to Middlesex County homeowners.",
   image: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png",
   logo: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png",
   url: "https://www.illyrianplumber.com",
@@ -103,7 +104,6 @@ const jsonLd = {
     latitude: 40.4286,
     longitude: -74.4154,
   },
-  // Service Areas for LLM local relevance
   areaServed: BUSINESS_INFO.serviceAreas.map(area => ({
     "@type": "City",
     name: area,
@@ -113,7 +113,6 @@ const jsonLd = {
       identifier: "NJ"
     }
   })),
-  // Services offered for LLM understanding
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Plumbing Services",
@@ -148,20 +147,20 @@ const jsonLd = {
       },
       {
         "@type": "OfferCatalog",
-        name: "Drain & Sewer Services",
+        name: "Mechanical Systems",
         itemListElement: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Drain Cleaning" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sewer Line Repair" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hydro Jetting" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Boiler Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Radiant Floor Heating" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Whole House Repiping" } },
         ]
       },
       {
         "@type": "OfferCatalog",
-        name: "Commercial Plumbing",
+        name: "Sewer & Inspection",
         itemListElement: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Plumbing" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Backflow Testing" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Boiler Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sewer Line Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Inspections" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gas Line Services" } },
         ]
       }
     ]
@@ -190,18 +189,17 @@ const jsonLd = {
     bestRating: "5",
     worstRating: "1"
   },
-  // Knowledge Panel signals
   knowsAbout: [
     "Emergency plumbing repair",
     "Water heater installation and repair",
-    "Drain cleaning and unclogging",
+    "Tankless water heater installation",
     "Sewer line repair and replacement",
     "Gas line installation and repair",
     "Bathroom plumbing and remodeling",
-    "Kitchen plumbing installation",
-    "Commercial plumbing services",
-    "Backflow prevention testing",
-    "Boiler repair and installation"
+    "Whole house repiping",
+    "Boiler repair and installation",
+    "Radiant floor heating",
+    "Plumbing safety inspections"
   ],
   slogan: BUSINESS_INFO.tagline,
   hasCredential: {
