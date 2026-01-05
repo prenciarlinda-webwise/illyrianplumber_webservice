@@ -111,7 +111,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. | Built by{" "}
+              © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved. | Website & SEO by{" "}
               <a href="https://www.websiteandseoagency.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition">
                 Web Wise
               </a>

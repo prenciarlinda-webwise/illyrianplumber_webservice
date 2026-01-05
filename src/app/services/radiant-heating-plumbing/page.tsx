@@ -17,8 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function RadiantHeatingPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Radiant Floor Heating",
+    description: "Professional radiant floor heating installation and repair in East Brunswick, NJ. Hydronic heating systems for comfortable, efficient warmth.",
+    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
+    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
+    serviceType: "Radiant Heating",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">

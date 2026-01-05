@@ -185,10 +185,47 @@ const jsonLd = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
-    reviewCount: "3",
+    reviewCount: "5",
     bestRating: "5",
     worstRating: "1"
   },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Michael R." },
+      datePublished: "2024-11-15",
+      reviewBody: "Illyrian Plumber saved us during a late-night emergency. Our water heater started leaking at 11pm and they arrived within 30 minutes. Professional, honest pricing, and excellent work. Highly recommend!",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Sarah T." },
+      datePublished: "2024-10-28",
+      reviewBody: "Had them install a new tankless water heater. The team was knowledgeable, explained all my options, and completed the installation in one day. Very happy with the results and the energy savings.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "James K." },
+      datePublished: "2024-09-12",
+      reviewBody: "Best plumber in East Brunswick! They fixed our boiler issue that two other companies couldn't figure out. Fair pricing and they stand behind their work. Will use them for all future plumbing needs.",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Linda M." },
+      datePublished: "2024-08-20",
+      reviewBody: "Called for a gas line inspection before selling our home. They were thorough, professional, and provided detailed documentation. The inspector was impressed with their work. Great service!",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "David P." },
+      datePublished: "2024-07-05",
+      reviewBody: "Illyrian repiped our entire 1960s home. The crew was respectful, clean, and finished ahead of schedule. No more rusty water and great water pressure now. Worth every penny!",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
+    }
+  ],
   knowsAbout: [
     "Emergency plumbing repair",
     "Water heater installation and repair",

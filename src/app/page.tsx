@@ -497,27 +497,44 @@ function ServiceAreasSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-          {BUSINESS_INFO.serviceAreas.map((area, index) => (
-            <Link
-              key={index}
-              href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`}
-              className="bg-gray-100 hover:bg-red-50 rounded-lg p-4 text-center transition group"
-            >
-              <span className="text-gray-700 group-hover:text-red-700 font-medium">
-                {area}, NJ
-              </span>
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Service Areas Grid */}
+          <div>
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              {BUSINESS_INFO.serviceAreas.map((area, index) => (
+                <Link
+                  key={index}
+                  href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="bg-gray-100 hover:bg-red-50 rounded-lg p-4 text-center transition group"
+                >
+                  <span className="text-gray-700 group-hover:text-red-700 font-medium">
+                    {area}, NJ
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <Link href="/service-areas" className="text-red-700 hover:text-red-800 font-semibold inline-flex items-center gap-2">
+              View All Service Areas
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
-          ))}
-        </div>
+          </div>
 
-        <div className="text-center mt-8">
-          <Link href="/service-areas" className="text-red-700 hover:text-red-800 font-semibold inline-flex items-center gap-2">
-            View All Service Areas
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          {/* Map */}
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563312.4975387864!2d-76.04627729339961!3d40.06772212112381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1767607369527!5m2!1sen!2s"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Illyrian Plumber Location"
+              className="w-full h-full min-h-[350px]"
+            />
+          </div>
         </div>
       </div>
     </section>

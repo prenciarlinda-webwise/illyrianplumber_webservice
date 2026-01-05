@@ -191,7 +191,6 @@ export const NAV_LINKS = [
   },
   { name: "Service Areas", href: "/service-areas" },
   { name: "Blog", href: "/blog" },
-  { name: "Tools", href: "/tools" },
   { name: "Contact", href: "/contact-us" },
 ];
 

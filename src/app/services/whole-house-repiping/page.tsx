@@ -17,8 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function WholeHouseRepipingPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Whole House Repiping",
+    description: "Complete home repiping services in East Brunswick, NJ. Replace old, corroded pipes with modern materials. Expert installation, minimal disruption.",
+    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
+    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
+    serviceType: "Repiping",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">

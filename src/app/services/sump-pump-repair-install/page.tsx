@@ -17,8 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function SumpPumpPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Sump Pump Repair and Installation",
+    description: "Professional sump pump repair and installation in East Brunswick, NJ. Protect your basement from flooding. Battery backup systems available.",
+    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
+    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
+    serviceType: "Sump Pump Services",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">

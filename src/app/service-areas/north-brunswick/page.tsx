@@ -15,8 +15,21 @@ export const metadata: Metadata = {
 };
 
 export default function NorthBrunswickPage() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "@id": "https://www.illyrianplumber.com/#organization",
+    name: BUSINESS_INFO.name,
+    telephone: BUSINESS_INFO.phone,
+    url: "https://www.illyrianplumber.com/service-areas/north-brunswick",
+    address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
+    areaServed: { "@type": "City", name: "North Brunswick", containedInPlace: { "@type": "State", name: "New Jersey" } },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">

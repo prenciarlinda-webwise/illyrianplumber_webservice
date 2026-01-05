@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us - Illyrian Plumber East Brunswick NJ",
-  description: "Contact Illyrian Plumber for plumbing services in East Brunswick, NJ. Call (718) 427-4396 or fill out our contact form. 24/7 emergency service available.",
+  description: "Contact Illyrian Plumber for plumbing services in East Brunswick, NJ. Call (347) 461-4856 for 24/7 emergency service.",
   keywords: [
     "contact plumber",
     "east brunswick plumber",
@@ -15,8 +15,24 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    mainEntity: {
+      "@type": "Plumber",
+      "@id": "https://www.illyrianplumber.com/#organization",
+      name: BUSINESS_INFO.name,
+      telephone: BUSINESS_INFO.phone,
+      email: BUSINESS_INFO.email,
+      address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
+      openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "00:00", closes: "23:59" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
@@ -46,169 +62,77 @@ export default function ContactPage() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Your Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"
-                        placeholder="John Smith"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                      Service Needed
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition"
-                    >
-                      <option value="">Select a service...</option>
-                      <option value="emergency">Emergency Plumbing</option>
-                      <option value="water-heater">Water Heater Services</option>
-                      <option value="boiler">Boiler Repair</option>
-                      <option value="leak-repair">Leak Repair</option>
-                      <option value="bathroom-kitchen">Bathroom/Kitchen Plumbing</option>
-                      <option value="repiping">Whole House Repiping</option>
-                      <option value="gas-line">Gas Line Services</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Describe Your Issue
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition resize-none"
-                      placeholder="Please describe your plumbing issue or what service you need..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-4 px-6 rounded-lg transition"
-                  >
-                    Send Message
-                  </button>
-                  <p className="text-sm text-gray-500">
-                    * Required fields. We&apos;ll respond within 1 business day. For emergencies, please call.
-                  </p>
-                </form>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Phone Cards */}
+              <a href={BUSINESS_INFO.phoneLink} className="bg-white border-2 border-red-700 rounded-xl p-6 text-center hover:bg-red-50 transition group">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition">
+                  <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <p className="text-gray-600 mb-1">Call {BUSINESS_INFO.phoneName}</p>
+                <p className="text-2xl font-bold text-red-700">{BUSINESS_INFO.phone}</p>
+              </a>
+
+              <a href={BUSINESS_INFO.phone2Link} className="bg-white border-2 border-gray-300 rounded-xl p-6 text-center hover:border-red-700 hover:bg-red-50 transition group">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-100 transition">
+                  <svg className="w-8 h-8 text-gray-700 group-hover:text-red-700 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <p className="text-gray-600 mb-1">Call {BUSINESS_INFO.phone2Name}</p>
+                <p className="text-2xl font-bold text-gray-900 group-hover:text-red-700 transition">{BUSINESS_INFO.phone2}</p>
+              </a>
+            </div>
+
+            {/* Contact Info Grid */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-gray-50 rounded-xl p-6 text-center">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                <a href={`mailto:${BUSINESS_INFO.email}`} className="text-red-700 hover:text-red-800 text-sm">
+                  {BUSINESS_INFO.email}
+                </a>
               </div>
 
-              {/* Contact Info */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
-
-                <div className="space-y-6 mb-8">
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <a href={BUSINESS_INFO.phoneLink} className="text-red-700 hover:text-red-800 text-lg font-medium">
-                        {BUSINESS_INFO.phone}
-                      </a>
-                      <p className="text-gray-500 text-sm">24/7 for emergencies</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Email</h3>
-                      <a href={`mailto:${BUSINESS_INFO.email}`} className="text-red-700 hover:text-red-800">
-                        {BUSINESS_INFO.email}
-                      </a>
-                      <p className="text-gray-500 text-sm">Response within 24 hours</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Address</h3>
-                      <p className="text-gray-700">{BUSINESS_INFO.address.full}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Hours</h3>
-                      <p className="text-gray-700">Emergency: 24/7</p>
-                      <p className="text-gray-500 text-sm">Office: Mon-Fri 8am-6pm</p>
-                    </div>
-                  </div>
+              <div className="bg-gray-50 rounded-xl p-6 text-center">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </div>
+                <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
+                <p className="text-gray-600 text-sm">{BUSINESS_INFO.address.full}</p>
+              </div>
 
-                {/* Service Areas */}
-                <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="font-semibold text-gray-900 mb-4">Service Areas</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {BUSINESS_INFO.serviceAreas.map((area, index) => (
-                      <Link key={index} href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`} className="bg-white px-3 py-1 rounded-full text-sm text-gray-600 hover:bg-red-50 hover:text-red-700 transition">
-                        {area}
-                      </Link>
-                    ))}
-                  </div>
+              <div className="bg-gray-50 rounded-xl p-6 text-center">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
+                <h3 className="font-semibold text-gray-900 mb-1">Hours</h3>
+                <p className="text-gray-600 text-sm">Emergency: 24/7</p>
+              </div>
+            </div>
+
+            {/* Service Areas */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="font-semibold text-gray-900 mb-4 text-center">Service Areas</h3>
+              <div className="flex flex-wrap justify-center gap-2">
+                {BUSINESS_INFO.serviceAreas.map((area, index) => (
+                  <Link key={index} href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`} className="bg-white px-4 py-2 rounded-full text-sm text-gray-600 hover:bg-red-50 hover:text-red-700 transition">
+                    {area}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -219,22 +143,18 @@ export default function ContactPage() {
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Find Us</h2>
-          <div className="bg-gray-300 rounded-xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <svg className="w-12 h-12 text-gray-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <p className="text-gray-600">697 Old Bridge Turnpike, East Brunswick, NJ 08816</p>
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS_INFO.address.full)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 text-red-700 hover:text-red-800 font-medium"
-              >
-                Open in Google Maps →
-              </a>
-            </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563312.4975387864!2d-76.04627729339961!3d40.06772212112381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1767607369527!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Illyrian Plumber Location"
+              className="w-full"
+            />
           </div>
         </div>
       </section>

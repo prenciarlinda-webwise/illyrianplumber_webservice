@@ -17,8 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function BathroomRemodelingPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Bathroom Remodeling Plumbing",
+    description: "Professional bathroom remodeling plumbing services in East Brunswick, NJ. Fixture installation, pipe relocation, and complete bathroom plumbing.",
+    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
+    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
+    serviceType: "Bathroom Remodeling",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">

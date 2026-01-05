@@ -17,8 +17,19 @@ export const metadata: Metadata = {
 };
 
 export default function GasLineRepairPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Gas Line Repair & Installation",
+    description: "Licensed gas line repair, installation, and safety inspections in East Brunswick, NJ. Expert gas plumbers for appliance hookups, leak repair, and new gas lines.",
+    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
+    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
+    serviceType: "Gas Line Services",
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
         <div className="absolute inset-0">

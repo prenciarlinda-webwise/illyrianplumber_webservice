@@ -31,8 +31,24 @@ const stats = [
 ];
 
 export default function AboutPage() {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    mainEntity: {
+      "@type": "Plumber",
+      "@id": "https://www.illyrianplumber.com/#organization",
+      name: BUSINESS_INFO.name,
+      description: "Professional 24/7 plumbing services in East Brunswick, NJ and Central New Jersey. Licensed master plumbers providing water heater repair, boiler service, gas line installation, and whole house repiping.",
+      foundingDate: BUSINESS_INFO.founded,
+      telephone: BUSINESS_INFO.phone,
+      address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
       <section className="relative bg-gray-900 text-white py-16 md:py-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -158,7 +174,7 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {BUSINESS_INFO.serviceAreas.map((area, index) => (
-                  <Link key={index} href={`/service-areas/plumber-${area.toLowerCase().replace(/\s+/g, "-")}`} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition">
+                  <Link key={index} href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition">
                     {area}, NJ
                   </Link>
                 ))}
@@ -168,7 +184,7 @@ export default function AboutPage() {
             {/* Contact Info */}
             <div className="bg-gray-900 text-white rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <h4 className="text-gray-400 text-sm uppercase tracking-wide mb-2">Address</h4>
                   <p className="text-white">{BUSINESS_INFO.address.full}</p>
@@ -195,6 +211,19 @@ export default function AboutPage() {
                   <p className="text-white">24/7 Emergency Service</p>
                   <p className="text-gray-400 text-sm">Office: Mon-Fri 8am-6pm</p>
                 </div>
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563312.4975387864!2d-76.04627729339961!3d40.06772212112381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1767607369527!5m2!1sen!2s"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Illyrian Plumber Location"
+                  className="w-full"
+                />
               </div>
             </div>
           </div>
