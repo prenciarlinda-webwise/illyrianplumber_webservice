@@ -123,6 +123,9 @@ export default function Footer() {
               <Link href="/terms-of-service" className="text-gray-400 hover:text-white transition">
                 Terms of Service
               </Link>
+              <Link href="/sitemap-page" className="text-gray-400 hover:text-white transition">
+                Sitemap
+              </Link>
               <span className="text-gray-400">{BUSINESS_INFO.licenses.insured}</span>
             </div>
           </div>

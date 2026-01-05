@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-{ source: '/testimonials', destination: '/about-us', permanent: true },
+{ source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/testimonials', destination: '/about-us', permanent: true },
       { source: '/coverage', destination: '/service-areas', permanent: true },
       { source: '/my-account', destination: '/', permanent: true },
       { source: '/water-heater-installation', destination: '/services/tankless-water-heater-installation', permanent: true },

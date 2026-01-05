@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="204f4f56-ee43-4ec3-9441-4267905e1cc5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="204f4f56-ee43-4ec3-9441-4267905e1cc5" name="Changes" comment="Gitignore update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;prenciarlinda-webwise&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/prenciarlinda-webwise/illyrianplumber_webservice.git&quot;,
+    &quot;accountId&quot;: &quot;3d4c06c1-1c49-4a86-8ef3-3117dbdccef6&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -76,11 +88,25 @@
       <workItem from="1766574290081" duration="18845000" />
       <workItem from="1766653402782" duration="5000" />
       <workItem from="1766726731279" duration="847000" />
-      <workItem from="1767518657850" duration="22900000" />
+      <workItem from="1767518657850" duration="23269000" />
+      <workItem from="1767611005501" duration="10000" />
     </task>
+    <task id="LOCAL-00001" summary="Gitignore update">
+      <option name="closed" value="true" />
+      <created>1767610349391</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767610349391</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gitignore update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gitignore update" />
   </component>
 </project>
