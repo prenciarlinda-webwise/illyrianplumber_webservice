@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BUSINESS_INFO } from "@/lib/constants";
+import { GoogleTagManager, GoogleTagManagerNoScript, GoogleAnalytics } from "@/components/Analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -254,6 +255,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <GoogleTagManager />
+        <GoogleAnalytics />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#b91c1c" />
@@ -263,6 +266,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        <GoogleTagManagerNoScript />
         <Header />
         <main>{children}</main>
         <Footer />
