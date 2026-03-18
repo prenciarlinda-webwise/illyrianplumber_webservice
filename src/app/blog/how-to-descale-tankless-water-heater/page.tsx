@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "tankless water heater descaling",
     "tankless water heater vinegar flush",
     "tankless water heater cleaning",
+    "how often descale tankless water heater",
+    "tankless water heater scale buildup",
+    "tankless water heater annual maintenance",
+    "tankless water heater service",
+    "tankless water heater flush frequency",
+    "descaling solution tankless water heater",
   ],
   openGraph: {
     title: "How to Descale a Tankless Water Heater: Complete Maintenance Guide",
@@ -44,7 +50,7 @@ export default function TanklessMaintenancePost() {
       },
     },
     datePublished: "2025-01-13T08:00:00.000Z",
-    dateModified: "2025-01-13T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/how-to-descale-tankless-water-heater",

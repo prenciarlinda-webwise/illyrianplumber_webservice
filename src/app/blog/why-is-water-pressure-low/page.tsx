@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     "how to fix low water pressure",
     "sudden low water pressure",
     "low hot water pressure",
+    "low water pressure causes",
+    "no water pressure in house",
+    "water pressure dropped suddenly",
+    "how to increase water pressure",
+    "water pressure low in shower",
+    "low water pressure fixes",
+    "residential water pressure problems",
+    "water pressure regulator",
   ],
   openGraph: {
     title: "Why Is My Water Pressure Low? 8 Causes and DIY Fixes",
@@ -44,7 +52,7 @@ export default function LowWaterPressurePost() {
       },
     },
     datePublished: "2025-01-17T08:00:00.000Z",
-    dateModified: "2025-01-17T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/why-is-water-pressure-low",

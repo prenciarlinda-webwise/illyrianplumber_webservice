@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "bathroom renovation schedule",
     "bathroom remodel phases",
     "bathroom renovation duration",
+    "bathroom remodel time",
+    "small bathroom remodel timeline",
+    "bathroom plumbing rough in time",
+    "bathroom renovation weeks",
+    "how long does a bathroom remodel take",
+    "bathroom renovation plumbing cost",
   ],
   openGraph: {
     title: "How Long Does a Bathroom Remodel Take?",
@@ -33,7 +39,7 @@ export default function BathroomRemodelPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-29T08:00:00.000Z",
-    dateModified: "2025-01-29T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/how-long-bathroom-remodel-take" },
   };
 

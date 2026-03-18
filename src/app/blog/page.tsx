@@ -18,6 +18,15 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    title: "11 Best Whole House Water Filtration Systems (2026 Expert Review)",
+    slug: "best-whole-house-water-filtration-systems",
+    excerpt: "Licensed plumbers tested and reviewed the 11 best whole house water filtration systems for 2026. Compare performance, cost, and which filter is best for your home.",
+    category: "Water Quality",
+    date: "March 2026",
+    image: "/images/professional-plumbing-services.jpg",
+    readTime: "25 min read",
+  },
+  {
     title: "How Tankless Water Heaters Work: The Complete Guide",
     slug: "how-tankless-water-heaters-work",
     excerpt: "Discover how tankless water heaters provide endless hot water on demand. Learn the technology, benefits, and if it's right for your New Jersey home.",

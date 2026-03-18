@@ -48,7 +48,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/service-areas/north-brunswick", priority: 0.75, changeFrequency: "monthly" as const },
   ];
 
-  const allPages = [...mainPages, ...featuredServices, ...residentialPages, ...serviceAreaPages];
+  // Blog posts
+  const blogPosts = [
+    { url: "/blog/how-tankless-water-heaters-work", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/tankless-vs-tank-water-heater", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/what-size-tankless-water-heater", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/signs-water-heater-dying", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/how-to-descale-tankless-water-heater", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/sump-pump-maintenance-guide", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/common-boiler-problems-winter", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/why-is-water-pressure-low", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/signs-of-slab-leak-sewer-line", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/gas-leak-detection-safety", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/whole-house-water-filter-worth-it", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/how-long-bathroom-remodel-take", priority: 0.7, changeFrequency: "monthly" as const },
+    { url: "/blog/best-whole-house-water-filtration-systems", priority: 0.8, changeFrequency: "monthly" as const },
+  ];
+
+  // Legal pages
+  const legalPages = [
+    { url: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" as const },
+    { url: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" as const },
+  ];
+
+  const allPages = [...mainPages, ...featuredServices, ...residentialPages, ...serviceAreaPages, ...blogPosts, ...legalPages];
 
   return allPages.map((page) => ({
     url: `${baseUrl}${page.url}`,

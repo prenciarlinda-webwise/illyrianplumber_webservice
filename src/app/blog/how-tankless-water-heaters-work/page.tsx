@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "on demand water heater",
     "tankless water heater lifespan",
     "tankless water heater benefits",
+    "tankless water heater technology",
+    "instantaneous water heater",
+    "tankless water heater energy efficiency",
+    "electric tankless water heater how it works",
+    "gas tankless water heater how it works",
+    "tankless water heater advantages disadvantages",
   ],
   openGraph: {
     title: "How Tankless Water Heaters Work: Complete Guide to Pros, Cons & Lifespan",
@@ -44,7 +50,7 @@ export default function TanklessGuidePost() {
       },
     },
     datePublished: "2025-01-06T08:00:00.000Z",
-    dateModified: "2025-01-06T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/how-tankless-water-heaters-work",

@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     "water heater lifespan",
     "water heater failing",
     "old water heater symptoms",
+    "water heater not working",
+    "hot water heater problems",
+    "water heater leaking",
+    "water heater making noise",
+    "water heater troubleshooting",
+    "hot water heater not heating",
+    "water heater repair vs replace",
+    "how long do water heaters last",
   ],
   openGraph: {
     title: "7 Warning Signs Your Water Heater Is Dying (And What to Do)",
@@ -44,7 +52,7 @@ export default function WaterHeaterDyingPost() {
       },
     },
     datePublished: "2025-01-15T08:00:00.000Z",
-    dateModified: "2025-01-15T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/signs-water-heater-dying",

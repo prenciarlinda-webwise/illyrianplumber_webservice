@@ -4,18 +4,25 @@ import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Tankless vs Tank Water Heater: 2025 Cost & Performance Comparison",
+  title: "Tankless vs Tank Water Heater: 2026 Cost & Performance Comparison",
   description: "Compare tankless vs tank water heaters. Learn costs, energy savings, pros and cons of gas vs electric tankless water heaters. Expert NJ plumber guide.",
   keywords: [
     "tankless water heater vs tank",
-    "tankless water heater cost",
+    "tankless vs tank water heater",
     "electric vs gas tankless water heater",
-    "average cost of a tankless water heater",
+    "tank vs tankless water heater pros and cons",
     "tank vs tankless water heater",
     "water heater comparison",
+    "tankless vs traditional water heater",
+    "on demand water heater vs tank",
+    "tankless water heater cost vs tank",
+    "is tankless water heater worth it",
+    "tankless water heater energy savings",
+    "best water heater type for home",
+    "water heater replacement options",
   ],
   openGraph: {
-    title: "Tankless vs Tank Water Heater: 2025 Cost & Performance Comparison",
+    title: "Tankless vs Tank Water Heater: 2026 Cost & Performance Comparison",
     description: "Compare tankless vs tank water heaters. Learn costs, energy savings, and which is best for your NJ home.",
     type: "article",
     publishedTime: "2025-01-08T08:00:00.000Z",
@@ -27,7 +34,7 @@ export default function TanklessVsTankPost() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Tankless vs Tank Water Heater: 2025 Cost & Performance Comparison",
+    headline: "Tankless vs Tank Water Heater: 2026 Cost & Performance Comparison",
     description: "Compare tankless vs tank water heaters. Learn costs, energy savings, and which is best for your New Jersey home.",
     image: "https://www.illyrianplumber.com/images/water-heater-repair-service.jpg",
     author: {
@@ -44,7 +51,7 @@ export default function TanklessVsTankPost() {
       },
     },
     datePublished: "2025-01-08T08:00:00.000Z",
-    dateModified: "2025-01-08T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/tankless-vs-tank-water-heater",
@@ -130,7 +137,7 @@ export default function TanklessVsTankPost() {
                 <span>18 min read</span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Tankless vs Tank Water Heater: Complete 2025 Cost & Performance Comparison
+                Tankless vs Tank Water Heater: Complete 2026 Cost & Performance Comparison
               </h1>
               <p className="text-xl text-gray-300">
                 An in-depth comparison of tankless and traditional tank water heaters, including costs, energy savings, and which is right for your New Jersey home.

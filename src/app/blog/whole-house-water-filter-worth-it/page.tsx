@@ -13,6 +13,16 @@ export const metadata: Metadata = {
     "water quality NJ",
     "home water filter",
     "water softener vs filter",
+    "whole house water filtration system",
+    "home water filtration",
+    "water purification system",
+    "PFAS water filter NJ",
+    "whole house water filter cost",
+    "is whole house water filter worth it",
+    "hard water filter",
+    "well water filtration system",
+    "water filter installation NJ",
+    "whole house water filter benefits",
   ],
   openGraph: {
     title: "Is a Whole House Water Filter Worth It?",
@@ -33,7 +43,7 @@ export default function WaterFilterPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-27T08:00:00.000Z",
-    dateModified: "2025-01-27T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/whole-house-water-filter-worth-it" },
   };
 

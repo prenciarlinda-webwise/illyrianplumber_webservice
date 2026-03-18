@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     "calculate tankless water heater size",
     "tankless water heater BTU",
     "tankless water heater for 3 bathroom house",
+    "tankless water heater size calculator",
+    "best tankless water heater size",
+    "tankless water heater flow rate",
+    "tankless water heater temperature rise",
+    "whole house tankless water heater size",
+    "tankless water heater sizing chart",
   ],
   openGraph: {
     title: "What Size Tankless Water Heater Do I Need? Complete Sizing Guide",
@@ -44,7 +50,7 @@ export default function TanklessSizingPost() {
       },
     },
     datePublished: "2025-01-10T08:00:00.000Z",
-    dateModified: "2025-01-10T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/what-size-tankless-water-heater",

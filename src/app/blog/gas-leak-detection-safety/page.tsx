@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     "gas line installation",
     "natural gas safety",
     "gas leak smell",
+    "what to do gas leak",
+    "gas line repair",
+    "gas leak in house",
+    "how to detect gas leak",
+    "gas pipe leak detection",
+    "natural gas leak symptoms",
+    "gas line inspection",
   ],
   openGraph: {
     title: "Gas Line Safety: What Every Homeowner Should Know",
@@ -33,7 +40,7 @@ export default function GasSafetyPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-24T08:00:00.000Z",
-    dateModified: "2025-01-24T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/gas-leak-detection-safety" },
   };
 

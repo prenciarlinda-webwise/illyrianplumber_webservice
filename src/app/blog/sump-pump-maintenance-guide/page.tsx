@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     "sump pump troubleshooting",
     "how to test sump pump",
     "sump pump replacement",
+    "how does a sump pump work",
+    "sump pump not working",
+    "sump pump check valve",
+    "sump pump float switch",
+    "sump pump running constantly",
+    "sump pump noise",
+    "sump pump installation",
+    "basement flooding prevention",
   ],
   openGraph: {
     title: "Sump Pump Maintenance Guide",
@@ -33,7 +41,7 @@ export default function SumpPumpPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-31T08:00:00.000Z",
-    dateModified: "2025-01-31T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/sump-pump-maintenance-guide" },
   };
 

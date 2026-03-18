@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     "sewer line repair",
     "foundation leak",
     "underground water leak",
+    "sewer line camera inspection",
+    "trenchless sewer repair",
+    "slab leak repair cost",
+    "sewer line replacement",
+    "sewer backup causes",
+    "broken sewer line signs",
+    "sewer line inspection",
   ],
   openGraph: {
     title: "Signs of a Slab Leak or Sewer Line Problem",
@@ -33,7 +40,7 @@ export default function SlabLeakPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-22T08:00:00.000Z",
-    dateModified: "2025-01-22T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/signs-of-slab-leak-sewer-line" },
   };
 

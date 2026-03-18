@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     "boiler repair",
     "boiler no heat",
     "boiler pilot light",
+    "boiler making noise",
+    "boiler leaking water",
+    "boiler pressure too low",
+    "boiler keeps turning off",
+    "boiler radiator not heating",
+    "boiler kettling",
+    "boiler short cycling",
+    "winter boiler problems",
   ],
   openGraph: {
     title: "Common Boiler Problems in Winter (And How to Fix Them)",
@@ -33,7 +41,7 @@ export default function BoilerProblemsPost() {
     author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
     publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
     datePublished: "2025-01-20T08:00:00.000Z",
-    dateModified: "2025-01-20T08:00:00.000Z",
+    dateModified: "2026-03-18T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/common-boiler-problems-winter" },
   };
 
