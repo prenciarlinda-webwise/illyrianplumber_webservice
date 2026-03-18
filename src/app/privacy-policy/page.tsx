@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Illyrian Plumber",
+  title: "Privacy Policy",
   description: "Privacy Policy for Illyrian Plumber Corp. Learn how we collect, use, and protect your personal information.",
 };
 

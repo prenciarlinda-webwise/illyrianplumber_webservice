@@ -1,5 +1,5 @@
 export const BUSINESS_INFO = {
-  name: "Illyrian Group Corp",
+  name: "Illyrian Plumber",
   phone: "(347) 461-4856",
   phoneLink: "tel:+13474614856",
   phoneName: "Niti",
@@ -16,7 +16,7 @@ export const BUSINESS_INFO = {
   },
   hours: "24/7 Emergency Service",
   tagline: "High-End Mechanical Plumbing & Water Heating Specialists",
-  description: "Illyrian Group Corp provides expert mechanical plumbing services in East Brunswick, NJ and Middlesex County. Specializing in water heaters, boiler systems, gas lines, and whole-house repiping.",
+  description: "Illyrian Plumber provides expert mechanical plumbing services in East Brunswick, NJ and Middlesex County. Specializing in water heaters, boiler systems, gas lines, and whole-house repiping.",
   founded: "2010",
   stats: {
     happyClients: "500+",

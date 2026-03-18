@@ -15,8 +15,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.illyrianplumber.com"),
   title: {
-    default: `${BUSINESS_INFO.name} | 24/7 Emergency Plumber in East Brunswick, NJ`,
-    template: `%s | ${BUSINESS_INFO.name}`,
+    default: `${BUSINESS_INFO.name} - 24/7 Emergency Plumber in East Brunswick, NJ`,
+    template: `%s - ${BUSINESS_INFO.name}`,
   },
   description: BUSINESS_INFO.description,
   keywords: [

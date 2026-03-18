@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Illyrian Plumber East Brunswick NJ",
+  title: "Contact Us - East Brunswick NJ",
   description: "Contact Illyrian Plumber for plumbing services in East Brunswick, NJ. Call (347) 461-4856 for 24/7 emergency service.",
   keywords: [
     "contact plumber",

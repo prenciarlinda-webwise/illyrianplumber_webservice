@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sitemap | Illyrian Plumber Corp",
+  title: "Sitemap",
   description: "Browse all pages on the Illyrian Plumber website including services, service areas, and helpful plumbing articles.",
 };
 

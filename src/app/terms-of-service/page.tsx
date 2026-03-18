@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Illyrian Plumber",
+  title: "Terms of Service",
   description: "Terms of Service for Illyrian Plumber Corp. Read our terms and conditions for plumbing services.",
 };
 

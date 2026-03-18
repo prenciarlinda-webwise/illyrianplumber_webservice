@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Illyrian Plumber - Licensed NJ Plumbing Company",
+  title: "About Us - Licensed NJ Plumbing Company",
   description: "Learn about Illyrian Plumber Corp, your trusted licensed plumber in East Brunswick, NJ. Family-owned, 24/7 service, and committed to quality workmanship.",
   keywords: [
     "about illyrian plumber",
