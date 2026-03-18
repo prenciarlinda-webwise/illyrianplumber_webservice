@@ -112,8 +112,8 @@ export default function TanklessGuidePost() {
         <header className="relative bg-gray-900 text-white py-16 md:py-24">
           <div className="absolute inset-0">
             <Image
-              src="/images/tankless-water-heater-installation.jpg"
-              alt="Tankless water heater installation by licensed plumber"
+              src="/images/residential-pex-plumbing-install.jpg"
+              alt="How tankless water heaters work - complete guide"
               fill
               className="object-cover opacity-40"
               priority
@@ -145,7 +145,7 @@ export default function TanklessGuidePost() {
                 IG
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Written by {BUSINESS_INFO.name}</p>
+                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
                 <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
               </div>
             </div>
@@ -154,7 +154,8 @@ export default function TanklessGuidePost() {
 
         {/* Content */}
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-3xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex-1 min-w-0 max-w-3xl">
             {/* Introduction */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -162,6 +163,14 @@ export default function TanklessGuidePost() {
               </p>
               <p>
                 As licensed plumbers who have installed hundreds of tankless systems throughout East Brunswick and Middlesex County, we&apos;ve seen firsthand how this technology can transform a home&apos;s hot water experience. In this comprehensive guide, we&apos;ll explain exactly how tankless water heaters work, break down the real pros and cons, and help you understand what to expect from these systems in our New Jersey climate.
+              </p>
+            </div>
+
+            {/* About Illyrian Plumber */}
+            <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
+              <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -290,6 +299,18 @@ export default function TanklessGuidePost() {
               </p>
             </section>
 
+            {/* Dark CTA */}
+            <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-lg">Thinking about going tankless?</p>
+                <p className="text-gray-300 text-sm">Expert tankless installation in Middlesex County</p>
+              </div>
+              <div className="flex gap-3">
+                <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap">Call Niti</a>
+                <a href={BUSINESS_INFO.phone2Link} className="bg-white text-gray-900 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm whitespace-nowrap">Call Danny</a>
+              </div>
+            </div>
+
             <section id="pros-cons" className="mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Tankless Water Heater Pros and Cons</h2>
 
@@ -387,6 +408,28 @@ export default function TanklessGuidePost() {
                 <p className="text-gray-700">Consider installing a water softener alongside your tankless system. Softened water dramatically reduces scale buildup, extending the heat exchanger&apos;s life and maintaining peak efficiency. Many of our East Brunswick customers combine these systems for optimal performance.</p>
               </div>
             </section>
+
+            {/* Red CTA */}
+            <div className="bg-red-700 text-white rounded-xl p-6 mb-12">
+              <p className="font-bold text-lg mb-1">Thinking about going tankless?</p>
+              <p className="text-red-100 text-sm mb-4">Expert tankless installation in Middlesex County</p>
+              <div className="flex flex-wrap gap-3">
+                <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm">Call Niti: {BUSINESS_INFO.phone}</a>
+                <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm">Call Danny: {BUSINESS_INFO.phone2}</a>
+              </div>
+            </div>
+
+            {/* Service Card */}
+            <div className="border border-gray-200 rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-start gap-4 hover:shadow-md transition">
+              <div className="bg-red-100 rounded-lg p-3 flex-shrink-0">
+                <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-gray-900 mb-1">Related Service: Tankless Water Heater Installation</p>
+                <p className="text-sm text-gray-600 mb-2">Professional tankless water heater installation with gas line upgrades, venting, and full system setup. Licensed and insured for all Middlesex County municipalities.</p>
+                <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800 font-medium text-sm">Learn More</Link>
+              </div>
+            </div>
 
             <section id="middlesex-county" className="mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County Considerations</h2>
@@ -506,6 +549,51 @@ export default function TanklessGuidePost() {
                 </Link>
               </div>
             </section>
+          </div>
+          {/* Sidebar */}
+          <aside className="hidden lg:block lg:w-72 flex-shrink-0">
+            <div className="sticky top-[6rem] space-y-6">
+              <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
+                <p className="text-lg font-bold text-gray-900 mb-1">Need a Plumber?</p>
+                <p className="text-gray-600 text-sm mb-4">Expert tankless water heater installation and service in Middlesex County.</p>
+                <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">Call Niti: {BUSINESS_INFO.phone}</a>
+                <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">Call Danny: {BUSINESS_INFO.phone2}</a>
+                <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">Service Areas</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">Our Services</p>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/services/tankless-water-heater-installation" className="text-gray-700 hover:text-red-700 transition">Tankless Water Heater Installation</Link></li>
+                  <li><Link href="/services/water-heater-repair" className="text-gray-700 hover:text-red-700 transition">Water Heater Repair</Link></li>
+                  <li><Link href="/services/water-heater-replacement" className="text-gray-700 hover:text-red-700 transition">Water Heater Replacement</Link></li>
+                  <li><Link href="/services/boiler-repair-service" className="text-gray-700 hover:text-red-700 transition">Boiler Repair</Link></li>
+                  <li><Link href="/services/gas-line-repair-installation" className="text-gray-700 hover:text-red-700 transition">Gas Line Services</Link></li>
+                  <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">Emergency Plumbing</Link></li>
+                </ul>
+                <Link href="/services" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Services</Link>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">You Might Also Like</p>
+                <ul className="space-y-3 text-sm">
+                  <li><Link href="/blog/tankless-vs-tank-water-heater" className="text-gray-700 hover:text-red-700 transition leading-snug block">Tankless vs Tank Water Heater: Complete Comparison</Link></li>
+                  <li><Link href="/blog/what-size-tankless-water-heater" className="text-gray-700 hover:text-red-700 transition leading-snug block">What Size Tankless Water Heater Do I Need?</Link></li>
+                  <li><Link href="/blog/how-to-descale-tankless-water-heater" className="text-gray-700 hover:text-red-700 transition leading-snug block">How to Descale a Tankless Water Heater</Link></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
           </div>
         </div>
       </article>

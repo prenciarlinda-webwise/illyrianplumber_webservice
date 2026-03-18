@@ -106,7 +106,7 @@ export default function BestWaterFiltrationPost() {
         name: "Do whole house water filters reduce water pressure?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Quality whole house water filters cause minimal pressure drop — typically 1-5 PSI when properly sized. However, clogged or undersized filters can significantly reduce pressure. Choose a system rated for your home's flow rate (typically 10-15 GPM for a 2-3 bathroom house) and replace filters on schedule to maintain pressure.",
+          text: "Quality whole house water filters cause minimal pressure drop -typically 1-5 PSI when properly sized. However, clogged or undersized filters can significantly reduce pressure. Choose a system rated for your home's flow rate (typically 10-15 GPM for a 2-3 bathroom house) and replace filters on schedule to maintain pressure.",
         },
       },
       {
@@ -130,7 +130,7 @@ export default function BestWaterFiltrationPost() {
         name: "What is the best whole house water filtration system for city water?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For city/municipal water, the primary concerns are chlorine, chloramine, PFAS, and sediment. The SpringWell CF1 is our top pick for city water — it removes 99%+ of chlorine and significantly reduces PFAS. The Aquasana Rhino is another excellent choice with NSF-certified contaminant removal.",
+          text: "For city/municipal water, the primary concerns are chlorine, chloramine, PFAS, and sediment. The SpringWell CF1 is our top pick for city water -it removes 99%+ of chlorine and significantly reduces PFAS. The Aquasana Rhino is another excellent choice with NSF-certified contaminant removal.",
         },
       },
       {
@@ -146,7 +146,7 @@ export default function BestWaterFiltrationPost() {
         name: "Do I need a water softener or a water filter?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "They serve different purposes. Water filters remove contaminants (chlorine, sediment, chemicals, heavy metals). Water softeners remove hardness minerals (calcium, magnesium) that cause scale buildup. Many homes benefit from both — a filter for clean water and a softener for soft water. Some systems combine both functions.",
+          text: "They serve different purposes. Water filters remove contaminants (chlorine, sediment, chemicals, heavy metals). Water softeners remove hardness minerals (calcium, magnesium) that cause scale buildup. Many homes benefit from both -a filter for clean water and a softener for soft water. Some systems combine both functions.",
         },
       },
       {
@@ -162,7 +162,7 @@ export default function BestWaterFiltrationPost() {
         name: "What contaminants do whole house water filters remove?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Depending on the system, whole house water filters can remove: chlorine, chloramine, sediment, rust, PFAS/PFOA, VOCs (volatile organic compounds), heavy metals (lead, mercury), pesticides, herbicides, and some bacteria. No single filter removes everything — multi-stage systems provide the broadest protection.",
+          text: "Depending on the system, whole house water filters can remove: chlorine, chloramine, sediment, rust, PFAS/PFOA, VOCs (volatile organic compounds), heavy metals (lead, mercury), pesticides, herbicides, and some bacteria. No single filter removes everything -multi-stage systems provide the broadest protection.",
         },
       },
     ],
@@ -221,7 +221,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div>
                 <p className="font-semibold text-gray-900">
-                  Reviewed by {BUSINESS_INFO.name}
+                  Reviewed by Illyrian Plumber
                 </p>
                 <p className="text-sm text-gray-600">
                   Licensed Master Plumbers serving Middlesex County, NJ since
@@ -233,14 +233,15 @@ export default function BestWaterFiltrationPost() {
         </div>
 
         <div className="container mx-auto px-4 py-12">
-          <div className="max-w-3xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex-1 min-w-0 max-w-3xl">
             {/* Intro */}
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed">
                 Choosing the best whole house water filtration system is
                 overwhelming. There are hundreds of options, conflicting reviews,
-                and confusing specs. As licensed plumbers who install water
-                filtration systems every week, we cut through the marketing and
+                and confusing specs. As <Link href="/services/water-filtration-system" className="text-red-700 hover:text-red-800 underline">licensed plumbers who install water
+                filtration systems</Link> every week, we cut through the marketing and
                 tested what actually matters: <strong>contaminant removal</strong>,{" "}
                 <strong>flow rate under real conditions</strong>,{" "}
                 <strong>long-term maintenance costs</strong>, and{" "}
@@ -249,16 +250,22 @@ export default function BestWaterFiltrationPost() {
               <p className="text-gray-700">
                 Whether you&apos;re on city water dealing with chlorine and PFAS
                 or well water with iron and sediment, this guide will help you
-                find the right whole house water filter for your home. We&apos;ve
-                organized our picks by use case so you can jump straight to
-                what&apos;s relevant.
+                find the right whole house water filter for your home. If you&apos;re still deciding whether filtration is right for you, read our guide on <Link href="/blog/whole-house-water-filter-worth-it" className="text-red-700 hover:text-red-800 underline">whether a whole house water filter is worth it</Link>. Otherwise, dive into our top picks organized by use case below.
+              </p>
+            </div>
+
+            {/* About Illyrian Plumber */}
+            <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
+              <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
             {/* Quick Picks Summary */}
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
               <h2 className="text-xl font-bold text-gray-900 mb-4">
-                Our Top Picks at a Glance
+                Best Whole House Water Filtration Systems: Our Top Picks
               </h2>
               <div className="space-y-3 text-sm">
                 <div className="flex items-start gap-3">
@@ -266,7 +273,7 @@ export default function BestWaterFiltrationPost() {
                     Best Overall
                   </span>
                   <p className="text-gray-700">
-                    <strong>SpringWell CF1</strong> &mdash; Best carbon
+                    <strong>SpringWell CF1</strong> -Best carbon
                     filtration for city water. 1M gallon capacity, 9+ GPM flow,
                     removes 99% chlorine and reduces PFAS.
                   </p>
@@ -276,7 +283,7 @@ export default function BestWaterFiltrationPost() {
                     Best Value
                   </span>
                   <p className="text-gray-700">
-                    <strong>iSpring WGB32B</strong> &mdash; Best budget option
+                    <strong>iSpring WGB32B</strong> -Best budget option
                     under $500. 3-stage filtration, easy DIY install, solid
                     chlorine and sediment removal.
                   </p>
@@ -286,7 +293,7 @@ export default function BestWaterFiltrationPost() {
                     Best for Well Water
                   </span>
                   <p className="text-gray-700">
-                    <strong>SoftPro IronMaster</strong> &mdash; Handles iron,
+                    <strong>SoftPro IronMaster</strong> -Handles iron,
                     manganese, and hydrogen sulfide. Chemical-free, backwashing
                     media filter. Built for tough well water.
                   </p>
@@ -296,7 +303,7 @@ export default function BestWaterFiltrationPost() {
                     Best Premium
                   </span>
                   <p className="text-gray-700">
-                    <strong>SpringWell WS1</strong> &mdash; Complete whole home
+                    <strong>SpringWell WS1</strong> -Complete whole home
                     system with softener combo. Filter + softener in one. Best
                     for hard water areas.
                   </p>
@@ -524,7 +531,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                SpringWell CF1 Whole House Water Filter System
+                Best Overall Whole House Water Filter: SpringWell CF1
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -578,7 +585,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Excellent chlorine and PFAS removal</li>
                     <li>+ High flow rate (no pressure loss)</li>
@@ -588,7 +595,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Higher upfront cost than basic filters</li>
                     <li>- Doesn&apos;t soften water (add softener separately)</li>
@@ -606,7 +613,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                iSpring WGB32B 3-Stage Whole House Water Filter
+                Best Budget Whole House Water Filter: iSpring WGB32B
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -653,7 +660,7 @@ export default function BestWaterFiltrationPost() {
                 </p>
                 <p>
                   The 15 GPM flow rate is outstanding for this price range
-                  &mdash; it won&apos;t reduce your water pressure even during
+                  -it won&apos;t reduce your water pressure even during
                   peak household usage. The 20&quot; x 4.5&quot; big blue
                   housings are industry-standard, so replacement filters are
                   widely available and affordable.
@@ -661,7 +668,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Excellent value under $500</li>
                     <li>+ High flow rate (15 GPM)</li>
@@ -671,7 +678,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Filters need replacement every 6-12 months</li>
                     <li>- Doesn&apos;t remove PFAS effectively</li>
@@ -690,7 +697,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                SoftPro IronMaster Whole House Water Filter
+                Best Whole House Water Filter for Well Water: SoftPro IronMaster
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -733,7 +740,7 @@ export default function BestWaterFiltrationPost() {
                   If you&apos;re on well water with iron, manganese, or hydrogen
                   sulfide (rotten egg smell), the SoftPro IronMaster is the best
                   whole house water filter for your situation. It uses air
-                  injection oxidation &mdash; no chemicals needed &mdash; to
+                  injection oxidation -no chemicals needed -to
                   oxidize and trap iron (up to 7 PPM), manganese (up to 1 PPM),
                   and hydrogen sulfide (up to 3 PPM).
                 </p>
@@ -746,7 +753,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ No filter replacements (self-cleaning)</li>
                     <li>+ Chemical-free iron/manganese removal</li>
@@ -756,7 +763,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Requires electricity and drain connection</li>
                     <li>- Doesn&apos;t remove chlorine or chemicals</li>
@@ -767,6 +774,18 @@ export default function BestWaterFiltrationPost() {
               </div>
             </section>
 
+            {/* Mid-content CTA */}
+            <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-lg">Want cleaner water from every tap?</p>
+                <p className="text-gray-300 text-sm">Get a free water quality consultation from our licensed plumbers.</p>
+              </div>
+              <div className="flex gap-3">
+                <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap">Call Niti</a>
+                <a href={BUSINESS_INFO.phone2Link} className="bg-white text-gray-900 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm whitespace-nowrap">Call Danny</a>
+              </div>
+            </div>
+
             {/* System 4: SpringWell WS1 */}
             <section id="best-premium" className="mb-12">
               <div className="flex items-center gap-3 mb-4">
@@ -775,8 +794,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                SpringWell WS1 Whole House Well Water Filter + Salt-Based
-                Softener
+                Best Premium Whole House Water Filtration System: SpringWell WS1
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -817,8 +835,8 @@ export default function BestWaterFiltrationPost() {
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
                   The SpringWell WS1 is the best whole house water treatment
-                  system for homeowners who want everything handled &mdash;
-                  filtration AND softening &mdash; in one integrated system. It
+                  system for homeowners who want everything handled -
+                  filtration AND softening -in one integrated system. It
                   combines multi-media filtration (for iron, manganese, and
                   sediment) with a salt-based water softener (for hardness
                   minerals).
@@ -832,7 +850,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Filtration + softening in one system</li>
                     <li>+ Excellent for hard water areas</li>
@@ -842,7 +860,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Premium price ($2,500+)</li>
                     <li>- Requires salt refills every 4-8 weeks</li>
@@ -861,7 +879,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Aquasana Rhino EQ-1000 Whole House Water Filter
+                Best Water Filter for Chloramine Removal: Aquasana Rhino EQ-1000
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -901,7 +919,7 @@ export default function BestWaterFiltrationPost() {
                 <p>
                   Many New Jersey water utilities use chloramine (instead of
                   chlorine) as a disinfectant. Standard carbon filters
-                  don&apos;t remove chloramine effectively &mdash; you need
+                  don&apos;t remove chloramine effectively -you need
                   catalytic carbon. The Aquasana Rhino EQ-1000 is specifically
                   designed for chloramine reduction and is NSF certified to
                   remove 97% of chlorine and significantly reduce lead, mercury,
@@ -915,7 +933,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Excellent chloramine removal (catalytic carbon)</li>
                     <li>+ NSF certified (Standards 42, 44, 53, 401)</li>
@@ -924,7 +942,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Lower flow rate (7 GPM)</li>
                     <li>- Pre-filter replacements every 2-3 months</li>
@@ -943,7 +961,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                AquaOx Whole House Water Filter
+                Best Whole House Water Filter for PFAS Removal: AquaOx
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -999,7 +1017,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Strong PFAS/PFOA reduction</li>
                     <li>+ No filter replacements</li>
@@ -1008,7 +1026,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Very expensive ($2,800+)</li>
                     <li>- Requires electricity and drain</li>
@@ -1027,7 +1045,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Pentair Pelican PSE2000 Water Softener Alternative + Filter
+                Best Compact Whole House Filtration System: Pentair Pelican PSE2000
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1075,13 +1093,13 @@ export default function BestWaterFiltrationPost() {
                   Rather than removing hardness minerals, the NaturSoft system
                   conditions them so they don&apos;t stick to surfaces. You
                   still get scale prevention for your pipes and appliances, plus
-                  clean filtered water &mdash; without the slippery feel of
+                  clean filtered water -without the slippery feel of
                   softened water.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ No salt or chemicals needed</li>
                     <li>+ Compact footprint</li>
@@ -1091,7 +1109,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Not a true softener (conditions, not removes)</li>
                     <li>- Mid-premium price</li>
@@ -1109,7 +1127,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Pelican PC1000 Carbon Series + UV
+                Best Whole House Water Filter with UV Disinfection: Pelican PC1000
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1164,7 +1182,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ UV kills bacteria and viruses</li>
                     <li>+ Chemical-free disinfection</li>
@@ -1173,7 +1191,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- UV bulb needs annual replacement (~$50-$80)</li>
                     <li>- Requires electricity</li>
@@ -1191,7 +1209,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Home Master HMF3SDGFEC Whole House Water Filter
+                Best Whole House Water Filter for Heavy Metals: Home Master HMF3SDGFEC
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1244,7 +1262,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Handles iron, manganese, and chemicals</li>
                     <li>+ Oversized filters last longer</li>
@@ -1253,7 +1271,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Filter replacements needed annually</li>
                     <li>- Not for high-iron well water (3+ PPM)</li>
@@ -1271,7 +1289,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Rusco Spin-Down Sediment Filter
+                Best Whole House Sediment Pre-Filter: Rusco Spin-Down
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1315,7 +1333,7 @@ export default function BestWaterFiltrationPost() {
                   pre-filter, and the Rusco spin-down is the best in the
                   business. It uses a reusable polyester screen to trap sand,
                   silt, rust, and debris before they reach your main filter
-                  &mdash; extending the life of your more expensive filtration
+                  -extending the life of your more expensive filtration
                   media.
                 </p>
                 <p>
@@ -1327,7 +1345,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Extremely affordable</li>
                     <li>+ Reusable (no replacement cartridges)</li>
@@ -1337,7 +1355,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Only removes sediment (no chemical filtration)</li>
                     <li>- Must be paired with other filters</li>
@@ -1347,6 +1365,16 @@ export default function BestWaterFiltrationPost() {
               </div>
             </section>
 
+            {/* Mid-content CTA 2 */}
+            <div className="bg-red-700 text-white rounded-xl p-6 mb-12">
+              <p className="font-bold text-lg mb-1">Want cleaner water from every tap?</p>
+              <p className="text-red-100 text-sm mb-4">Our licensed plumbers install and service whole house water filtration systems throughout Middlesex County.</p>
+              <div className="flex flex-wrap gap-3">
+                <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm">Call Niti: {BUSINESS_INFO.phone}</a>
+                <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm">Call Danny: {BUSINESS_INFO.phone2}</a>
+              </div>
+            </div>
+
             {/* System 11: FilterSmart */}
             <section id="best-softener-combo" className="mb-12">
               <div className="flex items-center gap-3 mb-4">
@@ -1355,7 +1383,7 @@ export default function BestWaterFiltrationPost() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                FilterSmart FS1000 Whole House Filter + Salt-Free Softener
+                Best Salt-Free Whole House Filter and Softener Combo: FilterSmart FS1000
               </h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -1396,7 +1424,7 @@ export default function BestWaterFiltrationPost() {
                   The FilterSmart FS1000 combines whole house carbon filtration
                   with TAC (Template Assisted Crystallization) salt-free water
                   conditioning. It&apos;s the lowest-maintenance combo system on
-                  our list &mdash; no salt to add, no backwashing, no electricity,
+                  our list -no salt to add, no backwashing, no electricity,
                   and filter media that lasts 5-10 years.
                 </p>
                 <p>
@@ -1409,7 +1437,7 @@ export default function BestWaterFiltrationPost() {
               </div>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <h4 className="font-bold text-green-800 mb-2">Pros</h4>
+                  <p className="font-bold text-green-800 mb-2">Pros</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>+ Ultra-low maintenance</li>
                     <li>+ No salt, no electricity, no drain</li>
@@ -1419,7 +1447,7 @@ export default function BestWaterFiltrationPost() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-bold text-red-800 mb-2">Cons</h4>
+                  <p className="font-bold text-red-800 mb-2">Cons</p>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li>- Salt-free conditioning less effective than true softening</li>
                     <li>- Not ideal for very hard water (20+ GPG)</li>
@@ -1528,6 +1556,18 @@ export default function BestWaterFiltrationPost() {
               </div>
             </section>
 
+            {/* Service Card */}
+            <div className="border border-gray-200 rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-start gap-4 hover:shadow-md transition">
+              <div className="bg-red-100 rounded-lg p-3 flex-shrink-0">
+                <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-bold text-gray-900 mb-1">Related Service: Water Filtration System Installation</p>
+                <p className="text-sm text-gray-600 mb-2">Professional whole house water filtration system installation and maintenance. We help you choose the right system for your water quality and install it to manufacturer specs.</p>
+                <Link href="/services/water-filtration-system" className="text-red-700 hover:text-red-800 font-medium text-sm">Learn More</Link>
+              </div>
+            </div>
+
             {/* Buying Guide */}
             <section id="buying-guide" className="mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -1605,7 +1645,7 @@ export default function BestWaterFiltrationPost() {
                     A $500 filter with $200/year in replacements costs $1,500
                     over 5 years. A $1,200 filter with $50/year maintenance
                     costs $1,450 over 5 years. Always calculate the 5-year
-                    total cost &mdash; the cheapest system upfront often isn&apos;t
+                    total cost -the cheapest system upfront often isn&apos;t
                     the cheapest to own.
                   </p>
                 </div>
@@ -1689,15 +1729,15 @@ export default function BestWaterFiltrationPost() {
                   </h3>
                   <ul className="text-gray-700 space-y-2 text-sm">
                     <li>
-                      <strong>iSpring WGB32B</strong> &mdash; compression
+                      <strong>iSpring WGB32B</strong> -compression
                       fittings, basic plumbing skills
                     </li>
                     <li>
-                      <strong>Rusco Spin-Down</strong> &mdash; simple inline
+                      <strong>Rusco Spin-Down</strong> -simple inline
                       install
                     </li>
                     <li>
-                      <strong>Home Master HMF3</strong> &mdash; standard
+                      <strong>Home Master HMF3</strong> -standard
                       plumbing connections
                     </li>
                   </ul>
@@ -1712,19 +1752,19 @@ export default function BestWaterFiltrationPost() {
                   </h3>
                   <ul className="text-gray-700 space-y-2 text-sm">
                     <li>
-                      <strong>SpringWell WS1</strong> &mdash; dual tank, drain
+                      <strong>SpringWell WS1</strong> -dual tank, drain
                       connection needed
                     </li>
                     <li>
-                      <strong>SoftPro IronMaster</strong> &mdash; electrical
+                      <strong>SoftPro IronMaster</strong> -electrical
                       and drain required
                     </li>
                     <li>
-                      <strong>AquaOx</strong> &mdash; heavy system, complex
+                      <strong>AquaOx</strong> -heavy system, complex
                       install
                     </li>
                     <li>
-                      <strong>Any system on older homes</strong> &mdash;
+                      <strong>Any system on older homes</strong> -
                       galvanized pipes may need updating
                     </li>
                   </ul>
@@ -1799,7 +1839,7 @@ export default function BestWaterFiltrationPost() {
                 <p className="text-sm text-gray-700">
                   <strong>Pro tip:</strong> Set calendar reminders for filter
                   replacements. A clogged filter doesn&apos;t just stop working
-                  &mdash; it can actually reduce water pressure and become a
+                  -it can actually reduce water pressure and become a
                   breeding ground for bacteria.
                 </p>
               </div>
@@ -1985,7 +2025,7 @@ export default function BestWaterFiltrationPost() {
                       sediment, rust, PFAS/PFOA, VOCs, lead, mercury,
                       pesticides, herbicides, iron, manganese, hydrogen sulfide,
                       and some bacteria (with UV). No single filter removes
-                      everything &mdash; multi-stage systems provide the
+                      everything -multi-stage systems provide the
                       broadest protection. Check NSF certifications for verified
                       removal rates.
                     </p>
@@ -2006,7 +2046,7 @@ export default function BestWaterFiltrationPost() {
                       Sediment pre-filters: every 3-6 months. Carbon block
                       cartridges: every 6-12 months. Carbon tank media: every
                       5-10 years. UV bulbs: annually. Follow the
-                      manufacturer&apos;s schedule &mdash; a clogged filter
+                      manufacturer&apos;s schedule -a clogged filter
                       reduces pressure and can harbor bacteria. Signs it&apos;s
                       time: reduced water pressure, change in taste, or visible
                       discoloration.
@@ -2090,6 +2130,55 @@ export default function BestWaterFiltrationPost() {
                 </Link>
               </div>
             </section>
+          </div>
+          {/* Sidebar */}
+          <aside className="hidden lg:block lg:w-72 flex-shrink-0">
+            <div className="sticky top-[6rem] space-y-6">
+              {/* Call Now */}
+              <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
+                <p className="text-lg font-bold text-gray-900 mb-1">Need a Plumber?</p>
+                <p className="text-gray-600 text-sm mb-4">Get expert water filtration installation and maintenance in Middlesex County.</p>
+                <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">Call Niti: {BUSINESS_INFO.phone}</a>
+                <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">Call Danny: {BUSINESS_INFO.phone2}</a>
+                <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
+              </div>
+              {/* Service Areas */}
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">Service Areas</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                </ul>
+              </div>
+              {/* Services */}
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">Our Services</p>
+                <ul className="space-y-2 text-sm">
+                  <li><Link href="/services/tankless-water-heater-installation" className="text-gray-700 hover:text-red-700 transition">Tankless Water Heater Installation</Link></li>
+                  <li><Link href="/services/water-heater-repair" className="text-gray-700 hover:text-red-700 transition">Water Heater Repair</Link></li>
+                  <li><Link href="/services/water-heater-replacement" className="text-gray-700 hover:text-red-700 transition">Water Heater Replacement</Link></li>
+                  <li><Link href="/services/boiler-repair-service" className="text-gray-700 hover:text-red-700 transition">Boiler Repair</Link></li>
+                  <li><Link href="/services/gas-line-repair-installation" className="text-gray-700 hover:text-red-700 transition">Gas Line Services</Link></li>
+                  <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">Emergency Plumbing</Link></li>
+                </ul>
+                <Link href="/services" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Services</Link>
+              </div>
+              {/* Related Blogs */}
+              <div className="bg-white rounded-xl shadow-md p-5">
+                <p className="font-bold text-gray-900 mb-3">You Might Also Like</p>
+                <ul className="space-y-3 text-sm">
+                  <li><Link href="/blog/whole-house-water-filter-worth-it" className="text-gray-700 hover:text-red-700 transition">Is a Whole House Water Filter Worth It?</Link></li>
+                  <li><Link href="/blog/how-to-descale-tankless-water-heater" className="text-gray-700 hover:text-red-700 transition">How to Descale a Tankless Water Heater</Link></li>
+                  <li><Link href="/blog/why-is-water-pressure-low" className="text-gray-700 hover:text-red-700 transition">Why Is My Water Pressure Low?</Link></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
           </div>
         </div>
       </article>

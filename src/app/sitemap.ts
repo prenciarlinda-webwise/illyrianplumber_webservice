@@ -63,6 +63,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/blog/whole-house-water-filter-worth-it", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/blog/how-long-bathroom-remodel-take", priority: 0.7, changeFrequency: "monthly" as const },
     { url: "/blog/best-whole-house-water-filtration-systems", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/how-much-does-a-tankless-water-heater-cost", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/frozen-pipes-prevention-repair", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/common-water-heater-problems", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/how-long-water-heater-heat-up", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/trenchless-sewer-repair-guide", priority: 0.75, changeFrequency: "monthly" as const },
   ];
 
   // Legal pages

@@ -1,22 +1,13 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "Plumbing Blog - Tips & Advice - Illyrian Plumber",
-  description: "Expert plumbing tips, maintenance advice, and DIY guides from the licensed plumbers at Illyrian Plumber Corp. Learn how to prevent common plumbing problems.",
-  keywords: [
-    "plumbing blog",
-    "plumbing tips",
-    "plumbing advice",
-    "DIY plumbing",
-    "plumbing maintenance",
-  ],
-};
-
 const blogPosts = [
+  // March 2026
   {
     title: "11 Best Whole House Water Filtration Systems (2026 Expert Review)",
     slug: "best-whole-house-water-filtration-systems",
@@ -27,93 +18,58 @@ const blogPosts = [
     readTime: "25 min read",
   },
   {
-    title: "How Tankless Water Heaters Work: The Complete Guide",
-    slug: "how-tankless-water-heaters-work",
-    excerpt: "Discover how tankless water heaters provide endless hot water on demand. Learn the technology, benefits, and if it's right for your New Jersey home.",
+    title: "How Much Does a Tankless Water Heater Cost? (2026 NJ Price Guide)",
+    slug: "how-much-does-a-tankless-water-heater-cost",
+    excerpt: "Tankless water heater costs range from $800-$4,500+ installed. See 2026 pricing by fuel type, brand, and installation factors with NJ-specific costs.",
     category: "Water Heaters",
-    date: "January 2025",
+    date: "March 2026",
     image: "/images/tankless-water-heater-installation.jpg",
-    readTime: "8 min read",
+    readTime: "18 min read",
   },
   {
-    title: "Tankless vs Tank Water Heater: Which Is Best for Your Home?",
-    slug: "tankless-vs-tank-water-heater",
-    excerpt: "Compare tankless and traditional tank water heaters side by side. Discover costs, efficiency, lifespan, and which option saves you more money.",
-    category: "Water Heaters",
-    date: "January 2025",
-    image: "/images/tankless-water-heater-installation.jpg",
-    readTime: "10 min read",
+    title: "Frozen Pipes: Prevention, Thawing & Emergency Repair Guide (NJ)",
+    slug: "frozen-pipes-prevention-repair",
+    excerpt: "Learn how to prevent frozen pipes, safely thaw them, and what to do if a pipe bursts. Complete NJ winter plumbing guide with costs and emergency steps.",
+    category: "Emergency Tips",
+    date: "March 2026",
+    image: "/images/emergency-plumbing-services-nj.jpg",
+    readTime: "18 min read",
   },
   {
-    title: "What Size Tankless Water Heater Do I Need?",
-    slug: "what-size-tankless-water-heater",
-    excerpt: "Learn how to calculate the right tankless water heater size for your home. Our sizing guide covers flow rates, temperature rise, and household needs.",
+    title: "Common Water Heater Problems and How to Fix Them (2026 Guide)",
+    slug: "common-water-heater-problems",
+    excerpt: "Troubleshoot 12 common water heater problems: no hot water, leaking, strange noises, pilot light issues, and more. DIY fixes and when to call a pro.",
     category: "Water Heaters",
-    date: "January 2025",
-    image: "/images/tankless-water-heater-installation.jpg",
-    readTime: "9 min read",
+    date: "March 2026",
+    image: "/images/water-heater-maintenance-parts.jpg",
+    readTime: "20 min read",
   },
   {
-    title: "How to Descale a Tankless Water Heater: Complete Maintenance Guide",
-    slug: "how-to-descale-tankless-water-heater",
-    excerpt: "Keep your tankless water heater running efficiently with regular descaling. Step-by-step instructions for DIY maintenance or when to call a pro.",
+    title: "How Long Does a Water Heater Take to Heat Up? (2026)",
+    slug: "how-long-water-heater-heat-up",
+    excerpt: "Gas water heaters heat in 30-40 minutes, electric in 60-80 minutes, tankless is instant. See exact times by tank size, fuel type, and season.",
+    category: "Water Heaters",
+    date: "March 2026",
+    image: "/images/water-heater-sediment-buildup.jpg",
+    readTime: "16 min read",
+  },
+  {
+    title: "Trenchless Sewer Repair: Methods, Costs & Complete Guide",
+    slug: "trenchless-sewer-repair-guide",
+    excerpt: "Compare trenchless sewer repair methods (pipe lining vs pipe bursting) with traditional replacement. Costs, timelines, and when each method is best.",
+    category: "Sewer Lines",
+    date: "March 2026",
+    image: "/images/drain-vent-pipe-installation.jpg",
+    readTime: "18 min read",
+  },
+  // January 2025 (newest first: Jan 31 → Jan 6)
+  {
+    title: "Sump Pump Maintenance: The Complete Homeowner's Guide",
+    slug: "sump-pump-maintenance-guide",
+    excerpt: "Protect your basement from flooding with proper sump pump care. Learn maintenance tips, testing procedures, and when to replace your pump.",
     category: "Maintenance",
     date: "January 2025",
-    image: "/images/tankless-water-heater-installation.jpg",
-    readTime: "7 min read",
-  },
-  {
-    title: "7 Warning Signs Your Water Heater Is Dying",
-    slug: "signs-water-heater-dying",
-    excerpt: "Don't wait for a cold shower surprise. Learn the warning signs that your water heater needs replacement before it fails completely.",
-    category: "Water Heaters",
-    date: "January 2025",
-    image: "/images/tankless-water-heater-installation.jpg",
-    readTime: "6 min read",
-  },
-  {
-    title: "Why Is My Water Pressure Low? Causes and Solutions",
-    slug: "why-is-water-pressure-low",
-    excerpt: "Frustrated by weak water pressure? Discover the common causes of low water pressure and practical solutions to restore strong flow.",
-    category: "Troubleshooting",
-    date: "January 2025",
-    image: "/images/professional-plumbing-services.jpg",
-    readTime: "7 min read",
-  },
-  {
-    title: "Common Boiler Problems in Winter and How to Fix Them",
-    slug: "common-boiler-problems-winter",
-    excerpt: "Keep your home warm this winter. Learn about common boiler issues, troubleshooting tips, and when to call a professional for repairs.",
-    category: "Boilers",
-    date: "January 2025",
-    image: "/images/boiler-repair-service-nj.jpg",
-    readTime: "8 min read",
-  },
-  {
-    title: "Signs of a Slab Leak and Sewer Line Problems",
-    slug: "signs-of-slab-leak-sewer-line",
-    excerpt: "Hidden leaks can cause serious damage. Learn the warning signs of slab leaks and sewer line issues before they become costly emergencies.",
-    category: "Emergency Tips",
-    date: "January 2025",
-    image: "/images/professional-plumbing-services.jpg",
-    readTime: "8 min read",
-  },
-  {
-    title: "Gas Leak Detection and Safety: What Every Homeowner Should Know",
-    slug: "gas-leak-detection-safety",
-    excerpt: "Gas leaks are dangerous. Learn how to detect gas leaks, what to do in an emergency, and how to keep your family safe.",
-    category: "Safety",
-    date: "January 2025",
-    image: "/images/professional-plumbing-services.jpg",
-    readTime: "7 min read",
-  },
-  {
-    title: "Is a Whole House Water Filter Worth It?",
-    slug: "whole-house-water-filter-worth-it",
-    excerpt: "Considering a whole house water filtration system? Learn the benefits, costs, and whether it's the right investment for your home.",
-    category: "Water Quality",
-    date: "January 2025",
-    image: "/images/professional-plumbing-services.jpg",
+    image: "/images/commercial-plumbing-copper-pipes.jpg",
     readTime: "8 min read",
   },
   {
@@ -126,12 +82,93 @@ const blogPosts = [
     readTime: "7 min read",
   },
   {
-    title: "Sump Pump Maintenance: The Complete Homeowner's Guide",
-    slug: "sump-pump-maintenance-guide",
-    excerpt: "Protect your basement from flooding with proper sump pump care. Learn maintenance tips, testing procedures, and when to replace your pump.",
+    title: "Is a Whole House Water Filter Worth It?",
+    slug: "whole-house-water-filter-worth-it",
+    excerpt: "Considering a whole house water filtration system? Learn the benefits, costs, and whether it's the right investment for your home.",
+    category: "Water Quality",
+    date: "January 2025",
+    image: "/images/licensed-plumber-east-brunswick-nj.jpg",
+    readTime: "8 min read",
+  },
+  {
+    title: "Gas Leak Detection and Safety: What Every Homeowner Should Know",
+    slug: "gas-leak-detection-safety",
+    excerpt: "Gas leaks are dangerous. Learn how to detect gas leaks, what to do in an emergency, and how to keep your family safe.",
+    category: "Safety",
+    date: "January 2025",
+    image: "/images/gas-line-pressure-gauge-installation.jpg",
+    readTime: "7 min read",
+  },
+  {
+    title: "Signs of a Slab Leak and Sewer Line Problems",
+    slug: "signs-of-slab-leak-sewer-line",
+    excerpt: "Hidden leaks can cause serious damage. Learn the warning signs of slab leaks and sewer line issues before they become costly emergencies.",
+    category: "Emergency Tips",
+    date: "January 2025",
+    image: "/images/pex-pipe-drain-rough-in.jpg",
+    readTime: "8 min read",
+  },
+  {
+    title: "Common Boiler Problems in Winter and How to Fix Them",
+    slug: "common-boiler-problems-winter",
+    excerpt: "Keep your home warm this winter. Learn about common boiler issues, troubleshooting tips, and when to call a professional for repairs.",
+    category: "Boilers",
+    date: "January 2025",
+    image: "/images/boiler-repair-service-nj.jpg",
+    readTime: "8 min read",
+  },
+  {
+    title: "Why Is My Water Pressure Low? Causes and Solutions",
+    slug: "why-is-water-pressure-low",
+    excerpt: "Frustrated by weak water pressure? Discover the common causes of low water pressure and practical solutions to restore strong flow.",
+    category: "Troubleshooting",
+    date: "January 2025",
+    image: "/images/copper-pipe-repiping-service.jpg",
+    readTime: "7 min read",
+  },
+  {
+    title: "7 Warning Signs Your Water Heater Is Dying",
+    slug: "signs-water-heater-dying",
+    excerpt: "Don't wait for a cold shower surprise. Learn the warning signs that your water heater needs replacement before it fails completely.",
+    category: "Water Heaters",
+    date: "January 2025",
+    image: "/images/water-heater-repair-service.jpg",
+    readTime: "6 min read",
+  },
+  {
+    title: "How to Descale a Tankless Water Heater: Complete Maintenance Guide",
+    slug: "how-to-descale-tankless-water-heater",
+    excerpt: "Keep your tankless water heater running efficiently with regular descaling. Step-by-step instructions for DIY maintenance or when to call a pro.",
     category: "Maintenance",
     date: "January 2025",
-    image: "/images/professional-plumbing-services.jpg",
+    image: "/images/water-heater-repair-near-me.jpg",
+    readTime: "7 min read",
+  },
+  {
+    title: "What Size Tankless Water Heater Do I Need?",
+    slug: "what-size-tankless-water-heater",
+    excerpt: "Learn how to calculate the right tankless water heater size for your home. Our sizing guide covers flow rates, temperature rise, and household needs.",
+    category: "Water Heaters",
+    date: "January 2025",
+    image: "/images/pex-water-line-rough-in.jpg",
+    readTime: "9 min read",
+  },
+  {
+    title: "Tankless vs Tank Water Heater: Which Is Best for Your Home?",
+    slug: "tankless-vs-tank-water-heater",
+    excerpt: "Compare tankless and traditional tank water heaters side by side. Discover costs, efficiency, lifespan, and which option saves you more money.",
+    category: "Water Heaters",
+    date: "January 2025",
+    image: "/images/commercial-copper-pipe-installation.jpg",
+    readTime: "10 min read",
+  },
+  {
+    title: "How Tankless Water Heaters Work: The Complete Guide",
+    slug: "how-tankless-water-heaters-work",
+    excerpt: "Discover how tankless water heaters provide endless hot water on demand. Learn the technology, benefits, and if it's right for your New Jersey home.",
+    category: "Water Heaters",
+    date: "January 2025",
+    image: "/images/residential-pex-plumbing-install.jpg",
     readTime: "8 min read",
   },
 ];
@@ -146,9 +183,14 @@ const categories = [
   "Safety",
   "Water Quality",
   "Renovations",
+  "Sewer Lines",
 ];
 
+
 export default function BlogPage() {
+  const [showAll, setShowAll] = useState(false);
+  const visiblePosts = showAll ? blogPosts : blogPosts.slice(0, 6);
+
   return (
     <>
       {/* Hero Section */}
@@ -196,8 +238,8 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {visiblePosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition group">
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -241,11 +283,16 @@ export default function BlogPage() {
           </div>
 
           {/* Load More */}
-          <div className="text-center mt-12">
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
-              Load More Posts
-            </button>
-          </div>
+          {!showAll && blogPosts.length > 6 && (
+            <div className="text-center mt-12">
+              <button
+                onClick={() => setShowAll(true)}
+                className="bg-gray-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition"
+              >
+                Load More Posts
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
