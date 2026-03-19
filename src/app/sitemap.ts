@@ -68,6 +68,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/blog/common-water-heater-problems", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/blog/how-long-water-heater-heat-up", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/blog/trenchless-sewer-repair-guide", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/hydro-jetting-drain-cleaning-guide", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/sewer-camera-inspection-guide", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/water-pipe-noises-causes-fixes", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/how-to-drain-flush-water-heater", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/battery-backup-sump-pump-guide", priority: 0.75, changeFrequency: "monthly" as const },
   ];
 
   // Legal pages
