@@ -118,17 +118,7 @@ export default function TanklessVsTankPost() {
 
       <article className="bg-white">
         {/* Hero Section */}
-        <header className="relative bg-gray-900 text-white py-16 md:py-24">
-          <div className="absolute inset-0">
-            <Image
-              src="/images/commercial-copper-pipe-installation.jpg"
-              alt="Tankless vs tank water heater comparison guide"
-              fill
-              className="object-cover opacity-40"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-          </div>
+        <header className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 text-sm text-gray-300 mb-4">

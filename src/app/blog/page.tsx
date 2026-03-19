@@ -14,7 +14,7 @@ const blogPosts = [
     excerpt: "Learn how hydro jetting works, when you need it, costs, and how it compares to snaking. Professional drain cleaning guide for NJ homeowners.",
     category: "Sewer Lines",
     date: "March 2026",
-    image: "/images/bathroom-vanity-sink-installation.jpg",
+    image: "",
     readTime: "18 min read",
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     excerpt: "Find out when you need a sewer camera inspection, what it costs, and what the camera reveals. Essential for home buyers and recurring drain problems.",
     category: "Sewer Lines",
     date: "March 2026",
-    image: "/images/bathroom-plumbing-rough-in-pex.jpg",
+    image: "",
     readTime: "18 min read",
   },
   {
@@ -32,7 +32,7 @@ const blogPosts = [
     excerpt: "Banging, whistling, humming, or rattling pipes? Learn the 8 most common causes of water pipe noises and how to fix each one.",
     category: "Troubleshooting",
     date: "March 2026",
-    image: "/images/shower-fixture-installation-nj.jpg",
+    image: "",
     readTime: "16 min read",
   },
   {
@@ -41,7 +41,7 @@ const blogPosts = [
     excerpt: "Step-by-step guide to draining and flushing your water heater. Remove sediment, improve efficiency, and extend your water heater's lifespan.",
     category: "Maintenance",
     date: "March 2026",
-    image: "/images/faucet-installation-service.jpg",
+    image: "",
     readTime: "15 min read",
   },
   {
@@ -50,7 +50,7 @@ const blogPosts = [
     excerpt: "Why every NJ homeowner needs a battery backup sump pump. Compare types, costs, top brands, and installation options to protect your basement.",
     category: "Maintenance",
     date: "March 2026",
-    image: "/images/bathroom-plumbing-services-nj.jpg",
+    image: "",
     readTime: "16 min read",
   },
   {
@@ -59,7 +59,7 @@ const blogPosts = [
     excerpt: "Licensed plumbers tested and reviewed the 11 best whole house water filtration systems for 2026. Compare performance, cost, and which filter is best for your home.",
     category: "Water Quality",
     date: "March 2026",
-    image: "/images/professional-plumbing-services.jpg",
+    image: "",
     readTime: "25 min read",
   },
   {
@@ -77,7 +77,7 @@ const blogPosts = [
     excerpt: "Learn how to prevent frozen pipes, safely thaw them, and what to do if a pipe bursts. Complete NJ winter plumbing guide with costs and emergency steps.",
     category: "Emergency Tips",
     date: "March 2026",
-    image: "/images/emergency-plumbing-services-nj.jpg",
+    image: "",
     readTime: "18 min read",
   },
   {
@@ -104,7 +104,7 @@ const blogPosts = [
     excerpt: "Compare trenchless sewer repair methods (pipe lining vs pipe bursting) with traditional replacement. Costs, timelines, and when each method is best.",
     category: "Sewer Lines",
     date: "March 2026",
-    image: "/images/drain-vent-pipe-installation.jpg",
+    image: "",
     readTime: "18 min read",
   },
   // January 2025 (newest first: Jan 31 → Jan 6)
@@ -114,7 +114,7 @@ const blogPosts = [
     excerpt: "Protect your basement from flooding with proper sump pump care. Learn maintenance tips, testing procedures, and when to replace your pump.",
     category: "Maintenance",
     date: "January 2025",
-    image: "/images/commercial-plumbing-copper-pipes.jpg",
+    image: "",
     readTime: "8 min read",
   },
   {
@@ -132,7 +132,7 @@ const blogPosts = [
     excerpt: "Considering a whole house water filtration system? Learn the benefits, costs, and whether it's the right investment for your home.",
     category: "Water Quality",
     date: "January 2025",
-    image: "/images/licensed-plumber-east-brunswick-nj.jpg",
+    image: "",
     readTime: "8 min read",
   },
   {
@@ -150,7 +150,7 @@ const blogPosts = [
     excerpt: "Hidden leaks can cause serious damage. Learn the warning signs of slab leaks and sewer line issues before they become costly emergencies.",
     category: "Emergency Tips",
     date: "January 2025",
-    image: "/images/pex-pipe-drain-rough-in.jpg",
+    image: "",
     readTime: "8 min read",
   },
   {
@@ -168,7 +168,7 @@ const blogPosts = [
     excerpt: "Frustrated by weak water pressure? Discover the common causes of low water pressure and practical solutions to restore strong flow.",
     category: "Troubleshooting",
     date: "January 2025",
-    image: "/images/copper-pipe-repiping-service.jpg",
+    image: "",
     readTime: "7 min read",
   },
   {
@@ -186,7 +186,7 @@ const blogPosts = [
     excerpt: "Keep your tankless water heater running efficiently with regular descaling. Step-by-step instructions for DIY maintenance or when to call a pro.",
     category: "Maintenance",
     date: "January 2025",
-    image: "/images/water-heater-repair-near-me.jpg",
+    image: "",
     readTime: "7 min read",
   },
   {
@@ -195,7 +195,7 @@ const blogPosts = [
     excerpt: "Learn how to calculate the right tankless water heater size for your home. Our sizing guide covers flow rates, temperature rise, and household needs.",
     category: "Water Heaters",
     date: "January 2025",
-    image: "/images/pex-water-line-rough-in.jpg",
+    image: "",
     readTime: "9 min read",
   },
   {
@@ -204,7 +204,7 @@ const blogPosts = [
     excerpt: "Compare tankless and traditional tank water heaters side by side. Discover costs, efficiency, lifespan, and which option saves you more money.",
     category: "Water Heaters",
     date: "January 2025",
-    image: "/images/commercial-copper-pipe-installation.jpg",
+    image: "",
     readTime: "10 min read",
   },
   {
@@ -213,7 +213,7 @@ const blogPosts = [
     excerpt: "Discover how tankless water heaters provide endless hot water on demand. Learn the technology, benefits, and if it's right for your New Jersey home.",
     category: "Water Heaters",
     date: "January 2025",
-    image: "/images/residential-pex-plumbing-install.jpg",
+    image: "",
     readTime: "8 min read",
   },
 ];
@@ -286,19 +286,29 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {visiblePosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition group">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-red-700 text-white px-3 py-1 rounded-full text-xs font-medium">
-                      {post.category}
-                    </span>
+                {post.image ? (
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-red-700 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        {post.category}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="relative h-48 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-end">
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-red-700 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
                     <span>{post.date}</span>
