@@ -157,11 +157,12 @@ const jsonLd = {
       },
       {
         "@type": "OfferCatalog",
-        name: "Sewer & Inspection",
+        name: "Inspections & Other Services",
         itemListElement: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sewer Line Repair" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plumbing Inspections" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gas Line Services" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Filtration Systems" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sump Pump Installation" } },
         ]
       }
     ]
@@ -231,7 +232,8 @@ const jsonLd = {
     "Emergency plumbing repair",
     "Water heater installation and repair",
     "Tankless water heater installation",
-    "Sewer line repair and replacement",
+    "Water filtration systems",
+    "Sump pump installation and repair",
     "Gas line installation and repair",
     "Bathroom plumbing and remodeling",
     "Whole house repiping",

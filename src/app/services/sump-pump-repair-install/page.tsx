@@ -437,7 +437,6 @@ export default function SumpPumpPage() {
                     <Link href="/services/water-heater-repair" className="block text-sm text-red-700 hover:text-red-800">Water Heater Repair</Link>
                     <Link href="/services/water-filtration-system" className="block text-sm text-red-700 hover:text-red-800">Water Filtration Systems</Link>
                     <Link href="/services/plumbing-safety-inspections" className="block text-sm text-red-700 hover:text-red-800">Plumbing Inspections</Link>
-                    <Link href="/services/sewer-line-repair-replacement" className="block text-sm text-red-700 hover:text-red-800">Sewer Line Repair</Link>
                   </div>
                 </div>
 

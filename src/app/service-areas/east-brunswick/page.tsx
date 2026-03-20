@@ -156,8 +156,6 @@ export default function EastBrunswickPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Additional Services Available in East Brunswick</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>

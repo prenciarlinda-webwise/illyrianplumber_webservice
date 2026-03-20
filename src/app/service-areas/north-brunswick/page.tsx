@@ -51,7 +51,7 @@ export default function NorthBrunswickPage() {
         name: "What plumbing services do you offer in North Brunswick?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We provide a full range of plumbing services in North Brunswick including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump installation, water leak detection, and 24/7 emergency plumbing.",
+          text: "We provide a full range of plumbing services in North Brunswick including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump installation, water leak detection, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function NorthBrunswickPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in North Brunswick</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -196,7 +194,7 @@ export default function NorthBrunswickPage() {
               <ul className="space-y-3">
                 <li><strong>Corroded Pipes in Older Homes:</strong> Many North Brunswick homes built before 1980 still have galvanized steel pipes that corrode from the inside, causing <Link href="/blog/why-is-water-pressure-low" className="text-red-700 hover:underline">low water pressure</Link> and discolored water. <Link href="/services/whole-house-repiping" className="text-red-700 hover:underline">Whole-house repiping</Link> with modern copper or PEX is the permanent solution.</li>
                 <li><strong>Water Heater Problems:</strong> Aging water heaters are one of the most common service calls in North Brunswick. Look for <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">warning signs</Link> and consider whether a <Link href="/blog/tankless-vs-tank-water-heater" className="text-red-700 hover:underline">tankless or tank water heater</Link> is right for your home.</li>
-                <li><strong>Drain Clogs:</strong> Multi-family and rental properties near the Rutgers area are prone to frequent drain issues. Our professional <Link href="/services/drain-cleaning" className="text-red-700 hover:underline">drain cleaning service</Link> clears stubborn clogs that household drain cleaners cannot.</li>
+                <li><strong>Drain Clogs:</strong> Multi-family and rental properties near the Rutgers area are prone to frequent drain issues. Our professional plumbers can diagnose and resolve stubborn clogs that household drain cleaners cannot.</li>
                 <li><strong>Boiler Maintenance:</strong> North Brunswick's older homes often rely on boiler heating. Regular maintenance prevents <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> like no heat, uneven heating, and strange noises.</li>
                 <li><strong>Gas Line Concerns:</strong> If you smell gas or suspect a gas leak, call us immediately. Learn about <Link href="/blog/gas-leak-detection-safety" className="text-red-700 hover:underline">gas leak detection and safety</Link> to protect your family.</li>
               </ul>

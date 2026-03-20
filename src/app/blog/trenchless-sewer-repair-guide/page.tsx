@@ -186,11 +186,15 @@ export default function TrenchlessSewerRepairGuidePost() {
           <div className="flex-1 min-w-0 max-w-3xl">
             {/* Introduction */}
             <div className="prose prose-lg max-w-none">
+              <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5 mb-6">
+                <p className="text-sm text-blue-900 font-medium mb-1">Informational Guide</p>
+                <p className="text-sm text-blue-800">Please note: Illyrian Plumber does not currently offer sewer line cleaning, snaking, or sewer lining services. This article is provided as an educational resource to help homeowners understand their options. For sewer-related services, we recommend contacting a specialized sewer contractor in your area.</p>
+              </div>
               <p className="text-xl text-gray-700 leading-relaxed">
                 When your sewer line fails, the first thing most homeowners picture is a backhoe tearing up their entire yard. But <strong>trenchless sewer repair</strong> has changed the game -allowing plumbers to repair or replace underground sewer pipes with minimal digging, often in just one day. The question is: which method is right for your situation, and what will it actually cost?
               </p>
               <p className="text-gray-700">
-                As licensed plumbers who perform <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 underline">sewer line repair and replacement</Link> throughout Middlesex County, we have seen firsthand how trenchless technology saves homeowners thousands of dollars in property restoration while delivering longer-lasting results. In this comprehensive guide, we will walk you through every trenchless method, compare costs and timelines, explain when traditional excavation is still necessary, and help you make an informed decision about your sewer line repair. If you suspect a sewer problem but aren&apos;t sure, our guide on <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800 underline">signs of a slab leak or sewer line issue</Link> can help you identify the warning signs.
+                As licensed plumbers who perform sewer line repair and replacement throughout Middlesex County, we have seen firsthand how trenchless technology saves homeowners thousands of dollars in property restoration while delivering longer-lasting results. In this comprehensive guide, we will walk you through every trenchless method, compare costs and timelines, explain when traditional excavation is still necessary, and help you make an informed decision about your sewer line repair. If you suspect a sewer problem but aren&apos;t sure, our guide on <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800 underline">signs of a slab leak or sewer line issue</Link> can help you identify the warning signs.
               </p>
             </div>
 
@@ -198,7 +202,7 @@ export default function TrenchlessSewerRepairGuidePost() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -757,8 +761,8 @@ export default function TrenchlessSewerRepairGuidePost() {
             {/* Mid-content CTA */}
             <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-lg">Sewer problems?</p>
-                <p className="text-gray-300 text-sm">Free sewer camera inspection with any repair - call us today.</p>
+                <p className="font-bold text-lg">Need a plumber?</p>
+                <p className="text-gray-300 text-sm">24/7 emergency plumbing, water heater repair, leak detection, and more in Middlesex County.</p>
               </div>
               <div className="flex gap-3">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap">Call Niti</a>
@@ -1010,8 +1014,8 @@ export default function TrenchlessSewerRepairGuidePost() {
             {/* Sewer Camera Inspection */}
             {/* Mid-content CTA 2 */}
             <div className="bg-red-700 text-white rounded-xl p-6 mb-12">
-              <p className="font-bold text-lg mb-1">Sewer problems?</p>
-              <p className="text-red-100 text-sm mb-4">Free sewer camera inspection with any repair. Our licensed plumbers use the latest trenchless technology to fix your sewer line with minimal disruption.</p>
+              <p className="font-bold text-lg mb-1">Need a plumber?</p>
+              <p className="text-red-100 text-sm mb-4">While we do not offer sewer repair services, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County.</p>
               <div className="flex flex-wrap gap-3">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm">Call Niti: {BUSINESS_INFO.phone}</a>
                 <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm">Call Danny: {BUSINESS_INFO.phone2}</a>
@@ -1024,9 +1028,9 @@ export default function TrenchlessSewerRepairGuidePost() {
                 <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
               </div>
               <div className="flex-1">
-                <p className="font-bold text-gray-900 mb-1">Related Service: Sewer Line Repair & Replacement</p>
-                <p className="text-sm text-gray-600 mb-2">Expert sewer line diagnostics, trenchless repair, and full replacement services. Camera inspection, pipe lining, pipe bursting, and traditional excavation.</p>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium text-sm">Learn More</Link>
+                <p className="font-bold text-gray-900 mb-1">Our Plumbing Services</p>
+                <p className="text-sm text-gray-600 mb-2">Expert drain and plumbing diagnostics, camera inspection, and a full range of repair services. We assess every situation before recommending the right solution.</p>
+                <Link href="/services" className="text-red-700 hover:text-red-800 font-medium text-sm">View Our Services</Link>
               </div>
             </div>
 
@@ -1302,16 +1306,16 @@ export default function TrenchlessSewerRepairGuidePost() {
 
             {/* CTA Section */}
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Need a Sewer Line Inspection or Repair?</h2>
+              <h2 className="text-2xl font-bold mb-4">Need Help With Your Plumbing?</h2>
               <p className="text-red-100 mb-6">
-                Whether you are dealing with slow drains, recurring backups, or suspect sewer line damage, the first step is always a camera inspection. Our licensed plumbers will diagnose the problem, explain your options -including trenchless and traditional methods -and provide a transparent, written estimate. We serve all of Middlesex County including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick.
+                While we do not offer sewer line or drain cleaning services, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County, NJ.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                   Call {BUSINESS_INFO.phone}
                 </a>
-                <Link href="/services/sewer-line-repair-replacement" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
-                  View Sewer Line Services
+                <Link href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
+                  View Our Services
                 </Link>
               </div>
             </section>
@@ -1341,7 +1345,7 @@ export default function TrenchlessSewerRepairGuidePost() {
               {/* Call Now */}
               <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
                 <p className="text-lg font-bold text-gray-900 mb-1">Need a Plumber?</p>
-                <p className="text-gray-600 text-sm mb-4">Sewer line problems? Free camera inspection with any repair.</p>
+                <p className="text-gray-600 text-sm mb-4">24/7 plumbing services in Middlesex County - water heaters, leak detection, gas lines, and more.</p>
                 <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">Call Niti: {BUSINESS_INFO.phone}</a>
                 <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">Call Danny: {BUSINESS_INFO.phone2}</a>
                 <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>

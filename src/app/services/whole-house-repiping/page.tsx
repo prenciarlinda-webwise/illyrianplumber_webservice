@@ -362,7 +362,6 @@ export default function WholeHouseRepipingPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection &#8594;</Link>
-                  <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair &#8594;</Link>
                   <Link href="/services/bathroom-remodeling" className="text-red-700 hover:text-red-800 font-medium">Bathroom Remodeling &#8594;</Link>
                   <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800 font-medium">Plumbing Inspections &#8594;</Link>
                 </div>
@@ -412,7 +411,6 @@ export default function WholeHouseRepipingPage() {
                     <Link href="/services/water-leak-detection" className="block text-sm text-red-700 hover:text-red-800">Water Leak Detection</Link>
                     <Link href="/services/water-heater-repair" className="block text-sm text-red-700 hover:text-red-800">Water Heater Repair</Link>
                     <Link href="/services/water-heater-replacement" className="block text-sm text-red-700 hover:text-red-800">Water Heater Replacement</Link>
-                    <Link href="/services/sewer-line-repair-replacement" className="block text-sm text-red-700 hover:text-red-800">Sewer Line Repair</Link>
                     <Link href="/services/bathroom-remodeling" className="block text-sm text-red-700 hover:text-red-800">Bathroom Remodeling</Link>
                     <Link href="/services/plumbing-safety-inspections" className="block text-sm text-red-700 hover:text-red-800">Plumbing Inspections</Link>
                     <Link href="/services/water-filtration-system" className="block text-sm text-red-700 hover:text-red-800">Water Filtration Systems</Link>

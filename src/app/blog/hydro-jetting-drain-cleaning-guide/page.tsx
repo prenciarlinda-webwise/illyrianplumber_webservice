@@ -183,8 +183,12 @@ export default function HydroJettingDrainCleaningGuide() {
           <div className="flex-1 min-w-0 max-w-3xl">
             {/* Introduction */}
             <div className="prose prose-lg max-w-none">
+              <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5 mb-6">
+                <p className="text-sm text-blue-900 font-medium mb-1">Informational Guide</p>
+                <p className="text-sm text-blue-800">Please note: Illyrian Plumber does not currently offer hydro jetting, drain cleaning, snaking, or sewer lining services. This article is provided as an educational resource to help homeowners understand their options. For drain and sewer cleaning services, we recommend contacting a specialized contractor in your area.</p>
+              </div>
               <p className="text-xl text-gray-700 leading-relaxed">
-                When stubborn drain clogs, grease buildup, or tree root intrusion keep coming back, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-semibold">sewer line repair and cleaning</Link> through hydro jetting is the most powerful solution available to homeowners and businesses in New Jersey. Unlike basic snaking that punches a hole through the clog, hydro jetting uses high pressure water streams between 3,000 and 8,000 PSI to scour the entire interior of your drain and sewer pipes, restoring them to near-original condition. If you have been dealing with recurring sewer backups, slow drains, or foul odors, this comprehensive guide covers everything about hydro jet drain cleaning, from how it works and what it costs to when it makes more sense than traditional drain snaking. For homeowners exploring non-invasive pipe restoration options, our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:text-red-800 font-semibold">trenchless sewer repair guide</Link> is also a valuable companion resource.
+                When stubborn drain clogs, grease buildup, or tree root intrusion keep coming back, sewer line repair and cleaning through hydro jetting is the most powerful solution available to homeowners and businesses in New Jersey. Unlike basic snaking that punches a hole through the clog, hydro jetting uses high pressure water streams between 3,000 and 8,000 PSI to scour the entire interior of your drain and sewer pipes, restoring them to near-original condition. If you have been dealing with recurring sewer backups, slow drains, or foul odors, this comprehensive guide covers everything about hydro jet drain cleaning, from how it works and what it costs to when it makes more sense than traditional drain snaking. For homeowners exploring non-invasive pipe restoration options, our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:text-red-800 font-semibold">trenchless sewer repair guide</Link> is also a valuable companion resource.
               </p>
               <p className="text-gray-700">
                 Hydro jetting has become the gold standard for professional drain and sewer line cleaning. Plumbers across Middlesex County rely on this technology daily because it delivers results that no other cleaning method can match. Whether you are dealing with a single clogged kitchen drain or need a full mainline sewer cleaning, understanding hydro jetting helps you make informed decisions about your plumbing system and avoid wasting money on temporary fixes that fail within weeks.
@@ -195,7 +199,7 @@ export default function HydroJettingDrainCleaningGuide() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -523,8 +527,8 @@ export default function HydroJettingDrainCleaningGuide() {
             {/* Mid-Content CTA */}
             <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-lg">Need Hydro Jetting in Middlesex County?</p>
-                <p className="text-gray-300 text-sm">Free estimates for residential and commercial drain cleaning. Camera inspection included.</p>
+                <p className="font-bold text-lg">Need a plumber?</p>
+                <p className="text-gray-300 text-sm">24/7 emergency plumbing, water heater repair, leak detection, and more in Middlesex County.</p>
               </div>
               <div className="flex gap-3">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap">Call Niti</a>
@@ -532,7 +536,7 @@ export default function HydroJettingDrainCleaningGuide() {
               </div>
             </div>
 
-            {/* Service Card - Sewer Line Repair */}
+            {/* Service Card - Plumbing Services */}
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-12">
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <div className="w-14 h-14 bg-red-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -541,12 +545,12 @@ export default function HydroJettingDrainCleaningGuide() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Sewer Line Repair and Replacement</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Professional Plumbing Services</h3>
                   <p className="text-gray-700 text-sm mb-3">
-                    If hydro jetting reveals structural damage during the camera inspection, our licensed plumbers provide complete sewer line repair and replacement services. We offer both traditional excavation and trenchless methods including pipe lining and pipe bursting to restore your sewer system with minimal disruption.
+                    If hydro jetting reveals structural damage during the camera inspection, a licensed plumber can help. Illyrian Plumber offers water leak detection, repiping, gas line services, and other plumbing repairs across Middlesex County.
                   </p>
-                  <Link href="/services/sewer-line-repair-replacement" className="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 transition text-sm">
-                    Learn About Sewer Line Services
+                  <Link href="/services" className="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 transition text-sm">
+                    View Our Services
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -696,9 +700,9 @@ export default function HydroJettingDrainCleaningGuide() {
 
             {/* Mid-Content CTA - Red */}
             <div className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Schedule Your Hydro Jetting Service</h2>
+              <h2 className="text-2xl font-bold mb-4">Need Help With Your Plumbing?</h2>
               <p className="text-red-100 mb-6">
-                Stop dealing with recurring drain clogs. Our licensed plumbers provide professional hydro jetting with camera inspection for homes and businesses throughout Middlesex County. Call today for a free estimate and let us show you the difference thorough pipe cleaning makes.
+                While we do not offer hydro jetting or drain cleaning, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County, NJ.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
@@ -1044,16 +1048,16 @@ export default function HydroJettingDrainCleaningGuide() {
 
             {/* Final CTA */}
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Get Professional Hydro Jetting in Middlesex County</h2>
+              <h2 className="text-2xl font-bold mb-4">Need Help With Your Plumbing?</h2>
               <p className="text-red-100 mb-6">
-                Whether you are dealing with a stubborn clog, recurring drain backups, or want to schedule preventive sewer maintenance, our licensed plumbers have the equipment and expertise to get your drains flowing like new. Every hydro jetting service includes a camera inspection so you can see the results for yourself.
+                While we do not offer hydro jetting or drain cleaning services, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County, NJ.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                  Call Niti: {BUSINESS_INFO.phone}
+                  Call {BUSINESS_INFO.phone}
                 </a>
-                <Link href="/services/sewer-line-repair-replacement" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
-                  Sewer Line Services
+                <Link href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
+                  View Our Services
                 </Link>
               </div>
             </section>
@@ -1083,8 +1087,8 @@ export default function HydroJettingDrainCleaningGuide() {
             <div className="sticky top-[6rem] space-y-6">
               {/* Call Now */}
               <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
-                <p className="text-lg font-bold text-gray-900 mb-1">Need Drain Cleaning?</p>
-                <p className="text-gray-600 text-sm mb-4">Free estimates for hydro jetting and sewer cleaning in Middlesex County.</p>
+                <p className="text-lg font-bold text-gray-900 mb-1">Need a Plumber?</p>
+                <p className="text-gray-600 text-sm mb-4">24/7 plumbing services in Middlesex County - water heaters, leak detection, gas lines, and more.</p>
                 <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">Call Niti: {BUSINESS_INFO.phone}</a>
                 <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">Call Danny: {BUSINESS_INFO.phone2}</a>
                 <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
@@ -1106,7 +1110,6 @@ export default function HydroJettingDrainCleaningGuide() {
               <div className="bg-white rounded-xl shadow-md p-5">
                 <p className="font-bold text-gray-900 mb-3">Our Services</p>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/services/sewer-line-repair-replacement" className="text-gray-700 hover:text-red-700 transition">Sewer Line Repair</Link></li>
                   <li><Link href="/services/water-leak-detection" className="text-gray-700 hover:text-red-700 transition">Water Leak Detection</Link></li>
                   <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">Emergency Plumbing</Link></li>
                   <li><Link href="/services/plumbing-safety-inspections" className="text-gray-700 hover:text-red-700 transition">Plumbing Inspections</Link></li>

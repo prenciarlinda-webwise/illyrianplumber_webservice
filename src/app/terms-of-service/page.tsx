@@ -33,7 +33,7 @@ export default function TermsOfServicePage() {
               <li>Water heater installation and repair</li>
               <li>Boiler services</li>
               <li>Gas line installation and repair</li>
-              <li>Drain cleaning and sewer services</li>
+              <li>Plumbing inspections and maintenance</li>
               <li>Bathroom remodeling plumbing</li>
               <li>Whole house repiping</li>
             </ul>

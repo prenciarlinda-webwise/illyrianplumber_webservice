@@ -440,7 +440,6 @@ export default function EmergencyPlumbingPage() {
                 <div className="grid sm:grid-cols-2 gap-3">
                   <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800 font-medium">Emergency Water Heater Repair →</Link>
                   <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800 font-medium">Emergency Gas Line Services →</Link>
-                  <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Emergency →</Link>
                   <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800 font-medium">Emergency Boiler Repair →</Link>
                   <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection →</Link>
                   <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800 font-medium">Pipe Repair & Repiping →</Link>
@@ -489,7 +488,6 @@ export default function EmergencyPlumbingPage() {
                     <li><Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">Water Heater Repair</Link></li>
                     <li><Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">Boiler Repair</Link></li>
                     <li><Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">Gas Line Services</Link></li>
-                    <li><Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">Sewer Line Repair</Link></li>
                     <li><Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">Whole House Repiping</Link></li>
                     <li><Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">Water Leak Detection</Link></li>
                   </ul>

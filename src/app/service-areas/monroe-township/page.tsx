@@ -51,7 +51,7 @@ export default function MonroeTownshipPage() {
         name: "What plumbing services do you offer in Monroe Township?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a full range of plumbing services in Monroe Township including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump services, water filtration, and 24/7 emergency plumbing.",
+          text: "We offer a full range of plumbing services in Monroe Township including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump services, water filtration, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -75,7 +75,7 @@ export default function MonroeTownshipPage() {
         name: "What plumbing problems are common in Monroe Township homes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Monroe Township homes - especially in adult communities - commonly experience aging water heaters, boiler system issues, outdated plumbing fixtures, hard water buildup, and sewer line problems from tree root intrusion. Many properties also benefit from water filtration system installation to address water quality concerns.",
+          text: "Monroe Township homes - especially in adult communities - commonly experience aging water heaters, boiler system issues, outdated plumbing fixtures, and hard water buildup. Many properties also benefit from water filtration system installation to address water quality concerns.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function MonroeTownshipPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in Monroe Township</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -198,7 +196,6 @@ export default function MonroeTownshipPage() {
                 <li><strong>Boiler System Maintenance:</strong> Many adult community homes rely on boilers for heat. Regular servicing can prevent <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> and extend the life of your system.</li>
                 <li><strong>Hard Water Issues:</strong> Monroe Township water can be hard on plumbing fixtures and pipes. A <Link href="/services/water-filtration-system" className="text-red-700 hover:underline">whole-house water filtration system</Link> can help protect your plumbing and improve water quality. Learn if <Link href="/blog/whole-house-water-filter-worth-it" className="text-red-700 hover:underline">a whole-house water filter is worth it</Link>.</li>
                 <li><strong>Outdated Plumbing Fixtures:</strong> Original fixtures from the 1970s-1980s are less efficient and may no longer meet modern standards. Our <Link href="/services/bathroom-remodeling" className="text-red-700 hover:underline">bathroom remodeling services</Link> can modernize your space - find out <Link href="/blog/how-long-bathroom-remodel-take" className="text-red-700 hover:underline">how long a bathroom remodel takes</Link>.</li>
-                <li><strong>Sewer Line Problems:</strong> Mature trees in Monroe Township can send roots into older sewer lines. Our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless sewer repair</Link> options fix the problem with minimal disruption to your landscaping.</li>
               </ul>
             </div>
 

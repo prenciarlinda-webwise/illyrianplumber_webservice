@@ -51,7 +51,7 @@ export default function EdisonPage() {
         name: "What plumbing services do you offer in Edison?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer comprehensive plumbing services in Edison including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sump pump installation, sewer line repair, and 24/7 emergency plumbing.",
+          text: "We offer comprehensive plumbing services in Edison including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump installation, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function EdisonPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in Edison</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -197,8 +195,7 @@ export default function EdisonPage() {
                 <li><strong>Aging Water Heaters:</strong> Many Edison homes have tank water heaters that are past their prime. Watch for <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">signs your water heater is dying</Link> and consider upgrading to a more efficient <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless water heater</Link>.</li>
                 <li><strong>Hard Water Buildup:</strong> Central New Jersey water is moderately hard, which causes mineral buildup in pipes and fixtures over time. A <Link href="/services/water-filtration-system" className="text-red-700 hover:underline">water filtration system</Link> can help protect your plumbing.</li>
                 <li><strong>Old Galvanized Pipes:</strong> Homes in Clara Barton and other older Edison neighborhoods may still have galvanized steel pipes that corrode from the inside out, causing <Link href="/blog/why-is-water-pressure-low" className="text-red-700 hover:underline">low water pressure</Link> and rusty water.</li>
-                <li><strong>Sewer Line Problems:</strong> Tree roots from Edison's mature landscaping can infiltrate older clay sewer lines. Our <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:underline">sewer line repair services</Link> include <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless options</Link> to minimize yard disruption.</li>
-                <li><strong>Boiler Maintenance:</strong> Many Edison homes rely on boilers for heat. Regular maintenance prevents <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> and keeps your system running efficiently.</li>
+<li><strong>Boiler Maintenance:</strong> Many Edison homes rely on boilers for heat. Regular maintenance prevents <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> and keeps your system running efficiently.</li>
               </ul>
             </div>
 

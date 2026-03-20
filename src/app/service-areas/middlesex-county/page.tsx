@@ -69,7 +69,7 @@ export default function MiddlesexCountyPage() {
         name: "What plumbing services do you offer in Middlesex County?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer comprehensive plumbing services including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump services, water filtration, water leak detection, plumbing inspections, and 24/7 emergency plumbing.",
+          text: "We offer comprehensive plumbing services including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump services, water filtration, water leak detection, plumbing inspections, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -182,8 +182,6 @@ export default function MiddlesexCountyPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Additional Services</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -222,8 +220,7 @@ export default function MiddlesexCountyPage() {
                 <li><strong>Aging Water Heaters:</strong> Many county homes have water heaters that are past their expected lifespan. Learn the <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">signs your water heater is dying</Link> and explore <Link href="/blog/tankless-vs-tank-water-heater" className="text-red-700 hover:underline">tankless vs. tank options</Link>.</li>
                 <li><strong>Hard Water Damage:</strong> Central New Jersey water causes mineral buildup in pipes and fixtures. Consider a <Link href="/services/water-filtration-system" className="text-red-700 hover:underline">water filtration system</Link> to protect your plumbing.</li>
                 <li><strong>Boiler Problems:</strong> Many Middlesex County homes rely on boilers for heat. Address <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> with regular maintenance.</li>
-                <li><strong>Sewer Line Issues:</strong> Mature trees throughout the county can infiltrate aging sewer lines. Our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless sewer repair</Link> options minimize yard disruption.</li>
-                <li><strong>Frozen Pipes:</strong> New Jersey winters can freeze exposed pipes. Learn about <Link href="/blog/frozen-pipes-prevention-repair" className="text-red-700 hover:underline">frozen pipe prevention and repair</Link> to protect your home.</li>
+<li><strong>Frozen Pipes:</strong> New Jersey winters can freeze exposed pipes. Learn about <Link href="/blog/frozen-pipes-prevention-repair" className="text-red-700 hover:underline">frozen pipe prevention and repair</Link> to protect your home.</li>
               </ul>
             </div>
 

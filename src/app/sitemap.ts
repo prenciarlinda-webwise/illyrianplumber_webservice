@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const featuredServices = [
     { url: "/services/tankless-water-heater-installation", priority: 0.95, changeFrequency: "weekly" as const },
-    { url: "/services/sewer-line-repair-replacement", priority: 0.95, changeFrequency: "weekly" as const },
+
     { url: "/services/boiler-repair-service", priority: 0.95, changeFrequency: "weekly" as const },
     { url: "/services/gas-line-repair-installation", priority: 0.95, changeFrequency: "weekly" as const },
     { url: "/services/whole-house-repiping", priority: 0.95, changeFrequency: "weekly" as const },
@@ -34,6 +34,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/services/bathroom-remodeling", priority: 0.85, changeFrequency: "monthly" as const },
     { url: "/services/toilet-and-faucet-installation", priority: 0.8, changeFrequency: "monthly" as const },
     { url: "/services/plumbing-safety-inspections", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/kitchen-plumbing", priority: 0.85, changeFrequency: "monthly" as const },
+    { url: "/services/backflow-prevention-testing", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/services/commercial-plumbing", priority: 0.9, changeFrequency: "monthly" as const },
   ];
 
   // Service area pages (Middlesex County focus)
@@ -72,6 +75,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/blog/sewer-camera-inspection-guide", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/blog/water-pipe-noises-causes-fixes", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/blog/how-to-drain-flush-water-heater", priority: 0.75, changeFrequency: "monthly" as const },
+    { url: "/blog/kitchen-sink-plumbing-diagram", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/how-to-unclog-kitchen-sink", priority: 0.8, changeFrequency: "monthly" as const },
+    { url: "/blog/what-is-backflow-testing", priority: 0.75, changeFrequency: "monthly" as const },
     { url: "/blog/battery-backup-sump-pump-guide", priority: 0.75, changeFrequency: "monthly" as const },
   ];
 

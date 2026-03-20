@@ -52,11 +52,6 @@ export const SERVICE_PAGES = {
       description: "Expert tankless water heater installation with gas line upgrades",
     },
     {
-      name: "Sewer Line Repair & Replacement",
-      href: "/services/sewer-line-repair-replacement",
-      description: "Structural sewer line repair and trenchless replacement",
-    },
-    {
       name: "Boiler Repair Service",
       href: "/services/boiler-repair-service",
       description: "Expert boiler repair, maintenance, and installation",
@@ -123,6 +118,23 @@ export const SERVICE_PAGES = {
       href: "/services/plumbing-safety-inspections",
       description: "Comprehensive plumbing inspections for code compliance",
     },
+    {
+      name: "Kitchen Plumbing",
+      href: "/services/kitchen-plumbing",
+      description: "Kitchen plumbing repair, remodel, and installation",
+    },
+    {
+      name: "Backflow Prevention & Testing",
+      href: "/services/backflow-prevention-testing",
+      description: "Certified backflow testing and prevention device installation",
+    },
+  ],
+  commercial: [
+    {
+      name: "Commercial Plumbing",
+      href: "/services/commercial-plumbing",
+      description: "Full-service commercial plumbing for businesses in Middlesex County",
+    },
   ],
 };
 
@@ -165,17 +177,19 @@ export const SERVICE_SILOS = [
     services: [
       { name: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
       { name: "Toilet & Faucet Install", href: "/services/toilet-and-faucet-installation" },
+      { name: "Kitchen Plumbing", href: "/services/kitchen-plumbing" },
       { name: "Sump Pump Services", href: "/services/sump-pump-repair-install" },
       { name: "Water Filtration", href: "/services/water-filtration-system" },
+      { name: "Backflow Testing", href: "/services/backflow-prevention-testing" },
+      { name: "Plumbing Inspections", href: "/services/plumbing-safety-inspections" },
     ],
   },
   {
-    id: "sewer",
-    title: "Sewer Line Services",
-    shortTitle: "Sewer Lines",
+    id: "commercial",
+    title: "Commercial Plumbing",
+    shortTitle: "Commercial",
     services: [
-      { name: "Sewer Line Repair", href: "/services/sewer-line-repair-replacement" },
-      { name: "Plumbing Inspections", href: "/services/plumbing-safety-inspections" },
+      { name: "Commercial Plumbing", href: "/services/commercial-plumbing" },
     ],
   },
 ];

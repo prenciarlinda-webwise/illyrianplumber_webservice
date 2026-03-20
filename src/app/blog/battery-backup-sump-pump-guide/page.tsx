@@ -193,7 +193,7 @@ export default function BatteryBackupSumpPumpGuide() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and basement waterproofing solutions in Middlesex County, NJ. We offer <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800">sump pump repair and installation</Link>, <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, and <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800">plumbing safety inspections</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and basement waterproofing solutions in Middlesex County, NJ. We offer <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800">sump pump repair and installation</Link>, <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, and <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800">plumbing safety inspections</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -1074,7 +1074,6 @@ export default function BatteryBackupSumpPumpGuide() {
                   <li><Link href="/services/water-leak-detection" className="text-gray-700 hover:text-red-700 transition">Water Leak Detection</Link></li>
                   <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">Emergency Plumbing</Link></li>
                   <li><Link href="/services/whole-house-repiping" className="text-gray-700 hover:text-red-700 transition">Whole House Repiping</Link></li>
-                  <li><Link href="/services/sewer-line-repair-replacement" className="text-gray-700 hover:text-red-700 transition">Sewer Line Repair</Link></li>
                   <li><Link href="/services/plumbing-safety-inspections" className="text-gray-700 hover:text-red-700 transition">Plumbing Inspections</Link></li>
                 </ul>
                 <Link href="/services" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Services</Link>

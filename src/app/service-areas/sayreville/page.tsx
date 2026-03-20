@@ -51,7 +51,7 @@ export default function SayrevillePage() {
         name: "What plumbing services do you offer in Sayreville?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a complete range of plumbing services in Sayreville including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump services, and 24/7 emergency plumbing.",
+          text: "We offer a complete range of plumbing services in Sayreville including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump services, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -75,7 +75,7 @@ export default function SayrevillePage() {
         name: "What plumbing problems are common in Sayreville homes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sayreville homes commonly experience sump pump issues due to the area's proximity to the Raritan River and high water tables, aging water heaters in older Parlin homes, boiler problems during winter, and sewer line issues from tree root intrusion in established neighborhoods.",
+          text: "Sayreville homes commonly experience sump pump issues due to the area's proximity to the Raritan River and high water tables, aging water heaters in older Parlin homes, and boiler problems during winter.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function SayrevillePage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in Sayreville</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -197,7 +195,6 @@ export default function SayrevillePage() {
                 <li><strong>Sump Pump Failures:</strong> With the Raritan River nearby and high water tables in many Sayreville neighborhoods, a reliable <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:underline">sump pump</Link> is critical. Our <Link href="/blog/sump-pump-maintenance-guide" className="text-red-700 hover:underline">sump pump maintenance guide</Link> can help you stay ahead of problems.</li>
                 <li><strong>Aging Water Heaters:</strong> Older Parlin homes often have water heaters that are well past their expected lifespan. Look for <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">signs your water heater is dying</Link> and consider upgrading to a <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless water heater</Link>.</li>
                 <li><strong>Frozen Pipes in Winter:</strong> Sayreville's coastal proximity can bring harsh winter conditions. Learn about <Link href="/blog/frozen-pipes-prevention-repair" className="text-red-700 hover:underline">frozen pipe prevention and repair</Link> to protect your home during cold snaps.</li>
-                <li><strong>Sewer Line Issues:</strong> Mature trees in established Sayreville neighborhoods can send roots into aging sewer lines. Our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless sewer repair</Link> options minimize disruption to your yard.</li>
                 <li><strong>Boiler Problems:</strong> Many Sayreville homes use boiler heating systems that need regular maintenance. Address <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common boiler problems</Link> before winter hits.</li>
               </ul>
             </div>

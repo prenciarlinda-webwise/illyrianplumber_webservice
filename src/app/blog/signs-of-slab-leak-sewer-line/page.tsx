@@ -91,6 +91,10 @@ export default function SlabLeakPost() {
           <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex-1 min-w-0 max-w-3xl">
             <div className="prose prose-lg max-w-none">
+              <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5 mb-6">
+                <p className="text-sm text-blue-900 font-medium mb-1">Informational Guide</p>
+                <p className="text-sm text-blue-800">Please note: Illyrian Plumber does not currently offer sewer line cleaning, snaking, or sewer lining services. This article is provided as an educational resource to help homeowners identify potential problems. For sewer-related services, we recommend contacting a specialized sewer contractor in your area. We do offer <a href="/services/water-leak-detection" className="text-blue-700 underline hover:text-blue-900">water leak detection</a> services.</p>
+              </div>
               <p className="text-xl text-gray-700 leading-relaxed">
                 The plumbing you can&apos;t see is often the plumbing that causes the biggest problems. Slab leaks and sewer line issues hide beneath your foundation and yard, silently causing damage until warning signs finally appear.
               </p>
@@ -103,7 +107,7 @@ export default function SlabLeakPost() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:text-red-800">tankless water heater installation</Link>, <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">water heater repair</Link>, <Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">boiler repair</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -396,10 +400,10 @@ export default function SlabLeakPost() {
                     <p className="text-sm text-gray-600">Leaks are a common cause of pressure problems.</p>
                   </div>
                 </Link>
-                <Link href="/services/sewer-line-repair-replacement" className="group">
+                <Link href="/services/water-leak-detection" className="group">
                   <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-red-700 mb-2">Sewer Line Services</h3>
-                    <p className="text-sm text-gray-600">Inspection, repair, and replacement options.</p>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-red-700 mb-2">Water Leak Detection Services</h3>
+                    <p className="text-sm text-gray-600">Professional leak detection to find hidden leaks fast.</p>
                   </div>
                 </Link>
               </div>
@@ -449,7 +453,6 @@ export default function SlabLeakPost() {
                     <li><Link href="/services/tankless-water-heater-installation" className="text-gray-700 hover:text-red-700 transition">Tankless Water Heater Installation</Link></li>
                     <li><Link href="/services/water-heater-repair" className="text-gray-700 hover:text-red-700 transition">Water Heater Repair</Link></li>
                     <li><Link href="/services/boiler-repair-service" className="text-gray-700 hover:text-red-700 transition">Boiler Repair</Link></li>
-                    <li><Link href="/services/sewer-line-repair-replacement" className="text-gray-700 hover:text-red-700 transition">Sewer Line Repair</Link></li>
                     <li><Link href="/services/gas-line-repair-installation" className="text-gray-700 hover:text-red-700 transition">Gas Line Services</Link></li>
                     <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">Emergency Plumbing</Link></li>
                   </ul>

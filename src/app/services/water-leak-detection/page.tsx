@@ -330,7 +330,6 @@ export default function WaterLeakDetectionPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Related Services</h3>
                 <div className="grid sm:grid-cols-2 gap-3">
                   <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800 font-medium">Whole House Repiping &#8594;</Link>
-                  <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair &#8594;</Link>
                   <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800 font-medium">Emergency Services &#8594;</Link>
                   <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800 font-medium">Plumbing Inspections &#8594;</Link>
                 </div>
@@ -379,7 +378,6 @@ export default function WaterLeakDetectionPage() {
                   <div className="space-y-2">
                     <Link href="/services/emergency-plumbing" className="block text-sm text-red-700 hover:text-red-800">Emergency Plumbing</Link>
                     <Link href="/services/whole-house-repiping" className="block text-sm text-red-700 hover:text-red-800">Whole House Repiping</Link>
-                    <Link href="/services/sewer-line-repair-replacement" className="block text-sm text-red-700 hover:text-red-800">Sewer Line Repair</Link>
                     <Link href="/services/water-heater-repair" className="block text-sm text-red-700 hover:text-red-800">Water Heater Repair</Link>
                     <Link href="/services/sump-pump-repair-install" className="block text-sm text-red-700 hover:text-red-800">Sump Pump Services</Link>
                     <Link href="/services/plumbing-safety-inspections" className="block text-sm text-red-700 hover:text-red-800">Plumbing Inspections</Link>

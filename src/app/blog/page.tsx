@@ -9,10 +9,37 @@ import { BUSINESS_INFO } from "@/lib/constants";
 const blogPosts = [
   // March 2026
   {
+    title: "Kitchen Sink Plumbing Diagram - Parts, Connections & How It Works",
+    slug: "kitchen-sink-plumbing-diagram",
+    excerpt: "Complete guide to kitchen sink plumbing parts and connections. Understand supply lines, drain pipes, P-traps, and how single and double sink setups work.",
+    category: "Kitchen Plumbing",
+    date: "March 2026",
+    image: "",
+    readTime: "12 min read",
+  },
+  {
+    title: "Kitchen Sink Clogged? How to Unclog a Kitchen Sink (7 Methods)",
+    slug: "how-to-unclog-kitchen-sink",
+    excerpt: "Step-by-step guide to unclogging a kitchen sink using 7 proven methods. From boiling water to plumber's snake, fix your clogged drain fast.",
+    category: "Kitchen Plumbing",
+    date: "March 2026",
+    image: "",
+    readTime: "14 min read",
+  },
+  {
+    title: "What Is Backflow Testing? Everything NJ Homeowners Need to Know",
+    slug: "what-is-backflow-testing",
+    excerpt: "Learn what backflow testing is, why it is required in NJ, how much it costs, and how often you need it. Complete guide for homeowners.",
+    category: "Water Quality",
+    date: "March 2026",
+    image: "",
+    readTime: "10 min read",
+  },
+  {
     title: "Hydro Jetting Drain Cleaning: Complete Guide to Water Jet Sewer Cleaning",
     slug: "hydro-jetting-drain-cleaning-guide",
     excerpt: "Learn how hydro jetting works, when you need it, costs, and how it compares to snaking. Professional drain cleaning guide for NJ homeowners.",
-    category: "Sewer Lines",
+    category: "Guides",
     date: "March 2026",
     image: "",
     readTime: "18 min read",
@@ -21,7 +48,7 @@ const blogPosts = [
     title: "Sewer Camera Inspection: When You Need One and What It Reveals",
     slug: "sewer-camera-inspection-guide",
     excerpt: "Find out when you need a sewer camera inspection, what it costs, and what the camera reveals. Essential for home buyers and recurring drain problems.",
-    category: "Sewer Lines",
+    category: "Guides",
     date: "March 2026",
     image: "",
     readTime: "18 min read",
@@ -102,7 +129,7 @@ const blogPosts = [
     title: "Trenchless Sewer Repair: Methods, Costs & Complete Guide",
     slug: "trenchless-sewer-repair-guide",
     excerpt: "Compare trenchless sewer repair methods (pipe lining vs pipe bursting) with traditional replacement. Costs, timelines, and when each method is best.",
-    category: "Sewer Lines",
+    category: "Guides",
     date: "March 2026",
     image: "",
     readTime: "18 min read",
@@ -221,6 +248,7 @@ const blogPosts = [
 const categories = [
   "All Posts",
   "Water Heaters",
+  "Kitchen Plumbing",
   "Maintenance",
   "Boilers",
   "Troubleshooting",
@@ -228,7 +256,7 @@ const categories = [
   "Safety",
   "Water Quality",
   "Renovations",
-  "Sewer Lines",
+  "Guides",
 ];
 
 
@@ -286,31 +314,11 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {visiblePosts.map((post) => (
               <article key={post.slug} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition group">
-                {post.image ? (
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-red-700 text-white px-3 py-1 rounded-full text-xs font-medium">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="relative h-48 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-end">
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-red-700 text-white px-3 py-1 rounded-full text-xs font-medium">
-                        {post.category}
-                      </span>
-                    </div>
-                  </div>
-                )}
                 <div className="p-6">
                   <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
+                    <span className="bg-red-50 text-red-700 px-2.5 py-0.5 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>{post.readTime}</span>

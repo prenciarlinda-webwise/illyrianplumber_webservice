@@ -421,7 +421,6 @@ export default function BoilerRepairPage() {
                     <li><Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">Water Heater Repair</Link></li>
                     <li><Link href="/services/boiler-repair-service" className="text-red-700 hover:text-red-800">Boiler Repair</Link></li>
                     <li><Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">Gas Line Services</Link></li>
-                    <li><Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">Sewer Line Repair</Link></li>
                     <li><Link href="/services/radiant-heating-plumbing" className="text-red-700 hover:text-red-800">Radiant Heating</Link></li>
                     <li><Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">Whole House Repiping</Link></li>
                   </ul>

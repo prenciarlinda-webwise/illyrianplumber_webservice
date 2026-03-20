@@ -182,8 +182,12 @@ export default function SewerCameraInspectionGuidePost() {
           <div className="flex-1 min-w-0 max-w-3xl">
             {/* Introduction */}
             <div className="prose prose-lg max-w-none">
+              <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5 mb-6">
+                <p className="text-sm text-blue-900 font-medium mb-1">Informational Guide</p>
+                <p className="text-sm text-blue-800">Please note: Illyrian Plumber does not currently offer sewer camera inspection, sewer cleaning, or sewer lining services. This article is provided as an educational resource to help homeowners understand their options. For sewer-related services, we recommend contacting a specialized sewer contractor in your area.</p>
+              </div>
               <p className="text-xl text-gray-700 leading-relaxed">
-                A <strong>sewer camera inspection</strong> is one of the most valuable diagnostic tools in modern plumbing, and if you own a home or are buying one in New Jersey, understanding how it works can save you thousands of dollars. Whether you are dealing with recurring drain problems that need <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair</Link> or you have noticed <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800">signs of a slab leak or sewer line damage</Link>, a camera inspection is the essential first step to understanding what is happening underground.
+                A <strong>sewer camera inspection</strong> is one of the most valuable diagnostic tools in modern plumbing, and if you own a home or are buying one in New Jersey, understanding how it works can save you thousands of dollars. Whether you are dealing with recurring drain problems that need sewer line repair or you have noticed <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800">signs of a slab leak or sewer line damage</Link>, a camera inspection is the essential first step to understanding what is happening underground.
               </p>
               <p className="text-gray-700">
                 Unlike older methods that involved guesswork and exploratory digging, today&apos;s sewer video inspection technology lets licensed plumbers see the exact condition of your pipes in real time. A waterproof, high-definition camera is fed into the sewer line through a cleanout or drain opening, transmitting live footage to a monitor above ground. The entire process is non-invasive, takes under an hour, and provides definitive answers about root intrusion, cracks, blockages, collapsed sections, and pipe material condition.
@@ -197,7 +201,7 @@ export default function SewerCameraInspectionGuidePost() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and sewer diagnostics in Middlesex County, NJ. We offer <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800">sewer line repair and replacement</Link>, <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and sewer diagnostics in Middlesex County, NJ. We offer <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -577,8 +581,8 @@ export default function SewerCameraInspectionGuidePost() {
             {/* Mid-content CTA */}
             <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-lg">Need a sewer camera inspection?</p>
-                <p className="text-gray-300 text-sm">HD camera inspections with video report. Serving all of Middlesex County, NJ.</p>
+                <p className="font-bold text-lg">Need a plumber?</p>
+                <p className="text-gray-300 text-sm">24/7 emergency plumbing, water heater repair, leak detection, and more in Middlesex County.</p>
               </div>
               <div className="flex gap-3">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm whitespace-nowrap">Call Niti</a>
@@ -592,9 +596,9 @@ export default function SewerCameraInspectionGuidePost() {
                 <svg className="w-8 h-8 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
               </div>
               <div className="flex-1">
-                <p className="font-bold text-gray-900 mb-1">Related Service: Sewer Line Repair & Replacement</p>
-                <p className="text-sm text-gray-600 mb-2">Expert sewer line diagnostics, trenchless repair, pipe lining, pipe bursting, and full replacement services. Camera inspection included with every repair.</p>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium text-sm">Learn More</Link>
+                <p className="font-bold text-gray-900 mb-1">Our Plumbing Services</p>
+                <p className="text-sm text-gray-600 mb-2">Expert drain diagnostics, hydro jetting, and a full range of plumbing services. Camera inspection available to pinpoint issues before any work begins.</p>
+                <Link href="/services" className="text-red-700 hover:text-red-800 font-medium text-sm">View Our Services</Link>
               </div>
             </div>
 
@@ -737,8 +741,8 @@ export default function SewerCameraInspectionGuidePost() {
 
             {/* Mid-content CTA (Red) */}
             <div className="bg-red-700 text-white rounded-xl p-6 mb-12">
-              <p className="font-bold text-lg mb-1">Sewer line problems? We can help.</p>
-              <p className="text-red-100 text-sm mb-4">Free camera inspection credit with any sewer repair. HD video report included. Licensed plumbers serving all of Middlesex County.</p>
+              <p className="font-bold text-lg mb-1">Need a plumber?</p>
+              <p className="text-red-100 text-sm mb-4">While we do not offer sewer inspection services, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County.</p>
               <div className="flex flex-wrap gap-3">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-5 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition text-sm">Call Niti: {BUSINESS_INFO.phone}</a>
                 <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-800 transition text-sm">Call Danny: {BUSINESS_INFO.phone2}</a>
@@ -878,16 +882,16 @@ export default function SewerCameraInspectionGuidePost() {
 
             {/* CTA Section */}
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Schedule Your Sewer Camera Inspection</h2>
+              <h2 className="text-2xl font-bold mb-4">Need Help With Your Plumbing?</h2>
               <p className="text-red-100 mb-6">
-                Whether you are buying a home, dealing with recurring drain problems, or just want peace of mind about your sewer line, our licensed plumbers provide thorough HD camera inspections with detailed reports. We serve all of Middlesex County, NJ, and credit the inspection cost toward any repair work.
+                While we do not offer sewer camera inspection or sewer line services, our licensed plumbers are available 24/7 for water heater repair, leak detection, gas line services, repiping, and more across Middlesex County, NJ.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                   Call {BUSINESS_INFO.phone}
                 </a>
-                <Link href="/services/sewer-line-repair-replacement" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
-                  View Our Sewer Services
+                <Link href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">
+                  View Our Services
                 </Link>
               </div>
             </section>
@@ -923,7 +927,7 @@ export default function SewerCameraInspectionGuidePost() {
               {/* Call Now */}
               <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
                 <p className="text-lg font-bold text-gray-900 mb-1">Need a Plumber?</p>
-                <p className="text-gray-600 text-sm mb-4">HD sewer camera inspections with video report. Free inspection credit with repairs.</p>
+                <p className="text-gray-600 text-sm mb-4">24/7 plumbing services in Middlesex County - water heaters, leak detection, gas lines, and more.</p>
                 <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">Call Niti: {BUSINESS_INFO.phone}</a>
                 <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">Call Danny: {BUSINESS_INFO.phone2}</a>
                 <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
@@ -945,7 +949,6 @@ export default function SewerCameraInspectionGuidePost() {
               <div className="bg-white rounded-xl shadow-md p-5">
                 <p className="font-bold text-gray-900 mb-3">Our Services</p>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/services/sewer-line-repair-replacement" className="text-gray-700 hover:text-red-700 transition">Sewer Line Repair & Replacement</Link></li>
                   <li><Link href="/services/water-leak-detection" className="text-gray-700 hover:text-red-700 transition">Water Leak Detection</Link></li>
                   <li><Link href="/services/whole-house-repiping" className="text-gray-700 hover:text-red-700 transition">Whole House Repiping</Link></li>
                   <li><Link href="/services/plumbing-safety-inspections" className="text-gray-700 hover:text-red-700 transition">Plumbing Safety Inspections</Link></li>

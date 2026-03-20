@@ -51,7 +51,7 @@ export default function OldBridgePage() {
         name: "What plumbing services do you offer in Old Bridge?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer complete plumbing services in Old Bridge including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump services, water leak detection, and 24/7 emergency plumbing.",
+          text: "We offer complete plumbing services in Old Bridge including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump services, water leak detection, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function OldBridgePage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in Old Bridge</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -197,7 +195,6 @@ export default function OldBridgePage() {
                 <li><strong>Aging Pipes in Older Homes:</strong> Many homes in Brownville, Madison Park, and other established neighborhoods were built with galvanized steel pipes that corrode over time, causing <Link href="/blog/why-is-water-pressure-low" className="text-red-700 hover:underline">low water pressure</Link> and discolored water. <Link href="/services/whole-house-repiping" className="text-red-700 hover:underline">Whole-house repiping</Link> is often the best long-term solution.</li>
                 <li><strong>Water Heater Failures:</strong> Homes built in the 1970s-1980s may be on their second or third water heater, and units installed 10+ years ago are reaching end of life. Look for <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">signs your water heater is dying</Link> and consider a <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless upgrade</Link>.</li>
                 <li><strong>Sump Pump Issues:</strong> Properties near Laurence Harbor and Cliffwood Beach often deal with high water tables and flooding risks. A reliable <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:underline">sump pump system</Link> is essential. Read our <Link href="/blog/sump-pump-maintenance-guide" className="text-red-700 hover:underline">sump pump maintenance guide</Link> for tips.</li>
-                <li><strong>Sewer Line Root Intrusion:</strong> Old Bridge's mature trees can infiltrate aging sewer lines. We offer <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless sewer repair</Link> to fix the problem with minimal yard disruption.</li>
                 <li><strong>Winter Boiler Problems:</strong> Many Old Bridge homes rely on boilers for heating. Regular maintenance can prevent <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler issues</Link> like no heat, strange noises, or pilot light failures.</li>
               </ul>
             </div>

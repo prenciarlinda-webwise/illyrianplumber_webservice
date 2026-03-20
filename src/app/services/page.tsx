@@ -49,6 +49,7 @@ const silos = [
     description: "Complete plumbing for kitchens and bathrooms. Toilets, faucets, and full remodels.",
     href: "/services/bathroom-remodeling",
     services: [
+      { name: "Kitchen Plumbing", href: "/services/kitchen-plumbing" },
       { name: "Bathroom Remodeling", href: "/services/bathroom-remodeling" },
       { name: "Toilet & Faucet Installation", href: "/services/toilet-and-faucet-installation" },
     ],
@@ -73,9 +74,20 @@ const silos = [
     href: "/services/plumbing-safety-inspections",
     services: [
       { name: "Plumbing Safety Inspections", href: "/services/plumbing-safety-inspections" },
+      { name: "Backflow Prevention & Testing", href: "/services/backflow-prevention-testing" },
       { name: "Radiant Heating Plumbing", href: "/services/radiant-heating-plumbing" },
     ],
     color: "purple",
+  },
+  {
+    id: "commercial",
+    title: "Commercial Plumbing",
+    description: "Full-service commercial plumbing for businesses throughout Middlesex County.",
+    href: "/services/commercial-plumbing",
+    services: [
+      { name: "Commercial Plumbing Services", href: "/services/commercial-plumbing" },
+    ],
+    color: "red",
   },
 ];
 

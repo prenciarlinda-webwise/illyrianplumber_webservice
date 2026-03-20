@@ -20,7 +20,7 @@ const sitemapData = {
     { url: "/services/tankless-water-heater-installation", label: "Tankless Water Heater Installation" },
     { url: "/services/water-heater-repair", label: "Water Heater Repair" },
     { url: "/services/water-heater-replacement", label: "Water Heater Replacement" },
-    { url: "/services/sewer-line-repair-replacement", label: "Sewer Line Repair & Replacement" },
+
     { url: "/services/boiler-repair-service", label: "Boiler Repair Service" },
     { url: "/services/gas-line-repair-installation", label: "Gas Line Repair & Installation" },
     { url: "/services/whole-house-repiping", label: "Whole House Repiping" },
@@ -32,6 +32,9 @@ const sitemapData = {
     { url: "/services/bathroom-remodeling", label: "Bathroom Remodeling" },
     { url: "/services/toilet-and-faucet-installation", label: "Toilet & Faucet Installation" },
     { url: "/services/plumbing-safety-inspections", label: "Plumbing Safety Inspections" },
+    { url: "/services/kitchen-plumbing", label: "Kitchen Plumbing" },
+    { url: "/services/backflow-prevention-testing", label: "Backflow Prevention & Testing" },
+    { url: "/services/commercial-plumbing", label: "Commercial Plumbing" },
   ],
   serviceAreas: [
     { url: "/service-areas/middlesex-county", label: "Middlesex County" },
@@ -55,6 +58,9 @@ const sitemapData = {
     { url: "/blog/common-boiler-problems-winter", label: "Common Boiler Problems in Winter" },
     { url: "/blog/how-long-bathroom-remodel-take", label: "How Long Does a Bathroom Remodel Take?" },
     { url: "/blog/gas-leak-detection-safety", label: "Gas Leak Detection & Safety" },
+    { url: "/blog/kitchen-sink-plumbing-diagram", label: "Kitchen Sink Plumbing Diagram" },
+    { url: "/blog/how-to-unclog-kitchen-sink", label: "How to Unclog a Kitchen Sink" },
+    { url: "/blog/what-is-backflow-testing", label: "What Is Backflow Testing?" },
     { url: "/blog/signs-of-slab-leak-sewer-line", label: "Signs of a Slab Leak or Sewer Line Issue" },
   ],
   legal: [

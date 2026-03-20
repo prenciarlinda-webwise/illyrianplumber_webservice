@@ -214,7 +214,7 @@ function ServicesSection() {
     "water-heater": "/images/tankless-water-heater-installation.jpg",
     mechanical: "/images/boiler-repair-service-nj.jpg",
     residential: "/images/modern-bathroom-shower-remodel.jpg",
-    sewer: "/images/copper-pipe-repiping-service.jpg",
+    commercial: "/images/professional-plumbing-services.jpg",
   };
 
   return (

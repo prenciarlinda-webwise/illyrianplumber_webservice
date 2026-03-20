@@ -411,7 +411,6 @@ export default function WaterFiltrationPage() {
                     <Link href="/services/tankless-water-heater-installation" className="block text-sm text-red-700 hover:text-red-800">Tankless Water Heater Installation</Link>
                     <Link href="/services/whole-house-repiping" className="block text-sm text-red-700 hover:text-red-800">Whole House Repiping</Link>
                     <Link href="/services/water-leak-detection" className="block text-sm text-red-700 hover:text-red-800">Water Leak Detection</Link>
-                    <Link href="/services/sewer-line-repair-replacement" className="block text-sm text-red-700 hover:text-red-800">Sewer Line Repair</Link>
                     <Link href="/services/plumbing-safety-inspections" className="block text-sm text-red-700 hover:text-red-800">Plumbing Inspections</Link>
                   </div>
                 </div>

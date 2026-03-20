@@ -51,7 +51,7 @@ export default function SouthBrunswickPage() {
         name: "What plumbing services do you offer in South Brunswick?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We provide comprehensive plumbing services in South Brunswick including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, drain cleaning, whole-house repiping, bathroom remodeling, sewer line repair, sump pump services, water filtration, and 24/7 emergency plumbing.",
+          text: "We provide comprehensive plumbing services in South Brunswick including water heater repair and replacement, tankless water heater installation, boiler repair, gas line services, whole-house repiping, bathroom remodeling, sump pump services, water filtration, and 24/7 emergency plumbing.",
         },
       },
       {
@@ -75,7 +75,7 @@ export default function SouthBrunswickPage() {
         name: "What plumbing problems are common in South Brunswick homes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "South Brunswick homes commonly experience well water system issues in rural areas, aging water heaters, hard water causing pipe corrosion and fixture buildup, sewer line problems from tree root intrusion in older neighborhoods, and boiler maintenance needs during winter months.",
+          text: "South Brunswick homes commonly experience well water system issues in rural areas, aging water heaters, hard water causing pipe corrosion and fixture buildup, and boiler maintenance needs during winter months.",
         },
       },
       {
@@ -156,8 +156,6 @@ export default function SouthBrunswickPage() {
             <div className="bg-gray-50 rounded-xl p-6 mb-12">
               <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available in South Brunswick</h3>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/drain-cleaning" className="text-red-700 hover:text-red-800 font-medium">Drain Cleaning</Link>
-                <Link href="/services/sewer-line-repair-replacement" className="text-red-700 hover:text-red-800 font-medium">Sewer Line Repair</Link>
                 <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
                 <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
                 <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
@@ -197,7 +195,6 @@ export default function SouthBrunswickPage() {
                 <li><strong>Well Water Challenges:</strong> Properties in Dayton, Kingston, and Deans that rely on well water often need <Link href="/services/water-filtration-system" className="text-red-700 hover:underline">water filtration systems</Link> to address iron, manganese, and hardness issues. Learn about the <Link href="/blog/best-whole-house-water-filtration-systems" className="text-red-700 hover:underline">best whole-house water filtration systems</Link> available.</li>
                 <li><strong>Aging Pipes in Kendall Park:</strong> Many Kendall Park homes built in the 1950s-1960s still have original galvanized pipes that cause <Link href="/blog/why-is-water-pressure-low" className="text-red-700 hover:underline">low water pressure</Link> and rusty water. <Link href="/services/whole-house-repiping" className="text-red-700 hover:underline">Whole-house repiping</Link> is often the best solution.</li>
                 <li><strong>Water Heater Failures:</strong> If your water heater is showing <Link href="/blog/signs-water-heater-dying" className="text-red-700 hover:underline">signs of failure</Link>, it is time to consider a replacement. We offer both <Link href="/services/water-heater-replacement" className="text-red-700 hover:underline">traditional tank</Link> and <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless options</Link> - read our <Link href="/blog/tankless-vs-tank-water-heater" className="text-red-700 hover:underline">comparison guide</Link>.</li>
-                <li><strong>Sewer Line Issues:</strong> Tree roots in South Brunswick's heavily wooded areas can infiltrate sewer lines. Our <Link href="/blog/trenchless-sewer-repair-guide" className="text-red-700 hover:underline">trenchless sewer repair</Link> minimizes yard disruption.</li>
                 <li><strong>Boiler Maintenance:</strong> Many South Brunswick homes use boiler systems that need seasonal attention. Prevent <Link href="/blog/common-boiler-problems-winter" className="text-red-700 hover:underline">common winter boiler problems</Link> with regular maintenance.</li>
               </ul>
             </div>
