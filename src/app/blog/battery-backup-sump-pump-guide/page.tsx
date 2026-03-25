@@ -2,10 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "Battery Backup Sump Pump: Complete 2026 Guide to Costs, Types & Installation",
   description: "Learn about battery backup sump pumps, costs ($200-$1,200+), types, and installation. Compare battery vs water-powered backup sump pumps. NJ plumber guide.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/battery-backup-sump-pump-guide" },
   keywords: [
     "battery backup sump pump",
     "sump pump battery backup",
@@ -160,19 +162,8 @@ export default function BatteryBackupSumpPumpGuide() {
           </div>
         </header>
 
-        {/* Author Box */}
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
-                IP
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2026-03-19" updateDate="2026-03-25" />
         </div>
 
         {/* Content */}

@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in Sayreville NJ",
   description: "Licensed plumber in Sayreville, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. Serving Parlin, Morgan, and all Sayreville areas. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/sayreville",
+  },
   keywords: [
     "sayreville plumber",
     "plumber near me sayreville",

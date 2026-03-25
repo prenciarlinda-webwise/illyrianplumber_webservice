@@ -2,10 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "How Long Does a Water Heater Take to Heat Up? (2026)",
   description: "Learn how long gas (30-40 min), electric (60-80 min), and tankless (instant) water heaters take to heat up. Recovery times by tank size with BTU data.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/how-long-water-heater-heat-up" },
   keywords: [
     "how long does a water heater take to heat up",
     "how long does it take for a water heater to heat up",
@@ -176,19 +178,8 @@ export default function WaterHeaterHeatUpTimePost() {
           </div>
         </header>
 
-        {/* Author Box */}
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
-                IG
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2026-03-18" updateDate="2026-03-25" />
         </div>
 
         {/* Content */}

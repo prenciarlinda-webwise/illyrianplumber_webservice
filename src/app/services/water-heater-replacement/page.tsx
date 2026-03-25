@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Water Heater Replacement East Brunswick NJ - Free Estimates",
   description: "Professional water heater replacement in East Brunswick & Middlesex County, NJ. Tank and tankless options. Same-day installation available. Free estimates. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/water-heater-replacement",
+  },
   keywords: [
     "water heater replacement",
     "water heater replacement near me",
@@ -139,10 +142,55 @@ export default function WaterHeaterReplacementPage() {
     ],
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Our Water Heater Replacement Process",
+    description: "When you call Illyrian Plumber for a water heater installation, here is exactly what happens from start to finish.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Free Estimate",
+        text: "Call us to schedule a free estimate. We will evaluate your current water heater, assess your household's hot water needs, inspect the installation location, and recommend the best replacement options for your budget and requirements.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Unit Selection",
+        text: "Based on your household size, hot water demand, available space, and budget, we recommend specific models. We work with top brands including Rheem, AO Smith, Bradford White, Navien, and Rinnai. We explain the pros and cons of each option.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Permits",
+        text: "We pull the required NJ plumbing permit for the installation. This ensures your new water heater meets all NJ Uniform Construction Code requirements and protects your home insurance coverage.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Old Unit Removal",
+        text: "We safely disconnect and remove your old water heater, including draining the tank, disconnecting gas/electric supply, and removing the old unit from your home. We handle disposal of the old unit.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "New Installation",
+        text: "We install your new water heater with all new fittings, connections, proper venting (gas units), expansion tank if required, and seismic strapping. Every connection is tested for leaks.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Testing and Inspection",
+        text: "We fill the new tank, test all connections, verify proper operation, check temperature output, and ensure everything is working perfectly. We schedule the required municipal inspection.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Documentation and Cleanup",
+        text: "You receive all warranty documentation, operation instructions, and maintenance recommendations. We clean up the work area and leave your home as we found it.",
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">

@@ -2,10 +2,12 @@ import { Metadata } from "next";
 
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "Is a Whole House Water Filter Worth It in NJ? Complete Guide",
   description: "Discover if whole house water filtration is worth the investment. Compare filter types, costs, and benefits for New Jersey homeowners.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/whole-house-water-filter-worth-it" },
   keywords: [
     "whole house water filter",
     "water filtration system",
@@ -78,16 +80,8 @@ export default function WaterFilterPost() {
           </div>
         </header>
 
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">IG</div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2025-01-27" updateDate="2026-03-23" />
         </div>
 
         <div className="container mx-auto px-4 py-12">

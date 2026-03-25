@@ -4,6 +4,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy Policy for Illyrian Plumber Corp. Learn how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

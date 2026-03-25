@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumbing FAQ - Common Questions Answered",
   description: "Answers to frequently asked plumbing questions. Learn about our services, pricing, emergency response, and more. Illyrian Plumber - East Brunswick, NJ.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/faq",
+  },
   keywords: [
     "plumbing faq",
     "plumbing questions",

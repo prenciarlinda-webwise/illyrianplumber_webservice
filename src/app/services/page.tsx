@@ -8,6 +8,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumbing Services - 24/7 Emergency & Residential Plumber",
   description: "Professional plumbing services in East Brunswick, NJ. Water heater repair, emergency plumbing, boiler service, gas line installation. Licensed & insured. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services",
+  },
   keywords: [
     "plumbing services East Brunswick NJ",
     "emergency plumber NJ",

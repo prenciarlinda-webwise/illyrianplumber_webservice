@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in Middlesex County NJ",
   description: "Professional plumbing services throughout Middlesex County, NJ. Serving East Brunswick, Edison, Old Bridge, Sayreville, Monroe Township, South Brunswick, and North Brunswick. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/middlesex-county",
+  },
   keywords: [
     "middlesex county plumber",
     "plumber near me middlesex county",

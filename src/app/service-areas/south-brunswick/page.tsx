@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in South Brunswick NJ",
   description: "Licensed plumber in South Brunswick, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. Serving Kendall Park, Monmouth Junction, Dayton, and Kingston. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/south-brunswick",
+  },
   keywords: [
     "south brunswick plumber",
     "plumber near me south brunswick",

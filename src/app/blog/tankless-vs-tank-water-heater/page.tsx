@@ -2,10 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "Tankless vs Tank Water Heater: 2026 Cost & Performance Comparison",
   description: "Compare tankless vs tank water heaters. Learn costs, energy savings, pros and cons of gas vs electric tankless water heaters. Expert NJ plumber guide.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/tankless-vs-tank-water-heater" },
   keywords: [
     "tankless water heater vs tank",
     "tankless vs tank water heater",
@@ -51,11 +53,19 @@ export default function TanklessVsTankPost() {
       },
     },
     datePublished: "2025-01-08T08:00:00.000Z",
-    dateModified: "2026-03-18T08:00:00.000Z",
+    dateModified: "2026-03-25T08:00:00.000Z",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/blog/tankless-vs-tank-water-heater",
     },
+  };
+
+  const comparisonTableSchema = {
+    "@context": "https://schema.org",
+    "@type": "Table",
+    about: "Tankless vs Tank Water Heater Comparison",
+    description:
+      "Side-by-side comparison of tank and tankless water heaters covering upfront cost, monthly energy cost, lifespan, hot water supply, energy efficiency, space required, maintenance, and best use cases.",
   };
 
   const faqSchema = {
@@ -113,6 +123,10 @@ export default function TanklessVsTankPost() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonTableSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
@@ -136,19 +150,8 @@ export default function TanklessVsTankPost() {
           </div>
         </header>
 
-        {/* Author Box */}
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
-                IG
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2025-01-08" updateDate="2026-03-25" />
         </div>
 
         {/* Content */}
@@ -188,56 +191,64 @@ export default function TanklessVsTankPost() {
             </nav>
 
             {/* Quick Comparison Table */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Comparison: Tankless vs Tank</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
+            <div className="border border-gray-200 rounded-xl mb-12 shadow-sm">
+              <h2 className="text-xl font-bold text-gray-900 p-6 pb-2">Tankless vs Tank Water Heater: Side-by-Side Comparison</h2>
+              <div className="overflow-x-auto px-6 pb-4">
+                <table className="w-full text-sm border-collapse mt-4">
                   <thead>
-                    <tr className="border-b border-blue-200">
-                      <th className="text-left py-3 px-2 font-semibold text-gray-900">Feature</th>
-                      <th className="text-center py-3 px-2 font-semibold text-gray-900">Tankless</th>
-                      <th className="text-center py-3 px-2 font-semibold text-gray-900">Tank</th>
+                    <tr className="bg-gray-50">
+                      <th className="text-left py-3 px-4 font-semibold text-gray-900 border-b border-gray-200">Feature</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900 border-b border-gray-200">Tank Water Heater</th>
+                      <th className="text-center py-3 px-4 font-semibold text-gray-900 border-b border-gray-200">Tankless Water Heater</th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-700">
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Upfront Cost (with install)</td>
-                      <td className="text-center py-3 px-2">$2,500-$6,000</td>
-                      <td className="text-center py-3 px-2">$1,200-$2,500</td>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 font-medium text-gray-900">Upfront Cost</td>
+                      <td className="text-center py-3 px-4">$800–$2,000 installed</td>
+                      <td className="text-center py-3 px-4">$2,800–$6,500 installed</td>
                     </tr>
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Lifespan</td>
-                      <td className="text-center py-3 px-2">20-25 years</td>
-                      <td className="text-center py-3 px-2">10-12 years</td>
+                    <tr className="border-b border-gray-100 bg-gray-50/50">
+                      <td className="py-3 px-4 font-medium text-gray-900">Monthly Energy Cost</td>
+                      <td className="text-center py-3 px-4">$30–$50/month</td>
+                      <td className="text-center py-3 px-4">$18–$35/month</td>
                     </tr>
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Energy Efficiency</td>
-                      <td className="text-center py-3 px-2">92-98%</td>
-                      <td className="text-center py-3 px-2">60-80%</td>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 font-medium text-gray-900">Lifespan</td>
+                      <td className="text-center py-3 px-4">8–12 years</td>
+                      <td className="text-center py-3 px-4">15–20+ years</td>
                     </tr>
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Annual Energy Savings</td>
-                      <td className="text-center py-3 px-2">$75-$150/year</td>
-                      <td className="text-center py-3 px-2">Baseline</td>
+                    <tr className="border-b border-gray-100 bg-gray-50/50">
+                      <td className="py-3 px-4 font-medium text-gray-900">Hot Water Supply</td>
+                      <td className="text-center py-3 px-4">40–80 gallons, then wait</td>
+                      <td className="text-center py-3 px-4">Unlimited, continuous</td>
                     </tr>
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Hot Water Supply</td>
-                      <td className="text-center py-3 px-2">Unlimited</td>
-                      <td className="text-center py-3 px-2">Limited by tank size</td>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 font-medium text-gray-900">Energy Efficiency</td>
+                      <td className="text-center py-3 px-4">60–65% (gas), 90–95% (electric)</td>
+                      <td className="text-center py-3 px-4">80–99% (gas & electric)</td>
                     </tr>
-                    <tr className="border-b border-blue-100">
-                      <td className="py-3 px-2">Space Required</td>
-                      <td className="text-center py-3 px-2">Wall-mounted, minimal</td>
-                      <td className="text-center py-3 px-2">40-80 gallon tank</td>
+                    <tr className="border-b border-gray-100 bg-gray-50/50">
+                      <td className="py-3 px-4 font-medium text-gray-900">Space Required</td>
+                      <td className="text-center py-3 px-4">4–5 sq ft floor space</td>
+                      <td className="text-center py-3 px-4">Wall-mounted, minimal</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-3 px-4 font-medium text-gray-900">Maintenance</td>
+                      <td className="text-center py-3 px-4">Annual flush, anode rod</td>
+                      <td className="text-center py-3 px-4">Annual descaling</td>
                     </tr>
                     <tr>
-                      <td className="py-3 px-2">Best For</td>
-                      <td className="text-center py-3 px-2">High-demand homes</td>
-                      <td className="text-center py-3 px-2">Budget-conscious</td>
+                      <td className="py-3 px-4 font-medium text-gray-900">Best For</td>
+                      <td className="text-center py-3 px-4">Lower budget, simple replacement</td>
+                      <td className="text-center py-3 px-4">Long-term savings, unlimited hot water</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p className="text-xs text-gray-500 px-6 pb-5 italic">
+                Source: Energy efficiency ratings based on U.S. Department of Energy data. Costs reflect 2026 national averages including professional installation. Actual costs may vary by region and home configuration.
+              </p>
             </div>
 
             {/* Cost Comparison Section */}

@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Water Heater Repair East Brunswick NJ - Same Day Service",
   description: "Same-day water heater repair in East Brunswick & Middlesex County, NJ. Gas, electric & tankless. No hot water? Leaking? Pilot light out? Licensed plumbers - call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/water-heater-repair",
+  },
   keywords: [
     "water heater repair",
     "water heater repair near me",

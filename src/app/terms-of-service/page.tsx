@@ -4,6 +4,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of Service for Illyrian Plumber Corp. Read our terms and conditions for plumbing services.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/terms-of-service",
+  },
 };
 
 export default function TermsOfServicePage() {

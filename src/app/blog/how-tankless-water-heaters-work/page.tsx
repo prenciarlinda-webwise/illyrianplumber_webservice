@@ -2,10 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "How Tankless Water Heaters Work: Complete Guide to Pros, Cons & Lifespan",
   description: "Learn how tankless water heaters work, their pros and cons, and how long they last. Expert guide from licensed NJ plumbers covering on-demand heating technology.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/how-tankless-water-heaters-work" },
   keywords: [
     "how does a tankless water heater work",
     "tankless water heater pros and cons",
@@ -127,19 +129,8 @@ export default function TanklessGuidePost() {
           </div>
         </header>
 
-        {/* Author Box */}
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
-                IG
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2025-01-06" updateDate="2026-03-23" />
         </div>
 
         {/* Content */}

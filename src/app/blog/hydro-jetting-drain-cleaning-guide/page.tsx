@@ -2,10 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
+import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
   title: "Hydro Jetting Drain Cleaning: Complete 2026 Guide to Sewer Jetting",
   description: "Learn about hydro jetting for drain and sewer line cleaning. Compare hydro jetting vs snaking, costs ($350-$600), PSI levels, and when you need high pressure drain cleaning.",
+  alternates: { canonical: "https://www.illyrianplumber.com/blog/hydro-jetting-drain-cleaning-guide" },
   keywords: [
     "hydro jetting",
     "hydro jet drain cleaning",
@@ -162,19 +164,8 @@ export default function HydroJettingDrainCleaningGuide() {
           </div>
         </header>
 
-        {/* Author Box */}
-        <div className="border-b">
-          <div className="container mx-auto px-4 py-6">
-            <div className="max-w-3xl mx-auto flex items-center gap-4">
-              <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
-                IP
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Written by Illyrian Plumber</p>
-                <p className="text-sm text-gray-600">Licensed Master Plumbers serving Middlesex County, NJ since 2020</p>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pt-8">
+          <AuthorBio publishDate="2026-03-19" updateDate="2026-03-25" />
         </div>
 
         {/* Content */}

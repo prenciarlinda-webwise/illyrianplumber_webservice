@@ -84,6 +84,11 @@ export const SERVICE_PAGES = {
       description: "Professional water heater replacement and upgrades",
     },
     {
+      name: "Water Heater Installation",
+      href: "/services/water-heater-installation",
+      description: "Professional water heater installation for all types and brands",
+    },
+    {
       name: "Water Leak Detection",
       href: "/services/water-leak-detection",
       description: "Advanced leak detection technology for hidden leaks",
@@ -156,6 +161,7 @@ export const SERVICE_SILOS = [
     services: [
       { name: "Water Heater Repair", href: "/services/water-heater-repair" },
       { name: "Water Heater Replacement", href: "/services/water-heater-replacement" },
+      { name: "Water Heater Installation", href: "/services/water-heater-installation" },
       { name: "Tankless Installation", href: "/services/tankless-water-heater-installation" },
     ],
   },

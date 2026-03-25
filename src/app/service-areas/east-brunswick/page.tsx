@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in East Brunswick NJ",
   description: "Licensed plumber in East Brunswick, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. Located at 697 Old Bridge Turnpike. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/east-brunswick",
+  },
   keywords: [
     "east brunswick plumber",
     "plumber near me east brunswick",

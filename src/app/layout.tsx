@@ -134,6 +134,7 @@ const jsonLd = {
         itemListElement: [
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Heater Repair" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Heater Replacement" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Heater Installation" } },
           { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tankless Water Heater Installation" } },
         ]
       },

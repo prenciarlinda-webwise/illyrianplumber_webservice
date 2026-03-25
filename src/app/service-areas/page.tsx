@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Service Areas - Central New Jersey",
   description: "Illyrian Plumber serves East Brunswick, New Brunswick, Edison, and surrounding areas in Central New Jersey. 24/7 plumbing service. Call (718) 427-4396.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas",
+  },
   keywords: [
     "plumber near me",
     "east brunswick plumber",

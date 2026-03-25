@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       { source: '/testimonials', destination: '/about-us', permanent: true },
       { source: '/coverage', destination: '/service-areas', permanent: true },
       { source: '/my-account', destination: '/', permanent: true },
-      { source: '/water-heater-installation', destination: '/services/tankless-water-heater-installation', permanent: true },
+      { source: '/water-heater-installation', destination: '/services/water-heater-installation', permanent: true },
       { source: '/emergency-water-heater-repair', destination: '/services/water-heater-repair', permanent: true },
       { source: '/radiant-plumbing', destination: '/services/radiant-heating-plumbing', permanent: true },
       { source: '/water-filtration-system', destination: '/services/water-filtration-system', permanent: true },

@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in North Brunswick NJ",
   description: "Licensed plumber in North Brunswick, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. 10 minutes from East Brunswick. Serving Rutgers area and Route 1 corridor. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/north-brunswick",
+  },
   keywords: [
     "north brunswick plumber",
     "plumber near me north brunswick",

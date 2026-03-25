@@ -9,95 +9,26 @@ export const metadata: Metadata = {
   },
 };
 
-// LocalBusiness Schema for Homepage
-const localBusinessSchema = {
+// WebPage Schema for Homepage (organization schema is in layout.tsx)
+const webPageSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.illyrianplumber.com/#localbusiness",
-  name: BUSINESS_INFO.name,
-  image: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png",
+  "@type": "WebPage",
+  "@id": "https://www.illyrianplumber.com/#webpage",
   url: "https://www.illyrianplumber.com",
-  telephone: BUSINESS_INFO.phone,
-  email: BUSINESS_INFO.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: BUSINESS_INFO.address.street,
-    addressLocality: BUSINESS_INFO.address.city,
-    addressRegion: BUSINESS_INFO.address.state,
-    postalCode: BUSINESS_INFO.address.zip,
-    addressCountry: "US",
+  name: `${BUSINESS_INFO.name} - 24/7 Emergency Plumber in East Brunswick, NJ`,
+  description: BUSINESS_INFO.description,
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": "https://www.illyrianplumber.com/#website",
+    url: "https://www.illyrianplumber.com",
+    name: BUSINESS_INFO.name,
+    publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 40.4286,
-    longitude: -74.4154,
+  about: { "@id": "https://www.illyrianplumber.com/#organization" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.illyrianplumber.com/images/professional-plumbing-services.jpg",
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  priceRange: "$$",
-};
-
-// Review Schema for Testimonials
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.illyrianplumber.com/#reviews",
-  name: BUSINESS_INFO.name,
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "3",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Michael R.",
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      datePublished: "2024-11-15",
-      reviewBody: "Called at 2 AM with a burst pipe flooding my basement. They arrived within 30 minutes and had everything fixed before morning. Best emergency plumber in NJ!",
-    },
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Sarah L.",
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      datePublished: "2024-10-20",
-      reviewBody: "Illyrian Plumber installed our new tankless water heater quickly and professionally. Fair water heater installation cost, clean work, and the technician explained everything.",
-    },
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "David K.",
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      datePublished: "2024-09-10",
-      reviewBody: "Best plumbing company I've used. They did a complete bathroom remodel plumbing job and it was seamless. Highly recommend for any plumbing repairs.",
-    },
-  ],
 };
 
 function HeroSection() {
@@ -603,11 +534,7 @@ export default function HomePage() {
       {/* Schema Markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
       <HeroSection />

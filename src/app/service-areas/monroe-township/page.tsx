@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in Monroe Township NJ",
   description: "Licensed plumber in Monroe Township, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. Serving Rossmoor, Concordia, Clearbrook, and all Monroe communities. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/monroe-township",
+  },
   keywords: [
     "monroe township plumber",
     "plumber near me monroe township",

@@ -5,6 +5,9 @@ import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumber in Old Bridge NJ",
   description: "Licensed plumber in Old Bridge, NJ. Water heaters, boilers, gas lines, repiping, and emergency plumbing. Serving Madison Park, Laurence Harbor, and all Old Bridge areas. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/service-areas/old-bridge",
+  },
   keywords: [
     "old bridge plumber",
     "plumber near me old bridge",
