@@ -9,6 +9,42 @@ import { BUSINESS_INFO } from "@/lib/constants";
 const blogPosts = [
   // March 2026
   {
+    title: "How to Fix a Running Toilet (Step-by-Step Guide)",
+    slug: "how-to-fix-running-toilet",
+    excerpt: "Stop a running toilet fast with this step-by-step guide. Learn how to diagnose and fix flappers, fill valves, floats, and overflow tubes yourself.",
+    category: "Toilet & Faucet",
+    date: "March 2026",
+    image: "",
+    readTime: "16 min read",
+  },
+  {
+    title: "How to Unclog a Toilet: 6 Methods That Actually Work",
+    slug: "how-to-unclog-toilet",
+    excerpt: "Clogged toilet? Try these 6 proven methods from plunger technique to toilet auger. Know when DIY is enough and when to call a licensed plumber.",
+    category: "Toilet & Faucet",
+    date: "March 2026",
+    image: "",
+    readTime: "15 min read",
+  },
+  {
+    title: "Dishwasher Not Draining? 8 Causes and How to Fix Each One",
+    slug: "dishwasher-not-draining-causes-fixes",
+    excerpt: "Diagnose why your dishwasher is not draining with this troubleshooting guide. Covers clogged filters, drain hoses, garbage disposal connections, and more.",
+    category: "Kitchen Plumbing",
+    date: "March 2026",
+    image: "",
+    readTime: "16 min read",
+  },
+  {
+    title: "How to Fix a Leaking Pipe: Emergency Steps and Permanent Repairs",
+    slug: "how-to-fix-leaking-pipe",
+    excerpt: "Learn how to stop a leaking pipe fast with temporary fixes, then make permanent repairs. Covers all pipe types: copper, PEX, galvanized, and CPVC.",
+    category: "Water Leak Detection",
+    date: "March 2026",
+    image: "",
+    readTime: "16 min read",
+  },
+  {
     title: "Kitchen Sink Plumbing Diagram - Parts, Connections & How It Works",
     slug: "kitchen-sink-plumbing-diagram",
     excerpt: "Complete guide to kitchen sink plumbing parts and connections. Understand supply lines, drain pipes, P-traps, and how single and double sink setups work.",

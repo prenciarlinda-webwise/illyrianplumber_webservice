@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "24/7 Emergency Plumber Near Me - Same Day Plumber East Brunswick NJ",
   description: "Need a 24 hour plumber near me? Illyrian Plumber provides 24/7 emergency plumbing services in East Brunswick & Middlesex County NJ. Same day plumber service for burst pipes, gas leaks, water heater failures. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/emergency-plumbing",
+  },
   keywords: [
     "24 7 plumber near me",
     "same day plumber near me",
@@ -27,6 +30,11 @@ export const metadata: Metadata = {
     "weekend plumber NJ",
     "night plumber near me",
   ],
+  openGraph: {
+    title: "24/7 Emergency Plumber Near Me - Same Day Plumber East Brunswick NJ",
+    description: "24/7 emergency plumbing services in East Brunswick & Middlesex County NJ. Same day service for burst pipes, gas leaks, and water heater failures.",
+    type: "website",
+  },
 };
 
 const faqData = [

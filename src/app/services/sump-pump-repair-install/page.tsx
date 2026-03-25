@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Sump Pump Repair and Installation NJ",
   description: "Professional sump pump repair and installation in East Brunswick and Middlesex County, NJ. Battery backup systems, basement flood protection, and 24/7 emergency service. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/sump-pump-repair-install",
+  },
   keywords: [
     "sump pump repair",
     "sump pump installation",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "East Brunswick sump pump service",
     "emergency sump pump repair",
   ],
+  openGraph: {
+    title: "Sump Pump Repair and Installation NJ",
+    description: "Professional sump pump repair and installation in East Brunswick and Middlesex County, NJ. Battery backup systems and basement flood protection.",
+    type: "website",
+  },
 };
 
 const faqData = [
@@ -86,10 +94,45 @@ export default function SumpPumpPage() {
     })),
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Sump Pump Installation Process",
+    description: "Whether you need a new sump pump installation or a replacement of an existing system, our process ensures reliable performance for years to come.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Basement Assessment",
+        text: "We evaluate your basement for water entry points, soil conditions, water table level, and existing drainage. This helps us determine the right pump size, type, and placement for optimal protection.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Pump Selection",
+        text: "Based on the assessment, we recommend the right pump type (submersible or pedestal), horsepower rating, and whether a battery backup system is needed. We explain the options and provide a detailed quote.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Pit Preparation",
+        text: "For new installations, we excavate the sump pit, install a proper pit liner, and add a gravel base for drainage. For replacements, we clean the existing pit and inspect it for structural integrity.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Pump Installation",
+        text: "We install the pump with proper float switch placement, connect the discharge line with a check valve to prevent backflow, and route the discharge to a safe exterior drainage point away from the foundation.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Testing and Calibration",
+        text: "We fill the pit to test pump activation, check discharge flow, verify the check valve operation, and test the battery backup system. We adjust float switch levels for optimal performance.",
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">

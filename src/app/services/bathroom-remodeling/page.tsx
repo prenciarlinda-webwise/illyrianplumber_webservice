@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Bathroom Remodeling Plumber NJ",
   description: "Professional bathroom remodeling plumbing services in East Brunswick & Middlesex County, NJ. Fixture installation, pipe relocation, shower conversion, vanity plumbing, and complete bathroom renovation plumbing. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/bathroom-remodeling",
+  },
   keywords: [
     "bathroom remodeling plumber",
     "bathroom plumbing",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "bathroom remodel Middlesex County",
     "walk-in shower plumbing",
   ],
+  openGraph: {
+    title: "Bathroom Remodeling Plumber NJ",
+    description: "Professional bathroom remodeling plumbing in East Brunswick & Middlesex County, NJ. Fixture installation, pipe relocation, shower conversion, and complete renovation plumbing.",
+    type: "website",
+  },
 };
 
 const faqData = [

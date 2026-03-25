@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Whole House Repiping Services NJ",
   description: "Professional whole house repiping in East Brunswick and Middlesex County, NJ. PEX and copper repiping for older homes. Licensed plumbers, minimal disruption. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/whole-house-repiping",
+  },
   keywords: [
     "whole house repiping",
     "home repiping",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "home repiping service NJ",
     "old pipe replacement",
   ],
+  openGraph: {
+    title: "Whole House Repiping Services NJ",
+    description: "Professional whole house repiping in East Brunswick and Middlesex County, NJ. PEX and copper repiping for older homes. Licensed plumbers, minimal disruption.",
+    type: "website",
+  },
 };
 
 const faqData = [
@@ -86,10 +94,55 @@ export default function WholeHouseRepipingPage() {
     })),
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Our Whole House Repiping Process",
+    description: "Repiping your home is a significant project, and we take a careful, systematic approach to ensure everything is done right with minimal disruption to your daily life. Here is what to expect when you work with Illyrian Plumber.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Free Inspection and Planning",
+        text: "We inspect all accessible plumbing, identify pipe materials and condition, count fixtures, and assess wall and ceiling accessibility. We then create a detailed plan and provide a written quote covering materials, labor, permits, and timeline.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Permit Acquisition",
+        text: "We pull all required plumbing permits from your local municipality. In NJ, repiping requires permits and inspections to ensure the work meets current plumbing codes. We handle the entire permit process for you.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Home Preparation",
+        text: "We protect your home with drop cloths, dust barriers, and floor protection. We work section by section, shutting off water only to the areas being worked on when possible. We explain the daily plan so you know what to expect.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Old Pipe Removal and New Installation",
+        text: "We create strategic access points in walls and ceilings, remove old pipes, and install new PEX or copper supply lines to every fixture in your home. PEX flexibility allows us to route pipes with fewer wall openings than rigid materials.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Fixture Connections and Pressure Testing",
+        text: "All fixtures are reconnected to the new pipe system. We pressure test every line to verify there are no leaks and ensure proper water flow to all fixtures throughout the home.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Wall Patching and Cleanup",
+        text: "We patch all access holes, clean up thoroughly, and leave your home in good condition. We recommend waiting 2-3 weeks before painting patched areas to allow joint compound to fully cure.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Final Inspection",
+        text: "We schedule and attend the required municipal inspection. The inspector verifies the work meets code, and you receive documentation that the repiping was done properly - important for insurance and resale.",
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">

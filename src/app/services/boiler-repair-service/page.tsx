@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Boiler Repair Service East Brunswick NJ",
   description: "Expert boiler repair, maintenance, and installation in East Brunswick & Middlesex County NJ. Steam and hot water boiler repair, emergency boiler service, annual maintenance. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/boiler-repair-service",
+  },
   keywords: [
     "boiler repair",
     "boiler repair near me",
@@ -26,6 +29,11 @@ export const metadata: Metadata = {
     "radiator not heating",
     "boiler annual maintenance",
   ],
+  openGraph: {
+    title: "Boiler Repair Service East Brunswick NJ",
+    description: "Expert boiler repair, maintenance, and installation in East Brunswick & Middlesex County NJ. Steam and hot water boiler repair, emergency service.",
+    type: "website",
+  },
 };
 
 const faqData = [

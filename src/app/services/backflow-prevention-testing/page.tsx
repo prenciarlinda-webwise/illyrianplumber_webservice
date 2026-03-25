@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Backflow Prevention & Testing East Brunswick NJ - Certified Testing",
   description:
     "Certified backflow prevention testing and installation in East Brunswick and Middlesex County, NJ. Annual backflow testing, RPZ valve installation, and NJ-required certification reports. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/backflow-prevention-testing",
+  },
   keywords: [
     "backflow testing",
     "backflow testing near me",
@@ -26,6 +29,11 @@ export const metadata: Metadata = {
     "irrigation backflow preventer",
     "commercial backflow testing NJ",
   ],
+  openGraph: {
+    title: "Backflow Prevention & Testing East Brunswick NJ - Certified Testing",
+    description: "Certified backflow prevention testing and installation in East Brunswick and Middlesex County, NJ. Annual testing, RPZ valve installation, and NJ certification reports.",
+    type: "website",
+  },
 };
 
 const faqData = [

@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Plumbing Safety Inspections NJ",
   description: "Professional plumbing inspections in East Brunswick & Middlesex County, NJ. Home buyer inspections, pre-purchase plumbing evaluations, annual maintenance checks, and safety assessments. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/plumbing-safety-inspections",
+  },
   keywords: [
     "plumbing inspection",
     "home plumbing inspection",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "plumbing code inspection",
     "residential plumbing inspection",
   ],
+  openGraph: {
+    title: "Plumbing Safety Inspections NJ",
+    description: "Professional plumbing inspections in East Brunswick & Middlesex County, NJ. Home buyer inspections, annual maintenance checks, and safety assessments.",
+    type: "website",
+  },
 };
 
 const faqData = [

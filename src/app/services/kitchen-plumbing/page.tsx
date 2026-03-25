@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Kitchen Plumbing Services East Brunswick NJ - Repair, Remodel, Installation",
   description: "Expert kitchen plumbing services in East Brunswick and Middlesex County, NJ. Kitchen sink plumbing, repair, remodel, garbage disposal, dishwasher hookup. Licensed kitchen plumbing company. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/kitchen-plumbing",
+  },
   keywords: [
     "kitchen plumbing",
     "kitchen sink plumbing",
@@ -28,6 +31,11 @@ export const metadata: Metadata = {
     "kitchen plumbing East Brunswick",
     "kitchen plumbing Edison NJ",
   ],
+  openGraph: {
+    title: "Kitchen Plumbing Services East Brunswick NJ",
+    description: "Expert kitchen plumbing in East Brunswick and Middlesex County, NJ. Sink plumbing, repair, remodel, garbage disposal, and dishwasher hookup.",
+    type: "website",
+  },
 };
 
 const faqData = [

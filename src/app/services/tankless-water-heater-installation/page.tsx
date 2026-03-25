@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Tankless Water Heater Installation NJ",
   description: "Professional tankless water heater installation in East Brunswick and Middlesex County, NJ. Gas and electric systems by licensed plumbers. Free estimates. Call (347) 461-4856 for expert installation.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/tankless-water-heater-installation",
+  },
   keywords: [
     "tankless water heater installation",
     "tankless water heater install",
@@ -24,6 +27,11 @@ export const metadata: Metadata = {
     "tankless water heater maintenance NJ",
     "best tankless water heater NJ",
   ],
+  openGraph: {
+    title: "Tankless Water Heater Installation NJ",
+    description: "Professional tankless water heater installation in East Brunswick and Middlesex County, NJ. Gas and electric systems by licensed plumbers. Free estimates.",
+    type: "website",
+  },
 };
 
 const faqData = [

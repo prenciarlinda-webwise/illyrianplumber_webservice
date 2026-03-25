@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Radiant Floor Heating Installation NJ",
   description: "Professional radiant floor heating installation and repair in East Brunswick & Middlesex County, NJ. Hydronic heating systems, in-floor heating, zone controls, and boiler integration. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/radiant-heating-plumbing",
+  },
   keywords: [
     "radiant floor heating",
     "hydronic heating",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "heated bathroom floor",
     "radiant heating Middlesex County",
   ],
+  openGraph: {
+    title: "Radiant Floor Heating Installation NJ",
+    description: "Professional radiant floor heating installation and repair in East Brunswick & Middlesex County, NJ. Hydronic heating systems, in-floor heating, and boiler integration.",
+    type: "website",
+  },
 };
 
 const faqData = [

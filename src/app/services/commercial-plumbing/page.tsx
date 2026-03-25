@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Commercial Plumbing Services East Brunswick NJ - Repair, Installation, Maintenance",
   description: "Licensed commercial plumbing contractors serving East Brunswick and Middlesex County, NJ. Commercial kitchen plumbing, bathroom fixtures, pipe repair, leak detection, gas lines, and rough-in plumbing for businesses. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/commercial-plumbing",
+  },
   keywords: [
     "commercial plumbing",
     "commercial plumbing near me",
@@ -26,6 +29,11 @@ export const metadata: Metadata = {
     "Middlesex County commercial plumbing",
     "business plumber NJ",
   ],
+  openGraph: {
+    title: "Commercial Plumbing Services East Brunswick NJ",
+    description: "Licensed commercial plumbing contractors serving East Brunswick and Middlesex County, NJ. Kitchen plumbing, bathroom fixtures, pipe repair, and gas lines for businesses.",
+    type: "website",
+  },
 };
 
 const faqData = [

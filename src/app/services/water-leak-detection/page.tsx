@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Water Leak Detection Services NJ",
   description: "Professional water leak detection in East Brunswick and Middlesex County, NJ. Find hidden leaks in walls, floors, and slabs with advanced non-invasive technology. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/water-leak-detection",
+  },
   keywords: [
     "water leak detection",
     "leak detection",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "ceiling leak detection",
     "water damage prevention",
   ],
+  openGraph: {
+    title: "Water Leak Detection Services NJ",
+    description: "Professional water leak detection in East Brunswick and Middlesex County, NJ. Find hidden leaks in walls, floors, and slabs with advanced non-invasive technology.",
+    type: "website",
+  },
 };
 
 const faqData = [

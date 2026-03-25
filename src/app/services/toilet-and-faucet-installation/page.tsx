@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Toilet and Faucet Installation NJ",
   description: "Professional toilet and faucet installation in East Brunswick & Middlesex County, NJ. Toilet replacement, faucet upgrade, fixture installation for all major brands. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/toilet-and-faucet-installation",
+  },
   keywords: [
     "toilet installation",
     "faucet installation",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "low-flow toilet installation",
     "fixture upgrade plumber",
   ],
+  openGraph: {
+    title: "Toilet and Faucet Installation NJ",
+    description: "Professional toilet and faucet installation in East Brunswick & Middlesex County, NJ. Toilet replacement, faucet upgrade, and fixture installation for all major brands.",
+    type: "website",
+  },
 };
 
 const faqData = [

@@ -4,6 +4,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sitemap",
   description: "Browse all pages on the Illyrian Plumber website including services, service areas, and helpful plumbing articles.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/sitemap-page",
+  },
 };
 
 const sitemapData = {
@@ -20,7 +23,7 @@ const sitemapData = {
     { url: "/services/tankless-water-heater-installation", label: "Tankless Water Heater Installation" },
     { url: "/services/water-heater-repair", label: "Water Heater Repair" },
     { url: "/services/water-heater-replacement", label: "Water Heater Replacement" },
-
+    { url: "/services/water-heater-installation", label: "Water Heater Installation" },
     { url: "/services/boiler-repair-service", label: "Boiler Repair Service" },
     { url: "/services/gas-line-repair-installation", label: "Gas Line Repair & Installation" },
     { url: "/services/whole-house-repiping", label: "Whole House Repiping" },
@@ -54,7 +57,9 @@ const sitemapData = {
     { url: "/blog/what-size-tankless-water-heater", label: "What Size Tankless Water Heater Do I Need?" },
     { url: "/blog/why-is-water-pressure-low", label: "Why Is My Water Pressure Low?" },
     { url: "/blog/whole-house-water-filter-worth-it", label: "Is a Whole House Water Filter Worth It?" },
+    { url: "/blog/best-whole-house-water-filtration-systems", label: "Best Whole House Water Filtration Systems" },
     { url: "/blog/sump-pump-maintenance-guide", label: "Sump Pump Maintenance Guide" },
+    { url: "/blog/battery-backup-sump-pump-guide", label: "Battery Backup Sump Pump Guide" },
     { url: "/blog/common-boiler-problems-winter", label: "Common Boiler Problems in Winter" },
     { url: "/blog/how-long-bathroom-remodel-take", label: "How Long Does a Bathroom Remodel Take?" },
     { url: "/blog/gas-leak-detection-safety", label: "Gas Leak Detection & Safety" },
@@ -62,6 +67,19 @@ const sitemapData = {
     { url: "/blog/how-to-unclog-kitchen-sink", label: "How to Unclog a Kitchen Sink" },
     { url: "/blog/what-is-backflow-testing", label: "What Is Backflow Testing?" },
     { url: "/blog/signs-of-slab-leak-sewer-line", label: "Signs of a Slab Leak or Sewer Line Issue" },
+    { url: "/blog/how-much-does-a-tankless-water-heater-cost", label: "How Much Does a Tankless Water Heater Cost?" },
+    { url: "/blog/common-water-heater-problems", label: "Common Water Heater Problems" },
+    { url: "/blog/how-long-water-heater-heat-up", label: "How Long Does a Water Heater Take to Heat Up?" },
+    { url: "/blog/frozen-pipes-prevention-repair", label: "Frozen Pipes Prevention & Repair" },
+    { url: "/blog/trenchless-sewer-repair-guide", label: "Trenchless Sewer Repair Guide" },
+    { url: "/blog/hydro-jetting-drain-cleaning-guide", label: "Hydro Jetting Drain Cleaning Guide" },
+    { url: "/blog/sewer-camera-inspection-guide", label: "Sewer Camera Inspection Guide" },
+    { url: "/blog/water-pipe-noises-causes-fixes", label: "Water Pipe Noises: Causes & Fixes" },
+    { url: "/blog/how-to-drain-flush-water-heater", label: "How to Drain & Flush a Water Heater" },
+    { url: "/blog/how-to-fix-running-toilet", label: "How to Fix a Running Toilet" },
+    { url: "/blog/how-to-unclog-toilet", label: "How to Unclog a Toilet" },
+    { url: "/blog/dishwasher-not-draining-causes-fixes", label: "Dishwasher Not Draining: Causes & Fixes" },
+    { url: "/blog/how-to-fix-leaking-pipe", label: "How to Fix a Leaking Pipe" },
   ],
   legal: [
     { url: "/privacy-policy", label: "Privacy Policy" },

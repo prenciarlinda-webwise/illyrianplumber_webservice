@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Gas Line Repair & Installation NJ",
   description: "Licensed gas line repair, installation, and safety inspections in East Brunswick & Middlesex County NJ. Expert gas plumbers for gas leak repair, appliance hookups, and new gas line installation. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/gas-line-repair-installation",
+  },
   keywords: [
     "gas line repair",
     "gas line installation",
@@ -26,6 +29,11 @@ export const metadata: Metadata = {
     "gas dryer hookup",
     "gas fireplace installation",
   ],
+  openGraph: {
+    title: "Gas Line Repair & Installation NJ",
+    description: "Licensed gas line repair, installation, and safety inspections in East Brunswick & Middlesex County NJ. Gas leak repair, appliance hookups, and new gas lines.",
+    type: "website",
+  },
 };
 
 const faqData = [

@@ -6,6 +6,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Water Filtration System Installation NJ",
   description: "Professional water filtration system installation in East Brunswick and Middlesex County, NJ. Whole house water filters, water softeners, reverse osmosis, and water treatment systems. Call (347) 461-4856.",
+  alternates: {
+    canonical: "https://www.illyrianplumber.com/services/water-filtration-system",
+  },
   keywords: [
     "water filtration system",
     "whole house water filter",
@@ -25,6 +28,11 @@ export const metadata: Metadata = {
     "carbon water filter",
     "UV water purification",
   ],
+  openGraph: {
+    title: "Water Filtration System Installation NJ",
+    description: "Professional water filtration system installation in East Brunswick and Middlesex County, NJ. Whole house water filters, water softeners, and reverse osmosis systems.",
+    type: "website",
+  },
 };
 
 const faqData = [
@@ -86,10 +94,45 @@ export default function WaterFiltrationPage() {
     })),
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Our Water Filtration Installation Process",
+    description: "Every water filtration installation begins with understanding your specific water quality issues. Here is what to expect when you work with Illyrian Plumber for your water treatment needs.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Water Quality Assessment",
+        text: "We test your water to identify hardness levels, pH, chlorine content, iron, lead, and other contaminants. This tells us exactly what needs to be filtered and which system will solve your problems.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "System Recommendation",
+        text: "Based on your water test results, household size, and budget, we recommend the right filtration solution. We explain each option, what it removes, and provide a detailed written quote.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Professional Installation",
+        text: "Our licensed plumbers install your water filtration system with proper connections, bypass valves, and drain lines. We ensure correct flow rates and system programming for optimal performance.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "System Testing and Calibration",
+        text: "After installation, we test the treated water to verify the system is working correctly. We calibrate settings, check water pressure, and confirm contaminant removal.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Maintenance Training",
+        text: "We walk you through your new system, explain filter change schedules, and provide maintenance instructions. We also offer ongoing maintenance plans for worry-free operation.",
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-20 md:py-28">
