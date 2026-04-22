@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { title: "Integrity", desc: "Honest assessments, upfront pricing, and recommendations based on your best interest—not ours." },
+  { title: "Integrity", desc: "Honest assessments, upfront pricing, and recommendations based on your best interest, not ours." },
   { title: "Quality", desc: "We do the job right the first time, using quality materials and proven techniques." },
   { title: "Reliability", desc: "We show up on time, complete work as promised, and stand behind everything we do." },
-  { title: "Respect", desc: "We treat your home like our own—clean work, protecting your property, and courteous service." },
+  { title: "Respect", desc: "We treat your home like our own, with clean work, protecting your property, and courteous service." },
 ];
 
 const stats = [
@@ -98,7 +98,7 @@ export default function AboutPage() {
                   Illyrian Plumber Corp was founded with a simple mission: provide honest, reliable plumbing services that homeowners and businesses can trust. Based in East Brunswick, New Jersey, we serve Middlesex County and surrounding areas with professional plumbing solutions.
                 </p>
                 <p>
-                  We understand that plumbing problems are stressful. That&apos;s why we focus on clear communication, upfront pricing, and quality work that lasts. When you call us, you&apos;ll speak to real people who care about solving your problem—not just making a sale.
+                  We understand that plumbing problems are stressful. That&apos;s why we focus on clear communication, upfront pricing, and quality work that lasts. When you call us, you&apos;ll speak to real people who care about solving your problem, not just making a sale.
                 </p>
                 <p>
                   Our team of licensed plumbers brings years of experience to every job, from simple repairs to complex installations. We invest in ongoing training and modern equipment to provide the best service possible.

@@ -2,38 +2,40 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
-  title: "24/7 Emergency Plumber Near Me - Same Day Plumber East Brunswick NJ",
-  description: "Need a 24 hour plumber near me? Illyrian Plumber provides 24/7 emergency plumbing services in East Brunswick & Middlesex County NJ. Same day plumber service for burst pipes, gas leaks, water heater failures. Call (347) 461-4856.",
+  title: "Emergency Plumber in East Brunswick NJ - 24/7 Service by Illyrian",
+  description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Licensed, fast response. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/services/emergency-plumbing",
   },
-  keywords: [
-    "24 7 plumber near me",
-    "same day plumber near me",
-    "24 hour plumber near me",
-    "emergency plumber near me",
-    "24/7 plumber",
-    "local emergency plumber",
-    "24 hour emergency plumber",
-    "same day plumber",
-    "after hours plumber",
-    "emergency gas plumber",
-    "plumber 24 hour service",
-    "need a plumber today",
-    "emergency plumbing services",
-    "emergency plumber East Brunswick",
-    "emergency plumber Middlesex County",
-    "burst pipe repair NJ",
-    "emergency sewer backup plumber",
-    "weekend plumber NJ",
-    "night plumber near me",
-  ],
   openGraph: {
-    title: "24/7 Emergency Plumber Near Me - Same Day Plumber East Brunswick NJ",
-    description: "24/7 emergency plumbing services in East Brunswick & Middlesex County NJ. Same day service for burst pipes, gas leaks, and water heater failures.",
+    title: "Emergency Plumber in East Brunswick NJ - 24/7 Service",
+    description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Fast response. Call (347) 461-4856.",
     type: "website",
+    url: "https://www.illyrianplumber.com/services/emergency-plumbing",
+    siteName: "Illyrian Plumber",
+    images: [
+      {
+        url: "https://www.illyrianplumber.com/images/emergency-plumbing-services-nj.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illyrian Plumber 24/7 emergency plumbing service in East Brunswick NJ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emergency Plumber in East Brunswick NJ - 24/7 Service",
+    description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Call (347) 461-4856.",
+    images: ["https://www.illyrianplumber.com/images/emergency-plumbing-services-nj.jpg"],
   },
 };
 
@@ -80,54 +82,22 @@ const faqData = [
   },
 ];
 
-// FAQ Schema
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqData.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = getFaqSchema(faqData);
 
-// Service Schema
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const serviceSchema = getServiceSchema({
   name: "24/7 Emergency Plumbing Service",
-  description: "24 hour emergency plumber services including burst pipe repair, water heater emergencies, gas leak response, sewer backup, and flooding repair. Same day plumber service available.",
-  provider: {
-    "@type": "LocalBusiness",
-    name: BUSINESS_INFO.name,
-    telephone: BUSINESS_INFO.phone,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: BUSINESS_INFO.address.street,
-      addressLocality: BUSINESS_INFO.address.city,
-      addressRegion: BUSINESS_INFO.address.state,
-      postalCode: BUSINESS_INFO.address.zip,
-    },
-  },
-  areaServed: {
-    "@type": "State",
-    name: "New Jersey",
-  },
-  availableChannel: {
-    "@type": "ServiceChannel",
-    servicePhone: BUSINESS_INFO.phone,
-    availableLanguage: "English",
-  },
-  hoursAvailable: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "00:00",
-    closes: "23:59",
-  },
-};
+  description:
+    "24 hour emergency plumber services including burst pipe repair, water heater emergencies, gas leak response, sewer backup, and flooding repair. Same day plumber service available.",
+  slug: "emergency-plumbing",
+});
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
+]);
+
+const localBusinessSchema = getLocalBusinessSchema();
 
 export default function EmergencyPlumbingPage() {
   return (
@@ -140,45 +110,24 @@ export default function EmergencyPlumbingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/emergency-plumbing-services-nj.jpg"
-            alt="24/7 Emergency plumber responding to plumbing emergency in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-yellow-400 font-bold mb-4 text-lg">24/7 EMERGENCY PLUMBER AVAILABLE NOW</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              24 Hour Emergency Plumber Near Me in East Brunswick, NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Need a plumber right now? Our 24/7 emergency plumbers respond fast to burst pipes, water heater failures, gas leaks, and flooding. Same day plumber service throughout Middlesex County - we arrive when you need us most.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
-                Call Now: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Or Call: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>✓ 24/7 Availability</span>
-              <span>✓ Same Day Service</span>
-              <span>✓ Licensed & Insured</span>
-              <span>✓ Fast Response</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="24/7 EMERGENCY PLUMBER AVAILABLE NOW"
+        heading="24/7 Emergency Plumber in East Brunswick, NJ"
+        subheading="Need a plumber right now? Our 24/7 emergency plumbers respond fast to burst pipes, water heater failures, gas leaks, and flooding. Same day plumber service throughout Middlesex County - we arrive when you need us most."
+        backgroundImage="/images/emergency-plumbing-services-nj.jpg"
+        backgroundAlt="24/7 Emergency plumber responding to plumbing emergency in East Brunswick NJ"
+        service="Emergency Plumbing"
+        bullets={["24/7 Availability", "Same Day Service", "Licensed & Insured", "Fast Response"]}
+      />
 
       {/* Urgency Banner */}
       <section className="bg-yellow-500 py-4">
@@ -204,7 +153,7 @@ export default function EmergencyPlumbingPage() {
 
                 {/* About Illyrian Plumber */}
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6 not-prose">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">About Illyrian Plumber</h3>
+                  <p className="text-lg font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
                   <p className="text-gray-700 text-base">
                     Illyrian Plumber has been serving Middlesex County homeowners and businesses for over {BUSINESS_INFO.stats.yearsExperience} years. With {BUSINESS_INFO.stats.projectsCompleted} projects completed and {BUSINESS_INFO.stats.happyClients} satisfied clients, we are one of the most trusted plumbing companies in Central New Jersey. Our team of licensed master plumbers specializes in emergency plumbing, water heater services, boiler repair, gas line work, and whole-house repiping. Based in East Brunswick, we respond faster than any national chain because we are local, dedicated, and always ready.
                   </p>
@@ -238,7 +187,7 @@ export default function EmergencyPlumbingPage() {
                   { situation: "Boiler Breakdown", desc: "No heat from boiler system in cold weather - a boiler failure in winter is a true emergency for your family's safety" },
                 ].map((item, index) => (
                   <div key={index} className="bg-red-50 border-l-4 border-red-600 rounded-lg p-4">
-                    <h3 className="font-bold text-gray-900">{item.situation}</h3>
+                    <p className="font-bold text-gray-900">{item.situation}</p>
                     <p className="text-gray-600 text-sm">{item.desc}</p>
                   </div>
                 ))}
@@ -246,7 +195,7 @@ export default function EmergencyPlumbingPage() {
 
               {/* Mid-content CTA */}
               <div className="bg-red-700 text-white rounded-xl p-6 mb-12 text-center">
-                <h3 className="text-2xl font-bold mb-3">Experiencing a Plumbing Emergency Right Now?</h3>
+                <p className="text-2xl font-bold mb-3">Experiencing a Plumbing Emergency Right Now?</p>
                 <p className="text-red-100 mb-4">Our emergency plumbers are standing by 24/7. Fast response throughout Middlesex County.</p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
@@ -276,7 +225,7 @@ export default function EmergencyPlumbingPage() {
                       {item.step}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                      <p className="font-semibold text-gray-900">{item.title}</p>
                       <p className="text-gray-600">{item.desc}</p>
                     </div>
                   </div>
@@ -309,7 +258,7 @@ export default function EmergencyPlumbingPage() {
 
               {/* Frozen Pipes Blog Link Section */}
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Prevent Frozen Pipe Emergencies</h3>
+                <p className="text-xl font-bold text-gray-900 mb-3">Prevent Frozen Pipe Emergencies</p>
                 <p className="text-gray-700 mb-3">
                   Frozen pipes are one of the leading causes of emergency plumber calls during New Jersey winters. Learn how to protect your home with our detailed guide.
                 </p>
@@ -333,7 +282,7 @@ export default function EmergencyPlumbingPage() {
                   { title: "Local to Middlesex County", desc: "Based in East Brunswick, we're your local emergency plumber - not a national call center. We know the area, the homes, and the common plumbing issues in Central NJ." },
                 ].map((item, index) => (
                   <div key={index} className="bg-gray-50 rounded-lg p-5">
-                    <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <p className="font-bold text-gray-900 mb-2">{item.title}</p>
                     <p className="text-gray-600">{item.desc}</p>
                   </div>
                 ))}
@@ -341,7 +290,7 @@ export default function EmergencyPlumbingPage() {
 
               {/* Second CTA */}
               <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 text-center">
-                <h3 className="text-2xl font-bold mb-3">Don&apos;t Let a Plumbing Emergency Ruin Your Home</h3>
+                <p className="text-2xl font-bold mb-3">Don&apos;t Let a Plumbing Emergency Ruin Your Home</p>
                 <p className="text-gray-300 mb-4">Fast, professional emergency plumbing service - day or night. Serving all of Middlesex County, NJ.</p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
@@ -393,7 +342,7 @@ export default function EmergencyPlumbingPage() {
 
               {/* Related Blog Posts */}
               <div className="bg-gray-50 rounded-xl p-6 mb-12">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Helpful Resources from Our Blog</h3>
+                <p className="text-xl font-bold text-gray-900 mb-4">Helpful Resources from Our Blog</p>
                 <p className="text-gray-600 mb-4">Learn more about preventing plumbing emergencies and staying safe:</p>
                 <div className="space-y-3">
                   <Link href="/blog/frozen-pipes-prevention-repair" className="block text-red-700 hover:text-red-800 font-medium">
@@ -410,20 +359,44 @@ export default function EmergencyPlumbingPage() {
 
               {/* Service Areas */}
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">24/7 Emergency Plumber Service Areas</h3>
+                <p className="text-xl font-bold text-gray-900 mb-4">24/7 Emergency Plumber Service Areas</p>
                 <p className="text-gray-700 mb-4">
                   Our <strong>24 hour plumber near me</strong> service covers all of Middlesex County, NJ. No matter where you are located in Central New Jersey, our emergency plumbers can reach you quickly.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-700">
-                  <span>East Brunswick</span>
-                  <span>Edison</span>
-                  <span>Old Bridge</span>
-                  <span>Sayreville</span>
-                  <span>South Brunswick</span>
-                  <span>North Brunswick</span>
-                  <span>Monroe Township</span>
-                  <span>And surrounding areas</span>
+                  <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 hover:underline">East Brunswick</Link>
+                  <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 hover:underline">Edison</Link>
+                  <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 hover:underline">Old Bridge</Link>
+                  <Link href="/service-areas/sayreville" className="text-red-700 hover:text-red-800 hover:underline">Sayreville</Link>
+                  <Link href="/service-areas/south-brunswick" className="text-red-700 hover:text-red-800 hover:underline">South Brunswick</Link>
+                  <Link href="/service-areas/north-brunswick" className="text-red-700 hover:text-red-800 hover:underline">North Brunswick</Link>
+                  <Link href="/service-areas/monroe-township" className="text-red-700 hover:text-red-800 hover:underline">Monroe Township</Link>
+                  <Link href="/service-areas/middlesex-county" className="text-red-700 hover:text-red-800 hover:underline">Middlesex County</Link>
                 </div>
+              </div>
+
+              {/* Local Plumbing Contractor Section */}
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Plumbing Contractor in East Brunswick, NJ</h2>
+              <p className="text-lg text-gray-700 mb-4">
+                Illyrian Plumber is headquartered at <strong>697 Old Bridge Turnpike, East Brunswick, NJ 08816</strong>, just off Route 18 and a short drive from NJ Turnpike Exit 9. From our East Brunswick location, our emergency plumbers can reach most of Middlesex County within 30 to 60 minutes, including Edison, Old Bridge, Sayreville, Monroe Township, South Brunswick, and North Brunswick.
+              </p>
+              <p className="text-lg text-gray-700 mb-4">
+                We serve homeowners and businesses throughout the area, including neighborhoods near Brunswick Square Mall, Mid-State Mall, Tamarack Hollow Park, East Brunswick Community Arts Center, and East Brunswick High School. Our trucks regularly travel Route 18, Route 1, Cranbury Road, Ryders Lane, and Milltown Road responding to emergency plumbing calls. We also service commercial properties along the Route 18 corridor and medical offices near Saint Peter's University Hospital and Robert Wood Johnson University Hospital in neighboring New Brunswick.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Because we are a true local plumbing contractor and not a national franchise, we know the homes, the water main layouts, and the common plumbing issues specific to Central New Jersey. Older homes in East Brunswick and Sayreville often have galvanized or polybutylene piping that needs replacement, while newer developments in Monroe Township and South Brunswick frequently call us for tankless water heater installations and whole-house water filtration. Whatever your address, we are the closest 24/7 emergency plumber to you.
+              </p>
+              <div className="rounded-xl overflow-hidden shadow-md mb-12">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563311.7530137168!2d-76.0434024528995!3d40.067754562570364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1776836216694!5m2!1sen!2s"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Illyrian Plumber location in East Brunswick, NJ"
+                />
               </div>
 
               {/* FAQ Section */}
@@ -432,7 +405,7 @@ export default function EmergencyPlumbingPage() {
                 {faqData.map((faq, index) => (
                   <details key={index} className="group bg-gray-50 rounded-lg">
                     <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                      <h3 className="font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                      <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
                       <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">+</span>
                     </summary>
                     <div className="px-5 pb-5">
@@ -444,7 +417,7 @@ export default function EmergencyPlumbingPage() {
 
               {/* Related Services */}
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Related Emergency Services</h3>
+                <p className="text-xl font-bold text-gray-900 mb-4">Related Emergency Services</p>
                 <div className="grid sm:grid-cols-2 gap-3">
                   <Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800 font-medium">Emergency Water Heater Repair →</Link>
                   <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800 font-medium">Emergency Gas Line Services →</Link>
@@ -461,7 +434,7 @@ export default function EmergencyPlumbingPage() {
 
                 {/* Call Now Box */}
                 <div className="bg-red-700 text-white rounded-xl p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2">24/7 Emergency Line</h3>
+                  <p className="text-xl font-bold mb-2">24/7 Emergency Line</p>
                   <p className="text-red-100 mb-4 text-sm">Speak directly with a plumber - no answering service</p>
                   <a href={BUSINESS_INFO.phoneLink} className="block bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition mb-3">
                     Call Niti: {BUSINESS_INFO.phone}
@@ -473,15 +446,15 @@ export default function EmergencyPlumbingPage() {
 
                 {/* Service Areas */}
                 <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Service Areas</h3>
-                  <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>East Brunswick, NJ</li>
-                    <li>Edison, NJ</li>
-                    <li>Old Bridge, NJ</li>
-                    <li>Sayreville, NJ</li>
-                    <li>South Brunswick, NJ</li>
-                    <li>North Brunswick, NJ</li>
-                    <li>Monroe Township, NJ</li>
+                  <p className="text-lg font-bold text-gray-900 mb-3">Service Areas</p>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800">East Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/edison" className="text-red-700 hover:text-red-800">Edison, NJ</Link></li>
+                    <li><Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800">Old Bridge, NJ</Link></li>
+                    <li><Link href="/service-areas/sayreville" className="text-red-700 hover:text-red-800">Sayreville, NJ</Link></li>
+                    <li><Link href="/service-areas/south-brunswick" className="text-red-700 hover:text-red-800">South Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/north-brunswick" className="text-red-700 hover:text-red-800">North Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/monroe-township" className="text-red-700 hover:text-red-800">Monroe Township, NJ</Link></li>
                   </ul>
                   <Link href="/service-areas" className="text-red-700 hover:text-red-800 text-sm font-medium mt-3 block">
                     View All Service Areas →
@@ -490,7 +463,7 @@ export default function EmergencyPlumbingPage() {
 
                 {/* Services */}
                 <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Our Services</h3>
+                  <p className="text-lg font-bold text-gray-900 mb-3">Our Services</p>
                   <ul className="space-y-2 text-sm">
                     <li><Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">Emergency Plumbing</Link></li>
                     <li><Link href="/services/water-heater-repair" className="text-red-700 hover:text-red-800">Water Heater Repair</Link></li>
@@ -503,7 +476,7 @@ export default function EmergencyPlumbingPage() {
 
                 {/* Related Blog Posts */}
                 <div className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Related Blog Posts</h3>
+                  <p className="text-lg font-bold text-gray-900 mb-3">Related Blog Posts</p>
                   <ul className="space-y-3 text-sm">
                     <li>
                       <Link href="/blog/frozen-pipes-prevention-repair" className="text-red-700 hover:text-red-800">
@@ -533,7 +506,7 @@ export default function EmergencyPlumbingPage() {
       {/* Final CTA */}
       <section className="py-12 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need a 24/7 Plumber Right Now?</h2>
+          <p className="text-3xl font-bold mb-4">Need a 24/7 Plumber Right Now?</p>
           <p className="text-xl text-red-100 mb-8">Don&apos;t wait - our same day plumber service is standing by.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={BUSINESS_INFO.phoneLink} className="bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition">

@@ -2,6 +2,30 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { BUSINESS_INFO, SERVICE_SILOS } from "@/lib/constants";
+import LeadForm from "@/components/LeadForm";
+import TrustBadges from "@/components/TrustBadges";
+import { getFaqSchema } from "@/lib/schemas";
+
+const homeFaqs = [
+  {
+    question: "What plumbing services does Illyrian Plumber offer in New Jersey?",
+    answer: "We provide a full range of residential and light commercial plumbing including 24/7 emergency plumbing, water heater repair and replacement, tankless water heater installation, boiler repair, gas line repair and installation, whole-house repiping, sump pump service, water leak detection, water filtration systems, bathroom remodeling plumbing, kitchen plumbing, toilet and faucet installation, backflow prevention testing, and plumbing safety inspections. Every job is performed by licensed NJ master plumbers.",
+  },
+  {
+    question: "What New Jersey towns do you service?",
+    answer: "We are based in East Brunswick and cover all of Middlesex County including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, North Brunswick, New Brunswick, Piscataway, and neighboring towns like Somerset and Middletown. If you are unsure whether we cover your address, call (347) 461-4856 and ask.",
+  },
+  {
+    question: "Are you a licensed plumber in NJ?",
+    answer: "Yes. Illyrian Plumber operates under an active New Jersey Master Plumber License and carries full liability insurance. Every job across our service area is performed by or supervised by a licensed NJ master plumber, and we pull all required municipal permits for work that needs them.",
+  },
+  {
+    question: "Do you answer calls after hours for plumbing emergencies?",
+    answer: "Yes. Our 24/7 emergency line is answered by a real person day or night, nights, weekends, and holidays included. We do not use call centers or voicemail for emergencies. Call (347) 461-4856 or (718) 427-4396 any time and a licensed plumber will be dispatched to your home.",
+  },
+];
+
+const homeFaqSchema = getFaqSchema(homeFaqs);
 
 export const metadata: Metadata = {
   alternates: {
@@ -43,71 +67,33 @@ function HeroSection() {
           className="object-cover opacity-50"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/50" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-red-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold mb-6">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            24/7 Emergency Plumber Available Now
+      <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24 relative z-10">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+          {/* Left: copy + trust */}
+          <div className="lg:col-span-3">
+            <div className="inline-flex items-center gap-2 bg-red-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold mb-5">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              24/7 Emergency Plumber Available Now
+            </div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
+              Professional Plumbing Services in{" "}
+              <span className="text-red-500">East Brunswick, NJ</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
+              24-hour emergency plumber serving Central New Jersey. Water heater repair, boiler service, gas line installation, and more.
+            </p>
+
+            <TrustBadges />
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Professional Plumbing Services in{" "}
-            <span className="text-red-500">East Brunswick, NJ</span>
-          </h1>
-
-          <p className="text-lg text-gray-300 mb-8 max-w-xl">
-            24-hour emergency plumber serving Central New Jersey. Water heater repair, boiler service, gas line installation, and more.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
-            <a
-              href={BUSINESS_INFO.phoneLink}
-              className="inline-flex items-center justify-center gap-2 bg-red-700 hover:bg-red-800 text-white px-5 py-3 rounded-lg font-medium text-sm transition-all shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-            </a>
-            <a
-              href={BUSINESS_INFO.phone2Link}
-              className="inline-flex items-center justify-center gap-2 bg-red-700 hover:bg-red-800 text-white px-5 py-3 rounded-lg font-medium text-sm transition-all shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-            </a>
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 px-5 py-3 rounded-lg font-medium text-sm transition-all"
-            >
-              Free Estimate
-            </Link>
-          </div>
-
-          <div className="flex flex-wrap gap-4 items-center text-xs text-gray-300">
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Licensed & Insured
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Satisfaction Guaranteed
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              Free Estimates
-            </div>
+          {/* Right: lead form */}
+          <div className="lg:col-span-2">
+            <LeadForm service="General Inquiry" />
           </div>
         </div>
       </div>
@@ -153,10 +139,10 @@ function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Professional Plumbing Services in East Brunswick, NJ
+            Full Range of Plumbing Services for NJ Homes & Businesses
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From 24-hour emergency repairs to water heater installation, we handle all your residential plumbing needs in Middlesex County.
+            From 24-hour emergency repairs to water heater installation, we handle every residential and light commercial plumbing need across Middlesex County.
           </p>
         </div>
 
@@ -172,9 +158,9 @@ function ServicesSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <h3 className="absolute bottom-4 left-4 text-xl font-bold text-white">
+                <p className="absolute bottom-4 left-4 text-xl font-bold text-white">
                   {silo.title}
-                </h3>
+                </p>
               </Link>
 
               {/* Service Links */}
@@ -297,7 +283,7 @@ function WhyChooseUsSection() {
             <div className="grid sm:grid-cols-2 gap-6">
               {reasons.map((reason, index) => (
                 <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
-                  <h3 className="font-semibold text-gray-900 mb-1">{reason.title}</h3>
+                  <p className="font-semibold text-gray-900 mb-1">{reason.title}</p>
                   <p className="text-sm text-gray-600">{reason.description}</p>
                 </div>
               ))}
@@ -421,10 +407,10 @@ function ServiceAreasSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Plumber Near Me - Serving Central New Jersey
+            Licensed Master Plumbers Serving New Jersey
           </h2>
           <p className="text-xl text-gray-600">
-            Professional plumbing services throughout Middlesex County and surrounding areas
+            NJ Master Plumber License holders, fully insured, covering Middlesex County and neighboring towns from our East Brunswick headquarters.
           </p>
         </div>
 
@@ -489,9 +475,9 @@ function EmergencyCTASection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-white">
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <p className="text-3xl md:text-4xl font-bold mb-4">
               Need a Plumber? Call Now for Fast Service
-            </h2>
+            </p>
             <p className="text-xl text-red-100">
               24-hour emergency plumber ready to help. Free estimates on all plumbing services.
             </p>
@@ -528,6 +514,34 @@ function EmergencyCTASection() {
   );
 }
 
+function FaqSection() {
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Plumbing Questions NJ Homeowners Ask Us
+          </h2>
+          <p className="text-xl text-gray-600">
+            Quick answers on services, coverage, licensing, and after-hours availability.
+          </p>
+        </div>
+        <div className="space-y-4">
+          {homeFaqs.map((faq, index) => (
+            <details key={index} className="bg-white rounded-lg shadow-sm group">
+              <summary className="p-5 cursor-pointer list-none flex justify-between items-center">
+                <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">+</span>
+              </summary>
+              <div className="px-5 pb-5 text-gray-700">{faq.answer}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -535,6 +549,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
 
       <HeroSection />
@@ -544,6 +562,7 @@ export default function HomePage() {
       <WorkGallerySection />
       <TestimonialsSection />
       <ServiceAreasSection />
+      <FaqSection />
       <EmergencyCTASection />
     </>
   );

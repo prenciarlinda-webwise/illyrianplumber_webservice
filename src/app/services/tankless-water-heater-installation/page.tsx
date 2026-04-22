@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Tankless Water Heater Installation NJ",
@@ -70,41 +77,21 @@ const faqData = [
 ];
 
 export default function TanklessWaterHeaterInstallationPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = getFaqSchema(faqData);
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Tankless Water Heater Installation",
-    provider: {
-      "@type": "Plumber",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-      },
-    },
-    areaServed: {
-      "@type": "State",
-      name: "New Jersey",
-    },
     description: "Professional tankless water heater installation services in New Jersey. Gas and electric tankless systems installed by licensed master plumbers.",
-  };
+    slug: "tankless-water-heater-installation",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Tankless Water Heater Installation", path: "/services/tankless-water-heater-installation" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
@@ -116,44 +103,24 @@ export default function TanklessWaterHeaterInstallationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/tankless-water-heater-installation.jpg"
-            alt="Tankless water heater installation service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Free In-Home Estimates</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Tankless Water Heater Installation in NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Professional tankless water heater installation by licensed NJ plumbers. Get endless hot water with expert, code-compliant installation. Free estimates with transparent, upfront pricing throughout Middlesex County.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Gas &amp; Electric Systems</span>
-              <span>&#10003; Licensed &amp; Insured</span>
-              <span>&#10003; All Major Brands</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Free In-Home Estimates"
+        heading="Tankless Water Heater Installation in NJ"
+        subheading="Professional tankless water heater installation by licensed NJ plumbers. Get endless hot water with expert, code-compliant installation. Free estimates with transparent, upfront pricing throughout Middlesex County."
+        backgroundImage="/images/tankless-water-heater-installation.jpg"
+        backgroundAlt="Tankless water heater installation service in East Brunswick NJ"
+        service="Tankless Water Heater Installation"
+        bullets={["Gas & Electric Systems", "Licensed & Insured", "All Major Brands"]}
+      />
 
       {/* Quick Info Box */}
       <section className="py-8 bg-gray-100">

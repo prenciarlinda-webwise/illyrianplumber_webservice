@@ -1,7 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+  getHowToSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Water Filtration System Installation NJ",
@@ -71,107 +78,66 @@ const faqData = [
 ];
 
 export default function WaterFiltrationPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Water Filtration System Installation",
     description: "Professional water filtration system installation in East Brunswick, NJ. Whole house filters, water softeners, and reverse osmosis systems.",
-    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Water Filtration",
-  };
+    slug: "water-filtration-system",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = getFaqSchema(faqData);
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+  const howToSchema = getHowToSchema({
     name: "Our Water Filtration Installation Process",
     description: "Every water filtration installation begins with understanding your specific water quality issues. Here is what to expect when you work with Illyrian Plumber for your water treatment needs.",
-    step: [
+    steps: [
       {
-        "@type": "HowToStep",
         name: "Water Quality Assessment",
         text: "We test your water to identify hardness levels, pH, chlorine content, iron, lead, and other contaminants. This tells us exactly what needs to be filtered and which system will solve your problems.",
       },
       {
-        "@type": "HowToStep",
         name: "System Recommendation",
         text: "Based on your water test results, household size, and budget, we recommend the right filtration solution. We explain each option, what it removes, and provide a detailed written quote.",
       },
       {
-        "@type": "HowToStep",
         name: "Professional Installation",
         text: "Our licensed plumbers install your water filtration system with proper connections, bypass valves, and drain lines. We ensure correct flow rates and system programming for optimal performance.",
       },
       {
-        "@type": "HowToStep",
         name: "System Testing and Calibration",
         text: "After installation, we test the treated water to verify the system is working correctly. We calibrate settings, check water pressure, and confirm contaminant removal.",
       },
       {
-        "@type": "HowToStep",
         name: "Maintenance Training",
         text: "We walk you through your new system, explain filter change schedules, and provide maintenance instructions. We also offer ongoing maintenance plans for worry-free operation.",
       },
     ],
-  };
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Water Filtration System", path: "/services/water-filtration-system" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/water-heater-repair-service.jpg"
-            alt="Water filtration system installation in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Clean Water Solutions</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Water Filtration System Installation in NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Clean, safe water for your entire home. We install whole house water filtration systems, water softeners, and reverse osmosis systems to improve your water quality throughout Middlesex County, NJ.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Whole House Filters</span>
-              <span>&#10003; Water Softeners</span>
-              <span>&#10003; Reverse Osmosis</span>
-              <span>&#10003; Licensed &amp; Insured</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Clean Water Solutions"
+        heading="Water Filtration System Installation in NJ"
+        subheading="Clean, safe water for your entire home. We install whole house water filtration systems, water softeners, and reverse osmosis systems to improve your water quality throughout Middlesex County, NJ."
+        backgroundImage="/images/water-heater-repair-service.jpg"
+        backgroundAlt="Water filtration system installation in East Brunswick NJ"
+        service="Water Filtration System"
+        bullets={["Whole House Filters", "Water Softeners", "Reverse Osmosis", "Licensed & Insured"]}
+      />
 
       {/* Main Content with Sidebar */}
       <section className="py-16">

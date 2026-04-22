@@ -20,7 +20,7 @@ export default function RelatedServices({
   if (variant === "compact") {
     return (
       <div className="bg-gray-50 rounded-lg p-6">
-        <h3 className="font-semibold text-gray-900 mb-4">{title}</h3>
+        <p className="font-semibold text-gray-900 mb-4">{title}</p>
         <ul className="space-y-2">
           {services.map((service, index) => (
             <li key={index}>
@@ -53,9 +53,9 @@ export default function RelatedServices({
                 className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition group border border-gray-100"
               >
                 <div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-red-700 transition">
+                  <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">
                     {service.title}
-                  </h3>
+                  </p>
                   <p className="text-sm text-gray-600">{service.description}</p>
                 </div>
                 <svg className="w-5 h-5 text-gray-400 group-hover:text-red-700 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,9 +81,9 @@ export default function RelatedServices({
               href={service.href}
               className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all group border border-gray-100"
             >
-              <h3 className="font-semibold text-lg text-gray-900 group-hover:text-red-700 transition mb-2">
+              <p className="font-semibold text-lg text-gray-900 group-hover:text-red-700 transition mb-2">
                 {service.title}
-              </h3>
+              </p>
               <p className="text-gray-600 text-sm mb-4">{service.description}</p>
               <span className="inline-flex items-center text-red-700 font-medium text-sm">
                 Learn More

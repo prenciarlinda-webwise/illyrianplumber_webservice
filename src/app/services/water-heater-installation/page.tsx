@@ -1,7 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+  getHowToSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Water Heater Installation East Brunswick NJ - Same-Day Service",
@@ -79,108 +86,48 @@ const installationSteps = [
 ];
 
 export default function WaterHeaterInstallationPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Water Heater Installation",
     description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, tankless, and heat pump water heaters with same-day service available.",
-    provider: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-      },
-    },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Water Heater Installation",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Water Heater Installation Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gas Water Heater Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electric Water Heater Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tankless Water Heater Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heat Pump Water Heater Installation" } },
-      ],
-    },
-  };
+    slug: "water-heater-installation",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = getFaqSchema(faqData);
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+  const howToSchema = getHowToSchema({
     name: "How Water Heater Installation Works",
     description: "Our professional water heater installation process from free estimate to final cleanup.",
-    step: installationSteps.map((item) => ({
-      "@type": "HowToStep",
-      position: parseInt(item.step),
+    steps: installationSteps.map((item) => ({
       name: item.title,
       text: item.desc,
     })),
-  };
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Water Heater Installation", path: "/services/water-heater-installation" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/water-heater-repair-service.jpg"
-            alt="Water heater installation service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Same-Day Service Available</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Water Heater Installation in East Brunswick &amp; Middlesex County, NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Professional water heater installation by licensed plumbers. Gas, electric, tankless, and heat pump options. Same-day service available with free estimates and upfront pricing.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Gas &amp; Electric Options</span>
-              <span>&#10003; Same-Day Installation</span>
-              <span>&#10003; Free Estimates</span>
-              <span>&#10003; Licensed &amp; Insured</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Same-Day Service Available"
+        heading="Water Heater Installation in East Brunswick & Middlesex County, NJ"
+        subheading="Professional water heater installation by licensed plumbers. Gas, electric, tankless, and heat pump options. Same-day service available with free estimates and upfront pricing."
+        backgroundImage="/images/water-heater-repair-service.jpg"
+        backgroundAlt="Water heater installation service in East Brunswick NJ"
+        service="Water Heater Installation"
+        bullets={["Gas & Electric Options", "Same-Day Installation", "Free Estimates", "Licensed & Insured"]}
+      />
 
       {/* Main Content + Sidebar */}
       <section className="py-16">

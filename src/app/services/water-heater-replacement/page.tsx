@@ -2,6 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+  getHowToSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Water Heater Replacement East Brunswick NJ - Free Estimates",
@@ -39,197 +47,107 @@ export const metadata: Metadata = {
 };
 
 export default function WaterHeaterReplacementPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Water Heater Replacement",
     description: "Professional water heater replacement and installation in East Brunswick and Middlesex County, NJ. Tank and tankless options with same-day installation available.",
-    provider: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-      },
-    },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Water Heater Replacement",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Water Heater Replacement Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tank Water Heater Replacement" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tankless Water Heater Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Heater Upgrade" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Old Water Heater Removal" } },
-      ],
-    },
-  };
+    slug: "water-heater-replacement",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How much does water heater replacement cost in NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Water heater replacement cost in New Jersey ranges from $1,500 to $3,500 for a standard 40-50 gallon tank unit (including installation and removal of the old unit). Tankless water heater installation costs $3,500 to $6,500 or more depending on the model and any gas line or venting upgrades needed. We provide free estimates with upfront pricing.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How long does it take to replace a water heater?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A standard tank water heater replacement takes 2-4 hours. Tankless water heater installation takes 4-8 hours, especially if gas line upgrades, new venting, or electrical work is required. Same-day installation is available for standard tank replacements when the unit is in stock.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Should I replace my water heater with a tank or tankless unit?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Tank water heaters have lower upfront cost ($1,500-$3,500 installed) and proven reliability. Tankless units cost more upfront ($3,500-$6,500+) but offer endless hot water, lower monthly energy bills (up to 30% savings), and a 20+ year lifespan versus 10-12 years for tanks. The best choice depends on your household size, hot water demand, and budget.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "When should I replace my water heater?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Replace your water heater if it is over 10-12 years old, the tank is leaking or corroded, you are experiencing frequent repairs, rusty water is coming from the hot tap, or your energy bills have increased significantly. If repair costs exceed 50% of the price of a new unit, replacement is usually the better investment.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do I need a permit to replace a water heater in NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, New Jersey requires a plumbing permit for water heater replacement. The permit ensures the installation meets NJ Uniform Construction Code requirements for safety, venting, and connections. As licensed plumbers, we handle all permit applications and schedule the required inspection for you.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is included in your water heater replacement service?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our water heater replacement includes the new unit, removal and disposal of the old water heater, all fittings and connections, proper venting for gas units, expansion tank if required by code, permit and inspection, system testing, and warranty documentation. We leave the area clean when the job is done.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can you install a tankless water heater where I had a tank?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we frequently convert homes from tank to tankless water heaters. The conversion typically requires upgrading the gas line to a larger diameter, installing new stainless steel venting, and possibly adding a condensate drain. We handle all aspects of the conversion and ensure everything meets NJ code requirements.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What size water heater do I need for my home?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For tank water heaters: 1-2 people need 30-40 gallons, 3-4 people need 40-50 gallons, and 5+ people need 50-80 gallons. For tankless, sizing is based on temperature rise and flow rate (GPM). A typical 3-bathroom NJ home needs a unit rated for at least 8-10 GPM. We evaluate your specific needs and recommend the right size during our free estimate.",
-        },
-      },
-    ],
-  };
+  const faqSchema = getFaqSchema([
+    {
+      question: "How much does water heater replacement cost in NJ?",
+      answer: "Water heater replacement cost in New Jersey ranges from $1,500 to $3,500 for a standard 40-50 gallon tank unit (including installation and removal of the old unit). Tankless water heater installation costs $3,500 to $6,500 or more depending on the model and any gas line or venting upgrades needed. We provide free estimates with upfront pricing.",
+    },
+    {
+      question: "How long does it take to replace a water heater?",
+      answer: "A standard tank water heater replacement takes 2-4 hours. Tankless water heater installation takes 4-8 hours, especially if gas line upgrades, new venting, or electrical work is required. Same-day installation is available for standard tank replacements when the unit is in stock.",
+    },
+    {
+      question: "Should I replace my water heater with a tank or tankless unit?",
+      answer: "Tank water heaters have lower upfront cost ($1,500-$3,500 installed) and proven reliability. Tankless units cost more upfront ($3,500-$6,500+) but offer endless hot water, lower monthly energy bills (up to 30% savings), and a 20+ year lifespan versus 10-12 years for tanks. The best choice depends on your household size, hot water demand, and budget.",
+    },
+    {
+      question: "When should I replace my water heater?",
+      answer: "Replace your water heater if it is over 10-12 years old, the tank is leaking or corroded, you are experiencing frequent repairs, rusty water is coming from the hot tap, or your energy bills have increased significantly. If repair costs exceed 50% of the price of a new unit, replacement is usually the better investment.",
+    },
+    {
+      question: "Do I need a permit to replace a water heater in NJ?",
+      answer: "Yes, New Jersey requires a plumbing permit for water heater replacement. The permit ensures the installation meets NJ Uniform Construction Code requirements for safety, venting, and connections. As licensed plumbers, we handle all permit applications and schedule the required inspection for you.",
+    },
+    {
+      question: "What is included in your water heater replacement service?",
+      answer: "Our water heater replacement includes the new unit, removal and disposal of the old water heater, all fittings and connections, proper venting for gas units, expansion tank if required by code, permit and inspection, system testing, and warranty documentation. We leave the area clean when the job is done.",
+    },
+    {
+      question: "Can you install a tankless water heater where I had a tank?",
+      answer: "Yes, we frequently convert homes from tank to tankless water heaters. The conversion typically requires upgrading the gas line to a larger diameter, installing new stainless steel venting, and possibly adding a condensate drain. We handle all aspects of the conversion and ensure everything meets NJ code requirements.",
+    },
+    {
+      question: "What size water heater do I need for my home?",
+      answer: "For tank water heaters: 1-2 people need 30-40 gallons, 3-4 people need 40-50 gallons, and 5+ people need 50-80 gallons. For tankless, sizing is based on temperature rise and flow rate (GPM). A typical 3-bathroom NJ home needs a unit rated for at least 8-10 GPM. We evaluate your specific needs and recommend the right size during our free estimate.",
+    },
+  ]);
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+  const howToSchema = getHowToSchema({
     name: "Our Water Heater Replacement Process",
     description: "When you call Illyrian Plumber for a water heater installation, here is exactly what happens from start to finish.",
-    step: [
+    steps: [
       {
-        "@type": "HowToStep",
         name: "Free Estimate",
         text: "Call us to schedule a free estimate. We will evaluate your current water heater, assess your household's hot water needs, inspect the installation location, and recommend the best replacement options for your budget and requirements.",
       },
       {
-        "@type": "HowToStep",
         name: "Unit Selection",
         text: "Based on your household size, hot water demand, available space, and budget, we recommend specific models. We work with top brands including Rheem, AO Smith, Bradford White, Navien, and Rinnai. We explain the pros and cons of each option.",
       },
       {
-        "@type": "HowToStep",
         name: "Permits",
         text: "We pull the required NJ plumbing permit for the installation. This ensures your new water heater meets all NJ Uniform Construction Code requirements and protects your home insurance coverage.",
       },
       {
-        "@type": "HowToStep",
         name: "Old Unit Removal",
         text: "We safely disconnect and remove your old water heater, including draining the tank, disconnecting gas/electric supply, and removing the old unit from your home. We handle disposal of the old unit.",
       },
       {
-        "@type": "HowToStep",
         name: "New Installation",
         text: "We install your new water heater with all new fittings, connections, proper venting (gas units), expansion tank if required, and seismic strapping. Every connection is tested for leaks.",
       },
       {
-        "@type": "HowToStep",
         name: "Testing and Inspection",
         text: "We fill the new tank, test all connections, verify proper operation, check temperature output, and ensure everything is working perfectly. We schedule the required municipal inspection.",
       },
       {
-        "@type": "HowToStep",
         name: "Documentation and Cleanup",
         text: "You receive all warranty documentation, operation instructions, and maintenance recommendations. We clean up the work area and leave your home as we found it.",
       },
     ],
-  };
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Water Heater Replacement", path: "/services/water-heater-replacement" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/water-heater-repair-service.jpg"
-            alt="Water heater replacement service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Same-Day Installation Available</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Water Heater Replacement in East Brunswick & Middlesex County, NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Professional water heater replacement with same-day installation available. We remove your old unit, install a new energy-efficient water heater, and handle all permits and inspections.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Tank & Tankless Options</span>
-              <span>&#10003; Free Estimates</span>
-              <span>&#10003; Licensed & Insured</span>
-              <span>&#10003; Permits Included</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Same-Day Installation Available"
+        heading="Water Heater Replacement in East Brunswick & Middlesex County, NJ"
+        subheading="Professional water heater replacement with same-day installation available. We remove your old unit, install a new energy-efficient water heater, and handle all permits and inspections."
+        backgroundImage="/images/water-heater-repair-service.jpg"
+        backgroundAlt="Water heater replacement service in East Brunswick NJ"
+        service="Water Heater Replacement"
+        bullets={["Tank & Tankless Options", "Free Estimates", "Licensed & Insured", "Permits Included"]}
+      />
 
       {/* Main Content + Sidebar */}
       <section className="py-16">

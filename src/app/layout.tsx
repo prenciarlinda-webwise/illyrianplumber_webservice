@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.illyrianplumber.com",
     siteName: BUSINESS_INFO.name,
-    title: `${BUSINESS_INFO.name} | 24/7 Emergency Plumber in East Brunswick, NJ`,
+    title: `${BUSINESS_INFO.name} - 24/7 Emergency Plumber in East Brunswick, NJ`,
     description: BUSINESS_INFO.description,
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BUSINESS_INFO.name} | 24/7 Emergency Plumber`,
+    title: `${BUSINESS_INFO.name} - 24/7 Emergency Plumber`,
     description: BUSINESS_INFO.description,
     images: ["/og-image.jpg"],
   },

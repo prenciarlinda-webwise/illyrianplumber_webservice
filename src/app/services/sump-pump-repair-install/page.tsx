@@ -1,7 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+  getHowToSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Sump Pump Repair and Installation NJ",
@@ -71,107 +78,66 @@ const faqData = [
 ];
 
 export default function SumpPumpPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Sump Pump Repair and Installation",
     description: "Professional sump pump repair and installation in East Brunswick, NJ. Protect your basement from flooding. Battery backup systems available.",
-    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Sump Pump Services",
-  };
+    slug: "sump-pump-repair-install",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = getFaqSchema(faqData);
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+  const howToSchema = getHowToSchema({
     name: "Sump Pump Installation Process",
     description: "Whether you need a new sump pump installation or a replacement of an existing system, our process ensures reliable performance for years to come.",
-    step: [
+    steps: [
       {
-        "@type": "HowToStep",
         name: "Basement Assessment",
         text: "We evaluate your basement for water entry points, soil conditions, water table level, and existing drainage. This helps us determine the right pump size, type, and placement for optimal protection.",
       },
       {
-        "@type": "HowToStep",
         name: "Pump Selection",
         text: "Based on the assessment, we recommend the right pump type (submersible or pedestal), horsepower rating, and whether a battery backup system is needed. We explain the options and provide a detailed quote.",
       },
       {
-        "@type": "HowToStep",
         name: "Pit Preparation",
         text: "For new installations, we excavate the sump pit, install a proper pit liner, and add a gravel base for drainage. For replacements, we clean the existing pit and inspect it for structural integrity.",
       },
       {
-        "@type": "HowToStep",
         name: "Pump Installation",
         text: "We install the pump with proper float switch placement, connect the discharge line with a check valve to prevent backflow, and route the discharge to a safe exterior drainage point away from the foundation.",
       },
       {
-        "@type": "HowToStep",
         name: "Testing and Calibration",
         text: "We fill the pit to test pump activation, check discharge flow, verify the check valve operation, and test the battery backup system. We adjust float switch levels for optimal performance.",
       },
     ],
-  };
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Sump Pump Repair & Installation", path: "/services/sump-pump-repair-install" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/professional-plumbing-services.jpg"
-            alt="Sump pump repair and installation in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Basement Flood Protection</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Sump Pump Repair and Installation in NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Protect your basement from flooding with a reliable sump pump system. We install, repair, and maintain sump pumps and battery backup systems to keep your Middlesex County home dry year-round.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Battery Backup Available</span>
-              <span>&#10003; Same-Day Repair</span>
-              <span>&#10003; New &amp; Existing Homes</span>
-              <span>&#10003; Licensed &amp; Insured</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Basement Flood Protection"
+        heading="Sump Pump Repair and Installation in NJ"
+        subheading="Protect your basement from flooding with a reliable sump pump system. We install, repair, and maintain sump pumps and battery backup systems to keep your Middlesex County home dry year-round."
+        backgroundImage="/images/professional-plumbing-services.jpg"
+        backgroundAlt="Sump pump repair and installation in East Brunswick NJ"
+        service="Sump Pump Repair & Installation"
+        bullets={["Battery Backup Available", "Same-Day Repair", "New & Existing Homes", "Licensed & Insured"]}
+      />
 
       {/* Main Content with Sidebar */}
       <section className="py-16">

@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <p className="text-lg font-semibold mb-4">Quick Links</p>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-400 hover:text-white transition">Home</Link></li>
               <li><Link href="/about-us" className="text-gray-400 hover:text-white transition">About Us</Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Service Areas</h3>
+            <p className="text-lg font-semibold mb-4">Service Areas</p>
             <ul className="space-y-2">
               {BUSINESS_INFO.serviceAreas.slice(0, 6).map((area) => (
                 <li key={area}>
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <p className="text-lg font-semibold mb-4">Contact Us</p>
             <ul className="space-y-4">
               <li>
                 <a href={BUSINESS_INFO.phoneLink} className="flex items-start gap-3 text-gray-400 hover:text-white transition">

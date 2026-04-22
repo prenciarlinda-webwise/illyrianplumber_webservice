@@ -1,7 +1,13 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Commercial Plumbing Services East Brunswick NJ - Repair, Installation, Maintenance",
@@ -71,84 +77,39 @@ const faqData = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqData.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = getFaqSchema(faqData);
 
 export default function CommercialPlumbingPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Commercial Plumbing Services",
     description: "Licensed commercial plumbing contractors serving East Brunswick and Middlesex County, NJ. Commercial kitchen plumbing, bathroom fixtures, pipe repair, leak detection, gas lines, and rough-in plumbing for businesses.",
-    provider: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-    },
-    areaServed: BUSINESS_INFO.serviceAreas.map((area) => ({ "@type": "City", name: area })),
-    serviceType: "Commercial Plumbing",
-  };
+    slug: "commercial-plumbing",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Commercial Plumbing", path: "/services/commercial-plumbing" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/professional-plumbing-services.jpg"
-            alt="Commercial plumbing services in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Licensed Commercial Plumbers</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Commercial Plumbing Services
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Expert commercial plumbing repair, installation, and maintenance for businesses throughout Middlesex County, NJ. From commercial kitchen buildouts to emergency pipe repairs, our licensed contractors keep your operations running without interruption.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a
-                href={BUSINESS_INFO.phoneLink}
-                className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
-              >
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a
-                href={BUSINESS_INFO.phone2Link}
-                className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg"
-              >
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; Licensed &amp; Insured</span>
-              <span>&#10003; Code Compliant</span>
-              <span>&#10003; Minimal Downtime</span>
-              <span>&#10003; 24/7 Emergency</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Licensed Commercial Plumbers"
+        heading="Commercial Plumbing Services"
+        subheading="Expert commercial plumbing repair, installation, and maintenance for businesses throughout Middlesex County, NJ. From commercial kitchen buildouts to emergency pipe repairs, our licensed contractors keep your operations running without interruption."
+        backgroundImage="/images/professional-plumbing-services.jpg"
+        backgroundAlt="Commercial plumbing services in East Brunswick NJ"
+        service="Commercial Plumbing"
+        bullets={["Licensed & Insured", "Code Compliant", "Minimal Downtime", "24/7 Emergency"]}
+      />
 
       {/* Main Content with Sidebar */}
       <section className="py-16">

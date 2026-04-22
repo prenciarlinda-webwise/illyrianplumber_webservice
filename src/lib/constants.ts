@@ -27,7 +27,7 @@ export const BUSINESS_INFO = {
   socialMedia: {
     facebook: "https://facebook.com/illyriangroupcorp",
     instagram: "https://instagram.com/illyriangroupcorp",
-    google: "https://g.page/illyriangroupcorp",
+    google: "https://maps.app.goo.gl/FFywaiyiHYnttLt56",
   },
   serviceAreas: [
     "East Brunswick",
@@ -39,7 +39,7 @@ export const BUSINESS_INFO = {
     "North Brunswick",
   ],
   licenses: {
-    nj: "NJ Master Plumber License #12345",
+    nj: "NJ Master Plumber License",
     insured: "Fully Licensed & Insured",
   },
 };

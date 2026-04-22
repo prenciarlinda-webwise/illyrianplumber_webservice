@@ -2,6 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+  getHowToSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Whole House Repiping Services NJ",
@@ -71,117 +79,74 @@ const faqData = [
 ];
 
 export default function WholeHouseRepipingPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Whole House Repiping",
     description: "Complete home repiping services in East Brunswick, NJ. Replace old, corroded pipes with modern materials. Expert installation, minimal disruption.",
-    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Repiping",
-  };
+    slug: "whole-house-repiping",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  const faqSchema = getFaqSchema(faqData);
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+  const howToSchema = getHowToSchema({
     name: "Our Whole House Repiping Process",
     description: "Repiping your home is a significant project, and we take a careful, systematic approach to ensure everything is done right with minimal disruption to your daily life. Here is what to expect when you work with Illyrian Plumber.",
-    step: [
+    steps: [
       {
-        "@type": "HowToStep",
         name: "Free Inspection and Planning",
         text: "We inspect all accessible plumbing, identify pipe materials and condition, count fixtures, and assess wall and ceiling accessibility. We then create a detailed plan and provide a written quote covering materials, labor, permits, and timeline.",
       },
       {
-        "@type": "HowToStep",
         name: "Permit Acquisition",
         text: "We pull all required plumbing permits from your local municipality. In NJ, repiping requires permits and inspections to ensure the work meets current plumbing codes. We handle the entire permit process for you.",
       },
       {
-        "@type": "HowToStep",
         name: "Home Preparation",
         text: "We protect your home with drop cloths, dust barriers, and floor protection. We work section by section, shutting off water only to the areas being worked on when possible. We explain the daily plan so you know what to expect.",
       },
       {
-        "@type": "HowToStep",
         name: "Old Pipe Removal and New Installation",
         text: "We create strategic access points in walls and ceilings, remove old pipes, and install new PEX or copper supply lines to every fixture in your home. PEX flexibility allows us to route pipes with fewer wall openings than rigid materials.",
       },
       {
-        "@type": "HowToStep",
         name: "Fixture Connections and Pressure Testing",
         text: "All fixtures are reconnected to the new pipe system. We pressure test every line to verify there are no leaks and ensure proper water flow to all fixtures throughout the home.",
       },
       {
-        "@type": "HowToStep",
         name: "Wall Patching and Cleanup",
         text: "We patch all access holes, clean up thoroughly, and leave your home in good condition. We recommend waiting 2-3 weeks before painting patched areas to allow joint compound to fully cure.",
       },
       {
-        "@type": "HowToStep",
         name: "Final Inspection",
         text: "We schedule and attend the required municipal inspection. The inspector verifies the work meets code, and you receive documentation that the repiping was done properly - important for insurance and resale.",
       },
     ],
-  };
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Whole House Repiping", path: "/services/whole-house-repiping" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/copper-pipe-repiping-service.jpg"
-            alt="Whole house repiping service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Complete Pipe Replacement</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Whole House Repiping in NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Complete home repiping for older homes, renovations, and pipe failure. We replace deteriorating pipes with modern, long-lasting PEX or copper for decades of reliable service throughout Middlesex County.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; PEX &amp; Copper Options</span>
-              <span>&#10003; Minimal Disruption</span>
-              <span>&#10003; Free Estimates</span>
-              <span>&#10003; Licensed &amp; Insured</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Complete Pipe Replacement"
+        heading="Whole House Repiping in NJ"
+        subheading="Complete home repiping for older homes, renovations, and pipe failure. We replace deteriorating pipes with modern, long-lasting PEX or copper for decades of reliable service throughout Middlesex County."
+        backgroundImage="/images/copper-pipe-repiping-service.jpg"
+        backgroundAlt="Whole house repiping service in East Brunswick NJ"
+        service="Whole House Repiping"
+        bullets={["PEX & Copper Options", "Minimal Disruption", "Free Estimates", "Licensed & Insured"]}
+      />
 
       {/* Main Content with Sidebar */}
       <section className="py-16">

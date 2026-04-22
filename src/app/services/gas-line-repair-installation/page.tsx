@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Gas Line Repair & Installation NJ",
@@ -71,78 +78,39 @@ const faqData = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqData.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+const faqSchema = getFaqSchema(faqData);
 
 export default function GasLineRepairPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Gas Line Repair & Installation",
     description: "Licensed gas line repair, installation, and safety inspections in East Brunswick, NJ. Expert gas plumbers for appliance hookups, leak repair, and new gas lines.",
-    provider: { "@type": "Plumber", "@id": "https://www.illyrianplumber.com/#organization", name: BUSINESS_INFO.name, telephone: BUSINESS_INFO.phone },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Gas Line Services",
-  };
+    slug: "gas-line-repair-installation",
+  });
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Gas Line Repair & Installation", path: "/services/gas-line-repair-installation" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/gas-line-pressure-gauge-installation.jpg"
-            alt="Gas line repair and installation service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Licensed Gas Plumbers</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Gas Line Repair & Installation in East Brunswick, NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-6 max-w-2xl">
-              Professional gas line services from licensed plumbers. We handle gas leak repair, new gas line installation, gas appliance hookups, gas pipe replacement, and safety inspections throughout Middlesex County, NJ.
-            </p>
-            <div className="bg-red-900/50 border border-red-500 rounded-lg p-4 mb-6 max-w-2xl">
-              <p className="text-red-200 font-medium">
-                <strong>Smell gas?</strong> Leave immediately and call your gas company, then call us for repairs.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>✓ Gas Leak Repair</span>
-              <span>✓ Appliance Hookups</span>
-              <span>✓ Licensed & Insured</span>
-              <span>✓ Free Estimates</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Licensed Gas Plumbers"
+        heading="Gas Line Repair & Installation in East Brunswick, NJ"
+        subheading="Professional gas line services from licensed plumbers. We handle gas leak repair, new gas line installation, gas appliance hookups, gas pipe replacement, and safety inspections throughout Middlesex County, NJ."
+        backgroundImage="/images/gas-line-pressure-gauge-installation.jpg"
+        backgroundAlt="Gas line repair and installation service in East Brunswick NJ"
+        service="Gas Line Repair & Installation"
+        bullets={["Gas Leak Repair", "Appliance Hookups", "Licensed & Insured", "Free Estimates"]}
+      />
 
       <section className="py-16">
         <div className="container mx-auto px-4">

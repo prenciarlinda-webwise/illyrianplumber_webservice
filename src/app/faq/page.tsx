@@ -54,11 +54,11 @@ const faqCategories = [
       },
       {
         question: "What qualifies as a plumbing emergency?",
-        answer: "Plumbing emergencies include: burst or major leaking pipes, sewage backups, gas leaks, no water, flooding, and water heater failures in extreme weather. When in doubt, call us—we'll help you assess the situation.",
+        answer: "Plumbing emergencies include: burst or major leaking pipes, sewage backups, gas leaks, no water, flooding, and water heater failures in extreme weather. When in doubt, call us and we will help you assess the situation.",
       },
       {
         question: "Is there an extra charge for emergency calls?",
-        answer: "Emergency calls may have a service fee due to after-hours availability and urgent response. We always provide upfront pricing before starting any work—no surprises.",
+        answer: "Emergency calls may have a service fee due to after-hours availability and urgent response. We always provide upfront pricing before starting any work, so there are no surprises.",
       },
     ],
   },

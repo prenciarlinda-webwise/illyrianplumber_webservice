@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFaqSchema,
+  getBreadcrumbSchema,
+} from "@/lib/schemas";
+import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
   title: "Water Heater Repair East Brunswick NJ - Same Day Service",
@@ -39,152 +46,71 @@ export const metadata: Metadata = {
 };
 
 export default function WaterHeaterRepairPage() {
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = getServiceSchema({
     name: "Water Heater Repair",
     description: "Same-day water heater repair in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless water heater diagnostics and repair by licensed plumbers.",
-    provider: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: BUSINESS_INFO.address.street,
-        addressLocality: BUSINESS_INFO.address.city,
-        addressRegion: BUSINESS_INFO.address.state,
-        postalCode: BUSINESS_INFO.address.zip,
-      },
-    },
-    areaServed: BUSINESS_INFO.serviceAreas.map(area => ({ "@type": "City", name: area })),
-    serviceType: "Water Heater Repair",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Water Heater Repair Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gas Water Heater Repair" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Electric Water Heater Repair" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tankless Water Heater Repair" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Water Heater Diagnostics" } },
-      ],
-    },
-  };
+    slug: "water-heater-repair",
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How much does water heater repair cost in NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Water heater repair in New Jersey typically costs between $150 and $600 depending on the problem. Common repairs include thermocouple replacement ($150-$250), heating element replacement ($150-$300), thermostat replacement ($150-$350), and T&P valve replacement ($150-$300). Emergency and after-hours service may add $100-$200.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why is my water heater not producing hot water?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For gas water heaters, the most common cause is a failed pilot light or bad thermocouple. For electric units, it is usually a burned-out heating element or tripped circuit breaker. Check your breaker panel first, then inspect the pilot light or elements. If the problem persists, call a licensed plumber for diagnosis.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can a leaking water heater be repaired?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "It depends on the source of the leak. Leaks from the T&P valve, drain valve, or pipe connections can usually be repaired for $100-$300. However, if the tank itself is leaking due to internal corrosion, the water heater cannot be repaired and must be replaced. A licensed plumber can determine the source of the leak.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How long does a water heater repair take?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Most water heater repairs take 1-2 hours. Simple fixes like thermocouple replacement or thermostat adjustment can be done in under an hour. More complex repairs like element replacement or gas valve service may take 2-3 hours. We carry common parts on our service trucks for same-day repair in most cases.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Should I repair or replace my water heater?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Consider replacing your water heater if it is over 10-12 years old, the tank is leaking, repair costs exceed 50% of a new unit, or you are experiencing frequent breakdowns. Repair makes sense if the unit is under 8 years old, the problem is a single component failure, and the tank itself is not corroded.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why does my water heater pilot light keep going out?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A pilot light that keeps going out is most commonly caused by a faulty thermocouple, which is a safety sensor that detects the flame. Other causes include a dirty pilot tube, drafty location, or failing gas valve. Thermocouple replacement is a common repair that typically costs $150-$250 including parts and labor.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you offer emergency water heater repair?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, Illyrian Plumber offers same-day and emergency water heater repair throughout Middlesex County, NJ, including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. Call us and we will dispatch a licensed plumber as quickly as possible.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What brands of water heaters do you repair?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We repair all major water heater brands including Rheem, AO Smith, Bradford White, Navien, Rinnai, Noritz, State, Kenmore, GE, and Whirlpool. We service gas, electric, and tankless models. Our plumbers carry common parts for these brands on our service trucks for faster repairs.",
-        },
-      },
-    ],
-  };
+  const faqSchema = getFaqSchema([
+    {
+      question: "How much does water heater repair cost in NJ?",
+      answer: "Water heater repair in New Jersey typically costs between $150 and $600 depending on the problem. Common repairs include thermocouple replacement ($150-$250), heating element replacement ($150-$300), thermostat replacement ($150-$350), and T&P valve replacement ($150-$300). Emergency and after-hours service may add $100-$200.",
+    },
+    {
+      question: "Why is my water heater not producing hot water?",
+      answer: "For gas water heaters, the most common cause is a failed pilot light or bad thermocouple. For electric units, it is usually a burned-out heating element or tripped circuit breaker. Check your breaker panel first, then inspect the pilot light or elements. If the problem persists, call a licensed plumber for diagnosis.",
+    },
+    {
+      question: "Can a leaking water heater be repaired?",
+      answer: "It depends on the source of the leak. Leaks from the T&P valve, drain valve, or pipe connections can usually be repaired for $100-$300. However, if the tank itself is leaking due to internal corrosion, the water heater cannot be repaired and must be replaced. A licensed plumber can determine the source of the leak.",
+    },
+    {
+      question: "How long does a water heater repair take?",
+      answer: "Most water heater repairs take 1-2 hours. Simple fixes like thermocouple replacement or thermostat adjustment can be done in under an hour. More complex repairs like element replacement or gas valve service may take 2-3 hours. We carry common parts on our service trucks for same-day repair in most cases.",
+    },
+    {
+      question: "Should I repair or replace my water heater?",
+      answer: "Consider replacing your water heater if it is over 10-12 years old, the tank is leaking, repair costs exceed 50% of a new unit, or you are experiencing frequent breakdowns. Repair makes sense if the unit is under 8 years old, the problem is a single component failure, and the tank itself is not corroded.",
+    },
+    {
+      question: "Why does my water heater pilot light keep going out?",
+      answer: "A pilot light that keeps going out is most commonly caused by a faulty thermocouple, which is a safety sensor that detects the flame. Other causes include a dirty pilot tube, drafty location, or failing gas valve. Thermocouple replacement is a common repair that typically costs $150-$250 including parts and labor.",
+    },
+    {
+      question: "Do you offer emergency water heater repair?",
+      answer: "Yes, Illyrian Plumber offers same-day and emergency water heater repair throughout Middlesex County, NJ, including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. Call us and we will dispatch a licensed plumber as quickly as possible.",
+    },
+    {
+      question: "What brands of water heaters do you repair?",
+      answer: "We repair all major water heater brands including Rheem, AO Smith, Bradford White, Navien, Rinnai, Noritz, State, Kenmore, GE, and Whirlpool. We service gas, electric, and tankless models. Our plumbers carry common parts for these brands on our service trucks for faster repairs.",
+    },
+  ]);
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Water Heater Repair", path: "/services/water-heater-repair" },
+  ]);
+
+  const localBusinessSchema = getLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white py-20 md:py-28">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/water-heater-repair-service.jpg"
-            alt="Water heater repair service in East Brunswick NJ"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-red-400 font-semibold mb-4">Same-Day Service Available</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Water Heater Repair in East Brunswick & Middlesex County, NJ
-            </h1>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-              Same-day water heater repair for all brands and types. No hot water? Strange noises? Leaking tank? Our licensed plumbers diagnose and fix the problem fast.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-6">
-              <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-              </a>
-              <a href={BUSINESS_INFO.phone2Link} className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg">
-                Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-300">
-              <span>&#10003; All Brands Serviced</span>
-              <span>&#10003; Gas & Electric</span>
-              <span>&#10003; Licensed & Insured</span>
-              <span>&#10003; Same-Day Repair</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        tagline="Same-Day Service Available"
+        heading="Water Heater Repair in East Brunswick & Middlesex County, NJ"
+        subheading="Same-day water heater repair for all brands and types. No hot water? Strange noises? Leaking tank? Our licensed plumbers diagnose and fix the problem fast."
+        backgroundImage="/images/water-heater-repair-service.jpg"
+        backgroundAlt="Water heater repair service in East Brunswick NJ"
+        service="Water Heater Repair"
+        bullets={["All Brands Serviced", "Gas & Electric", "Licensed & Insured", "Same-Day Repair"]}
+      />
 
       {/* Main Content + Sidebar */}
       <section className="py-16">
