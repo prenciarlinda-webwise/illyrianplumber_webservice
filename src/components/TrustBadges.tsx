@@ -1,8 +1,7 @@
 import { BUSINESS_INFO } from "@/lib/constants";
 
-// TODO: Replace these with the real values once the user provides them
-const GMB_RATING = 4.9; // real average rating from Google Business Profile
-const GMB_REVIEW_COUNT = 50; // real count of Google reviews
+const GMB_RATING = parseFloat(BUSINESS_INFO.reviews.rating);
+const GMB_REVIEW_COUNT = BUSINESS_INFO.reviews.count;
 
 function Star({ filled }: { filled: number }) {
   return (

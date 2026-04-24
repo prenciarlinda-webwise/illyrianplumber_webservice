@@ -86,11 +86,13 @@ export default function LeadForm({ service, compact = false }: Props) {
         body: JSON.stringify(payload),
       });
       if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        const msg =
-          Array.isArray(data.errors) && data.errors.length > 0
-            ? data.errors.map((e: { message: string }) => e.message).join(", ")
-            : "Submission failed. Please try again or call us.";
+        const data = await res.json().catch(() => null);
+        let msg = `Submission failed (${res.status}). Please try again or call us.`;
+        if (data && Array.isArray(data.errors) && data.errors.length > 0) {
+          msg = data.errors.map((e: { message?: string; code?: string }) => e.message || e.code || "error").join(", ");
+        } else if (data && typeof data.error === "string") {
+          msg = data.error;
+        }
         throw new Error(msg);
       }
       setStatus("success");
@@ -178,13 +180,7 @@ export default function LeadForm({ service, compact = false }: Props) {
           />
         </div>
 
-        {siteKey ? (
-          <div ref={turnstileRef} className="mt-4" />
-        ) : (
-          <p className="mt-3 text-xs text-amber-700">
-            Captcha disabled: set <code>NEXT_PUBLIC_TURNSTILE_SITE_KEY</code> in .env.local
-          </p>
-        )}
+        {siteKey && <div ref={turnstileRef} className="mt-4" />}
 
         <button
           type="submit"
