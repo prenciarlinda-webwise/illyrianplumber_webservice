@@ -182,37 +182,37 @@ const jsonLd = {
   review: [
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Michael R." },
-      datePublished: "2024-11-15",
-      reviewBody: "Illyrian Plumber saved us during a late-night emergency. Our water heater started leaking at 11pm and they arrived within 30 minutes. Professional, honest pricing, and excellent work. Highly recommend!",
+      author: { "@type": "Person", name: "Donna Penn" },
+      datePublished: "2026-02-24",
+      reviewBody: "Illyrian Plumbers did a fantastic job with our emergency plumbing issue. Our plumber was professional and thorough with our repair. A burst pipe is never a good situation, but the response by Illyrian Plumbers turned our messy emergency into a smooth repair.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Sarah T." },
-      datePublished: "2024-10-28",
-      reviewBody: "Had them install a new tankless water heater. The team was knowledgeable, explained all my options, and completed the installation in one day. Very happy with the results and the energy savings.",
+      author: { "@type": "Person", name: "Sam Kadric" },
+      datePublished: "2026-01-24",
+      reviewBody: "Dardan and his team were amazing. They did a full renovation including all new plumbing. The professionalism and communication by the team was terrific. Dardan helped me stay in my budget and timeline and always communicated what was being done.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "James K." },
-      datePublished: "2024-09-12",
-      reviewBody: "Best plumber in East Brunswick! They fixed our boiler issue that two other companies couldn't figure out. Fair pricing and they stand behind their work. Will use them for all future plumbing needs.",
+      author: { "@type": "Person", name: "Drin Gjonbalaj" },
+      datePublished: "2025-12-24",
+      reviewBody: "Illyrian Plumbing replaced our old oil boiler with a Navien combi boiler, and the whole experience was great from start to finish. They showed up on time, were very professional, and clearly knew what they were doing. The work was done right the first time.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Linda M." },
-      datePublished: "2024-08-20",
-      reviewBody: "Called for a gas line inspection before selling our home. They were thorough, professional, and provided detailed documentation. The inspector was impressed with their work. Great service!",
+      author: { "@type": "Person", name: "Shkreptim Mallaku" },
+      datePublished: "2025-12-24",
+      reviewBody: "Illyrian Plumber team was outstanding from start to finish. I had a specific plumbing issue that needed to be handled properly, not patched or rushed, and their team delivered exactly that. They showed up on time, diagnosed the problem, and did the job right.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
     },
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "David P." },
-      datePublished: "2024-07-05",
-      reviewBody: "Illyrian repiped our entire 1960s home. The crew was respectful, clean, and finished ahead of schedule. No more rusty water and great water pressure now. Worth every penny!",
+      author: { "@type": "Person", name: "Sead Kastrati" },
+      datePublished: "2025-12-24",
+      reviewBody: "When I needed someone on short notice to install new bathroom tiles and other bathroom fixtures, Dardan came through. He worked quickly, understood the urgency of the situation, and delivered great results.",
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }
     }
   ],

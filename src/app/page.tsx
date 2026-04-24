@@ -347,21 +347,21 @@ function WorkGallerySection() {
 function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Michael R.",
-      location: "East Brunswick, NJ",
-      text: "Called at 2 AM with a burst pipe flooding my basement. They arrived within 30 minutes and had everything fixed before morning. Best emergency plumber in NJ!",
+      name: "Donna Penn",
+      location: "Google Review",
+      text: "Illyrian Plumbers did a fantastic job with our emergency plumbing issue. Our plumber was professional and thorough with our repair. A burst pipe is never a good situation, but the response by Illyrian Plumbers turned our messy emergency into a smooth repair.",
       rating: 5,
     },
     {
-      name: "Sarah L.",
-      location: "Edison, NJ",
-      text: "Illyrian Plumber installed our new tankless water heater quickly and professionally. Fair water heater installation cost, clean work, and the technician explained everything.",
+      name: "Drin Gjonbalaj",
+      location: "Google Review",
+      text: "Illyrian Plumbing replaced our old oil boiler with a Navien combi boiler, and the whole experience was great from start to finish. They showed up on time, were very professional, and clearly knew what they were doing.",
       rating: 5,
     },
     {
-      name: "David K.",
-      location: "New Brunswick, NJ",
-      text: "Best plumbing company I've used. They did a complete bathroom remodel plumbing job and it was seamless. Highly recommend for any plumbing repairs.",
+      name: "Sam Kadric",
+      location: "Google Review",
+      text: "Dardan and his team were amazing. They did a full renovation including all new plumbing. The professionalism and communication by the team was terrific. Dardan helped me stay in my budget and timeline.",
       rating: 5,
     },
   ];

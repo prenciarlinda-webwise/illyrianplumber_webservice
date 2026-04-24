@@ -26,7 +26,6 @@ export default function NorthBrunswickPage() {
     url: "https://www.illyrianplumber.com/service-areas/north-brunswick",
     address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
     areaServed: { "@type": "City", name: "North Brunswick", containedInPlace: { "@type": "State", name: "New Jersey" } },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: BUSINESS_INFO.reviews.rating, reviewCount: BUSINESS_INFO.reviews.count, bestRating: BUSINESS_INFO.reviews.bestRating },
   };
 
   const faqSchema = {
