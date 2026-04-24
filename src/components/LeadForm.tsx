@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 
+const RECAPTCHA_SITE_KEY = "6LflhscsAAAAAHDHmPiQrQhcs12mVoYlnXMCbufW";
+
 type Props = {
   service: string;
   compact?: boolean;
@@ -12,45 +14,36 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 declare global {
   interface Window {
-    turnstile?: {
-      render: (selector: string | HTMLElement, options: Record<string, unknown>) => string;
-      reset: (widgetId?: string) => void;
-      remove: (widgetId?: string) => void;
+    grecaptcha?: {
+      render: (element: HTMLElement, options: Record<string, unknown>) => number;
+      reset: (widgetId?: number) => void;
+      getResponse: (widgetId?: number) => string;
     };
-    onTurnstileLoad?: () => void;
+    onRecaptchaLoad?: () => void;
   }
 }
 
 export default function LeadForm({ service, compact = false }: Props) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
-  const turnstileRef = useRef<HTMLDivElement>(null);
-  const widgetIdRef = useRef<string | null>(null);
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const recaptchaRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<number | null>(null);
 
   useEffect(() => {
-    if (!siteKey) return;
     const renderWidget = () => {
-      if (turnstileRef.current && window.turnstile && !widgetIdRef.current) {
-        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: siteKey,
-          size: "flexible",
+      if (recaptchaRef.current && window.grecaptcha && widgetIdRef.current === null) {
+        widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
+          sitekey: RECAPTCHA_SITE_KEY,
           theme: "light",
         });
       }
     };
-    if (window.turnstile) {
+    if (window.grecaptcha) {
       renderWidget();
     } else {
-      window.onTurnstileLoad = renderWidget;
+      window.onRecaptchaLoad = renderWidget;
     }
-    return () => {
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.remove(widgetIdRef.current);
-        widgetIdRef.current = null;
-      }
-    };
-  }, [siteKey]);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -66,13 +59,24 @@ export default function LeadForm({ service, compact = false }: Props) {
       return;
     }
 
+    const recaptchaToken =
+      widgetIdRef.current !== null && window.grecaptcha
+        ? window.grecaptcha.getResponse(widgetIdRef.current)
+        : "";
+
+    if (!recaptchaToken) {
+      setStatus("error");
+      setErrorMsg("Please confirm you are not a robot.");
+      return;
+    }
+
     const payload = {
       name: String(formData.get("name") ?? "").trim(),
       phone: String(formData.get("phone") ?? "").trim(),
       email: String(formData.get("email") ?? "").trim(),
       message: String(formData.get("message") ?? "").trim(),
       service: String(formData.get("service") ?? "").trim(),
-      turnstileToken: String(formData.get("cf-turnstile-response") ?? ""),
+      "g-recaptcha-response": recaptchaToken,
       pageUrl: typeof window !== "undefined" ? window.location.href : "",
     };
 
@@ -97,11 +101,11 @@ export default function LeadForm({ service, compact = false }: Props) {
       }
       setStatus("success");
       form.reset();
-      if (widgetIdRef.current && window.turnstile) window.turnstile.reset(widgetIdRef.current);
+      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current);
     } catch (err) {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");
-      if (widgetIdRef.current && window.turnstile) window.turnstile.reset(widgetIdRef.current);
+      if (widgetIdRef.current !== null && window.grecaptcha) window.grecaptcha.reset(widgetIdRef.current);
     }
   }
 
@@ -122,7 +126,7 @@ export default function LeadForm({ service, compact = false }: Props) {
   return (
     <>
       <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad"
+        src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit"
         strategy="afterInteractive"
         async
         defer
@@ -180,7 +184,7 @@ export default function LeadForm({ service, compact = false }: Props) {
           />
         </div>
 
-        {siteKey && <div ref={turnstileRef} className="mt-4" />}
+        <div ref={recaptchaRef} className="mt-4" />
 
         <button
           type="submit"
