@@ -45,7 +45,7 @@ export default function AboutPage() {
       foundingDate: BUSINESS_INFO.founded,
       telephone: BUSINESS_INFO.phone,
       address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: BUSINESS_INFO.reviews.rating, reviewCount: BUSINESS_INFO.reviews.count, bestRating: BUSINESS_INFO.reviews.bestRating },
     },
   };
 
@@ -217,7 +217,7 @@ export default function AboutPage() {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563312.4975387864!2d-76.04627729339961!3d40.06772212112381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1767607369527!5m2!1sen!2s"
+                  src={BUSINESS_INFO.mapEmbedUrl}
                   width="100%"
                   height="250"
                   style={{ border: 0 }}

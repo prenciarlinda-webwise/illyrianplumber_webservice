@@ -26,7 +26,7 @@ export default function OldBridgePage() {
     url: "https://www.illyrianplumber.com/service-areas/old-bridge",
     address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
     areaServed: { "@type": "City", name: "Old Bridge", containedInPlace: { "@type": "State", name: "New Jersey" } },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: BUSINESS_INFO.reviews.rating, reviewCount: BUSINESS_INFO.reviews.count, bestRating: BUSINESS_INFO.reviews.bestRating },
   };
 
   const faqSchema = {
@@ -301,7 +301,7 @@ export default function OldBridgePage() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24449.92!2d-74.3651!3d40.4049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c2c4cdf5f75f%3A0xebccf0e4bbc52abd!2sOld%20Bridge%20Township%2C%20NJ!5e0!3m2!1sen!2sus!4v1761000000000"
+                  src={BUSINESS_INFO.mapEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "400px" }}

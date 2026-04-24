@@ -388,7 +388,7 @@ export default function EmergencyPlumbingPage() {
               </p>
               <div className="rounded-xl overflow-hidden shadow-md mb-12">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563311.7530137168!2d-76.0434024528995!3d40.067754562570364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4a38fc2afc8255df%3A0x226b02ec0b6ff21a!2sIllyrian%20Plumber!5e0!3m2!1sen!2s!4v1776836216694!5m2!1sen!2s"
+                  src={BUSINESS_INFO.mapEmbedUrl}
                   width="100%"
                   height="450"
                   style={{ border: 0 }}

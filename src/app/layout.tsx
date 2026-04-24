@@ -174,9 +174,9 @@ const jsonLd = {
   currenciesAccepted: "USD",
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "5",
-    bestRating: "5",
+    ratingValue: BUSINESS_INFO.reviews.rating,
+    reviewCount: BUSINESS_INFO.reviews.count,
+    bestRating: BUSINESS_INFO.reviews.bestRating,
     worstRating: "1"
   },
   review: [

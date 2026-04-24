@@ -26,7 +26,7 @@ export default function SayrevillePage() {
     url: "https://www.illyrianplumber.com/service-areas/sayreville",
     address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
     areaServed: { "@type": "City", name: "Sayreville", containedInPlace: { "@type": "State", name: "New Jersey" } },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "5", bestRating: "5" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: BUSINESS_INFO.reviews.rating, reviewCount: BUSINESS_INFO.reviews.count, bestRating: BUSINESS_INFO.reviews.bestRating },
   };
 
   const faqSchema = {
@@ -290,7 +290,7 @@ export default function SayrevillePage() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24416.51!2d-74.3558!3d40.4593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c2b3d56d5a6f%3A0x13ec0d7ff3bc5b08!2sSayreville%2C%20NJ!5e0!3m2!1sen!2sus!4v1761000000000"
+                  src={BUSINESS_INFO.mapEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "400px" }}

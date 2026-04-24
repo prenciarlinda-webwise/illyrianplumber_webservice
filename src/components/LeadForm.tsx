@@ -77,14 +77,21 @@ export default function LeadForm({ service, compact = false }: Props) {
     };
 
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch("https://formspree.io/f/xqewwoqz", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || "Submission failed. Please try again or call us.");
+        const msg =
+          Array.isArray(data.errors) && data.errors.length > 0
+            ? data.errors.map((e: { message: string }) => e.message).join(", ")
+            : "Submission failed. Please try again or call us.";
+        throw new Error(msg);
       }
       setStatus("success");
       form.reset();
