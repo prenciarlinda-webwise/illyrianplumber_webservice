@@ -5,6 +5,38 @@ import { BUSINESS_INFO } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
+      {/* Brand Ornament Band */}
+      <div className="bg-blue-900/40 border-y border-blue-800/50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <div className="flex items-center gap-4 w-full max-w-xl">
+              <span className="flex-1 h-px bg-gradient-to-r from-transparent via-red-500/60 to-red-500/60" />
+              <svg
+                className="w-10 h-10 text-red-500 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                />
+              </svg>
+              <span className="flex-1 h-px bg-gradient-to-l from-transparent via-red-500/60 to-red-500/60" />
+            </div>
+            <p className="text-lg md:text-xl font-semibold text-white italic tracking-wide">
+              &ldquo;Craftsmanship you can count on. Service that shows up.&rdquo;
+            </p>
+            <p className="text-xs text-blue-200 uppercase tracking-[0.25em]">
+              Licensed NJ Master Plumbers &middot; Serving Middlesex County
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

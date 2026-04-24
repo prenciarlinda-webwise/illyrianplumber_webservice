@@ -39,7 +39,7 @@ async function insertLead(lead: LeadPayload, ip: string | null): Promise<void> {
   const url = process.env.SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !serviceKey) {
-    console.warn("[leads] Supabase not configured — skipping DB insert");
+    console.warn("[leads] Supabase not configured - skipping DB insert");
     return;
   }
 
@@ -73,7 +73,7 @@ async function sendEmail(lead: LeadPayload): Promise<void> {
   const from = process.env.RESEND_FROM_EMAIL;
   const to = process.env.RESEND_TO_EMAIL;
   if (!apiKey || !from || !to) {
-    console.warn("[leads] Resend not configured — skipping email");
+    console.warn("[leads] Resend not configured - skipping email");
     return;
   }
 
@@ -181,7 +181,7 @@ export async function POST(req: Request) {
     await insertLead(lead, ip);
   } catch (err) {
     console.error("[leads] DB insert error:", err);
-    // Continue to email — we'd rather deliver the lead than lose it entirely
+    // Continue to email - we'd rather deliver the lead than lose it entirely
   }
 
   try {

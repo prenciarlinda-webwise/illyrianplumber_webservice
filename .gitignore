@@ -45,3 +45,7 @@ next-env.d.ts
 
 # csv data files
 *.csv
+
+# screencapture / research images
+screencapture-*.png
+screencapture-*.jpg
