@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -100,9 +99,6 @@ export default function BackflowPreventionPage() {
     { name: "Services", path: "/services" },
     { name: "Backflow Prevention Testing", path: "/services/backflow-prevention-testing" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script
@@ -117,11 +113,6 @@ export default function BackflowPreventionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-
       <ServiceHero
         tagline="Certified Backflow Testing"
         heading="Backflow Prevention and Testing"

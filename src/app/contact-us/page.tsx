@@ -21,15 +21,8 @@ export default function ContactPage() {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    mainEntity: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      telephone: BUSINESS_INFO.phone,
-      email: BUSINESS_INFO.email,
-      address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
-      openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "00:00", closes: "23:59" },
-    },
+    url: "https://www.illyrianplumber.com/contact-us",
+    mainEntity: { "@id": "https://www.illyrianplumber.com/#organization" },
   };
 
   return (

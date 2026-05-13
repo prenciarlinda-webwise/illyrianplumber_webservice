@@ -17,17 +17,6 @@ export const metadata: Metadata = {
 };
 
 export default function EdisonPage() {
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "Plumber",
-    "@id": "https://www.illyrianplumber.com/#organization",
-    name: BUSINESS_INFO.name,
-    telephone: BUSINESS_INFO.phone,
-    url: "https://www.illyrianplumber.com/service-areas/edison",
-    address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
-    areaServed: { "@type": "City", name: "Edison", containedInPlace: { "@type": "State", name: "New Jersey" } },
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -93,7 +82,6 @@ export default function EdisonPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}

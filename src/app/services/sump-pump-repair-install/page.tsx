@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -118,17 +117,12 @@ export default function SumpPumpPage() {
     { name: "Services", path: "/services" },
     { name: "Sump Pump Repair & Installation", path: "/services/sump-pump-repair-install" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-
       <ServiceHero
         tagline="Basement Flood Protection"
         heading="Sump Pump Repair and Installation in NJ"

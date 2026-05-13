@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -127,17 +126,12 @@ export default function WholeHouseRepipingPage() {
     { name: "Services", path: "/services" },
     { name: "Whole House Repiping", path: "/services/whole-house-repiping" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-
       <ServiceHero
         tagline="Complete Pipe Replacement"
         heading="Whole House Repiping in NJ"

@@ -37,15 +37,8 @@ export default function AboutPage() {
   const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    mainEntity: {
-      "@type": "Plumber",
-      "@id": "https://www.illyrianplumber.com/#organization",
-      name: BUSINESS_INFO.name,
-      description: "Professional 24/7 plumbing services in East Brunswick, NJ and Central New Jersey. Licensed master plumbers providing water heater repair, boiler service, gas line installation, and whole house repiping.",
-      foundingDate: BUSINESS_INFO.founded,
-      telephone: BUSINESS_INFO.phone,
-      address: { "@type": "PostalAddress", streetAddress: BUSINESS_INFO.address.street, addressLocality: BUSINESS_INFO.address.city, addressRegion: "NJ", postalCode: BUSINESS_INFO.address.zip, addressCountry: "US" },
-    },
+    url: "https://www.illyrianplumber.com/about-us",
+    mainEntity: { "@id": "https://www.illyrianplumber.com/#organization" },
   };
 
   return (

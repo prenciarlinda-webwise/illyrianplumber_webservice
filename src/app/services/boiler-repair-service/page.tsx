@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -92,16 +91,11 @@ export default function BoilerRepairPage() {
     { name: "Services", path: "/services" },
     { name: "Boiler Repair Service", path: "/services/boiler-repair-service" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-
       <ServiceHero
         tagline="Heating Specialists"
         heading="Boiler Repair Service in East Brunswick, NJ"

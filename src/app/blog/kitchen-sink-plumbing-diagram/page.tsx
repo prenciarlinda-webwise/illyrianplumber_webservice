@@ -878,7 +878,7 @@ export default function KitchenSinkPlumbingDiagramPost() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/blog/how-to-flush-water-heater" className="text-gray-700 hover:text-red-700 transition leading-snug block">
+                      <Link href="/blog/how-to-drain-flush-water-heater" className="text-gray-700 hover:text-red-700 transition leading-snug block">
                         How to Flush a Water Heater
                       </Link>
                     </li>

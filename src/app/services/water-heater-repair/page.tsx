@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -92,16 +91,11 @@ export default function WaterHeaterRepairPage() {
     { name: "Services", path: "/services" },
     { name: "Water Heater Repair", path: "/services/water-heater-repair" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-
       <ServiceHero
         tagline="Same-Day Service Available"
         heading="Water Heater Repair in East Brunswick & Middlesex County, NJ"

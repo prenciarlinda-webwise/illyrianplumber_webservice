@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -90,16 +89,11 @@ export default function WaterLeakDetectionPage() {
     { name: "Services", path: "/services" },
     { name: "Water Leak Detection", path: "/services/water-leak-detection" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-
       <ServiceHero
         tagline="Advanced Detection Technology"
         heading="Water Leak Detection Services in NJ"

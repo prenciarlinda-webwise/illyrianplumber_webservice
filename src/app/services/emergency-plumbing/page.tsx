@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -96,9 +95,6 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: "Services", path: "/services" },
   { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
 ]);
-
-const localBusinessSchema = getLocalBusinessSchema();
-
 export default function EmergencyPlumbingPage() {
   return (
     <>
@@ -114,11 +110,6 @@ export default function EmergencyPlumbingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-
       <ServiceHero
         tagline="24/7 EMERGENCY PLUMBER AVAILABLE NOW"
         heading="24/7 Emergency Plumber in East Brunswick, NJ"

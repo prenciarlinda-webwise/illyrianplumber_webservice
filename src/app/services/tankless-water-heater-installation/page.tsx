@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/constants";
 import {
-  getLocalBusinessSchema,
   getServiceSchema,
   getFaqSchema,
   getBreadcrumbSchema,
@@ -90,9 +89,6 @@ export default function TanklessWaterHeaterInstallationPage() {
     { name: "Services", path: "/services" },
     { name: "Tankless Water Heater Installation", path: "/services/tankless-water-heater-installation" },
   ]);
-
-  const localBusinessSchema = getLocalBusinessSchema();
-
   return (
     <>
       <script
@@ -107,11 +103,6 @@ export default function TanklessWaterHeaterInstallationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-
       <ServiceHero
         tagline="Free In-Home Estimates"
         heading="Tankless Water Heater Installation in NJ"
