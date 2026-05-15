@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/constants";
 import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
-  title: "Sump Pump Maintenance: The Complete Homeowner's Guide",
-  description: "Keep your sump pump ready for storms. Learn testing procedures, maintenance schedule, and when to replace. Expert NJ plumber guide.",
+  title: "Sump Pump Maintenance: 2026 NJ Homeowner Guide",
+  description: "Quarterly sump pump testing, full maintenance schedule, NJ storm-season prep, battery backup checks, and when to replace your pump. 2026 homeowner guide.",
   alternates: { canonical: "https://www.illyrianplumber.com/blog/sump-pump-maintenance-guide" },
   keywords: [
     "sump pump maintenance",
@@ -25,10 +25,11 @@ export const metadata: Metadata = {
     "basement flooding prevention",
   ],
   openGraph: {
-    title: "Sump Pump Maintenance Guide",
-    description: "Complete sump pump maintenance guide for NJ homeowners.",
+    title: "Sump Pump Maintenance: 2026 NJ Homeowner Guide",
+    description: "Quarterly testing, full maintenance schedule, and NJ storm-season prep from licensed master plumbers.",
     type: "article",
     publishedTime: "2025-01-31T08:00:00.000Z",
+    modifiedTime: "2026-05-15T08:00:00.000Z",
     authors: ["Illyrian Plumber"],
   },
 };
@@ -37,24 +38,38 @@ export default function SumpPumpPost() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Sump Pump Maintenance: The Complete Homeowner's Guide",
-    description: "Keep your sump pump ready for storms with proper maintenance.",
+    headline: "Sump Pump Maintenance: 2026 NJ Homeowner Guide",
+    description: "Quarterly sump pump testing, full maintenance schedule, NJ storm-season prep, battery backup checks, and replacement guidance for Middlesex County homeowners.",
     image: "https://www.illyrianplumber.com/images/sump-pump-installation.jpg",
-    author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
-    publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
+    author: {
+      "@type": "Person",
+      name: "Illyrian Plumber Team",
+      worksFor: { "@id": "https://www.illyrianplumber.com/#organization" },
+    },
+    publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
     datePublished: "2025-01-31T08:00:00.000Z",
-    dateModified: "2026-03-18T08:00:00.000Z",
+    dateModified: "2026-05-15T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/sump-pump-maintenance-guide" },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.illyrianplumber.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.illyrianplumber.com/blog" },
+      { "@type": "ListItem", position: 3, name: "Sump Pump Maintenance Guide", item: "https://www.illyrianplumber.com/blog/sump-pump-maintenance-guide" },
+    ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "How often should I test my sump pump?", acceptedAnswer: { "@type": "Answer", text: "Test your sump pump at least quarterly -ideally before each season. Also test before any predicted heavy rain. Testing takes just a few minutes: pour water into the pit until the float activates. The pump should start, remove the water, and shut off automatically." } },
-      { "@type": "Question", name: "How long do sump pumps last?", acceptedAnswer: { "@type": "Answer", text: "A quality sump pump lasts 7-10 years on average with proper maintenance. Pumps that run frequently (high water table areas) may need replacement sooner. Battery backups typically last 3-5 years. If your pump is over 7 years old, consider proactive replacement." } },
-      { "@type": "Question", name: "Do I need a battery backup for my sump pump?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially in New Jersey where storms often cause power outages. A battery backup keeps your sump pump running during outages -exactly when you need it most. It's inexpensive insurance against a flooded basement." } },
-      { "@type": "Question", name: "Why is my sump pump running constantly?", acceptedAnswer: { "@type": "Answer", text: "Constant running can indicate: stuck float switch, high water table, undersized pump, check valve failure, or plumbing issue draining into the pit. A stuck float is most common -try cleaning or adjusting it. If the problem persists, call a professional." } },
+      { "@type": "Question", name: "How often should I test my sump pump in NJ?", acceptedAnswer: { "@type": "Answer", text: "Test your sump pump at least quarterly and always before predicted heavy rain or tropical systems. Testing takes 5 minutes: remove the pit cover, pour 5 gallons of water in slowly, watch the pump activate, verify it pumps the water out cleanly, and confirm it shuts off when the float drops. New Jersey homeowners should also test before hurricane season starts in June." } },
+      { "@type": "Question", name: "How long do sump pumps last in NJ?", acceptedAnswer: { "@type": "Answer", text: "A submersible sump pump lasts 7 to 10 years on average. A pedestal pump (motor above the pit) lasts 15 to 25 years because the motor stays dry. Battery backup units need replacement every 3 to 5 years. Pumps in high water table areas like parts of Sayreville and Old Bridge run more often and may need earlier replacement." } },
+      { "@type": "Question", name: "Do I need a battery backup for my sump pump?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially in New Jersey. Major storms regularly cause widespread power outages, and that is exactly when groundwater rises and your pump is needed most. A battery backup runs for 6 to 12 hours on a single charge depending on cycle frequency, which usually outlasts the outage. Cost is $300 to $500 installed, far less than basement water-damage restoration." } },
+      { "@type": "Question", name: "Why is my sump pump running constantly?", acceptedAnswer: { "@type": "Answer", text: "Constant running points to one of five causes: a stuck or misadjusted float switch (most common), a high water table from heavy rain or rising groundwater, an undersized pump for your home's incoming water volume, a failed check valve that lets pumped water flow back into the pit, or a downspout or plumbing drain incorrectly tied into the sump pit. Try cleaning the float first; if running persists, call a licensed plumber." } },
     ],
   };
 
@@ -62,6 +77,7 @@ export default function SumpPumpPost() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <article className="bg-white">
         <header className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
@@ -69,28 +85,35 @@ export default function SumpPumpPost() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 text-sm text-gray-300 mb-4">
                 <span className="bg-red-700 text-white px-3 py-1 rounded-full">Maintenance</span>
-                <time dateTime="2025-01-31">January 31, 2025</time>
+                <time dateTime="2026-05-15">Updated May 15, 2026</time>
                 <span>12 min read</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Sump Pump Maintenance: The Complete Homeowner&apos;s Guide</h1>
-              <p className="text-xl text-gray-300">Your sump pump protects your basement from flooding -but only if it works when you need it. Here&apos;s how to keep it ready.</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Sump pump maintenance: 2026 NJ homeowner guide</h1>
+              <p className="text-xl text-gray-300">Your sump pump protects your basement from flooding, but only if it works when you need it. Here is how to keep it ready.</p>
             </div>
           </div>
         </header>
 
         <div className="container mx-auto px-4 pt-8">
-          <AuthorBio publishDate="2025-01-31" updateDate="2026-03-23" />
+          <AuthorBio publishDate="2025-01-31" updateDate="2026-05-15" />
         </div>
 
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex-1 min-w-0 max-w-3xl">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-lg p-5 mb-8">
+              <p className="font-bold text-gray-900 mb-2">Quick answer</p>
+              <p className="text-gray-800 leading-relaxed">
+                Test your sump pump quarterly and before every major storm forecast. Pour 5 gallons of water into the pit, confirm the pump activates within seconds, evacuates the water cleanly, and shuts off when the float drops. Replace the unit every 7 to 10 years (submersible) or every 15 to 25 years (pedestal), and replace battery backups every 3 to 5 years.
+              </p>
+            </div>
+
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Your sump pump sits quietly in the basement, ignored for months at a time -until a heavy rain comes and you need it desperately. Unfortunately, that&apos;s when many homeowners discover their pump has failed.
+                Your sump pump sits quietly in the basement, ignored for months at a time, until a heavy rain comes and you need it desperately. That is when many homeowners discover the pump has failed. If you need <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 underline">sump pump repair or installation in NJ</Link>, we offer same-day service across Middlesex County, but the cheapest fix is preventive maintenance that catches problems before the next storm.
               </p>
               <p>
-                A flooded basement is expensive and heartbreaking. The good news? Simple maintenance prevents most sump pump failures. This guide covers everything Middlesex County homeowners need to know about keeping their sump pump ready for New Jersey&apos;s storms.
+                A flooded basement is expensive and heartbreaking. The good news is that simple maintenance prevents most sump pump failures. This guide covers everything <Link href="/service-areas/sayreville" className="text-red-700 hover:text-red-800 underline">Sayreville</Link>, <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 underline">Old Bridge</Link>, and other Middlesex County homeowners need to know about keeping their sump pump ready for New Jersey storms.
               </p>
             </div>
 
@@ -103,19 +126,19 @@ export default function SumpPumpPost() {
             </div>
 
             <nav className="bg-gray-50 rounded-xl p-6 my-8">
-              <h2 className="text-lg font-bold text-gray-900 mb-4">Maintenance Topics</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-4">Maintenance topics</h2>
               <ul className="space-y-2">
-                <li><a href="#how-it-works" className="text-red-700 hover:text-red-800">How Your Sump Pump Works</a></li>
-                <li><a href="#testing" className="text-red-700 hover:text-red-800">How to Test Your Sump Pump</a></li>
-                <li><a href="#maintenance-schedule" className="text-red-700 hover:text-red-800">Maintenance Schedule</a></li>
-                <li><a href="#battery-backup" className="text-red-700 hover:text-red-800">Battery Backup Importance</a></li>
-                <li><a href="#warning-signs" className="text-red-700 hover:text-red-800">Warning Signs of Failure</a></li>
-                <li><a href="#replacement" className="text-red-700 hover:text-red-800">When to Replace</a></li>
+                <li><a href="#how-it-works" className="text-red-700 hover:text-red-800">How your sump pump works</a></li>
+                <li><a href="#testing" className="text-red-700 hover:text-red-800">How to test your sump pump</a></li>
+                <li><a href="#maintenance-schedule" className="text-red-700 hover:text-red-800">Maintenance schedule</a></li>
+                <li><a href="#battery-backup" className="text-red-700 hover:text-red-800">Battery backup importance</a></li>
+                <li><a href="#warning-signs" className="text-red-700 hover:text-red-800">Warning signs of failure</a></li>
+                <li><a href="#replacement" className="text-red-700 hover:text-red-800">When to replace</a></li>
               </ul>
             </nav>
 
             <section id="how-it-works" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Your Sump Pump Works</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How your sump pump works</h2>
               <p className="text-gray-700 mb-6">Understanding your sump pump helps you maintain it properly:</p>
 
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
@@ -131,22 +154,22 @@ export default function SumpPumpPost() {
 
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Pedestal Pumps</h4>
-                  <p className="text-gray-700 text-sm">Motor sits above the pit, out of water. Easier to service, louder operation, less powerful. Lasts 25-30 years.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Pedestal pumps</h4>
+                  <p className="text-gray-700 text-sm">Motor sits above the pit, out of water. Easier to service, louder operation, less powerful. Lasts 25 to 30 years.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Submersible Pumps</h4>
-                  <p className="text-gray-700 text-sm">Entire unit sits in the pit underwater. Quieter, more powerful, handles debris better. Lasts 7-10 years.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Submersible pumps</h4>
+                  <p className="text-gray-700 text-sm">Entire unit sits in the pit underwater. Quieter, more powerful, handles debris better. Lasts 7 to 10 years.</p>
                 </div>
               </div>
             </section>
 
             <section id="testing" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How to Test Your Sump Pump</h2>
-              <p className="text-gray-700 mb-6">Test your sump pump at least quarterly. Here&apos;s the proper procedure:</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How to test your sump pump</h2>
+              <p className="text-gray-700 mb-6">Test your sump pump at least quarterly. Here is the proper procedure recommended by the <a href="https://www.fema.gov/floodplain-management" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">FEMA floodplain management guidelines</a>:</p>
 
               <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
-                <h3 className="font-bold text-gray-900 mb-4">Step-by-Step Testing</h3>
+                <h3 className="font-bold text-gray-900 mb-4">Step-by-step testing</h3>
                 <ol className="space-y-3 text-gray-700">
                   <li><strong>1.</strong> Remove the pit cover and inspect the pit for debris</li>
                   <li><strong>2.</strong> Check that the pump is upright and the float moves freely</li>
@@ -160,7 +183,7 @@ export default function SumpPumpPost() {
               </div>
 
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">What to Look For</h4>
+                <h4 className="font-bold text-gray-900 mb-2">What to look for</h4>
                 <ul className="text-gray-700 space-y-1">
                   <li>• Pump activates at proper water level (not too high or low)</li>
                   <li>• Water evacuates within 10-15 seconds for 5 gallons</li>
@@ -188,11 +211,11 @@ export default function SumpPumpPost() {
             </div>
 
             <section id="maintenance-schedule" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Complete Maintenance Schedule</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Complete maintenance schedule</h2>
 
               <div className="space-y-6">
                 <div className="bg-white border rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Monthly Tasks</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Monthly tasks</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center gap-2">
                       <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -206,7 +229,7 @@ export default function SumpPumpPost() {
                 </div>
 
                 <div className="bg-white border rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Quarterly Tasks</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Quarterly tasks</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center gap-2">
                       <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -228,7 +251,7 @@ export default function SumpPumpPost() {
                 </div>
 
                 <div className="bg-white border rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Annual Tasks</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Annual tasks</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center gap-2">
                       <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
@@ -260,18 +283,18 @@ export default function SumpPumpPost() {
             </section>
 
             <section id="battery-backup" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Why Battery Backup Is Essential</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Why battery backup is essential</h2>
 
               <p className="text-gray-700 mb-6">When do storms cause the most basement water? When they also cause power outages. Without a battery backup, your sump pump is useless exactly when you need it most.</p>
 
               <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
-                <h4 className="font-bold text-gray-900 mb-3">New Jersey Reality Check</h4>
-                <p className="text-gray-700">Major storms regularly cause widespread outages in Middlesex County. Without backup power, even a premium sump pump can&apos;t protect your basement during extended outages. A battery backup provides hours of protection -often enough to outlast the outage.</p>
+                <h4 className="font-bold text-gray-900 mb-3">New Jersey reality check</h4>
+                <p className="text-gray-700">Major storms regularly cause widespread outages in Middlesex County. Without backup power, even a premium sump pump cannot protect your basement during extended outages. A battery backup provides 6 to 12 hours of protection, often enough to outlast the outage.</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Battery Backup Benefits</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Battery backup benefits</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Protection during power outages</li>
                     <li>• Backup if primary pump fails</li>
@@ -280,11 +303,11 @@ export default function SumpPumpPost() {
                   </ul>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Battery Maintenance</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Battery maintenance</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Test quarterly</li>
                     <li>• Check water level (if applicable)</li>
-                    <li>• Replace every 3-5 years</li>
+                    <li>• Replace every 3 to 5 years</li>
                     <li>• Keep connections clean</li>
                   </ul>
                 </div>
@@ -292,7 +315,7 @@ export default function SumpPumpPost() {
             </section>
 
             <section id="warning-signs" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Warning Signs of Pump Failure</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Warning signs of pump failure</h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 {[
@@ -347,89 +370,89 @@ export default function SumpPumpPost() {
             </div>
 
             <section id="replacement" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">When to Replace Your Sump Pump</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">When to replace your sump pump</h2>
 
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                <h3 className="font-bold text-gray-900 mb-4">Replace If:</h3>
+                <h3 className="font-bold text-gray-900 mb-4">Replace if</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Pump is over 7-10 years old (submersible)</li>
-                  <li>• Pump is over 15-20 years old (pedestal)</li>
+                  <li>• Pump is over 7 to 10 years old (submersible)</li>
+                  <li>• Pump is over 15 to 20 years old (pedestal)</li>
                   <li>• Multiple failures or repairs needed</li>
-                  <li>• Pump runs but doesn&apos;t remove water efficiently</li>
+                  <li>• Pump runs but does not remove water efficiently</li>
                   <li>• Visible damage or heavy corrosion</li>
-                  <li>• Motor makes grinding/failing sounds</li>
+                  <li>• Motor makes grinding or failing sounds</li>
                 </ul>
               </div>
 
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Proactive Replacement</h4>
-                <p className="text-gray-700">Don&apos;t wait for failure. If your pump is approaching the end of its expected life, replace it proactively -before a storm reveals it&apos;s failed. The cost of a new pump is far less than water damage restoration.</p>
+                <h4 className="font-bold text-gray-900 mb-2">Proactive replacement</h4>
+                <p className="text-gray-700">Do not wait for failure. If your pump is approaching the end of its expected life, replace it proactively, before a storm reveals it has failed. The cost of a new pump is far less than water damage restoration.</p>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County Considerations</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County considerations</h2>
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">High Water Table Areas</h4>
-                  <p className="text-gray-700">Parts of Middlesex County have high water tables. Pumps in these areas run more frequently and may need replacement sooner. Consider upgrading to a higher-capacity pump if yours runs constantly during wet seasons.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">High water table areas</h4>
+                  <p className="text-gray-700">Low-lying parts of <Link href="/service-areas/sayreville" className="text-red-700 hover:text-red-800 underline">Sayreville</Link> near the Raritan Bay and basement-equipped homes in <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 underline">Old Bridge</Link>'s Cliffwood Beach area have notably high water tables. Pumps in these zones cycle more often and may need replacement on the 5 to 7 year side rather than 10.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Storm Season Readiness</h4>
-                  <p className="text-gray-700">Test your pump before hurricane season (June-November) and before spring rain season. New Jersey gets significant rain in spring and during tropical systems -your pump needs to be ready.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Storm season readiness</h4>
+                  <p className="text-gray-700">Test your pump before hurricane season (June to November) and before spring rain season. New Jersey gets significant rain in spring and during tropical systems, your pump needs to be ready.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Freeze Protection</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Freeze protection</h4>
                   <p className="text-gray-700">Discharge lines can freeze in winter, causing backups. Ensure your discharge pipe has proper pitch and consider a freeze guard or larger diameter pipe to prevent ice blockages.</p>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
               <div className="space-y-4">
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">How often should I test my sump pump?</h3>
+                    <h3 className="font-semibold text-gray-900 pr-4">How often should I test my sump pump in NJ?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Test your sump pump at least quarterly -ideally before each season. Also test before any predicted heavy rain. Testing takes just a few minutes and can reveal problems before they cause flooding.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Test your sump pump at least quarterly and always before predicted heavy rain or tropical systems. Testing takes 5 minutes: remove the pit cover, pour 5 gallons of water in slowly, watch the pump activate, verify it pumps the water out cleanly, and confirm it shuts off when the float drops. New Jersey homeowners should also test before hurricane season starts in June.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">How long do sump pumps last?</h3>
+                    <h3 className="font-semibold text-gray-900 pr-4">How long do sump pumps last in NJ?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Submersible sump pumps typically last 7-10 years. Pedestal pumps can last 15-25 years since the motor stays dry. Battery backups need replacement every 3-5 years. Pumps that run frequently may need replacement sooner.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">A submersible sump pump lasts 7 to 10 years on average. A pedestal pump (motor above the pit) lasts 15 to 25 years because the motor stays dry. Battery backup units need replacement every 3 to 5 years. Pumps in high water table areas like parts of Sayreville and Old Bridge run more often and may need earlier replacement.</p></div>
+                </details>
+                <details className="group bg-gray-50 rounded-lg">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <h3 className="font-semibold text-gray-900 pr-4">Do I need a battery backup for my sump pump?</h3>
+                    <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
+                  </summary>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Yes, especially in New Jersey. Major storms regularly cause widespread power outages, and that is exactly when groundwater rises and your pump is needed most. A battery backup runs for 6 to 12 hours on a single charge depending on cycle frequency, which usually outlasts the outage. Cost is $300 to $500 installed, far less than basement water-damage restoration.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <h3 className="font-semibold text-gray-900 pr-4">Why is my sump pump running constantly?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Constant running can indicate: stuck or misadjusted float switch, high water table, undersized pump, failed check valve allowing water to flow back, or a plumbing drain incorrectly connected to the pit. Try cleaning and adjusting the float first.</p></div>
-                </details>
-                <details className="group bg-gray-50 rounded-lg">
-                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">Do I really need a battery backup?</h3>
-                    <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
-                  </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">In New Jersey, absolutely yes. Our storms frequently cause power outages, and that&apos;s exactly when groundwater levels rise most. A battery backup is inexpensive insurance against a flooded basement -typically $300-500 for years of protection.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Constant running points to one of five causes: a stuck or misadjusted float switch (most common), a high water table from heavy rain or rising groundwater, an undersized pump for your home&apos;s incoming water volume, a failed check valve that lets pumped water flow back into the pit, or a downspout or plumbing drain incorrectly tied into the sump pit. Try cleaning the float first; if running persists, call a licensed plumber.</p></div>
                 </details>
               </div>
             </section>
 
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Sump Pump Services</h2>
-              <p className="text-red-100 mb-6">From annual maintenance to emergency replacement, we keep Middlesex County basements dry. Don&apos;t wait for a storm to discover your pump has failed -schedule a maintenance check today.</p>
+              <h2 className="text-2xl font-bold mb-4">Sump pump services</h2>
+              <p className="text-red-100 mb-6">From annual maintenance to emergency replacement, we keep Middlesex County basements dry. Do not wait for a storm to discover your pump has failed, schedule a maintenance check today.</p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Call {BUSINESS_INFO.phone}</a>
-                <Link href="/services/sump-pump-repair-install" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Sump Pump Services</Link>
+                <Link href="/services/sump-pump-repair-install" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Sump pump services</Link>
               </div>
             </section>
 
             <section className="border-t pt-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Related Articles</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Related articles</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <Link href="/blog/signs-of-slab-leak-sewer-line" className="group">
                   <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
@@ -471,15 +494,15 @@ export default function SumpPumpPost() {
 
                 {/* Service Areas */}
                 <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Service Areas</p>
+                  <p className="font-bold text-gray-900 mb-3">Service areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li><Link href="/service-areas/east-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</Link></li>
+                    <li><Link href="/service-areas/edison" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</Link></li>
+                    <li><Link href="/service-areas/sayreville" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</Link></li>
+                    <li><Link href="/service-areas/old-bridge" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</Link></li>
+                    <li><Link href="/service-areas/monroe-township" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</Link></li>
+                    <li><Link href="/service-areas/south-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</Link></li>
+                    <li><Link href="/service-areas/north-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</Link></li>
                   </ul>
                 </div>
 

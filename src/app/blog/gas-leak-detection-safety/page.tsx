@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/constants";
 import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
-  title: "Gas Line Safety: What Every Homeowner Should Know",
-  description: "Learn gas leak signs, safety procedures, and when to call for help. Essential gas line safety guide from licensed NJ plumbers.",
+  title: "Gas Line Safety Guide for NJ Homeowners (2026)",
+  description: "Gas leak signs, what to do if you smell gas, NJ permit rules, and prevention. 2026 safety guide for Middlesex County homeowners from licensed master plumbers.",
   alternates: { canonical: "https://www.illyrianplumber.com/blog/gas-leak-detection-safety" },
   keywords: [
     "gas leak detection",
@@ -24,10 +24,11 @@ export const metadata: Metadata = {
     "gas line inspection",
   ],
   openGraph: {
-    title: "Gas Line Safety: What Every Homeowner Should Know",
-    description: "Essential gas safety knowledge for every homeowner. Know the signs and what to do.",
+    title: "Gas Line Safety Guide for NJ Homeowners (2026)",
+    description: "Gas leak signs, what to do if you smell gas, NJ permit rules, and prevention from licensed master plumbers.",
     type: "article",
     publishedTime: "2025-01-24T08:00:00.000Z",
+    modifiedTime: "2026-05-15T08:00:00.000Z",
     authors: ["Illyrian Plumber"],
   },
 };
@@ -36,24 +37,38 @@ export default function GasSafetyPost() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Gas Line Safety: What Every Homeowner Should Know",
-    description: "Essential gas leak detection and safety information for homeowners.",
+    headline: "Gas Line Safety Guide for NJ Homeowners (2026)",
+    description: "Gas leak signs, what to do if you smell gas, NJ permit and licensing rules, prevention checklist, and Middlesex County safety guidance from licensed master plumbers.",
     image: "https://www.illyrianplumber.com/images/gas-line-installation.jpg",
-    author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
-    publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
+    author: {
+      "@type": "Person",
+      name: "Illyrian Plumber Team",
+      worksFor: { "@id": "https://www.illyrianplumber.com/#organization" },
+    },
+    publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
     datePublished: "2025-01-24T08:00:00.000Z",
-    dateModified: "2026-03-18T08:00:00.000Z",
+    dateModified: "2026-05-15T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/gas-leak-detection-safety" },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.illyrianplumber.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.illyrianplumber.com/blog" },
+      { "@type": "ListItem", position: 3, name: "Gas Line Safety Guide for NJ Homeowners", item: "https://www.illyrianplumber.com/blog/gas-leak-detection-safety" },
+    ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "What does a gas leak smell like?", acceptedAnswer: { "@type": "Answer", text: "Natural gas is odorless, but utilities add mercaptan -a chemical that smells like rotten eggs or sulfur. If you smell this distinctive odor, treat it as a gas leak. The smell may be faint near small leaks or overwhelming near large ones." } },
-      { "@type": "Question", name: "What should I do if I smell gas?", acceptedAnswer: { "@type": "Answer", text: "Leave the building immediately without turning any lights or switches on or off. Don't use your phone inside. Once safely outside, call 911 and your gas company's emergency line. Don't return until cleared by professionals." } },
-      { "@type": "Question", name: "How do I know if I have a gas leak?", acceptedAnswer: { "@type": "Answer", text: "Signs include: rotten egg smell, hissing or whistling sound near gas lines, dead plants near gas lines, bubbling in standing water, higher than normal gas bills, and pilot lights frequently going out. Physical symptoms include headaches, dizziness, and nausea." } },
-      { "@type": "Question", name: "Who can work on gas lines in NJ?", acceptedAnswer: { "@type": "Answer", text: "In New Jersey, only licensed plumbers are authorized to work on gas piping. DIY gas line work is illegal and extremely dangerous. All gas line work requires permits and inspection. Always hire a licensed, insured professional." } },
+      { "@type": "Question", name: "What does a gas leak smell like?", acceptedAnswer: { "@type": "Answer", text: "Natural gas is odorless on its own, but utilities add mercaptan, a sulfur compound that smells like rotten eggs. If you smell this distinctive odor in your home, treat it as a gas leak emergency. The smell may be faint near a small pinhole leak in a fitting or overwhelming near a larger line failure." } },
+      { "@type": "Question", name: "What should I do if I smell gas in my house?", acceptedAnswer: { "@type": "Answer", text: "Leave the building immediately without turning any switches on or off, since a single spark can ignite leaked gas. Take pets and family members with you. Once safely outside and away from the home, call 911 and PSE&G at 1-800-880-7734. Do not return inside until emergency responders give the all-clear." } },
+      { "@type": "Question", name: "How do I know if I have a gas leak in my home?", acceptedAnswer: { "@type": "Answer", text: "The most reliable signs are a rotten-egg smell, a hissing sound near gas lines or appliances, dead vegetation directly above buried gas lines, bubbling in standing water near a line, an unexplained spike in your gas bill, and pilot lights that keep going out. Physical symptoms include headaches, dizziness, nausea, and fatigue that improve when you leave the home." } },
+      { "@type": "Question", name: "Who can legally work on gas lines in New Jersey?", acceptedAnswer: { "@type": "Answer", text: "In New Jersey, only state-licensed master plumbers are authorized to work on gas piping. All gas line installations, repairs, and modifications require a municipal permit and inspection. DIY gas line work is illegal under NJ Uniform Construction Code and extremely dangerous. Always verify your contractor holds an active NJ Master Plumber License before work begins." } },
     ],
   };
 
@@ -61,6 +76,7 @@ export default function GasSafetyPost() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <article className="bg-white">
         <header className="relative bg-gray-900 text-white py-16 md:py-24">
@@ -72,39 +88,46 @@ export default function GasSafetyPost() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 text-sm text-gray-300 mb-4">
                 <span className="bg-red-700 text-white px-3 py-1 rounded-full">Safety</span>
-                <time dateTime="2025-01-24">January 24, 2025</time>
+                <time dateTime="2026-05-15">Updated May 15, 2026</time>
                 <span>12 min read</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Gas Line Safety: What Every Homeowner Should Know</h1>
-              <p className="text-xl text-gray-300">Natural gas powers many homes, but requires respect. Learn the warning signs of gas leaks and essential safety procedures.</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Gas line safety guide for NJ homeowners (2026)</h1>
+              <p className="text-xl text-gray-300">Recognize a gas leak in seconds, know what to do in the first five minutes, and understand who can legally work on gas piping in New Jersey.</p>
             </div>
           </div>
         </header>
 
         <div className="container mx-auto px-4 pt-8">
-          <AuthorBio publishDate="2025-01-24" updateDate="2026-03-23" />
+          <AuthorBio publishDate="2025-01-24" updateDate="2026-05-15" />
         </div>
 
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex-1 min-w-0 max-w-3xl">
             <div className="bg-red-100 border-2 border-red-500 rounded-xl p-6 mb-8">
-              <h2 className="text-xl font-bold text-red-800 mb-2">Emergency: If You Smell Gas Now</h2>
+              <h2 className="text-xl font-bold text-red-800 mb-2">Emergency: if you smell gas now</h2>
               <ol className="text-red-800 space-y-2">
-                <li><strong>1.</strong> Leave the building immediately -don&apos;t turn switches on or off</li>
-                <li><strong>2.</strong> Don&apos;t use phones, lighters, or anything that could spark</li>
+                <li><strong>1.</strong> Leave the building immediately, do not turn switches on or off</li>
+                <li><strong>2.</strong> Do not use phones, lighters, or anything that could spark</li>
                 <li><strong>3.</strong> Once outside and away, call 911</li>
                 <li><strong>4.</strong> Call PSE&G: 1-800-880-7734 or your gas provider</li>
-                <li><strong>5.</strong> Don&apos;t return until cleared by emergency responders</li>
+                <li><strong>5.</strong> Do not return until cleared by emergency responders</li>
               </ol>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-lg p-5 mb-8">
+              <p className="font-bold text-gray-900 mb-2">Quick answer</p>
+              <p className="text-gray-800 leading-relaxed">
+                A natural gas leak smells like rotten eggs (mercaptan added by utilities) and may also produce a hissing sound near gas lines, dead vegetation, or an unexplained gas-bill spike. If you suspect a leak, leave the home immediately, then from a safe distance call 911 and PSE&G at 1-800-880-7734. In New Jersey, only a licensed master plumber can legally repair gas piping.
+              </p>
             </div>
 
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed">
-                Natural gas is a safe, efficient fuel when handled properly. It heats homes, powers water heaters and stoves, and fuels outdoor grills throughout Middlesex County. But gas leaks are serious emergencies that require immediate action.
+                Natural gas is a safe, efficient fuel when installed and maintained by licensed professionals. It heats homes, powers water heaters and stoves, and fuels outdoor grills throughout Middlesex County, but gas leaks are serious emergencies that demand immediate action. If your home needs <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800 underline">licensed gas line repair or installation in NJ</Link>, only a state-licensed master plumber can legally perform the work.
               </p>
               <p>
-                This guide covers what every homeowner should know about gas safety -from recognizing leaks to maintaining your gas appliances.
+                This guide covers what every Middlesex County homeowner should know about gas safety, from recognizing a leak to maintaining your gas appliances and knowing when to call for help.
               </p>
             </div>
 
@@ -117,43 +140,42 @@ export default function GasSafetyPost() {
             </div>
 
             <nav className="bg-gray-50 rounded-xl p-6 my-8">
-              <h2 className="text-lg font-bold text-gray-900 mb-4">Gas Safety Topics</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-4">Gas safety topics</h2>
               <ul className="space-y-2">
-                <li><a href="#recognizing-leaks" className="text-red-700 hover:text-red-800">Recognizing Gas Leaks</a></li>
-                <li><a href="#what-to-do" className="text-red-700 hover:text-red-800">What to Do If You Suspect a Leak</a></li>
-                <li><a href="#prevention" className="text-red-700 hover:text-red-800">Preventing Gas Leaks</a></li>
-                <li><a href="#appliance-safety" className="text-red-700 hover:text-red-800">Gas Appliance Safety</a></li>
-                <li><a href="#when-to-call" className="text-red-700 hover:text-red-800">When to Call a Professional</a></li>
+                <li><a href="#recognizing-leaks" className="text-red-700 hover:text-red-800">Recognizing gas leaks</a></li>
+                <li><a href="#what-to-do" className="text-red-700 hover:text-red-800">What to do if you suspect a leak</a></li>
+                <li><a href="#prevention" className="text-red-700 hover:text-red-800">Preventing gas leaks</a></li>
+                <li><a href="#appliance-safety" className="text-red-700 hover:text-red-800">Gas appliance safety</a></li>
+                <li><a href="#when-to-call" className="text-red-700 hover:text-red-800">When to call a professional</a></li>
               </ul>
             </nav>
 
             <section id="recognizing-leaks" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Recognizing Gas Leaks</h2>
-              <p className="text-gray-700 mb-6">Natural gas is colorless and odorless in its natural state. Utility companies add mercaptan -a sulfur compound -to give it a distinctive &quot;rotten egg&quot; smell for safety detection.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Recognizing gas leaks</h2>
+              <p className="text-gray-700 mb-6">Natural gas is colorless and odorless in its natural state. NJ utilities add mercaptan, a sulfur compound, to give it a distinctive rotten-egg smell for safety detection. The U.S. Department of Transportation requires this odorant in nearly all natural gas distribution systems.</p>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Signs of a Gas Leak</h3>
-              <div className="grid md:grid-cols-2 gap-4 mb-8">
-                {[
-                  { title: "Rotten Egg Smell", desc: "Distinctive sulfur odor -the most common sign" },
-                  { title: "Hissing Sound", desc: "Near gas lines, appliances, or meter" },
-                  { title: "Dead Vegetation", desc: "Plants dying over buried gas lines" },
-                  { title: "Bubbling Water", desc: "In puddles or wet areas near lines" },
-                  { title: "White Mist or Dust", desc: "Blowing from ground or near lines" },
-                  { title: "Higher Gas Bills", desc: "Unexplained increase in usage" },
-                ].map((sign, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-amber-50 rounded-lg p-4">
-                    <svg className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    <div>
-                      <p className="font-semibold text-gray-900">{sign.title}</p>
-                      <p className="text-sm text-gray-700">{sign.desc}</p>
-                    </div>
-                  </div>
-                ))}
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Signs of a gas leak</h3>
+              <div className="overflow-x-auto mb-8">
+                <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-sm">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="text-left p-3 font-semibold text-gray-900">Sign</th>
+                      <th className="text-left p-3 font-semibold text-gray-900">What it means</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    <tr><td className="p-3 font-medium">Rotten-egg smell</td><td className="p-3">Mercaptan odorant from leaked natural gas, the most common sign</td></tr>
+                    <tr><td className="p-3 font-medium">Hissing sound</td><td className="p-3">Pressurized gas escaping near a line, fitting, appliance, or meter</td></tr>
+                    <tr><td className="p-3 font-medium">Dead vegetation</td><td className="p-3">Plants or grass dying in a strip directly over a buried gas line</td></tr>
+                    <tr><td className="p-3 font-medium">Bubbling water</td><td className="p-3">Bubbles in puddles or wet ground near a buried line</td></tr>
+                    <tr><td className="p-3 font-medium">White mist or dust</td><td className="p-3">Visible cloud blowing from the ground above a high-pressure line</td></tr>
+                    <tr><td className="p-3 font-medium">Higher gas bills</td><td className="p-3">An unexplained spike in monthly usage with no usage change</td></tr>
+                    <tr><td className="p-3 font-medium">Pilot light failures</td><td className="p-3">Pilot lights on appliances that repeatedly go out</td></tr>
+                  </tbody>
+                </table>
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Physical Symptoms of Gas Exposure</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Physical symptoms of gas exposure</h3>
               <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                 <p className="text-gray-700 mb-3">If you experience these symptoms in your home and they improve when you leave:</p>
                 <ul className="grid md:grid-cols-2 gap-2 text-gray-700">
@@ -164,12 +186,12 @@ export default function GasSafetyPost() {
                   <li>• Difficulty breathing</li>
                   <li>• Eye and throat irritation</li>
                 </ul>
-                <p className="text-red-700 font-semibold mt-3">These could indicate gas exposure. Leave immediately and seek fresh air.</p>
+                <p className="text-red-700 font-semibold mt-3">These can indicate gas exposure. Leave immediately and seek fresh air.</p>
               </div>
             </section>
 
             <section id="what-to-do" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What to Do If You Suspect a Leak</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What to do if you suspect a leak</h2>
               <div className="space-y-4 mb-6">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <h4 className="font-bold text-green-800">DO:</h4>
@@ -213,41 +235,41 @@ export default function GasSafetyPost() {
             </div>
 
             <section id="prevention" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Preventing Gas Leaks</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Preventing gas leaks</h2>
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Annual Appliance Inspection</h4>
-                  <p className="text-gray-700">Have gas appliances (furnace, boiler, water heater) inspected annually by a licensed professional. They&apos;ll check connections, ventilation, and safe operation.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Annual appliance inspection</h4>
+                  <p className="text-gray-700">Have gas appliances (furnace, boiler, water heater) inspected annually by a licensed professional. They check connections, ventilation, and safe operation.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Know Your Shutoff Valves</h4>
-                  <p className="text-gray-700">Locate the main gas shutoff (usually at the meter) and individual appliance shutoffs. In an emergency, you may need to turn off gas -but usually leave this to professionals.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Know your shutoff valves</h4>
+                  <p className="text-gray-700">Locate the main gas shutoff (usually at the meter) and individual appliance shutoffs. In an emergency you may need to turn off the gas, but the actual shutoff is usually best left to professionals.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Install Gas Detectors</h4>
-                  <p className="text-gray-700">Natural gas detectors provide an additional layer of safety, especially useful while sleeping. Install near gas appliances but not directly beside them.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Install gas detectors</h4>
+                  <p className="text-gray-700">Natural gas detectors add a second layer of safety, especially overnight. Install near gas appliances but not directly beside them, where false positives are common.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Call Before You Dig</h4>
-                  <p className="text-gray-700">Before any digging project, call 811 (NJ One Call). They&apos;ll mark underground utilities including gas lines -free of charge. Hitting a gas line is dangerous and expensive.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Call before you dig</h4>
+                  <p className="text-gray-700">Before any digging project, call 811 (NJ One Call) at least 3 business days ahead. They mark underground utilities including gas lines, free of charge. Hitting a gas line is dangerous and expensive. Learn more from <a href="https://www.nj.gov/bpu/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">the NJ Board of Public Utilities</a>, which oversees pipeline safety in New Jersey.</p>
                 </div>
               </div>
             </section>
 
             <section id="appliance-safety" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Gas Appliance Safety Tips</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Gas appliance safety tips</h2>
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Gas Range/Stove</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Gas range and stove</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Keep burners clean</li>
-                    <li>• Blue flame is normal; yellow indicates a problem</li>
+                    <li>• Blue flame is normal, yellow indicates a problem</li>
                     <li>• Never use for heating the home</li>
                     <li>• Ensure proper ventilation when cooking</li>
                   </ul>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Gas Water Heater</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Gas water heater</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Keep area clear of flammables</li>
                     <li>• Check pilot light periodically</li>
@@ -256,7 +278,7 @@ export default function GasSafetyPost() {
                   </ul>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Gas Furnace/Boiler</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Gas furnace and boiler</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Change filters regularly</li>
                     <li>• Keep vents unobstructed</li>
@@ -265,7 +287,7 @@ export default function GasSafetyPost() {
                   </ul>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Gas Dryer</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Gas dryer</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Clean lint trap after every use</li>
                     <li>• Clean dryer vent annually</li>
@@ -305,9 +327,9 @@ export default function GasSafetyPost() {
             </div>
 
             <section id="when-to-call" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">When to Call a Professional</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">When to call a professional</h2>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                <p className="text-gray-700 mb-4"><strong>In New Jersey, only licensed plumbers can legally work on gas lines.</strong> Call a professional for:</p>
+                <p className="text-gray-700 mb-4"><strong>In New Jersey, only licensed master plumbers can legally work on gas lines.</strong> Call a professional for:</p>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Installing new gas appliances</li>
                   <li>• Running gas lines to new locations</li>
@@ -318,63 +340,70 @@ export default function GasSafetyPost() {
                 </ul>
               </div>
               <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Never DIY Gas Work</h4>
+                <h4 className="font-bold text-gray-900 mb-2">Never DIY gas work</h4>
                 <p className="text-gray-700">Gas line work is not a DIY project under any circumstances. Improper installation causes leaks, carbon monoxide poisoning, explosions, and house fires. The risk to your family and neighbors is too high. Always hire licensed, insured professionals.</p>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County Gas Safety</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County gas safety</h2>
               <div className="space-y-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">PSE&G Service Area</h4>
-                  <p className="text-gray-700">Most of Middlesex County is served by PSE&G for natural gas. Their 24/7 gas emergency line is 1-800-880-7734. Save this number in your phone.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">PSE&amp;G service area</h4>
+                  <p className="text-gray-700">Most of Middlesex County is served by PSE&amp;G for natural gas. Their 24/7 gas emergency line is 1-800-880-7734, save it in your phone now. <a href="https://nj.pseg.com/safety" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">PSE&amp;G publishes detailed gas safety guidance</a> for residential customers, including what to do during a suspected leak and how to identify gas appliance issues.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Aging Gas Infrastructure</h4>
-                  <p className="text-gray-700">Many Middlesex County homes have gas lines installed 40-60+ years ago. If you have older black iron or galvanized gas piping, consider having it inspected for corrosion and safety.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Aging gas infrastructure</h4>
+                  <p className="text-gray-700">Many homes in <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 underline">East Brunswick</Link> and <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 underline">Edison</Link> have gas lines installed 40 to 60+ years ago. If you have older black iron or galvanized gas piping, consider having it inspected for corrosion and replaced where needed before it fails.</p>
                 </div>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
               <div className="space-y-4">
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <h3 className="font-semibold text-gray-900 pr-4">What does a gas leak smell like?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Natural gas itself is odorless, but utilities add mercaptan -a chemical that smells like rotten eggs or sulfur. This distinctive smell makes gas leaks detectable. If you smell it, treat it as a gas leak emergency.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Natural gas is odorless on its own, but utilities add mercaptan, a sulfur compound that smells like rotten eggs. If you smell this distinctive odor in your home, treat it as a gas leak emergency. The smell may be faint near a small pinhole leak in a fitting or overwhelming near a larger line failure.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">Who can work on gas lines in NJ?</h3>
+                    <h3 className="font-semibold text-gray-900 pr-4">What should I do if I smell gas in my house?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">In New Jersey, only licensed plumbers are authorized to work on gas piping. All gas line work requires permits and inspections. DIY gas work is illegal and dangerous. Always verify your contractor is licensed and insured.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Leave the building immediately without turning any switches on or off, since a single spark can ignite leaked gas. Take pets and family members with you. Once safely outside and away from the home, call 911 and PSE&amp;G at 1-800-880-7734. Do not return inside until emergency responders give the all-clear.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">How often should gas appliances be inspected?</h3>
+                    <h3 className="font-semibold text-gray-900 pr-4">How do I know if I have a gas leak in my home?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Gas appliances should be professionally inspected annually. This is especially important for heating equipment (furnaces, boilers) which should be serviced before each heating season. Regular inspection catches potential issues before they become dangerous.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">The most reliable signs are a rotten-egg smell, a hissing sound near gas lines or appliances, dead vegetation directly above buried gas lines, bubbling in standing water near a line, an unexplained spike in your gas bill, and pilot lights that keep going out. Physical symptoms include headaches, dizziness, nausea, and fatigue that improve when you leave the home.</p></div>
+                </details>
+                <details className="group bg-gray-50 rounded-lg">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <h3 className="font-semibold text-gray-900 pr-4">Who can legally work on gas lines in New Jersey?</h3>
+                    <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
+                  </summary>
+                  <div className="px-5 pb-5"><p className="text-gray-700">In New Jersey, only state-licensed master plumbers are authorized to work on gas piping. All gas line installations, repairs, and modifications require a municipal permit and inspection. DIY gas line work is illegal under NJ Uniform Construction Code and extremely dangerous. Always verify your contractor holds an active NJ Master Plumber License before work begins.</p></div>
                 </details>
               </div>
             </section>
 
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Gas Line Services</h2>
-              <p className="text-red-100 mb-6">From new installations to safety inspections, our licensed plumbers handle all gas line work throughout Middlesex County. We ensure safe, code-compliant installations every time.</p>
+              <h2 className="text-2xl font-bold mb-4">Gas line services</h2>
+              <p className="text-red-100 mb-6">From new installations to safety inspections, our licensed plumbers handle all gas line work throughout Middlesex County. We pull permits, coordinate inspections, and stand behind every job.</p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Call {BUSINESS_INFO.phone}</a>
-                <Link href="/services/gas-line-repair-installation" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Gas Line Services</Link>
+                <Link href="/services/gas-line-repair-installation" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Gas line services</Link>
               </div>
             </section>
 
             <section className="border-t pt-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Related Articles</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Related articles</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <Link href="/blog/common-boiler-problems-winter" className="group">
                   <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
@@ -416,15 +445,15 @@ export default function GasSafetyPost() {
 
                 {/* Service Areas */}
                 <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Service Areas</p>
+                  <p className="font-bold text-gray-900 mb-3">Service areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li><Link href="/service-areas/east-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</Link></li>
+                    <li><Link href="/service-areas/edison" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</Link></li>
+                    <li><Link href="/service-areas/sayreville" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</Link></li>
+                    <li><Link href="/service-areas/old-bridge" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</Link></li>
+                    <li><Link href="/service-areas/monroe-township" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</Link></li>
+                    <li><Link href="/service-areas/south-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</Link></li>
+                    <li><Link href="/service-areas/north-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</Link></li>
                   </ul>
                 </div>
 

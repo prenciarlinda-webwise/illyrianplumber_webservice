@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/constants";
 import AuthorBio from "@/components/AuthorBio";
 
 export const metadata: Metadata = {
-  title: "How Long Does a Bathroom Remodel Take? Complete Timeline Guide",
-  description: "Plan your bathroom renovation with realistic timelines. Learn how long each phase takes and what affects the schedule. NJ plumber expert guide.",
+  title: "How Long Does a Bathroom Remodel Take? (2026 NJ Timeline)",
+  description: "Realistic bathroom remodel timeline by phase, what slips the schedule, NJ permit and inspection windows, and how plumbing rough-in fits in. 2026 homeowner guide.",
   alternates: { canonical: "https://www.illyrianplumber.com/blog/how-long-bathroom-remodel-take" },
   keywords: [
     "bathroom remodel timeline",
@@ -23,10 +23,11 @@ export const metadata: Metadata = {
     "bathroom renovation plumbing cost",
   ],
   openGraph: {
-    title: "How Long Does a Bathroom Remodel Take?",
-    description: "Complete bathroom renovation timeline guide for NJ homeowners.",
+    title: "How Long Does a Bathroom Remodel Take? (2026 NJ Timeline)",
+    description: "Phase-by-phase remodel timeline with NJ permit windows and plumbing rough-in detail from licensed master plumbers.",
     type: "article",
     publishedTime: "2025-01-29T08:00:00.000Z",
+    modifiedTime: "2026-05-15T08:00:00.000Z",
     authors: ["Illyrian Plumber"],
   },
 };
@@ -35,24 +36,38 @@ export default function BathroomRemodelPost() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "How Long Does a Bathroom Remodel Take?",
-    description: "Complete bathroom renovation timeline guide with realistic phase-by-phase breakdown.",
+    headline: "How Long Does a Bathroom Remodel Take? (2026 NJ Timeline)",
+    description: "Realistic bathroom remodel timeline by phase, what slips the schedule, NJ permit and inspection windows, and how plumbing rough-in fits in.",
     image: "https://www.illyrianplumber.com/images/bathroom-remodel-marble-shower.jpg",
-    author: { "@type": "Organization", name: BUSINESS_INFO.name, url: "https://www.illyrianplumber.com" },
-    publisher: { "@type": "Organization", name: BUSINESS_INFO.name, logo: { "@type": "ImageObject", url: "https://www.illyrianplumber.com/images/illyrian-plumber-logo.png" } },
+    author: {
+      "@type": "Person",
+      name: "Illyrian Plumber Team",
+      worksFor: { "@id": "https://www.illyrianplumber.com/#organization" },
+    },
+    publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
     datePublished: "2025-01-29T08:00:00.000Z",
-    dateModified: "2026-03-18T08:00:00.000Z",
+    dateModified: "2026-05-15T08:00:00.000Z",
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.illyrianplumber.com/blog/how-long-bathroom-remodel-take" },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.illyrianplumber.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.illyrianplumber.com/blog" },
+      { "@type": "ListItem", position: 3, name: "How Long Does a Bathroom Remodel Take?", item: "https://www.illyrianplumber.com/blog/how-long-bathroom-remodel-take" },
+    ],
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "How long does a full bathroom remodel take?", acceptedAnswer: { "@type": "Answer", text: "A full bathroom remodel typically takes 3-6 weeks for a standard bathroom. Master bathrooms or bathrooms with layout changes can take 6-8 weeks. This includes demolition, plumbing rough-in, electrical, drywall, tile, fixtures, and finishing." } },
-      { "@type": "Question", name: "How long does bathroom plumbing rough-in take?", acceptedAnswer: { "@type": "Answer", text: "Plumbing rough-in (moving or installing supply lines and drains) typically takes 1-3 days for a standard bathroom. If you're relocating fixtures or making significant layout changes, it can take up to a week." } },
-      { "@type": "Question", name: "What takes the longest in a bathroom remodel?", acceptedAnswer: { "@type": "Answer", text: "Tile work typically takes the longest -usually 3-7 days for installation plus curing time. Custom orders (vanities, fixtures, tile) can also cause delays of 2-8 weeks if not ordered early in the planning phase." } },
-      { "@type": "Question", name: "Can a bathroom be remodeled in one week?", acceptedAnswer: { "@type": "Answer", text: "A very minor remodel (replacing fixtures without moving plumbing, new paint, new vanity in same location) might be possible in 5-7 days. However, any tile work, plumbing relocation, or significant changes will require at least 2-3 weeks minimum." } },
+      { "@type": "Question", name: "How long does a full bathroom remodel take?", acceptedAnswer: { "@type": "Answer", text: "A full bathroom remodel takes 3 to 6 weeks of active construction for a standard hall bathroom in NJ. Master bathrooms or projects with layout changes run 6 to 8 weeks. The schedule includes demolition (1 to 2 days), plumbing rough-in (1 to 3 days), electrical (1 to 2 days), inspection wait, drywall and cement board (2 to 3 days), tile work (3 to 7 days), vanity and countertop (1 to 2 days), fixture trim-out (1 to 2 days), and finishing." } },
+      { "@type": "Question", name: "How long does bathroom plumbing rough-in take?", acceptedAnswer: { "@type": "Answer", text: "Bathroom plumbing rough-in (moving or installing supply lines, drains, and vents) typically takes 1 to 3 days for a standard NJ bathroom that keeps fixtures in their existing locations. If you are relocating the toilet, tub, or shower more than a few feet, or working on a slab foundation, expect up to a full week including the wait for municipal inspection before walls can be closed." } },
+      { "@type": "Question", name: "What takes the longest in a bathroom remodel?", acceptedAnswer: { "@type": "Answer", text: "Tile work is typically the longest single phase, 3 to 7 days for installation plus 24 to 48 hours of curing before grouting and another 24 hours before the shower can be used. Custom orders (vanities, slab countertops, specialty tile) cause the most schedule risk and can add 2 to 8 weeks to the project if not ordered before demolition begins." } },
+      { "@type": "Question", name: "Can a bathroom be remodeled in one week?", acceptedAnswer: { "@type": "Answer", text: "Only a minor refresh fits in one week: swapping a vanity, faucet, toilet, and mirror in their existing locations with stock materials and no tile work. Anything involving tile, layout changes, or relocated plumbing requires at least 2 to 3 weeks minimum because of inspection wait times and tile cure times built into the NJ Uniform Construction Code process." } },
     ],
   };
 
@@ -60,6 +75,7 @@ export default function BathroomRemodelPost() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <article className="bg-white">
         <header className="relative bg-gray-900 text-white py-16 md:py-24">
@@ -71,28 +87,35 @@ export default function BathroomRemodelPost() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 text-sm text-gray-300 mb-4">
                 <span className="bg-red-700 text-white px-3 py-1 rounded-full">Remodeling</span>
-                <time dateTime="2025-01-29">January 29, 2025</time>
+                <time dateTime="2026-05-15">Updated May 15, 2026</time>
                 <span>13 min read</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">How Long Does a Bathroom Remodel Take? Complete Timeline Guide</h1>
-              <p className="text-xl text-gray-300">Plan your bathroom renovation with realistic expectations. Here&apos;s what to expect from start to finish.</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">How long does a bathroom remodel take? (2026 NJ timeline)</h1>
+              <p className="text-xl text-gray-300">Realistic phase-by-phase timeline, NJ permit and inspection windows, and how plumbing rough-in fits into the schedule.</p>
             </div>
           </div>
         </header>
 
         <div className="container mx-auto px-4 pt-8">
-          <AuthorBio publishDate="2025-01-29" updateDate="2026-03-23" />
+          <AuthorBio publishDate="2025-01-29" updateDate="2026-05-15" />
         </div>
 
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex-1 min-w-0 max-w-3xl">
+            <div className="bg-blue-50 border-l-4 border-blue-600 rounded-r-lg p-5 mb-8">
+              <p className="font-bold text-gray-900 mb-2">Quick answer</p>
+              <p className="text-gray-800 leading-relaxed">
+                A standard NJ bathroom remodel takes 3 to 6 weeks of active construction. A minor refresh (new fixtures and paint, no layout changes) runs 1 to 2 weeks. A master bathroom or any project that relocates plumbing or adds layout changes runs 5 to 8 weeks. Add 2 to 6 weeks before construction for design, permits, and material orders.
+              </p>
+            </div>
+
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-700 leading-relaxed">
-                &quot;How long until I can use my bathroom again?&quot; It&apos;s the first question every homeowner asks when planning a bathroom remodel. The honest answer depends on the scope of your project -but realistic expectations help you plan accordingly.
+                &quot;How long until I can use my bathroom again?&quot; It is the first question every homeowner asks when planning a bathroom remodel. The honest answer depends on the scope of your project, but realistic expectations help you plan trades, budgets, and time off. As licensed plumbers handling <Link href="/services/bathroom-remodeling" className="text-red-700 hover:text-red-800 underline">bathroom plumbing rough-in across Middlesex County</Link>, we see the schedule succeed or slip based on how the demolition, plumbing, tile, and finishing phases get sequenced.
               </p>
               <p>
-                As plumbers who handle the rough-in work for bathroom remodels throughout Middlesex County, we see projects from start to finish. Here&apos;s a realistic timeline breakdown based on real projects.
+                A typical full bathroom remodel pulls in five trades that have to hand off cleanly: a demo crew working alongside a <a href="https://www.904dumpster.com/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">dumpster rental</a> for tear-out debris, a plumber for the rough-in and trim-out, an electrician, a tile installer or <a href="https://zeloflooring.com/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">flooring contractor</a> for the floor and walls, and finally a <a href="https://www.paint-techs.com/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">painting contractor</a> for the finish coat before fixtures go in. Coordinating those handoffs is where real timelines are won or lost. Below is a realistic phase-by-phase breakdown based on actual NJ projects.
               </p>
             </div>
 
@@ -105,45 +128,45 @@ export default function BathroomRemodelPost() {
             </div>
 
             <nav className="bg-gray-50 rounded-xl p-6 my-8">
-              <h2 className="text-lg font-bold text-gray-900 mb-4">Timeline Topics</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-4">Timeline topics</h2>
               <ul className="space-y-2">
-                <li><a href="#quick-overview" className="text-red-700 hover:text-red-800">Quick Timeline Overview</a></li>
-                <li><a href="#phase-breakdown" className="text-red-700 hover:text-red-800">Phase-by-Phase Breakdown</a></li>
-                <li><a href="#what-affects" className="text-red-700 hover:text-red-800">What Affects the Timeline</a></li>
-                <li><a href="#plumbing-focus" className="text-red-700 hover:text-red-800">The Plumbing Phase Explained</a></li>
-                <li><a href="#delays" className="text-red-700 hover:text-red-800">Common Delay Causes</a></li>
-                <li><a href="#tips" className="text-red-700 hover:text-red-800">Tips for Faster Completion</a></li>
+                <li><a href="#quick-overview" className="text-red-700 hover:text-red-800">Quick timeline overview</a></li>
+                <li><a href="#phase-breakdown" className="text-red-700 hover:text-red-800">Phase-by-phase breakdown</a></li>
+                <li><a href="#what-affects" className="text-red-700 hover:text-red-800">What affects the timeline</a></li>
+                <li><a href="#plumbing-focus" className="text-red-700 hover:text-red-800">The plumbing phase explained</a></li>
+                <li><a href="#delays" className="text-red-700 hover:text-red-800">Common delay causes</a></li>
+                <li><a href="#tips" className="text-red-700 hover:text-red-800">Tips for faster completion</a></li>
               </ul>
             </nav>
 
             <section id="quick-overview" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Quick Timeline Overview</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Quick timeline overview</h2>
 
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
                     <p className="text-3xl font-bold text-green-600 mb-2">1-2 weeks</p>
-                    <p className="font-semibold text-gray-900">Minor Refresh</p>
+                    <p className="font-semibold text-gray-900">Minor refresh</p>
                     <p className="text-sm text-gray-600">New fixtures, paint, vanity (same locations)</p>
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-blue-600 mb-2">3-4 weeks</p>
-                    <p className="font-semibold text-gray-900">Standard Remodel</p>
+                    <p className="font-semibold text-gray-900">Standard remodel</p>
                     <p className="text-sm text-gray-600">New tile, fixtures, vanity, some plumbing updates</p>
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-orange-600 mb-2">5-8 weeks</p>
-                    <p className="font-semibold text-gray-900">Full Renovation</p>
+                    <p className="font-semibold text-gray-900">Full renovation</p>
                     <p className="text-sm text-gray-600">Layout changes, moving plumbing, custom work</p>
                   </div>
                 </div>
               </div>
 
-              <p className="text-gray-700">These are working days with trades on-site. Add planning time (design, permits, ordering materials) before construction starts -typically 2-6 weeks depending on complexity.</p>
+              <p className="text-gray-700">These are working days with trades on-site. Add planning time (design, permits, ordering materials) before construction starts, typically 2 to 6 weeks depending on complexity.</p>
             </section>
 
             <section id="phase-breakdown" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Phase-by-Phase Breakdown</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Phase-by-phase breakdown</h2>
 
               <div className="space-y-6">
                 <div className="bg-white border rounded-xl p-6">
@@ -161,7 +184,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">2</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Plumbing Rough-In</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Plumbing rough-in</h3>
                       <p className="text-sm text-gray-600">1-3 days</p>
                     </div>
                   </div>
@@ -172,7 +195,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">3</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Electrical Rough-In</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Electrical rough-in</h3>
                       <p className="text-sm text-gray-600">1-2 days</p>
                     </div>
                   </div>
@@ -194,7 +217,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">5</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Drywall & Cement Board</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Drywall and cement board</h3>
                       <p className="text-sm text-gray-600">2-3 days</p>
                     </div>
                   </div>
@@ -205,7 +228,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">6</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Tile Work</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Tile work</h3>
                       <p className="text-sm text-gray-600">3-7 days</p>
                     </div>
                   </div>
@@ -216,7 +239,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">7</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Vanity & Countertop</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Vanity and countertop</h3>
                       <p className="text-sm text-gray-600">1-2 days</p>
                     </div>
                   </div>
@@ -227,7 +250,7 @@ export default function BathroomRemodelPost() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="w-10 h-10 bg-red-700 text-white rounded-full flex items-center justify-center font-bold">8</span>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">Fixture Installation</h3>
+                      <h3 className="text-xl font-bold text-gray-900">Fixture installation</h3>
                       <p className="text-sm text-gray-600">1-2 days</p>
                     </div>
                   </div>
@@ -264,25 +287,25 @@ export default function BathroomRemodelPost() {
             </div>
 
             <section id="what-affects" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What Affects the Timeline?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What affects the timeline?</h2>
 
               <div className="grid md:grid-cols-2 gap-4 mb-6">
                 <div className="bg-red-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Extends Timeline</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Extends timeline</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Moving plumbing locations</li>
                     <li>• Custom tile patterns</li>
-                    <li>• Custom cabinetry/countertops</li>
+                    <li>• Custom cabinetry or countertops</li>
                     <li>• Structural changes</li>
                     <li>• Discovering hidden issues</li>
-                    <li>• Permit/inspection delays</li>
+                    <li>• Permit or inspection delays</li>
                   </ul>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Speeds Up Timeline</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Speeds up timeline</h4>
                   <ul className="text-gray-700 text-sm space-y-1">
                     <li>• Keeping fixtures in same locations</li>
-                    <li>• Stock/ready-made materials</li>
+                    <li>• Stock or ready-made materials</li>
                     <li>• Simple tile layouts</li>
                     <li>• All materials on-site before start</li>
                     <li>• Experienced contractor</li>
@@ -293,15 +316,15 @@ export default function BathroomRemodelPost() {
             </section>
 
             <section id="plumbing-focus" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">The Plumbing Phase Explained</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">The plumbing phase explained</h2>
 
               <p className="text-gray-700 mb-6">As plumbers, we&apos;re involved in two distinct phases of your bathroom remodel:</p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-3">Rough-In Phase (Early)</h3>
+                  <h3 className="font-bold text-gray-900 mb-3">Rough-in phase (early)</h3>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• Moving/installing supply lines</li>
+                    <li>• Moving or installing supply lines</li>
                     <li>• Relocating drains if needed</li>
                     <li>• Installing new vent piping</li>
                     <li>• Shower valve installation</li>
@@ -310,7 +333,7 @@ export default function BathroomRemodelPost() {
                   <p className="text-sm text-gray-600 mt-3"><strong>Timing:</strong> After demo, before drywall</p>
                 </div>
                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-3">Trim-Out Phase (Late)</h3>
+                  <h3 className="font-bold text-gray-900 mb-3">Trim-out phase (late)</h3>
                   <ul className="text-gray-700 space-y-2">
                     <li>• Installing toilet</li>
                     <li>• Setting faucets</li>
@@ -323,29 +346,29 @@ export default function BathroomRemodelPost() {
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
-                <h4 className="font-bold text-gray-900 mb-2">Why Plumbing Location Matters</h4>
-                <p className="text-gray-700">Keeping fixtures in their current locations is the single biggest time-saver. Moving a toilet, for example, requires rerouting the drain line through the subfloor -adding days to the project. Moving it more than a few feet may require breaking concrete if you have a slab foundation.</p>
+                <h4 className="font-bold text-gray-900 mb-2">Why plumbing location matters</h4>
+                <p className="text-gray-700">Keeping fixtures in their current locations is the single biggest time-saver. Moving a toilet, for example, requires rerouting the drain line through the subfloor and adds days to the project. Moving it more than a few feet may require breaking concrete if you have a slab foundation, common in newer <Link href="/service-areas/monroe-township" className="text-red-700 hover:text-red-800 underline">Monroe Township</Link> and <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 underline">Old Bridge</Link> developments.</p>
               </div>
             </section>
 
             <section id="delays" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Common Delay Causes</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Common delay causes</h2>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Materials Not Available</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Materials not available</h4>
                   <p className="text-gray-700">Custom tile, specific fixtures, or special-order items can take weeks to arrive. Order everything before demolition begins.</p>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Hidden Problems Discovered</h4>
-                  <p className="text-gray-700">Water damage, mold, outdated wiring, or rotted subfloor aren&apos;t visible until demo. These must be addressed before proceeding.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Hidden problems discovered</h4>
+                  <p className="text-gray-700">Water damage, mold, outdated wiring, or a rotted subfloor are not visible until demo. These must be addressed before proceeding.</p>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Permit/Inspection Scheduling</h4>
-                  <p className="text-gray-700">Municipal inspectors have their own schedules. A 1-2 day wait for inspection is normal; longer delays happen during busy periods.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Permit and inspection scheduling</h4>
+                  <p className="text-gray-700">Municipal inspectors have their own schedules. A 1 to 2 day wait for inspection is normal under the <a href="https://www.nj.gov/dca/codes/codreg/ucc.html" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:text-red-800 underline">NJ Uniform Construction Code</a>; longer delays happen during busy periods.</p>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Change Orders</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Change orders</h4>
                   <p className="text-gray-700">Changing your mind mid-project (different tile, moving a fixture) requires rescheduling trades and possibly reordering materials.</p>
                 </div>
               </div>
@@ -380,7 +403,7 @@ export default function BathroomRemodelPost() {
             </div>
 
             <section id="tips" className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Tips for Faster Completion</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Tips for faster completion</h2>
 
               <div className="space-y-3 mb-6">
                 {[
@@ -404,54 +427,61 @@ export default function BathroomRemodelPost() {
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County Considerations</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County considerations</h2>
               <div className="bg-gray-50 rounded-xl p-6">
                 <ul className="space-y-3 text-gray-700">
-                  <li><strong>Permit timelines:</strong> East Brunswick, Edison, and other Middlesex County municipalities have varying permit processing times. Apply early -some take 1-2 weeks for approval.</li>
-                  <li><strong>Inspection scheduling:</strong> Local inspectors are busy. Build inspection wait times (1-3 days typically) into your project timeline.</li>
+                  <li><strong>Permit timelines:</strong> <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 underline">East Brunswick</Link>, <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 underline">Edison</Link>, and other Middlesex County municipalities have varying permit processing times. Apply early, some take 1 to 2 weeks for approval.</li>
+                  <li><strong>Inspection scheduling:</strong> Local inspectors are busy. Build inspection wait times (1 to 3 days typically) into your project timeline.</li>
                   <li><strong>Older homes:</strong> Many area homes have galvanized or older copper plumbing. Budget extra time for addressing outdated plumbing discovered during demo.</li>
                 </ul>
               </div>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
               <div className="space-y-4">
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <h3 className="font-semibold text-gray-900 pr-4">How long does a full bathroom remodel take?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">A full bathroom remodel typically takes 3-6 weeks of active construction for a standard bathroom. Master bathrooms or those with layout changes can take 6-8 weeks. Add 2-6 weeks for pre-construction planning, permits, and material orders.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">A full bathroom remodel takes 3 to 6 weeks of active construction for a standard hall bathroom in NJ. Master bathrooms or projects with layout changes run 6 to 8 weeks. The schedule includes demolition (1 to 2 days), plumbing rough-in (1 to 3 days), electrical (1 to 2 days), inspection wait, drywall and cement board (2 to 3 days), tile work (3 to 7 days), vanity and countertop (1 to 2 days), fixture trim-out (1 to 2 days), and finishing.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <h3 className="font-semibold text-gray-900 pr-4">Can a bathroom be remodeled in one week?</h3>
+                    <h3 className="font-semibold text-gray-900 pr-4">How long does bathroom plumbing rough-in take?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">A minor refresh (new fixtures in same locations, paint, stock vanity) might be completed in 5-7 days. However, any tile work requires multiple days for setting and curing. Plumbing relocation or significant changes need at least 2-3 weeks minimum.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Bathroom plumbing rough-in (moving or installing supply lines, drains, and vents) typically takes 1 to 3 days for a standard NJ bathroom that keeps fixtures in their existing locations. If you are relocating the toilet, tub, or shower more than a few feet, or working on a slab foundation, expect up to a full week including the wait for municipal inspection before walls can be closed.</p></div>
                 </details>
                 <details className="group bg-gray-50 rounded-lg">
                   <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                     <h3 className="font-semibold text-gray-900 pr-4">What takes the longest in a bathroom remodel?</h3>
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
-                  <div className="px-5 pb-5"><p className="text-gray-700">Tile work typically takes the longest -3-7 days for installation plus curing time. Custom orders (vanities, countertops, specialty tile) can also cause delays if not ordered weeks in advance.</p></div>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Tile work is typically the longest single phase, 3 to 7 days for installation plus 24 to 48 hours of curing before grouting and another 24 hours before the shower can be used. Custom orders (vanities, slab countertops, specialty tile) cause the most schedule risk and can add 2 to 8 weeks to the project if not ordered before demolition begins.</p></div>
+                </details>
+                <details className="group bg-gray-50 rounded-lg">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <h3 className="font-semibold text-gray-900 pr-4">Can a bathroom be remodeled in one week?</h3>
+                    <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
+                  </summary>
+                  <div className="px-5 pb-5"><p className="text-gray-700">Only a minor refresh fits in one week: swapping a vanity, faucet, toilet, and mirror in their existing locations with stock materials and no tile work. Anything involving tile, layout changes, or relocated plumbing requires at least 2 to 3 weeks minimum because of inspection wait times and tile cure times built into the NJ Uniform Construction Code process.</p></div>
                 </details>
               </div>
             </section>
 
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
-              <h2 className="text-2xl font-bold mb-4">Planning a Bathroom Remodel?</h2>
-              <p className="text-red-100 mb-6">We handle all the plumbing for bathroom renovations -from rough-in to fixture installation. Coordinate with your contractor or let us recommend trusted partners for a complete remodel.</p>
+              <h2 className="text-2xl font-bold mb-4">Planning a bathroom remodel?</h2>
+              <p className="text-red-100 mb-6">We handle all the plumbing for bathroom renovations, from rough-in to fixture installation. Coordinate with your contractor or let us recommend trusted partners for a complete remodel.</p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Call {BUSINESS_INFO.phone}</a>
-                <Link href="/services/bathroom-remodeling" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Bathroom Plumbing Services</Link>
+                <Link href="/services/bathroom-remodeling" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Bathroom plumbing services</Link>
               </div>
             </section>
 
             <section className="border-t pt-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Related Articles</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Related articles</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <Link href="/blog/whole-house-water-filter-worth-it" className="group">
                   <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition">
@@ -493,15 +523,15 @@ export default function BathroomRemodelPost() {
 
                 {/* Service Areas */}
                 <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Service Areas</p>
+                  <p className="font-bold text-gray-900 mb-3">Service areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li><Link href="/service-areas/east-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</Link></li>
+                    <li><Link href="/service-areas/edison" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</Link></li>
+                    <li><Link href="/service-areas/sayreville" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</Link></li>
+                    <li><Link href="/service-areas/old-bridge" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</Link></li>
+                    <li><Link href="/service-areas/monroe-township" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</Link></li>
+                    <li><Link href="/service-areas/south-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</Link></li>
+                    <li><Link href="/service-areas/north-brunswick" className="flex items-center gap-2 hover:text-red-700 transition"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</Link></li>
                   </ul>
                 </div>
 

@@ -1,24 +1,27 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
+import { BUSINESS_INFO } from "@/lib/constants";
+import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
+import LocationServiceDirectory from "@/components/LocationServiceDirectory";
+import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in East Brunswick, NJ",
-  description: "Emergency plumber in East Brunswick, NJ based at 697 Old Bridge Turnpike. Licensed 24 hour plumber, tankless water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
+  title: { absolute: "Emergency Plumber East Brunswick, NJ - 24/7 Licensed" },
+  description: "Emergency plumber in East Brunswick NJ based at 697 Old Bridge Turnpike. Licensed 24/7 master plumbers, 5-15 min response. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/east-brunswick",
   },
   openGraph: {
-    title: "Emergency Plumber in East Brunswick, NJ",
-    description: "24/7 emergency plumber based in East Brunswick, NJ. Tankless water heater installation, boiler repair, gas lines. Licensed NJ Master Plumbers.",
+    title: "Emergency Plumber East Brunswick, NJ - 24/7 Licensed",
+    description: "24/7 emergency plumber based at 697 Old Bridge Turnpike, East Brunswick NJ. Water heaters, boilers, gas lines, repiping. Licensed NJ Master Plumbers.",
     type: "website",
+    url: "https://www.illyrianplumber.com/service-areas/east-brunswick",
   },
 };
 
 export default function EastBrunswickPage() {
   const faqSchema = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
@@ -26,7 +29,7 @@ export default function EastBrunswickPage() {
         name: "Are you a 24 hour emergency plumber in East Brunswick, NJ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Illyrian Plumber is a 24 hour emergency plumber based right in East Brunswick, NJ at 697 Old Bridge Turnpike. We answer calls day or night, including weekends and holidays, and dispatch a licensed NJ master plumber directly to your door. Most East Brunswick addresses are 5 to 15 minutes from our office.",
+          text: "Yes. Illyrian Plumber is a 24 hour emergency plumber based at 697 Old Bridge Turnpike in East Brunswick. We answer calls day or night, weekends and holidays included, and dispatch a licensed NJ master plumber to your address within 5 to 15 minutes for most East Brunswick locations.",
         },
       },
       {
@@ -34,44 +37,20 @@ export default function EastBrunswickPage() {
         name: "How much does a plumber cost in East Brunswick, NJ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Plumbing rates in East Brunswick typically run: diagnostic service call from $95, common repairs $150 to $500, water heater replacement $1,500 to $3,500 for tank or $3,500 to $6,500 for tankless, boiler repair $250 to $1,200, gas line work $300 to $1,500. Every quote is written down and approved before work starts. No hidden trip charges or shop fees.",
+          text: "Plumber rates in East Brunswick typically run: diagnostic service call from $95, common repairs $150 to $500, water heater replacement $1,500 to $3,500 tank or $3,500 to $6,500 tankless, boiler repair $250 to $1,200, gas line work $300 to $1,500. Every quote is written down and approved before work starts.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you install tankless water heaters in East Brunswick, NJ?",
+        name: "Who is the closest emergency plumber near me in East Brunswick?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Tankless water heater installation in East Brunswick, NJ is one of our most requested upgrades. We install gas and electric tankless units from Navien, Rinnai, and Rheem. Most installs are completed in one day and include all permits, venting, and gas line sizing. Typical installed cost runs $3,500 to $6,500.",
+          text: "Illyrian Plumber is headquartered at 697 Old Bridge Turnpike in East Brunswick, which puts us 5 to 15 minutes from any 08816 address - closer than any out-of-town competitor on most searches for emergency plumber near me. For after-hours emergencies, our on-call licensed master plumbers live inside the township and respond from East Brunswick itself, not from a neighboring borough or county.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you do boiler repair in East Brunswick, NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we repair and service residential boilers throughout East Brunswick. Many older East Brunswick homes built in the 1960s-1970s run on gas or oil hydronic boilers. We handle no-heat emergencies, leaking circulators, pilot and ignition problems, expansion tank issues, and annual maintenance tune-ups.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How fast is your response time?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Response time to any East Brunswick address is typically 5 to 15 minutes during business hours, since our office is on Old Bridge Turnpike in the heart of the township. For 24/7 emergencies, our on-call plumbers live locally and respond faster than any out-of-town competitor. Active emergencies get a live ETA call.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Which neighborhoods do you serve?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We serve every residential and commercial neighborhood in East Brunswick including Farrington Lake, Crystal Springs, Dunhams Corner, Tamarack Hollow Park, the Brunswick Square Mall area, Mid-State Mall corridor, the Route 18 business corridor, and the NJ Turnpike Exit 9 area. No part of East Brunswick is too small or too remote.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you pull plumbing permits?",
+        name: "Do you pull East Brunswick plumbing permits?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes. We are licensed NJ Master Plumbers and pull all required permits from the East Brunswick Township Construction Office for water heater installations, gas line work, boiler replacements, and repiping. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
@@ -80,9 +59,39 @@ export default function EastBrunswickPage() {
     ],
   };
 
+  const pageGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      faqSchema,
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://www.illyrianplumber.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Service Areas",
+            item: "https://www.illyrianplumber.com/service-areas",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "East Brunswick, NJ",
+            item: "https://www.illyrianplumber.com/service-areas/east-brunswick",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageGraph) }} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-20">
@@ -116,86 +125,23 @@ export default function EastBrunswickPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response from Our Home Base</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 emergency plumber based in East Brunswick</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is an emergency plumber in East Brunswick, NJ</strong>, headquartered at 697 Old Bridge Turnpike in the heart of the township. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, main line backups, and boiler no-heat calls day or night, 365 days a year. Free estimates, upfront pricing, and permits pulled from East Brunswick Township Construction on every job that requires one.
-              </p>
-              <p>
-                When a plumbing emergency hits an East Brunswick home, every minute counts. We answer our own phones with a live dispatcher, not a call center. A licensed plumber is on the road to your door within minutes, with real parts and real tools to fix the problem on the first visit. Because we are local, you are not waiting for someone driving in from two counties away.
-              </p>
-              <p>
-                Most homes in East Brunswick were built between the 1960s and the 1990s, which means the plumbing systems are aging into the repair-and-replace window. Galvanized steel piping from the 70s is corroding, original water heaters are beyond their service life, and boilers that were top-of-the-line in 1985 are running inefficiently. Our team has worked on hundreds of East Brunswick homes and can diagnose a problem within the first 10 minutes.
-              </p>
-              <p>
-                Every East Brunswick plumbing service call gets upfront written pricing before work starts, full NJ Master Plumber licensing, permit coordination with East Brunswick Township Construction, and a 24/7 phone line answered by a real person. For non-emergency work we also offer same-day scheduled service when our crew has capacity, and free estimates on any major project over $500.
+                <strong>Illyrian Plumber is a licensed NJ Master Plumber in East Brunswick, NJ</strong>, headquartered at 697 Old Bridge Turnpike. We answer the phone day or night for emergency plumbing in East Brunswick, dispatch within minutes, and reach most addresses in 5 to 15 minutes. Every job comes with upfront written pricing, permits pulled from the East Brunswick Township Construction Office where required, and a real person on the line, never a call center.
               </p>
             </div>
 
-            {/* Services Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Plumbing Services</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              A full range of residential and light commercial plumbing for East Brunswick homeowners. Click any service to learn more.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {SERVICE_PAGES.featured.map((service) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group"
-                >
-                  <h3 className="font-semibold text-gray-900 group-hover:text-red-700 transition">{service.name}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
+            {/* Comprehensive Services Directory with near-me intro */}
+            <LocationServiceDirectory location={LOCATION_DATA["east-brunswick"]} />
 
-            {/* Additional Services */}
-            <div className="bg-gray-50 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
-                <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
-                <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet & Faucet Install</Link>
-                <Link href="/services/water-filtration-system" className="text-red-700 hover:text-red-800 font-medium">Water Filtration Systems</Link>
-                <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800 font-medium">Plumbing Inspections</Link>
-                <Link href="/services/bathroom-remodeling" className="text-red-700 hover:text-red-800 font-medium">Bathroom Remodeling</Link>
-                <Link href="/services/commercial-plumbing" className="text-red-700 hover:text-red-800 font-medium">Commercial Plumbing</Link>
-              </div>
-            </div>
-
-            {/* Tankless H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tankless Water Heater Installation in East Brunswick, NJ</h2>
-            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-              <p>
-                Tankless water heater installation in East Brunswick, NJ is one of our most requested upgrades. East Brunswick homes benefit from the compact wall-mounted footprint, the endless on-demand hot water, and the 20-plus-year lifespan of a tankless unit. Typical installed cost for a tankless water heater East Brunswick NJ project runs $3,500 to $6,500 depending on unit size and any gas line or venting upgrades.
-              </p>
-              <p>
-                We install gas and electric tankless units from <strong>Navien, Rinnai, and Rheem</strong>, pull the required East Brunswick Township plumbing permit, coordinate the municipal inspection, and register the manufacturer warranty. Most installs are completed in one day, and many qualify for NJ Clean Energy rebates that offset $300 to $700 of the installed price. For full service details, see our <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless water heater installation page</Link>.
-              </p>
-            </div>
-
-            {/* Boiler H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler Repair in East Brunswick, NJ</h2>
-            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-              <p>
-                Boiler repair in East Brunswick is a core service. Many older East Brunswick homes, particularly those built in the 1960s and 1970s, run on gas or oil hydronic boilers for heat and hot water. Our licensed plumbers handle no-heat emergencies, low-pressure faults, leaking circulators, pilot and ignition problems, expansion tank issues, zone valve replacements, and annual tune-ups. Typical boiler repair cost in East Brunswick runs $250 to $1,200 depending on the failure.
-              </p>
-              <p>
-                Most East Brunswick boiler repair calls are resolved on the first visit. If replacement is more economical than repair (typically when the unit is 20-plus years old or the heat exchanger has failed) we quote both options upfront. See our <Link href="/services/boiler-repair-service" className="text-red-700 hover:underline">boiler repair service page</Link> for full pricing and scope details.
-              </p>
-            </div>
-
-            {/* Gas Line H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Gas Line Repair in East Brunswick, NJ</h2>
-            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
-              <p>
-                Gas line repair in East Brunswick, NJ requires a licensed master plumber under NJ code. We handle new appliance hookups, gas leak detection and repair, gas line replacement for older East Brunswick homes with undersized lines, and stove or dryer relocations. If you smell gas, leave the house immediately, call your utility, then call us. Typical gas line work runs $300 to $1,500 depending on scope.
-              </p>
+            {/* Trust badges row */}
+            <div className="bg-gray-50 rounded-xl p-5 md:p-6 mb-12">
+              <TrustBadges />
             </div>
 
             {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why East Brunswick homeowners choose Illyrian Plumber</h2>
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               {[
                 "Based in East Brunswick at 697 Old Bridge Turnpike",
@@ -232,7 +178,7 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Pricing Table - EB unique */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">How Much Does a Plumber Cost in East Brunswick, NJ?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">How much does a plumber cost in East Brunswick, NJ?</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-6">
               <p>
                 Plumber pricing in East Brunswick depends on the job, the materials, and whether the work needs a permit. Here are honest ranges so you can plan ahead.
@@ -260,7 +206,7 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Common Issues */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Plumbing Issues in East Brunswick Homes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common plumbing issues in East Brunswick homes</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 East Brunswick homes face a range of plumbing challenges depending on age and construction. From 1960s splits in Dunhams Corner to newer builds along Cranbury Road, here are the issues our East Brunswick plumbers see most often on emergency calls and service visits.
@@ -277,7 +223,7 @@ export default function EastBrunswickPage() {
 
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Response Time &amp; Availability</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Response time and availability</h3>
               <p className="text-gray-700 mb-2">
                 Our Old Bridge Turnpike office puts us 5 to 15 minutes from any East Brunswick address during business hours. For after-hours emergencies, our on-call plumbers live locally and respond faster than any out-of-town competitor.
               </p>
@@ -290,7 +236,7 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Neighborhoods */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods We Serve</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">East Brunswick neighborhoods we serve</h2>
             <p className="text-lg text-gray-600 mb-6">
               From our Old Bridge Turnpike office, we cover every residential neighborhood in East Brunswick including:
             </p>
@@ -301,14 +247,16 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Local Professional Plumbing Services with map */}
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional Plumbing Services in East Brunswick, NJ</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Plumber in East Brunswick, NJ</h3>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
-                  Illyrian Plumber has called East Brunswick home for over a decade. Our office at 697 Old Bridge Turnpike sits just off Route 18, minutes from Brunswick Square Mall, the Mid-State Mall corridor, and East Brunswick High School. We cover every zip code in the township (08816) and travel Ryders Lane, Cranbury Road, Milltown Road, Dunhams Corner Road, and the Route 527 corridor daily.
+                  Illyrian Plumber has operated from East Brunswick since 2010. Our office at 697 Old Bridge Turnpike sits just off Route 18, minutes from Brunswick Square Mall, the Mid-State Mall corridor, and East Brunswick High School. We cover ZIP 08816 in full and travel Ryders Lane, Cranbury Road, Milltown Road, Dunhams Corner Road, and the Route 527 corridor daily.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving East Brunswick NJ, we handle the full scope of residential plumbing: water heater installation and repair, tankless water heater upgrades, boiler service, gas line work, whole-house repiping, drain cleaning, sump pump replacement, and 24/7 emergency plumbing. Permits are pulled from the East Brunswick Township Construction Office, and all inspections are coordinated on your behalf.
+                  We pull all required permits from the <a href="https://www.eastbrunswick.org/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">East Brunswick Township</a> Construction Office and operate under an active{" "}
+                  <a href="https://www.njconsumeraffairs.gov/plu" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">NJ Master Plumber License</a>. Learn more about{" "}
+                  <a href="https://en.wikipedia.org/wiki/East_Brunswick,_New_Jersey" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">East Brunswick on Wikipedia</a>.
                 </p>
                 <p>
                   When East Brunswick homeowners need a local plumber, they want someone who actually lives and works in the community. That is exactly what Illyrian Plumber delivers, from Farrington Lake to the NJ Turnpike Exit 9 area.
@@ -329,7 +277,7 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* FAQ Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
             <div className="space-y-4 mb-12">
               {faqSchema.mainEntity.map((faq, index) => (
                 <details key={index} className="bg-gray-50 rounded-lg group">
@@ -345,7 +293,7 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful plumbing resources</h2>
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               <Link href="/blog/how-tankless-water-heaters-work" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
                 <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">How Tankless Water Heaters Work</p>
@@ -367,7 +315,7 @@ export default function EastBrunswickPage() {
 
             {/* Nearby Service Areas */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby Service Areas</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby service areas</h3>
               <p className="text-gray-600 mb-4">We also serve these Middlesex County towns from our East Brunswick location.</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 font-medium">Edison</Link>
@@ -386,7 +334,7 @@ export default function EastBrunswickPage() {
       {/* CTA Section */}
       <section className="py-12 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need an Emergency Plumber in East Brunswick?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need an emergency plumber in East Brunswick?</h2>
           <p className="text-xl text-red-100 mb-8">Based right here at 697 Old Bridge Turnpike. Typical arrival in 5 to 15 minutes.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-block">

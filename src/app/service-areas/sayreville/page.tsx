@@ -1,7 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { BUSINESS_INFO, SERVICE_PAGES } from "@/lib/constants";
+import { BUSINESS_INFO } from "@/lib/constants";
+import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
+import LocationServiceDirectory from "@/components/LocationServiceDirectory";
+import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Sayreville, NJ",
@@ -132,36 +135,12 @@ export default function SayrevillePage() {
               </p>
             </div>
 
-            {/* Services Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Plumbing Services</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              A full range of residential plumbing for Sayreville homeowners. Click any service to learn more.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {SERVICE_PAGES.featured.map((service) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group"
-                >
-                  <h3 className="font-semibold text-gray-900 group-hover:text-red-700 transition">{service.name}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
+            {/* Comprehensive Services Directory with near-me intro */}
+            <LocationServiceDirectory location={LOCATION_DATA["sayreville"]} />
 
-            {/* Additional Services */}
-            <div className="bg-gray-50 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">More Services Available</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800 font-medium">Water Leak Detection</Link>
-                <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:text-red-800 font-medium">Sump Pump Services</Link>
-                <Link href="/services/toilet-and-faucet-installation" className="text-red-700 hover:text-red-800 font-medium">Toilet &amp; Faucet Install</Link>
-                <Link href="/services/water-filtration-system" className="text-red-700 hover:text-red-800 font-medium">Water Filtration Systems</Link>
-                <Link href="/services/plumbing-safety-inspections" className="text-red-700 hover:text-red-800 font-medium">Plumbing Inspections</Link>
-                <Link href="/services/radiant-heating-plumbing" className="text-red-700 hover:text-red-800 font-medium">Radiant Heating</Link>
-                <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800 font-medium">Emergency Plumbing</Link>
-              </div>
+            {/* Trust badges row */}
+            <div className="bg-gray-50 rounded-xl p-5 md:p-6 mb-12">
+              <TrustBadges />
             </div>
 
             {/* Water Heater H2 */}
