@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import { BUSINESS_INFO, SERVICE_SILOS } from "@/lib/constants";
 import LeadForm from "@/components/LeadForm";
 import TrustBadges from "@/components/TrustBadges";
-import { getFaqSchema } from "@/lib/schemas";
 
 const homeFaqs = [
   {
@@ -25,34 +24,48 @@ const homeFaqs = [
   },
 ];
 
-const homeFaqSchema = getFaqSchema(homeFaqs);
-
 export const metadata: Metadata = {
+  title: { absolute: "Plumbers East Brunswick, NJ - 24/7 Emergency Plumbing" },
+  description: "Need an emergency plumber in East Brunswick NJ? Licensed master plumbers for water heaters, boilers, gas lines and 24/7 service. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com",
   },
 };
 
-// WebPage Schema for Homepage (organization schema is in layout.tsx)
-const webPageSchema = {
+const homeGraph = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.illyrianplumber.com/#webpage",
-  url: "https://www.illyrianplumber.com",
-  name: `${BUSINESS_INFO.name} - 24/7 Emergency Plumber in East Brunswick, NJ`,
-  description: BUSINESS_INFO.description,
-  isPartOf: {
-    "@type": "WebSite",
-    "@id": "https://www.illyrianplumber.com/#website",
-    url: "https://www.illyrianplumber.com",
-    name: BUSINESS_INFO.name,
-    publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
-  },
-  about: { "@id": "https://www.illyrianplumber.com/#organization" },
-  primaryImageOfPage: {
-    "@type": "ImageObject",
-    url: "https://www.illyrianplumber.com/images/professional-plumbing-services.jpg",
-  },
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.illyrianplumber.com/#website",
+      url: "https://www.illyrianplumber.com",
+      name: BUSINESS_INFO.name,
+      publisher: { "@id": "https://www.illyrianplumber.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.illyrianplumber.com/#webpage",
+      url: "https://www.illyrianplumber.com",
+      name: "Plumbers East Brunswick, NJ - 24/7 Emergency Plumbing",
+      description: "Licensed NJ master plumbers in East Brunswick. 24/7 emergency plumbing, water heater repair, boiler service, gas line work, and whole-house repiping across Middlesex County.",
+      isPartOf: { "@id": "https://www.illyrianplumber.com/#website" },
+      about: { "@id": "https://www.illyrianplumber.com/#organization" },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: "https://www.illyrianplumber.com/images/professional-plumbing-services.jpg",
+      },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: homeFaqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+  ],
 };
 
 function HeroSection() {
@@ -80,12 +93,12 @@ function HeroSection() {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
-              Professional Plumbing Services in{" "}
+              Plumbers in{" "}
               <span className="text-red-500">East Brunswick, NJ</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
-              24-hour emergency plumber serving Central New Jersey. Water heater repair, boiler service, gas line installation, and more.
+              Licensed NJ master plumbers serving East Brunswick and all of Middlesex County. 24/7 emergency response, water heater repair, boiler service, gas line work, and whole-house repiping. Typical arrival in 30 minutes.
             </p>
 
             <TrustBadges />
@@ -139,7 +152,7 @@ function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Full Range of Plumbing Services for NJ Homes & Businesses
+            Plumbing services in East Brunswick and Middlesex County
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             From 24-hour emergency repairs to water heater installation, we handle every residential and light commercial plumbing need across Middlesex County.
@@ -198,6 +211,45 @@ function ServicesSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ResidentialPlumbingNJSection() {
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Residential plumbing services across New Jersey
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            Illyrian Plumber operates as a residential plumbing service in NJ from our East Brunswick headquarters at 697 Old Bridge Turnpike, covering all of Middlesex County and the surrounding central New Jersey corridor. Every job is performed by a licensed NJ Master Plumber, permitted through the appropriate municipal Construction Office, and quoted in writing before any work begins.
+          </p>
+          <p className="text-lg text-gray-700 mb-4">
+            Residential plumbing services we run across New Jersey include{" "}
+            <Link href="/services/water-heater-installation" className="text-red-700 hover:underline">tank and tankless water heater installation</Link>,{" "}
+            <Link href="/services/boiler-repair-service" className="text-red-700 hover:underline">hydronic boiler repair</Link>,{" "}
+            <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:underline">gas line work</Link>,{" "}
+            <Link href="/services/whole-house-repiping" className="text-red-700 hover:underline">whole-house repiping</Link>,{" "}
+            <Link href="/services/sump-pump-repair-install" className="text-red-700 hover:underline">sump pump install</Link>,{" "}
+            <Link href="/services/water-filtration-system" className="text-red-700 hover:underline">whole-house water filtration</Link>,{" "}
+            <Link href="/services/bathroom-remodeling" className="text-red-700 hover:underline">bathroom remodel plumbing</Link>, and{" "}
+            <Link href="/services/emergency-plumbing" className="text-red-700 hover:underline">24/7 emergency dispatch</Link>.
+          </p>
+          <p className="text-lg text-gray-700">
+            Active NJ towns we cover from our East Brunswick base include{" "}
+            <Link href="/service-areas/east-brunswick" className="text-red-700 hover:underline">East Brunswick</Link>,{" "}
+            <Link href="/service-areas/edison" className="text-red-700 hover:underline">Edison</Link>,{" "}
+            <Link href="/service-areas/sayreville" className="text-red-700 hover:underline">Sayreville</Link>,{" "}
+            <Link href="/service-areas/old-bridge" className="text-red-700 hover:underline">Old Bridge</Link>,{" "}
+            <Link href="/service-areas/monroe-township" className="text-red-700 hover:underline">Monroe Township</Link>,{" "}
+            <Link href="/service-areas/south-brunswick" className="text-red-700 hover:underline">South Brunswick</Link>,{" "}
+            <Link href="/service-areas/north-brunswick" className="text-red-700 hover:underline">North Brunswick</Link>, and the broader{" "}
+            <Link href="/service-areas/middlesex-county" className="text-red-700 hover:underline">Middlesex County</Link>. Call <a href={BUSINESS_INFO.phoneLink} className="text-red-700 hover:underline font-semibold">{BUSINESS_INFO.phone}</a> to confirm coverage for your NJ address.
+          </p>
         </div>
       </div>
     </section>
@@ -275,7 +327,7 @@ function WhyChooseUsSection() {
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why East Brunswick Trusts Illyrian Plumber
+              Why East Brunswick homeowners trust Illyrian Plumber
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               For over 15 years, we have built our reputation on honest work, fair prices, and exceptional service. When you call Illyrian Plumber, you get master plumbers who care about doing the job right.
@@ -310,7 +362,7 @@ function WorkGallerySection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Recent Work
+            Recent plumbing projects in East Brunswick
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Quality craftsmanship on every project. See examples of our plumbing work across East Brunswick and Central New Jersey.
@@ -371,10 +423,10 @@ function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our Customers Say
+            What East Brunswick homeowners say
           </h2>
           <p className="text-xl text-gray-400">
-            Join thousands of satisfied homeowners across Central New Jersey
+            Real Google reviews from across Middlesex County, NJ.
           </p>
         </div>
 
@@ -407,7 +459,7 @@ function ServiceAreasSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Licensed Master Plumbers Serving New Jersey
+            Licensed master plumbers serving Middlesex County, NJ
           </h2>
           <p className="text-xl text-gray-600">
             NJ Master Plumber License holders, fully insured, covering Middlesex County and neighboring towns from our East Brunswick headquarters.
@@ -514,13 +566,136 @@ function EmergencyCTASection() {
   );
 }
 
+function EmergencyPlumberSection() {
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Emergency plumber in East Brunswick, NJ
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            Illyrian Plumber answers the phone day or night for emergency plumbing in East Brunswick. Burst pipes, gas leaks, sewer backups, no hot water, and no heat all qualify for 24/7 dispatch. A licensed NJ Master Plumber is on the road from our 697 Old Bridge Turnpike office within minutes of the call, with parts and tools to fix the problem on the first visit.
+          </p>
+          <p className="text-lg text-gray-700">
+            Typical response time across East Brunswick is 30 minutes or less. Weekends, nights, and holidays included at the same emergency rates. Call <a href={BUSINESS_INFO.phoneLink} className="text-red-700 hover:underline font-semibold">{BUSINESS_INFO.phone}</a> or <a href={BUSINESS_INFO.phone2Link} className="text-red-700 hover:underline font-semibold">{BUSINESS_INFO.phone2}</a> for immediate service.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PricingSection() {
+  const rows = [
+    { item: "Diagnostic service call", price: "from $95" },
+    { item: "Common plumbing repair", price: "$150 - $500" },
+    { item: "Water heater replacement (tank)", price: "$1,500 - $3,500" },
+    { item: "Tankless water heater installation", price: "$2,800 - $6,500" },
+    { item: "Boiler repair", price: "$250 - $1,200" },
+    { item: "Gas line repair or install", price: "$300 - $1,500" },
+    { item: "Emergency / after-hours plumbing", price: "$150 - $450" },
+  ];
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Plumber prices in East Brunswick, NJ
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Every Illyrian Plumber quote is written down and approved before work starts. No trip charges, no shop fees, no surprise add-ons. Final pricing depends on the job scope and parts required.
+          </p>
+          <div className="overflow-hidden rounded-xl shadow-sm border border-gray-200 bg-white mb-4">
+            <table className="w-full text-left">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-4 py-3 text-sm font-semibold text-gray-900">Service</th>
+                  <th className="px-4 py-3 text-sm font-semibold text-gray-900">Typical East Brunswick price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.item} className="border-t border-gray-200">
+                    <td className="px-4 py-3 text-gray-800">{r.item}</td>
+                    <td className="px-4 py-3 text-gray-900 font-medium">{r.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600">
+            Permits pulled from the East Brunswick Township Construction Office for water heater installs, gas line work, boiler replacements, and repiping. Permit costs are included in the quote.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EastBrunswickCoverageSection() {
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Plumber in East Brunswick, NJ
+          </h3>
+          <p className="text-lg text-gray-700">
+            Our East Brunswick office on Old Bridge Turnpike puts us 5 to 15 minutes from every East Brunswick address, covering ZIP 08816 and every neighborhood: Farrington Lake, Crystal Springs, Dunhams Corner, Tamarack Hollow Park, the Brunswick Square Mall corridor, the Route 18 business district, and the NJ Turnpike Exit 9 area. We pull all required permits from the{" "}
+            <a href="https://www.eastbrunswick.org/" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">East Brunswick Township</a> Construction Office, and our crew works under an active{" "}
+            <a href="https://www.njconsumeraffairs.gov/plu" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">NJ Master Plumber License</a>. Learn more about{" "}
+            <a href="https://en.wikipedia.org/wiki/East_Brunswick,_New_Jersey" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">East Brunswick on Wikipedia</a>, or call us for service across any nearby Middlesex County town.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function QuickAnswersSection() {
+  const qa = [
+    {
+      q: "How much does a plumber cost per hour in East Brunswick, NJ?",
+      a: "Plumber hourly rates in East Brunswick typically run $95 to $175 for standard service work. Most plumbing jobs are quoted by the project rather than the hour. Our diagnostic service call starts at $95 and the final job quote is written down and approved before any work begins.",
+    },
+    {
+      q: "How fast can you get a plumber to East Brunswick?",
+      a: "Our office is on Old Bridge Turnpike in East Brunswick, so most East Brunswick addresses see a licensed plumber within 30 minutes during business hours. For 24/7 emergencies, on-call plumbers respond as soon as the next call clears. We text a live ETA on dispatch.",
+    },
+    {
+      q: "Do I need a permit for plumbing work in East Brunswick?",
+      a: "Yes. Water heater replacements, gas line work, boiler installations, repiping, and most main-stack work require a permit from the East Brunswick Township Construction Office. Illyrian Plumber pulls the permit, includes the cost in the quote, and coordinates the municipal inspection on your behalf.",
+    },
+  ];
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Quick answers about plumbing in East Brunswick
+          </h2>
+          <div className="space-y-6">
+            {qa.map((item) => (
+              <div key={item.q}>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-gray-700">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FaqSection() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Plumbing Questions NJ Homeowners Ask Us
+            Plumbing questions East Brunswick homeowners ask
           </h2>
           <p className="text-xl text-gray-600">
             Quick answers on services, coverage, licensing, and after-hours availability.
@@ -545,25 +720,36 @@ function FaqSection() {
 export default function HomePage() {
   return (
     <>
-      {/* Schema Markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeGraph) }}
       />
 
       <HeroSection />
       <StatsSection />
+      <EmergencyPlumberSection />
       <ServicesSection />
+      <ResidentialPlumbingNJSection />
       <WhyChooseUsSection />
+      <PricingSection />
       <WorkGallerySection />
       <TestimonialsSection />
       <ServiceAreasSection />
+      <EastBrunswickCoverageSection />
+      <QuickAnswersSection />
       <FaqSection />
       <EmergencyCTASection />
+
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }
