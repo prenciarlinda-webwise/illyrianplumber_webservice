@@ -3,17 +3,16 @@ import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us - East Brunswick NJ",
-  description: "Contact Illyrian Plumber for plumbing services in East Brunswick, NJ. Call (347) 461-4856 for 24/7 emergency service.",
+  title: "Contact Us - Schedule Service",
+  description: "Contact Illyrian Plumber to schedule plumbing service or request a quote. Call (347) 461-4856 for 24/7 emergency service in New Jersey.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/contact-us",
   },
   keywords: [
     "contact plumber",
-    "east brunswick plumber",
     "plumber phone number",
     "plumbing quote",
-    "plumber near me",
+    "schedule plumbing service",
   ],
 };
 

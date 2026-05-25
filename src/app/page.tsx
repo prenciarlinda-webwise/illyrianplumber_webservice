@@ -25,8 +25,8 @@ const homeFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Plumbers East Brunswick, NJ - 24/7 Emergency Plumbing" },
-  description: "Need an emergency plumber in East Brunswick NJ? Licensed master plumbers for water heaters, boilers, gas lines and 24/7 service. Call (347) 461-4856.",
+  title: { absolute: "Illyrian Plumber - 24 Hour & Residential Plumber in NJ" },
+  description: "Licensed New Jersey master plumbers for 24 hour emergency and residential plumbing service. Water heaters, boilers, gas lines, leak detection. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com",
   },
@@ -47,8 +47,8 @@ const homeGraph = {
       "@type": "WebPage",
       "@id": "https://www.illyrianplumber.com/#webpage",
       url: "https://www.illyrianplumber.com",
-      name: "Plumbers East Brunswick, NJ - 24/7 Emergency Plumbing",
-      description: "Licensed NJ master plumbers in East Brunswick. 24/7 emergency plumbing, water heater repair, boiler service, gas line work, and whole-house repiping across Middlesex County.",
+      name: "Illyrian Plumber - 24 Hour & Residential Plumber in NJ",
+      description: "Licensed New Jersey master plumbers. 24 hour emergency plumbing and residential plumbing service: water heater repair, boiler service, gas line work, leak detection, and whole-house repiping across Middlesex County and New Jersey.",
       isPartOf: { "@id": "https://www.illyrianplumber.com/#website" },
       about: { "@id": "https://www.illyrianplumber.com/#organization" },
       primaryImageOfPage: {
@@ -93,12 +93,12 @@ function HeroSection() {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
-              Plumbers in{" "}
-              <span className="text-red-500">East Brunswick, NJ</span>
+              24 Hour Emergency &amp; Residential Plumbers in{" "}
+              <span className="text-red-500">New Jersey</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
-              Licensed NJ master plumbers serving East Brunswick and all of Middlesex County. 24/7 emergency response, water heater repair, boiler service, gas line work, and whole-house repiping. Typical arrival in 30 minutes.
+              Licensed NJ master plumbers providing 24/7 emergency response and full residential plumbing service across New Jersey, headquartered in East Brunswick, Middlesex County. Water heaters, boilers, gas lines, leak detection, and whole-house repiping. Typical arrival in 30 minutes.
             </p>
 
             <TrustBadges />

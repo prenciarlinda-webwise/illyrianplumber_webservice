@@ -10,14 +10,14 @@ import {
 import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in East Brunswick NJ - 24/7 Service by Illyrian",
-  description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Licensed, fast response. Call (347) 461-4856.",
+  title: "24 Hour Emergency Plumbing Service in NJ",
+  description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Licensed, fast response. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/services/emergency-plumbing",
   },
   openGraph: {
-    title: "Emergency Plumber in East Brunswick NJ - 24/7 Service",
-    description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Fast response. Call (347) 461-4856.",
+    title: "24 Hour Emergency Plumbing Service in NJ",
+    description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Fast response. Call (347) 461-4856.",
     type: "website",
     url: "https://www.illyrianplumber.com/services/emergency-plumbing",
     siteName: "Illyrian Plumber",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emergency Plumber in East Brunswick NJ - 24/7 Service",
-    description: "24/7 emergency plumber in East Brunswick & Middlesex County NJ. Burst pipes, gas leaks, water heater failures. Call (347) 461-4856.",
+    title: "24 Hour Emergency Plumbing Service in NJ",
+    description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Call (347) 461-4856.",
     images: ["https://www.illyrianplumber.com/images/emergency-plumbing-services-nj.jpg"],
   },
 };
@@ -112,8 +112,8 @@ export default function EmergencyPlumbingPage() {
       />
       <ServiceHero
         tagline="24/7 EMERGENCY PLUMBER AVAILABLE NOW"
-        heading="24/7 Emergency Plumber in East Brunswick, NJ"
-        subheading="Need a plumber right now? Our 24/7 emergency plumbers respond fast to burst pipes, water heater failures, gas leaks, and flooding. Same day plumber service throughout Middlesex County - we arrive when you need us most."
+        heading="24 Hour Emergency Plumber in New Jersey"
+        subheading="Need a plumber right now? Our 24 hour emergency plumbers respond fast to burst pipes, water heater failures, gas leaks, and flooding. Same day emergency plumbing service across New Jersey from our East Brunswick base - we arrive when you need us most."
         backgroundImage="/images/emergency-plumbing-services-nj.jpg"
         backgroundAlt="24/7 Emergency plumber responding to plumbing emergency in East Brunswick NJ"
         service="Emergency Plumbing"

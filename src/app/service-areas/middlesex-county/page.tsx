@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Boiler Repair in Middlesex County, NJ",
-  description: "Boiler repair in Middlesex County, NJ. Licensed NJ master plumbers serving East Brunswick, Edison, Old Bridge, Monroe, Sayreville, and all Middlesex County. 24/7 emergency plumbing. Call (347) 461-4856.",
+  title: "Plumbing Services in Middlesex County, NJ",
+  description: "Plumbers in Middlesex County, NJ. Licensed NJ master plumbers serving East Brunswick, Edison, Old Bridge, Monroe, Sayreville, and all Middlesex County. 24/7 emergency plumbing. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/middlesex-county",
   },
   openGraph: {
-    title: "Boiler Repair in Middlesex County, NJ",
-    description: "Licensed boiler repair and 24/7 emergency plumbing across Middlesex County, NJ. Serving every major township.",
+    title: "Plumbing Services in Middlesex County, NJ",
+    description: "Licensed plumbers and 24/7 emergency plumbing services across Middlesex County, NJ. Serving every major township.",
     type: "website",
   },
 };
@@ -94,10 +94,10 @@ export default function MiddlesexCountyPage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving East Brunswick, Edison, Old Bridge, Monroe &amp; All Middlesex County</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Boiler Repair in Middlesex County, NJ
+                Plumbers in Middlesex County, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Need boiler repair in Middlesex County, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Middlesex County township, day or night. Based in East Brunswick with typical response times of 10 to 25 minutes depending on your town.
+                Need a plumber in Middlesex County, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Middlesex County township, day or night, for emergencies, water heaters, boilers, gas lines, and full plumbing service. Based in East Brunswick with typical response times of 10 to 25 minutes depending on your town.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3.5 rounded-lg font-semibold transition">
@@ -122,7 +122,7 @@ export default function MiddlesexCountyPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Trusted Plumbing Across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber handles boiler repair in Middlesex County, NJ</strong>, along with the full range of residential and light commercial plumbing across every major township in the county. Licensed NJ Master Plumbers handle no-heat boiler emergencies, burst pipes, failed water heaters, gas leaks, sewer backups, tankless installations, and 24/7 emergency plumbing from East Brunswick to Monroe Township.
+                <strong>Illyrian Plumber provides full plumbing services across Middlesex County, NJ</strong>, covering the complete range of residential and light commercial plumbing in every major township in the county. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, sewer backups, no-heat boiler emergencies, tankless installations, and 24/7 emergency plumbing from East Brunswick to Monroe Township.
               </p>
               <p>
                 Middlesex County spans diverse housing stock, from 1950s Capes in Kendall Park and Madison Park to newer construction along the Route 1 and Route 18 corridors, and everything in between. We have worked on hundreds of homes across the county and know the common failure points for each era of construction and each township&apos;s permit process. That county-wide experience means we arrive prepared, whether your job is in Parlin, Clara Barton, Livingston Park, or Rossmoor.

@@ -9,8 +9,8 @@ import {
 import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
-  title: "Water Leak Detection Services NJ",
-  description: "Professional water leak detection in East Brunswick and Middlesex County, NJ. Find hidden leaks in walls, floors, and slabs with advanced non-invasive technology. Call (347) 461-4856.",
+  title: "Emergency Leak Detection Services in NJ",
+  description: "Emergency leak detection and repair in New Jersey. We pinpoint hidden slab, underground, and pipe leaks fast with non-invasive tools, no demolition. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/services/water-leak-detection",
   },
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     "water damage prevention",
   ],
   openGraph: {
-    title: "Water Leak Detection Services NJ",
-    description: "Professional water leak detection in East Brunswick and Middlesex County, NJ. Find hidden leaks in walls, floors, and slabs with advanced non-invasive technology.",
+    title: "Emergency Leak Detection Services in NJ",
+    description: "Emergency leak detection and repair across New Jersey. Find hidden slab, underground, and pipe leaks with advanced non-invasive technology. Upfront pricing.",
     type: "website",
   },
 };
@@ -96,8 +96,8 @@ export default function WaterLeakDetectionPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <ServiceHero
         tagline="Advanced Detection Technology"
-        heading="Water Leak Detection Services in NJ"
-        subheading="Advanced leak detection technology to find hidden water leaks in walls, ceilings, floors, and slabs. We locate the leak precisely before any unnecessary demolition. Serving East Brunswick and all of Middlesex County."
+        heading="Water Leak Detection Services in New Jersey"
+        subheading="Emergency and same-day leak detection to find hidden water leaks in walls, ceilings, floors, and slabs. We pinpoint the leak precisely before any unnecessary demolition. Serving homeowners across New Jersey from our East Brunswick base in Middlesex County."
         backgroundImage="/images/water-heater-repair-service.jpg"
         backgroundAlt="Water leak detection service in East Brunswick NJ"
         service="Water Leak Detection"
@@ -114,11 +114,17 @@ export default function WaterLeakDetectionPage() {
 
               {/* About Illyrian Plumber */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
-                <h2 className="text-xl font-bold text-gray-900 mb-3">Illyrian Plumber - Professional Leak Detection Specialists</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">Illyrian Plumber - Professional Leak Detection Specialists in New Jersey</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  Illyrian Plumber has been protecting homes in East Brunswick and Middlesex County, NJ for over {BUSINESS_INFO.stats.yearsExperience} years. Our licensed plumbers use advanced, non-invasive leak detection technology to find hidden water leaks without tearing apart your home. We locate the problem first, then provide honest repair options and upfront pricing. When you suspect a water leak, fast action prevents costly water damage - call us for same-day leak detection service.
+                  Illyrian Plumber has been protecting New Jersey homes for over {BUSINESS_INFO.stats.yearsExperience} years, with our base in East Brunswick, Middlesex County. Our licensed plumbers use advanced, non-invasive leak detection technology to find hidden water leaks without tearing apart your home. We locate the problem first, then provide honest repair options and affordable, upfront pricing with no hidden fees. When you search for leak detection near me and suspect a hidden leak, fast action prevents costly water damage - call us for emergency, same-day leak detection service.
                 </p>
               </div>
+
+              {/* Emergency Leak Detection AEO block */}
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Do you offer emergency leak detection in New Jersey?</h2>
+              <p className="text-lg text-gray-600 mb-12">
+                Yes. Illyrian Plumber provides emergency and same-day leak detection across New Jersey. A licensed NJ plumber arrives with acoustic, thermal, and moisture equipment to locate hidden slab, underground, and pipe leaks fast, then gives you affordable, upfront repair pricing before any work starts. For an active leak or a sudden spike in your water bill, call now and we dispatch immediately.
+              </p>
 
               {/* Signs of Hidden Leaks */}
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Signs of Hidden Water Leaks</h2>
