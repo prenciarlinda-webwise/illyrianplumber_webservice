@@ -121,7 +121,7 @@ export default function BoilerRepairPage() {
 
                 {/* About Illyrian Plumber */}
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6 not-prose">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">About Illyrian Plumber</h3>
+                  <p className="text-lg font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
                   <p className="text-gray-700 text-base">
                     Illyrian Plumber has been serving Middlesex County homeowners and businesses for over {BUSINESS_INFO.stats.yearsExperience} years. With {BUSINESS_INFO.stats.projectsCompleted} projects completed and {BUSINESS_INFO.stats.happyClients} satisfied clients, we are one of the most trusted plumbing and heating companies in Central New Jersey. Our licensed master plumbers specialize in boiler repair, water heater services, gas line work, emergency plumbing, and whole-house repiping. Based in East Brunswick, we deliver fast, dependable service to every customer.
                   </p>
