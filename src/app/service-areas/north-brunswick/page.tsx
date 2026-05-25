@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in North Brunswick, NJ",
-  description: "Emergency plumber in North Brunswick, NJ. Licensed 24 hour plumber serving the Rutgers area, Route 1 and Route 130 corridors, Livingston Park. Water heater, boiler, gas lines. Call (347) 461-4856.",
+  title: "Plumber in North Brunswick, NJ - 24/7",
+  description: "Plumber in North Brunswick, NJ. Licensed 24 hour plumber serving the Rutgers area, Route 1 and Route 130 corridors, Livingston Park. Water heater, boiler, gas lines. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/north-brunswick",
   },
   openGraph: {
-    title: "Emergency Plumber in North Brunswick, NJ",
-    description: "24/7 emergency plumber serving North Brunswick, NJ. Water heater installation, tankless, boiler repair, gas lines.",
+    title: "Plumber in North Brunswick, NJ - 24/7",
+    description: "24/7 plumber serving North Brunswick, NJ. Water heater installation, tankless, boiler repair, gas lines.",
     type: "website",
   },
 };
@@ -94,10 +94,10 @@ export default function NorthBrunswickPage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving Rutgers Area, Livingston Park &amp; All North Brunswick</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Emergency Plumber in North Brunswick, NJ
+                24 Hour Plumber in North Brunswick, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Need an emergency plumber in North Brunswick, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every North Brunswick neighborhood day or night, typically on-site within 10 minutes of our East Brunswick base via Route 1 or Route 130.
+                Need a plumber in North Brunswick, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every North Brunswick neighborhood day or night, typically on-site within 10 minutes of our East Brunswick base via Route 1 or Route 130.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3.5 rounded-lg font-semibold transition">

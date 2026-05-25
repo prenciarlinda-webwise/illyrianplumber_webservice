@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in Old Bridge, NJ",
-  description: "Emergency plumber in Old Bridge, NJ. Licensed 24 hour plumber serving Madison Park, Laurence Harbor, Brownville, Cliffwood Beach. Water heater replacement, tankless install, boiler repair. Call (347) 461-4856.",
+  title: "Plumber in Old Bridge, NJ - 24/7 Service",
+  description: "Plumber in Old Bridge, NJ. Licensed 24 hour plumber serving Madison Park, Laurence Harbor, Brownville, Cliffwood Beach. Water heater replacement, tankless install, boiler repair. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/old-bridge",
   },
   openGraph: {
-    title: "Emergency Plumber in Old Bridge, NJ",
-    description: "24/7 emergency plumber serving Old Bridge, NJ. Water heater replacement, tankless installation, boiler repair, water filtration.",
+    title: "Plumber in Old Bridge, NJ - 24/7 Service",
+    description: "24/7 plumber serving Old Bridge, NJ. Water heater replacement, tankless installation, boiler repair, water filtration.",
     type: "website",
   },
 };
@@ -94,10 +94,10 @@ export default function OldBridgePage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving Madison Park, Laurence Harbor, Brownville, Cliffwood Beach</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Emergency Plumber in Old Bridge, NJ
+                24 Hour Plumber in Old Bridge, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Need an emergency plumber in Old Bridge, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Old Bridge neighborhood day or night, typically on-site within 10 to 15 minutes of our East Brunswick base via Route 9 or Route 516.
+                Need a plumber in Old Bridge, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Old Bridge neighborhood day or night, typically on-site within 10 to 15 minutes of our East Brunswick base via Route 9 or Route 516.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3.5 rounded-lg font-semibold transition">

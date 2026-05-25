@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in Edison, NJ",
-  description: "Emergency plumber in Edison, NJ serving Clara Barton, Nixon, Stelton and all Edison Township. Licensed 24 hour plumber, tankless water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
+  title: "Plumber in Edison, NJ - 24 Hour Service",
+  description: "Licensed plumbers in Edison, NJ serving Clara Barton, Nixon, Stelton and all Edison Township. 24 hour plumber, tankless water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/edison",
   },
   openGraph: {
-    title: "Emergency Plumber in Edison, NJ",
-    description: "24/7 emergency plumber serving Edison, NJ. Tankless water heater installation, boiler repair, gas lines. Licensed NJ Master Plumbers.",
+    title: "Plumber in Edison, NJ - 24 Hour Service",
+    description: "Licensed plumbers serving Edison, NJ. 24 hour service, tankless water heater installation, boiler repair, gas lines. Licensed NJ Master Plumbers.",
     type: "website",
   },
 };
@@ -95,7 +95,7 @@ export default function EdisonPage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving Clara Barton, Nixon, Stelton & All Edison Neighborhoods</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Emergency Plumber in Edison, NJ
+                24 Hour Plumber in Edison, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
                 Need a 24 hour emergency plumber in Edison, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to Edison day or night, typically on-site within 10 minutes of our East Brunswick base via Route 18, Route 1, or Route 287.
@@ -187,6 +187,14 @@ export default function EdisonPage() {
                   <span className="text-gray-700">{reason}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Plural-intent AEO block */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Looking for licensed plumbers in Edison, NJ?</h2>
+            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+              <p>
+                Illyrian Plumber is a team of licensed NJ Master Plumbers serving Edison, NJ from our East Brunswick base, roughly 10 minutes away. Our plumbers in Edison handle emergency repairs, water heater and tankless installation, boiler service, gas lines, drain cleaning, and whole-house repiping, with upfront pricing and permits pulled from Edison Township on every job that needs one.
+              </p>
             </div>
 
             {/* Mid-page CTA Band */}

@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Emergency Plumber in Sayreville, NJ",
-  description: "Emergency plumber in Sayreville, NJ. Licensed 24 hour plumber serving Parlin, Morgan, Ernston, Melrose. Water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
+  title: "Plumber in Sayreville, NJ - 24/7 Service",
+  description: "Plumber in Sayreville, NJ. Licensed 24 hour plumber serving Parlin, Morgan, Ernston, Melrose. Water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/sayreville",
   },
   openGraph: {
-    title: "Emergency Plumber in Sayreville, NJ",
-    description: "24/7 emergency plumber serving Sayreville, NJ. Water heater installation, tankless, boiler repair, gas lines.",
+    title: "Plumber in Sayreville, NJ - 24/7 Service",
+    description: "24/7 plumber serving Sayreville, NJ. Water heater installation, tankless, boiler repair, gas lines.",
     type: "website",
   },
 };
@@ -94,10 +94,10 @@ export default function SayrevillePage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving Parlin, Morgan, Ernston, Melrose &amp; Sayreville Proper</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Emergency Plumber in Sayreville, NJ
+                24 Hour Plumber in Sayreville, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Need an emergency plumber in Sayreville, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Sayreville neighborhood day or night, typically on-site within 10 to 15 minutes of our East Brunswick base via Route 9 or Route 35.
+                Need a plumber in Sayreville, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Sayreville neighborhood day or night, typically on-site within 10 to 15 minutes of our East Brunswick base via Route 9 or Route 35.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3.5 rounded-lg font-semibold transition">
@@ -179,6 +179,14 @@ export default function SayrevillePage() {
                   <span className="text-gray-700">{reason}</span>
                 </div>
               ))}
+            </div>
+
+            {/* AEO block - reliable plumbers in Sayreville */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Who are reliable plumbers in Sayreville, NJ?</h2>
+            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+              <p>
+                Illyrian Plumber is a licensed, insured NJ Master Plumber serving Sayreville, NJ, including Parlin, Morgan, Ernston, and Melrose, from our East Brunswick base about 10 to 15 minutes away. We answer our own phones with a live dispatcher, give upfront written pricing before any work starts, and handle emergency repairs, water heaters, boilers, gas lines, and drain cleaning. Founded in {BUSINESS_INFO.founded}, we hold a 5.0 star rating and respond 24/7.
+              </p>
             </div>
 
             {/* Mid-page CTA Band */}

@@ -7,14 +7,14 @@ import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Boiler Repair in Monroe Township, NJ",
-  description: "Boiler repair in Monroe Township, NJ. Licensed NJ master plumbers serving Rossmoor, Concordia, Clearbrook, Greenbriar. Emergency plumbing, tankless water heater installation. Call (347) 461-4856.",
+  title: "Plumbers in Monroe Township, NJ",
+  description: "Plumbers in Monroe Township, NJ. Licensed NJ master plumbers serving Rossmoor, Concordia, Clearbrook, Greenbriar. Emergency plumbing, boiler repair, tankless water heater installation. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/monroe-township",
   },
   openGraph: {
-    title: "Boiler Repair in Monroe Township, NJ",
-    description: "Licensed boiler repair and 24/7 emergency plumbing in Monroe Township, NJ. Rossmoor, Concordia, Clearbrook and all adult communities.",
+    title: "Plumbers in Monroe Township, NJ",
+    description: "Licensed plumbers and 24/7 emergency plumbing in Monroe Township, NJ. Rossmoor, Concordia, Clearbrook and all adult communities.",
     type: "website",
   },
 };
@@ -94,10 +94,10 @@ export default function MonroeTownshipPage() {
             <div className="lg:col-span-3">
               <p className="text-red-400 font-medium mb-4">Serving Rossmoor, Concordia, Clearbrook, Greenbriar &amp; All Monroe Township</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Boiler Repair in Monroe Township, NJ
+                Plumber in Monroe Township, NJ
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-                Need boiler repair in Monroe Township, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to Rossmoor, Concordia, Clearbrook, Greenbriar, and every Monroe Township community, typically on-site within 15 to 20 minutes of our East Brunswick base via Route 18 or the NJ Turnpike.
+                Need a plumber in Monroe Township, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to Rossmoor, Concordia, Clearbrook, Greenbriar, and every Monroe Township community for emergencies, water heaters, boilers, and gas lines, typically on-site within 15 to 20 minutes of our East Brunswick base via Route 18 or the NJ Turnpike.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-6 py-3.5 rounded-lg font-semibold transition">
@@ -109,7 +109,7 @@ export default function MonroeTownshipPage() {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <LeadForm service="Boiler Repair - Monroe Township, NJ" />
+              <LeadForm service="Plumber - Monroe Township, NJ" />
             </div>
           </div>
         </div>
@@ -119,10 +119,10 @@ export default function MonroeTownshipPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler Service &amp; Plumbing for Monroe Township Communities</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Plumbing &amp; Boiler Service for Monroe Township Communities</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is the boiler repair specialist in Monroe Township, NJ</strong>, serving every adult community and family neighborhood from Rossmoor and Concordia to Clearbrook, Greenbriar, Monroe Village, and the Jamesburg border. Licensed NJ Master Plumbers handle no-heat emergencies, boiler tune-ups, water heater installations, tankless upgrades, gas line work, and 24/7 emergency plumbing. Free estimates and upfront written pricing on every Monroe Township job.
+                <strong>Illyrian Plumber is a trusted plumber in Monroe Township, NJ</strong>, serving every adult community and family neighborhood from Rossmoor and Concordia to Clearbrook, Greenbriar, Monroe Village, and the Jamesburg border. Licensed NJ Master Plumbers handle no-heat boiler emergencies, boiler tune-ups, water heater installations, tankless upgrades, gas line work, and 24/7 emergency plumbing. Free estimates and upfront written pricing on every Monroe Township job.
               </p>
               <p>
                 Many Monroe Township homes, particularly in the adult communities of Rossmoor and Concordia, were built between the 1970s and 1990s. Boilers and water heaters in these homes are often reaching the end of their service life, and proactive replacement prevents expensive mid-winter emergencies. Our licensed plumbers have worked on hundreds of boilers across Monroe Township and know the common brands and failure modes inside out.
