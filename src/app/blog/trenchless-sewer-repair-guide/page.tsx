@@ -1072,7 +1072,7 @@ export default function TrenchlessSewerRepairGuidePost() {
               </div>
 
               <p className="text-gray-700">
-                We use high-definition sewer cameras with built-in locators that can pinpoint the exact depth and location of problems from the surface. This data is critical for determining whether trenchless repair is feasible and for providing accurate repair estimates. We provide customers with video footage and a written report of our findings.
+                Sewer specialists use high-definition cameras with built-in locators that can pinpoint the exact depth and location of problems from the surface. This data is critical for determining whether trenchless repair is feasible and for providing accurate repair estimates. A good contractor provides customers with video footage and a written report of the findings.
               </p>
             </section>
 
@@ -1167,7 +1167,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Tree Root Intrusion</h4>
-                  <p className="text-gray-700">Middlesex County has mature tree canopies throughout its residential neighborhoods. Oak, maple, and willow trees are particularly aggressive root growers. Tree roots seek out sewer lines because they are a source of water and nutrients. Roots enter through joints in clay pipes and through corrosion holes in cast iron. We see root intrusion in approximately 60% of the sewer camera inspections we perform. Trenchless repair with seamless pipe (CIPP or HDPE via pipe bursting) is the best long-term solution because it eliminates the joints where roots enter.</p>
+                  <p className="text-gray-700">Middlesex County has mature tree canopies throughout its residential neighborhoods. Oak, maple, and willow trees are particularly aggressive root growers. Tree roots seek out sewer lines because they are a source of water and nutrients. Roots enter through joints in clay pipes and through corrosion holes in cast iron. Root intrusion appears in approximately 60% of sewer camera inspections on older homes in the area. Trenchless repair with seamless pipe (CIPP or HDPE via pipe bursting) is the best long-term solution because it eliminates the joints where roots enter.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">NJ Permits and Municipal Requirements</h4>
@@ -1269,7 +1269,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
                   <div className="px-5 pb-5">
-                    <p className="text-gray-700">A sewer camera inspection ($150-$400) uses a waterproof camera on a flexible cable to inspect the interior of your sewer pipe in real time. It identifies the exact type, location, and severity of damage -including cracks, root intrusion, bellies, offsets, and pipe material. Yes, you absolutely need one before any sewer repair. It is the only way to determine the correct repair method and get an accurate cost estimate. We provide HD video footage and a written report with every inspection.</p>
+                    <p className="text-gray-700">A sewer camera inspection ($150-$400) uses a waterproof camera on a flexible cable to inspect the interior of your sewer pipe in real time. It identifies the exact type, location, and severity of damage -including cracks, root intrusion, bellies, offsets, and pipe material. Yes, you absolutely need one before any sewer repair. It is the only way to determine the correct repair method and get an accurate cost estimate. A reputable contractor provides HD video footage and a written report with every inspection.</p>
                   </div>
                 </details>
 

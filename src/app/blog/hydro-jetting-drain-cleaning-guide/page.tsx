@@ -472,7 +472,7 @@ export default function HydroJettingDrainCleaningGuide() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900 mb-1">Tree Root Intrusion</h3>
-                      <p className="text-gray-700">Tree roots are naturally drawn to sewer lines because the pipes contain water and nutrients. Roots enter through tiny cracks, loose joints, or deteriorated pipe connections and grow inside the pipe, catching debris and eventually causing complete blockages. Snaking trims roots but leaves the root mass attached to the pipe wall. Hydro jetting with specialized root-cutting nozzles shears roots flush with the pipe wall and flushes all the debris downstream. In neighborhoods throughout Middlesex County where mature trees line the streets, particularly in Monroe Township, Old Bridge, and South Brunswick, tree root intrusion is one of the most common sewer problems we address.</p>
+                      <p className="text-gray-700">Tree roots are naturally drawn to sewer lines because the pipes contain water and nutrients. Roots enter through tiny cracks, loose joints, or deteriorated pipe connections and grow inside the pipe, catching debris and eventually causing complete blockages. Snaking trims roots but leaves the root mass attached to the pipe wall. Hydro jetting with specialized root-cutting nozzles shears roots flush with the pipe wall and flushes all the debris downstream. In neighborhoods throughout Middlesex County where mature trees line the streets, particularly in Monroe Township, Old Bridge, and South Brunswick, tree root intrusion is one of the most common sewer problems homeowners face.</p>
                     </div>
                   </div>
                 </div>
@@ -484,7 +484,7 @@ export default function HydroJettingDrainCleaningGuide() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900 mb-1">Recurring Clogs and Slow Drains</h3>
-                      <p className="text-gray-700">If you find yourself calling a plumber every few months for the same drain problem, snaking is only providing a temporary fix. Recurring clogs are a clear sign that there is significant buildup inside the pipe that snaking cannot reach. The snake creates a channel through the blockage, but the buildup on the pipe walls quickly narrows the opening again. Hydro jetting removes the buildup entirely, and many homeowners find that a single jetting session eliminates years of recurring drain issues. We typically recommend hydro jetting for any drain that has been snaked more than twice in a 12-month period.</p>
+                      <p className="text-gray-700">If you find yourself calling a plumber every few months for the same drain problem, snaking is only providing a temporary fix. Recurring clogs are a clear sign that there is significant buildup inside the pipe that snaking cannot reach. The snake creates a channel through the blockage, but the buildup on the pipe walls quickly narrows the opening again. Hydro jetting removes the buildup entirely, and many homeowners find that a single jetting session eliminates years of recurring drain issues. Plumbers typically recommend hydro jetting for any drain that has been snaked more than twice in a 12-month period.</p>
                     </div>
                   </div>
                 </div>
@@ -629,7 +629,7 @@ export default function HydroJettingDrainCleaningGuide() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Emergency vs Scheduled Service</h4>
-                  <p className="text-gray-700">Scheduling hydro jetting as a planned maintenance service is more cost-effective than calling for emergency service during a sewer backup. Emergency calls on weekends, holidays, or after hours may include additional service charges. We always recommend proactive jetting schedules to avoid emergency situations and the higher costs associated with them.</p>
+                  <p className="text-gray-700">Scheduling hydro jetting as a planned maintenance service is more cost-effective than calling for emergency service during a sewer backup. Emergency calls on weekends, holidays, or after hours may include additional service charges. Plumbers generally recommend proactive jetting schedules to avoid emergency situations and the higher costs associated with them.</p>
                 </div>
               </div>
 
@@ -863,14 +863,14 @@ export default function HydroJettingDrainCleaningGuide() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">How Often Should You Hydro Jet Your Sewer Line?</h2>
 
               <p className="text-gray-700 mb-6">
-                The recommended frequency for hydro jetting depends on your property type, the age and material of your pipes, the presence of nearby trees, and your household usage patterns. Here are general guidelines based on our experience servicing homes and businesses across Middlesex County.
+                The recommended frequency for hydro jetting depends on your property type, the age and material of your pipes, the presence of nearby trees, and your household usage patterns. Here are general guidelines that apply to homes and businesses across Middlesex County.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="bg-gray-50 rounded-lg p-5">
                   <h3 className="font-bold text-gray-900 mb-2">Residential Properties: Every 18-24 Months</h3>
                   <p className="text-gray-700">
-                    Most residential sewer lines benefit from hydro jetting every 18 to 24 months as preventive maintenance. This schedule keeps buildup from accumulating to the point where it restricts flow or causes backups. If your home has no history of drain problems and is surrounded by minimal vegetation, you may be able to extend this to every 2-3 years. However, homes with older pipes, heavy kitchen use, or multiple bathrooms often benefit from the 18-month schedule. We work with many homeowners in East Brunswick and Edison who schedule annual or biannual jetting as part of their home maintenance routine.
+                    Most residential sewer lines benefit from hydro jetting every 18 to 24 months as preventive maintenance. This schedule keeps buildup from accumulating to the point where it restricts flow or causes backups. If your home has no history of drain problems and is surrounded by minimal vegetation, you may be able to extend this to every 2-3 years. However, homes with older pipes, heavy kitchen use, or multiple bathrooms often benefit from the 18-month schedule. Many homeowners in East Brunswick and Edison schedule annual or biannual jetting as part of their home maintenance routine.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-5">
@@ -899,7 +899,7 @@ export default function HydroJettingDrainCleaningGuide() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Hydro Jetting in Middlesex County: Local Sewer Challenges</h2>
 
               <p className="text-gray-700 mb-6">
-                Middlesex County presents unique challenges for residential and commercial sewer systems. Understanding these local factors helps homeowners make informed decisions about drain maintenance and hydro jetting schedules. As plumbers who have worked in every town across Middlesex County, we see these issues daily and have developed effective solutions for each one.
+                Middlesex County presents unique challenges for residential and commercial sewer systems. Understanding these local factors helps homeowners make informed decisions about drain maintenance and hydro jetting schedules. These issues appear across the county year-round, and each one has well-established solutions a qualified drain specialist can apply.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -922,9 +922,9 @@ export default function HydroJettingDrainCleaningGuide() {
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-5">
-                  <h3 className="font-bold text-gray-900 mb-2">Service Areas We Cover</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Finding Hydro Jetting Service in Middlesex County</h3>
                   <p className="text-gray-700">
-                    Our hydro jetting services are available throughout Middlesex County, including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. We bring our truck-mounted hydro jetting equipment directly to your property and complete most residential jobs in 1-2 hours. We are familiar with the typical pipe materials, soil conditions, and tree species in each community, which allows us to tailor our cleaning approach for the best results.
+                    Several drain and sewer specialists offer hydro jetting throughout Middlesex County, including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. Look for a contractor who uses truck-mounted equipment, includes a before-and-after camera inspection, and knows the pipe materials, soil conditions, and tree species common in each community. Illyrian Plumber does not perform hydro jetting, but our <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">leak detection</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">repiping</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">emergency plumbing</Link> teams can help if a camera inspection uncovers a problem beyond a simple clog.
                   </p>
                 </div>
               </div>
