@@ -378,7 +378,7 @@ export default function SlabLeakPost() {
 
             <section className="bg-red-700 text-white rounded-xl p-8 mb-12">
               <h2 className="text-2xl font-bold mb-4">Suspect Underground Plumbing Problems?</h2>
-              <p className="text-red-100 mb-6">Don&apos;t wait for minor signs to become major damage. We offer professional leak detection and sewer camera inspection to pinpoint problems accurately -before recommending any repairs.</p>
+              <p className="text-red-100 mb-6">Don&apos;t wait for minor signs to become major damage. We offer professional water leak detection to pinpoint problems accurately before recommending any repairs.</p>
               <div className="flex flex-wrap gap-4">
                 <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Call {BUSINESS_INFO.phone}</a>
                 <Link href="/services/water-leak-detection" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition">Leak Detection Services</Link>

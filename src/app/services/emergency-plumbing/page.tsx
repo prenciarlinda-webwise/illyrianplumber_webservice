@@ -10,14 +10,14 @@ import {
 import ServiceHero from "@/components/ServiceHero";
 
 export const metadata: Metadata = {
-  title: "24 Hour Emergency Plumbing Service in NJ",
-  description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Licensed, fast response. Call (347) 461-4856.",
+  title: "Emergency Plumber NJ - (347) 461-4856 - Illyrian Plumber",
+  description: "Need an emergency plumber in NJ? Illyrian offers 24 hour same day service for burst pipes, gas leaks, and flooding in Middlesex County. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/services/emergency-plumbing",
   },
   openGraph: {
-    title: "24 Hour Emergency Plumbing Service in NJ",
-    description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Fast response. Call (347) 461-4856.",
+    title: "Emergency Plumber NJ - (347) 461-4856 - Illyrian Plumber",
+    description: "Need an emergency plumber in NJ? Illyrian offers 24 hour same day service for burst pipes, gas leaks, and flooding in Middlesex County. Call (347) 461-4856.",
     type: "website",
     url: "https://www.illyrianplumber.com/services/emergency-plumbing",
     siteName: "Illyrian Plumber",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "24 Hour Emergency Plumbing Service in NJ",
-    description: "24 hour emergency plumbing service across New Jersey. Burst pipes, gas leaks, water heater failures, sewer backups. Call (347) 461-4856.",
+    title: "Emergency Plumber NJ - (347) 461-4856 - Illyrian Plumber",
+    description: "Need an emergency plumber in NJ? Illyrian offers 24 hour same day service for burst pipes, gas leaks, and flooding in Middlesex County. Call (347) 461-4856.",
     images: ["https://www.illyrianplumber.com/images/emergency-plumbing-services-nj.jpg"],
   },
 };
@@ -49,7 +49,7 @@ const faqData = [
   },
   {
     question: "What qualifies as a plumbing emergency?",
-    answer: "A plumbing emergency is any situation that could cause significant property damage, health hazards, or leave you without essential services. This includes burst pipes, major water leaks, sewer backups, gas leaks, complete loss of water, water heater failures (especially in winter), and flooding. If you're unsure, call us - we're happy to assess your situation.",
+    answer: "A plumbing emergency is any situation that could cause significant property damage, health hazards, or leave you without essential services. This includes burst pipes, major water leaks, gas leaks, complete loss of water, water heater failures (especially in winter), and flooding. If you're unsure, call us - we're happy to assess your situation.",
   },
   {
     question: "How much does a 24 hour emergency plumber cost?",
@@ -61,7 +61,7 @@ const faqData = [
   },
   {
     question: "What should I do while waiting for the emergency plumber?",
-    answer: "For water emergencies: Shut off the main water valve (usually near your water meter). For water heater issues: Turn off power (electric) or gas supply. For gas leaks: Evacuate, don't use electronics, and call from outside. For sewer backups: Stop using water and plumbing fixtures. These steps can minimize damage while you wait for our arrival.",
+    answer: "For water emergencies: Shut off the main water valve (usually near your water meter). For water heater issues: Turn off power (electric) or gas supply. For gas leaks: Evacuate, don't use electronics, and call from outside. These steps can minimize damage while you wait for our arrival.",
   },
   {
     question: "Do you offer after hours plumber service on weekends and holidays?",
@@ -75,10 +75,6 @@ const faqData = [
     question: "Do you handle frozen pipe emergencies in winter?",
     answer: "Yes, frozen and burst pipe emergencies are one of our most common winter calls. We respond quickly to thaw frozen pipes before they burst and repair burst pipes that have already caused water damage. We also provide preventive advice to help you avoid frozen pipes in the future.",
   },
-  {
-    question: "Can you help with a sewer backup emergency?",
-    answer: "Absolutely. Sewer backups are serious health hazards that require immediate attention. Our emergency plumbers arrive equipped to clear sewer blockages, perform video camera inspections to diagnose the cause, and restore proper drainage. We handle tree root intrusions, collapsed sewer lines, and all types of sewer emergencies.",
-  },
 ];
 
 const faqSchema = getFaqSchema(faqData);
@@ -86,7 +82,7 @@ const faqSchema = getFaqSchema(faqData);
 const serviceSchema = getServiceSchema({
   name: "24/7 Emergency Plumbing Service",
   description:
-    "24 hour emergency plumber services including burst pipe repair, water heater emergencies, gas leak response, sewer backup, and flooding repair. Same day plumber service available.",
+    "24 hour emergency plumber services including burst pipe repair, water heater emergencies, gas leak response, and flooding repair. Same day plumber service available.",
   slug: "emergency-plumbing",
 });
 
@@ -151,13 +147,13 @@ export default function EmergencyPlumbingPage() {
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  We understand that plumbing emergencies don&apos;t wait for convenient business hours. That&apos;s why we offer true <strong>24 hour emergency plumber</strong> service - nights, weekends, and holidays. When you need a <strong>same day plumber</strong>, we dispatch immediately and arrive quickly. Whether it is a burst pipe at midnight, a gas leak on a holiday, or a sewer backup on a Sunday morning, our <strong>after hours plumber</strong> team is ready to respond.
+                  We understand that plumbing emergencies don&apos;t wait for convenient business hours. That&apos;s why we offer true <strong>24 hour emergency plumber</strong> service - nights, weekends, and holidays. When you need a <strong>same day plumber</strong>, we dispatch immediately and arrive quickly. Whether it is a burst pipe at midnight, a gas leak on a holiday, or a water heater failure on a Sunday morning, our <strong>after hours plumber</strong> team is ready to respond.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Many homeowners in Middlesex County have experienced the frustration of calling a plumber during an emergency only to reach a voicemail or an answering service. At Illyrian Plumber, we answer every call personally. When you call our <strong>emergency plumbing services</strong> line, you speak directly with someone who can dispatch a plumber immediately. We do not use call centers or third-party answering services because we know that every minute counts during a plumbing emergency.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Our <strong>emergency plumber East Brunswick</strong> team carries fully stocked trucks with the parts and equipment needed for the most common emergency repairs. This means we can often complete your repair in a single visit without needing to source parts or schedule a follow-up. From pipe fittings and water heater components to sewer line equipment and gas line repair tools, we come prepared.
+                  Our <strong>emergency plumber East Brunswick</strong> team carries fully stocked trucks with the parts and equipment needed for the most common emergency repairs. This means we can often complete your repair in a single visit without needing to source parts or schedule a follow-up. From pipe fittings and water heater components to leak detection and gas line repair tools, we come prepared.
                 </p>
               </div>
 
@@ -171,7 +167,6 @@ export default function EmergencyPlumbingPage() {
                   { situation: "Burst or Frozen Pipes", desc: "Water spraying or no water flow in winter - frozen pipes can burst and cause thousands in damage if not addressed quickly" },
                   { situation: "Major Water Leaks", desc: "Visible flooding or water damage spreading - every minute of delay means more water damage to your home" },
                   { situation: "Gas Leak or Gas Smell", desc: "Evacuate first, then call for emergency gas plumber - gas leaks are life-threatening and require immediate response" },
-                  { situation: "Sewer Line Backup", desc: "Sewage coming up through drains or toilets - a serious health hazard that needs emergency sewer backup plumber service" },
                   { situation: "Water Heater Failure", desc: "No hot water, leaking tank, or strange noises - especially dangerous if your water heater is gas-powered" },
                   { situation: "Complete Loss of Water", desc: "No water anywhere in your home - could indicate a main line break or frozen supply lines" },
                   { situation: "Flooding from Any Source", desc: "Appliance failure, pipe break, or unknown source - quick response prevents structural damage and mold growth" },
@@ -236,10 +231,6 @@ export default function EmergencyPlumbingPage() {
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Water Heater Emergencies</h3>
                   <p className="text-gray-700">A leaking or failing water heater can release 40-80 gallons of water into your home in minutes. Our <strong>same day plumber</strong> team responds to water heater emergencies including leaking tanks, failed relief valves, gas control valve failures, and pilot light issues. We carry replacement parts for the most common water heater brands and can often complete repairs on the spot. If your water heater is beyond repair, we provide same-day replacement options to restore your hot water quickly.</p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Sewer Backup and Drain Emergencies</h3>
-                  <p className="text-gray-700">Sewer backups create unsanitary conditions that require immediate attention from an <strong>emergency sewer backup plumber</strong>. Raw sewage backing up into your home is a health hazard that can contaminate your living space. Our emergency plumbers use professional drain cleaning equipment and sewer cameras to clear blockages and identify the root cause, whether it is tree root intrusion, a collapsed pipe, or a grease buildup. We restore proper drainage and advise on preventive measures.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Gas Leak Emergency Response</h3>

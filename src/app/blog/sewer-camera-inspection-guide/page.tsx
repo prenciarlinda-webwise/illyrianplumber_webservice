@@ -767,7 +767,7 @@ export default function SewerCameraInspectionGuidePost() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Tree Root Problems</h4>
-                  <p className="text-gray-700">Middlesex County&apos;s mature tree canopy is beautiful, but those trees are constantly seeking moisture and nutrients underground. Oak, maple, willow, and sweetgum trees are particularly aggressive root growers. Many neighborhoods in Edison, East Brunswick, and Old Bridge have large street trees planted 30-50 years ago whose roots have grown into the path of sewer laterals. We find root intrusion in roughly 60% of the sewer inspections we perform on homes built before 1990 in these areas.</p>
+                  <p className="text-gray-700">Middlesex County&apos;s mature tree canopy is beautiful, but those trees are constantly seeking moisture and nutrients underground. Oak, maple, willow, and sweetgum trees are particularly aggressive root growers. Many neighborhoods in Edison, East Brunswick, and Old Bridge have large street trees planted 30-50 years ago whose roots have grown into the path of sewer laterals. Root intrusion shows up in roughly 60% of sewer camera inspections on homes built before 1990 in these areas.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Soil Conditions and Pipe Settlement</h4>

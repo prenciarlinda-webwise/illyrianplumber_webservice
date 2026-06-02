@@ -7,6 +7,70 @@ import CTASection from "@/components/CTASection";
 import { BUSINESS_INFO } from "@/lib/constants";
 
 const blogPosts = [
+  // June 2026
+  {
+    title: "How to Clean and Unclog a Garbage Disposal",
+    slug: "garbage-disposal-cleaning-unclogging-guide",
+    excerpt: "Clean a smelly garbage disposal and unclog a jammed one safely. Ice and salt cleaning, the hex key reset, P-trap fixes, and what never to put down the drain.",
+    category: "Kitchen Plumbing",
+    date: "June 2026",
+    image: "",
+    readTime: "13 min read",
+  },
+  {
+    title: "How to Shut Off the Water to Your House (Emergency Guide)",
+    slug: "how-to-shut-off-water-to-your-house",
+    excerpt: "Find your main water shut off valve and stop a plumbing emergency fast. How to shut off a fixture, the water heater, and flush a toilet with the water off.",
+    category: "Emergency Plumbing",
+    date: "June 2026",
+    image: "",
+    readTime: "12 min read",
+  },
+  {
+    title: "How to Clean and Replace a Shower Head",
+    slug: "how-to-clean-and-replace-a-shower-head",
+    excerpt: "Clear black gunk and hard-water calcium off your shower head with a vinegar soak, then learn how to replace it and pick the right gpm flow rate.",
+    category: "Bathroom Plumbing",
+    date: "June 2026",
+    image: "",
+    readTime: "13 min read",
+  },
+  {
+    title: "How to Get Rid of Drain Flies (Step-by-Step)",
+    slug: "how-to-get-rid-of-drain-flies",
+    excerpt: "Those tiny flies are breeding inside your drain. Find the source, clear the biofilm they live in, and keep drain flies and sewer gnats from coming back.",
+    category: "Troubleshooting",
+    date: "June 2026",
+    image: "",
+    readTime: "11 min read",
+  },
+  {
+    title: "How to Fix a Leaky Bathtub Faucet (Step-by-Step)",
+    slug: "how-to-fix-a-leaky-bathtub-faucet",
+    excerpt: "Stop a dripping bathtub faucet by identifying your valve type and replacing the worn cartridge or washer. Step-by-step DIY guide for NJ homeowners.",
+    category: "Toilet & Faucet",
+    date: "June 2026",
+    image: "",
+    readTime: "12 min read",
+  },
+  {
+    title: "How to Light a Gas Water Heater and Set the Temp",
+    slug: "how-to-light-a-gas-water-heater",
+    excerpt: "Relight the pilot safely, adjust the temperature to 120 degrees, and turn the unit off. Plus the warning signs that mean it is time to call a pro.",
+    category: "Water Heaters",
+    date: "June 2026",
+    image: "",
+    readTime: "12 min read",
+  },
+  {
+    title: "How to Unclog a Shower or Tub Drain (7 DIY Methods)",
+    slug: "how-to-unclog-a-shower-or-tub-drain",
+    excerpt: "Clear a clogged shower or tub drain yourself with seven proven methods, from pulling the hair clog to snaking the line, including how to handle standing water.",
+    category: "Bathroom Plumbing",
+    date: "June 2026",
+    image: "",
+    readTime: "13 min read",
+  },
   // March 2026
   {
     title: "How to Fix a Running Toilet (Step-by-Step Guide)",
