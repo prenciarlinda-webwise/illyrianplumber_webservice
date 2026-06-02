@@ -53,6 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   const blogPosts = [
+    { url: "/blog/garbage-disposal-cleaning-unclogging-guide", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-shut-off-water-to-your-house", priority: 0.8, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-clean-and-replace-a-shower-head", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-get-rid-of-drain-flies", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-fix-a-leaky-bathtub-faucet", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-light-a-gas-water-heater", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
+    { url: "/blog/how-to-unclog-a-shower-or-tub-drain", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-06-02" },
     { url: "/blog/how-tankless-water-heaters-work", priority: 0.7, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
     { url: "/blog/tankless-vs-tank-water-heater", priority: 0.7, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
     { url: "/blog/what-size-tankless-water-heater", priority: 0.7, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
