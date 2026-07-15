@@ -349,13 +349,13 @@ export default function RadiantHeatingPage() {
                   We install and repair <strong>radiant floor heating systems</strong> throughout Middlesex County, NJ:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-700">
-                  <span>East Brunswick</span>
-                  <span>Edison</span>
-                  <span>Old Bridge</span>
-                  <span>Sayreville</span>
-                  <span>South Brunswick</span>
-                  <span>North Brunswick</span>
-                  <span>Monroe Township</span>
+                  <Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link>
+                  <Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link>
+                  <Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link>
+                  <Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link>
+                  <Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link>
+                  <Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link>
+                  <Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link>
                   <span>And surrounding areas</span>
                 </div>
               </div>
@@ -416,13 +416,13 @@ export default function RadiantHeatingPage() {
                 <div className="bg-white rounded-xl shadow-md p-5">
                   <p className="font-bold text-gray-900 mb-3">Service Areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link></li>
                   </ul>
                 </div>
 
