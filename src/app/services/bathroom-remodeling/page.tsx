@@ -148,7 +148,7 @@ export default function BathroomRemodelingPage() {
                 ))}
               </div>
 
-              {/* Mid-Content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Planning a Bathroom Remodel?</h3>
                 <p className="text-gray-600 mb-4">Get a free plumbing consultation and detailed estimate for your project.</p>
@@ -484,6 +484,18 @@ export default function BathroomRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

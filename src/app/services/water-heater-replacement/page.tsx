@@ -242,7 +242,7 @@ export default function WaterHeaterReplacementPage() {
                 </p>
               </div>
 
-              {/* Mid-content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <p className="font-bold text-lg">Need a Free Replacement Estimate?</p>
@@ -589,6 +589,18 @@ export default function WaterHeaterReplacementPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

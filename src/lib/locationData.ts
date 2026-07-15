@@ -26,7 +26,7 @@ export type LocationData = {
 // the surrounding silo intro paragraph, which IS city-unique.
 export const SERVICE_BLURBS: Record<string, string> = {
   "/services/emergency-plumbing":
-    "24/7 dispatch for burst pipes, no hot water, sewer backups, and gas smells.",
+    "24/7 dispatch for burst pipes, no hot water, gas leaks, and no-heat calls.",
   "/services/water-leak-detection":
     "Acoustic and thermal imaging to locate hidden leaks behind walls and slabs.",
   "/services/gas-line-repair-installation":
@@ -80,7 +80,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Route 18 corridor",
     ],
     emergencyNearMeIntro:
-      "When East Brunswick homeowners search for an emergency plumber near me, proximity is the question that actually matters. Our office at 697 Old Bridge Turnpike puts a licensed NJ master plumber 5 to 15 minutes from any 08816 address. Burst pipes, sewage backups, no-hot-water calls, and gas smells get same-shift dispatch any hour, weekend, or holiday. The phone is answered by a live dispatcher, not an after-hours routing service. Written prices are quoted before any work starts, and our trucks carry real parts so most East Brunswick emergency calls close on the first visit.",
+      "When East Brunswick homeowners search for an emergency plumber near me, proximity is the question that actually matters. Our office at 697 Old Bridge Turnpike puts a licensed NJ master plumber 5 to 15 minutes from any 08816 address. Burst pipes, no-hot-water calls, gas smells, and no-heat calls get same-shift dispatch any hour, weekend, or holiday. The phone is answered by a live dispatcher, not an after-hours routing service. Written prices are quoted before any work starts, and our trucks carry real parts so most East Brunswick emergency calls close on the first visit.",
     siloIntros: {
       emergency:
         "Emergency plumbing is the largest chunk of our East Brunswick call volume, especially during winter freeze-thaw cycles along Cranbury Road and Ryders Lane. The three services below are the ones most often searched as \"emergency plumber near me\" or \"24/7 plumber near me\" by 08816 residents. We keep a dispatcher live around the clock and an on-call plumber under 15 minutes from any address inside the township.",
@@ -111,7 +111,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Oak Tree",
     ],
     emergencyNearMeIntro:
-      "Edison residents searching for a 24 hour emergency plumber near me get a real answer from our East Brunswick base: a licensed master plumber on the road within minutes of the call, on most Edison driveways inside 10 minutes via Route 18, Route 1, or Route 287. We dispatch for burst pipes, sewer backups, failed water heaters, and gas leaks day or night, including weekends and holidays. There is no surprise after-hours surcharge layered on top of the repair, and every emergency call comes with a live ETA before the truck arrives.",
+      "Edison residents searching for a 24 hour emergency plumber near me get a real answer from our East Brunswick base: a licensed master plumber on the road within minutes of the call, on most Edison driveways inside 10 minutes via Route 18, Route 1, or Route 287. We dispatch for burst pipes, failed water heaters, gas leaks, and no-heat boiler calls day or night, including weekends and holidays. There is no surprise after-hours surcharge layered on top of the repair, and every emergency call comes with a live ETA before the truck arrives.",
     siloIntros: {
       emergency:
         "Edison's mix of mid-century Clara Barton single-family homes and newer Route 1 townhomes generates a steady stream of emergency calls year-round. Burst pipes during January freezes, sudden water-heater failures, and gas-smell calls all route to the same 24/7 dispatch line. These three services are what Edison homeowners ask for when they type \"emergency plumber near me\" into Google after midnight.",
@@ -142,7 +142,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Sayreville Borough",
     ],
     emergencyNearMeIntro:
-      "Searching for an emergency plumber near me in Sayreville? Our crews reach Parlin (08859) and Sayreville (08872) addresses inside 12 to 18 minutes from East Brunswick via Route 9 or Garden State Parkway Exit 124. We answer the phone live overnight, dispatch for burst pipes and sewer backups every day of the year, and bring stock for the failures we see most often in Sayreville's mix of older borough homes and newer Parlin developments. Pricing is quoted in writing before any work starts.",
+      "Searching for an emergency plumber near me in Sayreville? Our crews reach Parlin (08859) and Sayreville (08872) addresses inside 12 to 18 minutes from East Brunswick via Route 9 or Garden State Parkway Exit 124. We answer the phone live overnight, dispatch for burst pipes and failed water heaters every day of the year, and bring stock for the failures we see most often in Sayreville's mix of older borough homes and newer Parlin developments. Pricing is quoted in writing before any work starts.",
     siloIntros: {
       emergency:
         "Sayreville sits on low, sandy ground close to the Raritan Bay, so basement flooding and sump pump failures hit harder here than in upland Middlesex towns. The three emergency services below are the most-searched \"plumber near me\" calls from Sayreville Borough, Parlin, and Morgan. Live dispatcher, real ETA, no after-hours upcharge.",
@@ -173,7 +173,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Old Bridge proper",
     ],
     emergencyNearMeIntro:
-      "Old Bridge is the township we reach fastest after East Brunswick itself. A 10 to 15 minute response time covers every 08857 address from Madison Park down to Cliffwood Beach when you call the emergency plumber near me line. Burst pipes, no hot water, gas smells, and sewer backups all get same-shift dispatch with a live ETA. Old Bridge homes built in the 1960s and 1970s are well-represented in our weekly emergency volume because the original galvanized supply lines and 70s-era cast-iron drains are now well past their service life.",
+      "Old Bridge is the township we reach fastest after East Brunswick itself. A 10 to 15 minute response time covers every 08857 address from Madison Park down to Cliffwood Beach when you call the emergency plumber near me line. Burst pipes, no hot water, gas smells, and no-heat boiler calls all get same-shift dispatch with a live ETA. Old Bridge homes built in the 1960s and 1970s are well-represented in our weekly emergency volume because the original galvanized supply lines and 70s-era cast-iron drains are now well past their service life.",
     siloIntros: {
       emergency:
         "Old Bridge's wide split between bayfront Cliffwood Beach properties and inland Madison Park neighborhoods means our emergency calls run the full plumbing failure spectrum: salt-air corroded supply, frozen exposed pipes in unconditioned crawlspaces, and aging drain stacks giving out under normal load. Live dispatch around the clock for all three services below.",
@@ -204,7 +204,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Stonebridge",
     ],
     emergencyNearMeIntro:
-      "Monroe Township residents looking for a 24 hour emergency plumber near me get response times of 15 to 25 minutes from our East Brunswick base via NJ Turnpike Exit 8A. A high share of Monroe's 08831 housing sits inside 55-plus active-adult communities like Rossmoor, Concordia, Clearbrook, and Greenbriar at Whittingham, so we routinely coordinate with HOA management offices on after-hours access. Burst pipes, sewer backups, and gas-leak calls get same-shift dispatch any day of the week, with a written quote before any work begins.",
+      "Monroe Township residents looking for a 24 hour emergency plumber near me get response times of 15 to 25 minutes from our East Brunswick base via NJ Turnpike Exit 8A. A high share of Monroe's 08831 housing sits inside 55-plus active-adult communities like Rossmoor, Concordia, Clearbrook, and Greenbriar at Whittingham, so we routinely coordinate with HOA management offices on after-hours access. Burst pipes, no-heat calls, and gas-leak calls get same-shift dispatch any day of the week, with a written quote before any work begins.",
     siloIntros: {
       emergency:
         "Monroe Township's active-adult communities generate a different emergency mix than the typical Middlesex town. Hidden slow leaks behind finished walls, master-bath supply failures while owners winter out of state, and water-heater rupture during seasonal returns are the three failure modes we see most. All three emergency services below carry live overnight dispatch.",
@@ -235,7 +235,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Route 130 corridor",
     ],
     emergencyNearMeIntro:
-      "North Brunswick covers a wide span of housing - from rental properties near the Rutgers campus to older single-family homes around Livingston Park to newer Renaissance condos. When residents type emergency plumber near me into a phone at 2 AM, the variable that matters is whether anyone will pick up the call live. We do, every night. East Brunswick to any 08902 address runs 12 to 18 minutes via Route 1 or Route 130. Burst pipe, no hot water, sewer smell, gas smell - we dispatch with a live ETA before the truck arrives.",
+      "North Brunswick covers a wide span of housing - from rental properties near the Rutgers campus to older single-family homes around Livingston Park to newer Renaissance condos. When residents type emergency plumber near me into a phone at 2 AM, the variable that matters is whether anyone will pick up the call live. We do, every night. East Brunswick to any 08902 address runs 12 to 18 minutes via Route 1 or Route 130. Burst pipe, no hot water, no heat, gas smell - we dispatch with a live ETA before the truck arrives.",
     siloIntros: {
       emergency:
         "North Brunswick's rental-heavy Rutgers-adjacent housing produces a steady stream of midnight emergency calls: clogged tubs, no-hot-water complaints from tenants, and frozen exposed pipes in older sublet houses. All three emergency services below run 24/7 dispatch with no surprise after-hours fee tacked on the invoice.",
@@ -269,7 +269,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "South Brunswick is one of our farther-out service areas, and we are still the local plumber near me answer for emergency dispatch across Kendall Park (08824), Monmouth Junction (08852), and Dayton (08810). Response runs 18 to 25 minutes from East Brunswick via Route 1 or Route 130, with a live dispatcher overnight and a written quote on every emergency job before work begins. Many South Brunswick homes sit on well water rather than municipal supply, which changes the diagnostic on water-pressure complaints and on water heater service life.",
     siloIntros: {
       emergency:
-        "South Brunswick's mix of older Kendall Park split-levels, Monmouth Junction Capes, and newer Route 522 developments means our emergency call mix includes well-pump-adjacent supply issues alongside the standard burst-pipe and sewer-backup work. All three services below run with live overnight dispatch and a real ETA.",
+        "South Brunswick's mix of older Kendall Park split-levels, Monmouth Junction Capes, and newer Route 522 developments means our emergency call mix includes well-pump-adjacent supply issues alongside the standard burst-pipe and no-heat boiler work. All three services below run with live overnight dispatch and a real ETA.",
       "water-heater":
         "South Brunswick has a high percentage of well water homes, which shortens tank water heater life and makes anode rod replacement a real recurring service. Tankless conversion in Kendall Park and Monmouth Junction homes is common when homeowners want endless hot water with less mineral buildup. Every install includes a permit pulled from South Brunswick Township Construction.",
       mechanical:
@@ -301,7 +301,7 @@ export const LOCATION_DATA: Record<string, LocationData> = {
       "Middlesex County is the full service area, not a single town. When residents anywhere in the county search emergency plumber near me, the practical answer is which town they are calling from and how far we have to drive. Inside East Brunswick (08816) we arrive in 5 to 15 minutes. Inside Edison (08817 to 08837), 10 minutes. Old Bridge (08857), 10 to 15. Sayreville, North Brunswick, South Brunswick, and Monroe Township run 12 to 25 minutes depending on traffic and route. Every county-wide emergency call gets the same live dispatcher, the same written quote, and the same NJ Master Plumber license behind the work.",
     siloIntros: {
       emergency:
-        "County-wide emergency plumbing is the largest single service Illyrian Plumber runs. Burst pipes during January freeze-thaw cycles, sewer backups during summer storms, and gas-smell calls year-round all route to the same 24/7 line. Whichever Middlesex County town you are calling from, the three services below are the most-requested emergency dispatches.",
+        "County-wide emergency plumbing is the largest single service Illyrian Plumber runs. Burst pipes during January freeze-thaw cycles, flooding during summer storms, and gas-smell calls year-round all route to the same 24/7 line. Whichever Middlesex County town you are calling from, the three services below are the most-requested emergency dispatches.",
       "water-heater":
         "Across Middlesex County, water heater work is the second-largest service category. Tank replacements run heavy in the older neighborhoods of East Brunswick, Old Bridge, and Sayreville, while tankless conversions dominate in newer Edison Route 1 townhomes and South Brunswick Kendall Park homes with growing hot-water demand.",
       mechanical:

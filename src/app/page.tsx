@@ -575,7 +575,7 @@ function EmergencyPlumberSection() {
             Emergency plumber in East Brunswick, NJ
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            Illyrian Plumber answers the phone day or night for emergency plumbing in East Brunswick. Burst pipes, gas leaks, sewer backups, no hot water, and no heat all qualify for 24/7 dispatch. A licensed NJ Master Plumber is on the road from our 697 Old Bridge Turnpike office within minutes of the call, with parts and tools to fix the problem on the first visit.
+            Illyrian Plumber answers the phone day or night for emergency plumbing in East Brunswick. Burst pipes, gas leaks, no hot water, and no heat all qualify for 24/7 dispatch. A licensed NJ Master Plumber is on the road from our 697 Old Bridge Turnpike office within minutes of the call, with parts and tools to fix the problem on the first visit.
           </p>
           <p className="text-lg text-gray-700">
             Typical response time across East Brunswick is 30 minutes or less. Weekends, nights, and holidays included at the same emergency rates. Call <a href={BUSINESS_INFO.phoneLink} className="text-red-700 hover:underline font-semibold">{BUSINESS_INFO.phone}</a> or <a href={BUSINESS_INFO.phone2Link} className="text-red-700 hover:underline font-semibold">{BUSINESS_INFO.phone2}</a> for immediate service.

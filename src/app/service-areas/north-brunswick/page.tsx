@@ -80,6 +80,22 @@ export default function NorthBrunswickPage() {
           text: "Yes. We are licensed NJ Master Plumbers and pull all required permits from the North Brunswick Township Construction Office for water heater installations, gas line work, boiler replacements, and repiping. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
         },
       },
+      {
+        "@type": "Question",
+        name: "How much does it typically cost to fix a leak in North Brunswick?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber typically charges $150 to $500 to fix a leak in North Brunswick, depending on whether it is a visible fixture connection, a supply line, or a hidden leak requiring detection equipment. Simple faucet or toilet supply leaks run toward the lower end; leaks inside walls or slabs that need locating first cost more. We provide a written price before any repair begins.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What should I look for when hiring a plumber in North Brunswick?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber recommends confirming an active NJ Master Plumber license, current liability insurance, upfront written pricing, and real North Brunswick response times before hiring. We meet all four: licensed NJ Master Plumbers, fully insured, written quotes before work starts, and about a 10-minute response from our East Brunswick base via Route 1 or Route 130.",
+        },
+      },
     ],
   };
 
@@ -122,7 +138,7 @@ export default function NorthBrunswickPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response, Day or Night</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a 24 hour emergency plumber in North Brunswick, NJ</strong>, serving the Rutgers area, Livingston Park, Adams Lane, Hermann Road, Cozzens Lane, the Route 1 and Route 130 corridors, and North Brunswick proper. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, sewer backups, and boiler no-heat calls day or night, 365 days a year. Free estimates and upfront written pricing on every North Brunswick job.
+                <strong>Illyrian Plumber is a 24 hour emergency plumber in North Brunswick, NJ</strong>, serving the Rutgers area, Livingston Park, Adams Lane, Hermann Road, Cozzens Lane, the Route 1 and Route 130 corridors, and North Brunswick proper. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, and boiler no-heat calls day or night, 365 days a year. Free estimates and upfront written pricing on every North Brunswick job.
               </p>
               <p>
                 North Brunswick Township sits right next to our East Brunswick headquarters, making it one of our closest and fastest response areas. Most North Brunswick addresses are 10 minutes or less via Route 1 or Route 130. For active plumbing emergencies, that proximity matters, a burst pipe can cause thousands in damage if response is slow.
@@ -248,7 +264,7 @@ export default function NorthBrunswickPage() {
                   Illyrian Plumber serves every North Brunswick community from our East Brunswick headquarters. Our licensed plumbers cover all North Brunswick zip codes (08902) and travel Route 1, Route 130, Route 27, Adams Lane, Hermann Road, and Cozzens Lane daily to reach Livingston Park, the Rutgers area, and every other corner of the township.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving North Brunswick NJ, we handle the full scope of residential plumbing: water heater installation, tankless water heater upgrades, boiler repair, gas line work, whole-house repiping, drain cleaning, sump pump replacement, water filtration, and 24/7 emergency plumbing. Permits are pulled from the North Brunswick Township Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving North Brunswick NJ, we handle the full scope of residential plumbing: water heater installation, tankless water heater upgrades, boiler repair, gas line work, whole-house repiping, sump pump replacement, water filtration, and 24/7 emergency plumbing. Permits are pulled from the North Brunswick Township Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   Whether you own a mid-century home in Livingston Park, manage a rental near the Rutgers area, or live along the Route 130 corridor, our North Brunswick plumbers arrive with the right parts and the right experience for the job.

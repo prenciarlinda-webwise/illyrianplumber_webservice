@@ -80,6 +80,30 @@ export default function SayrevillePage() {
           text: "Yes. We are licensed NJ Master Plumbers and pull all required permits from the Sayreville Borough Construction Office for water heater installations, gas line work, boiler replacements, and repiping. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Can you recommend reliable plumbers in Sayreville NJ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber is a licensed, insured NJ Master Plumber serving Sayreville, NJ, including Parlin, Morgan, Ernston, and Melrose, from our East Brunswick base about 10 to 15 minutes away. We answer our own phones with a live dispatcher, give upfront written pricing before any work starts, hold a 5.0 star rating, and have completed 750+ projects since founding in 2010.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What should I look for when hiring a plumber in Sayreville NJ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber recommends confirming an active NJ Master Plumber license, current liability insurance, written upfront pricing, and real Sayreville response times before hiring anyone. We meet all four: licensed NJ Master Plumbers, fully insured, written quotes before work starts, and a 10 to 15 minute response from our East Brunswick base via Route 9 or Route 35.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the common plumbing issues in Sayreville and how to fix them?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber sees four issues most often in Sayreville: aging water heaters past their 12 to 18 year service life, galvanized supply lines in older Parlin and Morgan homes causing low pressure, sump pump failures near the Raritan River during storms, and hard water mineral buildup. We fix each with water heater replacement, whole-house repiping, sump pump service with battery backup, and water filtration or softening.",
+        },
+      },
     ],
   };
 
@@ -122,7 +146,7 @@ export default function SayrevillePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response, Day or Night</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a 24 hour emergency plumber in Sayreville, NJ</strong>, serving Parlin, Morgan, Ernston, Melrose, Sayreville proper, and the South Amboy border neighborhoods. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, sewer backups, boiler no-heat calls, and sump pump failures day or night, 365 days a year. Free estimates and upfront written pricing on every Sayreville job.
+                <strong>Illyrian Plumber is a 24 hour emergency plumber in Sayreville, NJ</strong>, serving Parlin, Morgan, Ernston, Melrose, Sayreville proper, and the South Amboy border neighborhoods. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, boiler no-heat calls, and sump pump failures day or night, 365 days a year. Free estimates and upfront written pricing on every Sayreville job.
               </p>
               <p>
                 Sayreville Borough has a mix of mid-century family neighborhoods in Parlin and Morgan, newer construction near the Route 9 corridor, and light commercial along the Garden State Parkway. Each comes with its own plumbing challenges. Older galvanized supply lines and aging water heaters are the most common issues we see on Sayreville service calls.
@@ -185,7 +209,7 @@ export default function SayrevillePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Who are reliable plumbers in Sayreville, NJ?</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                Illyrian Plumber is a licensed, insured NJ Master Plumber serving Sayreville, NJ, including Parlin, Morgan, Ernston, and Melrose, from our East Brunswick base about 10 to 15 minutes away. We answer our own phones with a live dispatcher, give upfront written pricing before any work starts, and handle emergency repairs, water heaters, boilers, gas lines, and drain cleaning. Founded in {BUSINESS_INFO.founded}, we hold a 5.0 star rating and respond 24/7.
+                Illyrian Plumber is a licensed, insured NJ Master Plumber serving Sayreville, NJ, including Parlin, Morgan, Ernston, and Melrose, from our East Brunswick base about 10 to 15 minutes away. We answer our own phones with a live dispatcher, give upfront written pricing before any work starts, and handle emergency repairs, water heaters, boilers, and gas lines. Founded in {BUSINESS_INFO.founded}, we hold a 5.0 star rating and respond 24/7.
               </p>
             </div>
 
@@ -256,7 +280,7 @@ export default function SayrevillePage() {
                   Illyrian Plumber serves every Sayreville neighborhood from our East Brunswick headquarters. Our licensed plumbers cover all Sayreville zip codes (08872, 08859) and travel Route 9, Route 35, Route 18, and the Garden State Parkway daily to reach Parlin, Morgan, Ernston, Melrose, Sayreville proper, and the South Amboy border.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving Sayreville NJ, we handle the full scope of residential plumbing: water heater installation, tankless water heater upgrades, boiler repair, gas line work, whole-house repiping, drain cleaning, sump pump replacement, water filtration, and 24/7 emergency plumbing. Permits are pulled from the Sayreville Borough Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving Sayreville NJ, we handle the full scope of residential plumbing: water heater installation, tankless water heater upgrades, boiler repair, gas line work, whole-house repiping, sump pump replacement, water filtration, and 24/7 emergency plumbing. Permits are pulled from the Sayreville Borough Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   Whether you need a boiler tune-up in Parlin or a tankless water heater install in Morgan, our Sayreville plumbers arrive with the right parts and the right expertise for the job.

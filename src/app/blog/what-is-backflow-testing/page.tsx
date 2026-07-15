@@ -675,10 +675,13 @@ export default function BackflowTestingPost() {
                     {BUSINESS_INFO.serviceAreas.map((area) => (
                       <li key={area} className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>
-                        {area}
+                        <Link href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-red-700 transition">
+                          {area}
+                        </Link>
                       </li>
                     ))}
                   </ul>
+                  <Link href="/service-areas" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Service Areas</Link>
                 </div>
 
                 {/* Services */}

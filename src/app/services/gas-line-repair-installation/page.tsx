@@ -195,7 +195,7 @@ export default function GasLineRepairPage() {
                 </div>
               </div>
 
-              {/* Mid-content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-700 text-white rounded-xl p-6 mb-12 text-center">
                 <h3 className="text-2xl font-bold mb-3">Need Gas Line Service?</h3>
                 <p className="text-red-100 mb-4">Licensed gas plumbers serving all of Middlesex County. Free estimates on all gas line work.</p>
@@ -435,6 +435,18 @@ export default function GasLineRepairPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

@@ -46,7 +46,7 @@ const faqCategories = [
     faqs: [
       {
         question: "Do you offer 24/7 emergency service?",
-        answer: "Yes, we provide 24/7 emergency plumbing service for urgent situations like burst pipes, major leaks, sewage backups, and no-water emergencies. Call us anytime for emergencies.",
+        answer: "Yes, we provide 24/7 emergency plumbing service for urgent situations like burst pipes, major leaks, gas leaks, and no-water emergencies. Call us anytime for emergencies.",
       },
       {
         question: "How quickly can you respond to an emergency?",
@@ -54,7 +54,7 @@ const faqCategories = [
       },
       {
         question: "What qualifies as a plumbing emergency?",
-        answer: "Plumbing emergencies include: burst or major leaking pipes, sewage backups, gas leaks, no water, flooding, and water heater failures in extreme weather. When in doubt, call us and we will help you assess the situation.",
+        answer: "Plumbing emergencies include: burst or major leaking pipes, gas leaks, no water, flooding, and water heater failures in extreme weather. When in doubt, call us and we will help you assess the situation.",
       },
       {
         question: "Is there an extra charge for emergency calls?",
