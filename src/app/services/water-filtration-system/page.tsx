@@ -231,7 +231,7 @@ export default function WaterFiltrationPage() {
                 Not sure which system is right for your home? Read our detailed comparison: <Link href="/blog/whole-house-water-filter-worth-it" className="text-red-700 hover:text-red-800 font-medium">Is a Whole House Water Filter Worth It?</Link>
               </p>
 
-              {/* Mid-Content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-700 text-white rounded-xl p-8 mb-12 text-center">
                 <h3 className="text-2xl font-bold mb-3">Get a Free Water Quality Consultation</h3>
                 <p className="text-red-100 mb-6 max-w-xl mx-auto">We test your water, identify contaminants, and recommend the best filtration solution for your home and budget. No obligation.</p>
@@ -448,6 +448,18 @@ export default function WaterFiltrationPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

@@ -90,6 +90,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/blog/how-to-unclog-toilet", priority: 0.85, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
     { url: "/blog/dishwasher-not-draining-causes-fixes", priority: 0.8, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
     { url: "/blog/how-to-fix-leaking-pipe", priority: 0.8, changeFrequency: "monthly" as const, lastModified: "2026-03-25" },
+    { url: "/blog/signs-your-home-needs-whole-house-repiping", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-15" },
+    { url: "/blog/what-is-a-plumbing-safety-inspection", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-17" },
+    { url: "/blog/radiant-floor-heating-vs-forced-air", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-19" },
+    { url: "/blog/commercial-plumbing-code-compliance-guide", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-22" },
+    { url: "/blog/basement-flood-prevention-checklist", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-24" },
+    { url: "/blog/plumbing-for-55-plus-community-downsizing", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-27" },
+    { url: "/blog/what-drives-bathroom-remodel-cost", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-07-29" },
+    { url: "/blog/how-often-do-you-need-backflow-testing", priority: 0.75, changeFrequency: "monthly" as const, lastModified: "2026-08-01" },
   ];
 
   // Legal pages

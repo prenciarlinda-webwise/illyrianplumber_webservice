@@ -148,7 +148,7 @@ export default function BathroomRemodelingPage() {
                 ))}
               </div>
 
-              {/* Mid-Content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Planning a Bathroom Remodel?</h3>
                 <p className="text-gray-600 mb-4">Get a free plumbing consultation and detailed estimate for your project.</p>
@@ -357,13 +357,13 @@ export default function BathroomRemodelingPage() {
                   We provide professional <strong>bathroom remodeling plumbing</strong> throughout Middlesex County, NJ:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-700">
-                  <span>East Brunswick</span>
-                  <span>Edison</span>
-                  <span>Old Bridge</span>
-                  <span>Sayreville</span>
-                  <span>South Brunswick</span>
-                  <span>North Brunswick</span>
-                  <span>Monroe Township</span>
+                  <Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link>
+                  <Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link>
+                  <Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link>
+                  <Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link>
+                  <Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link>
+                  <Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link>
+                  <Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link>
                   <span>And surrounding areas</span>
                 </div>
               </div>
@@ -424,13 +424,13 @@ export default function BathroomRemodelingPage() {
                 <div className="bg-white rounded-xl shadow-md p-5">
                   <p className="font-bold text-gray-900 mb-3">Service Areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link></li>
                   </ul>
                 </div>
 
@@ -484,6 +484,18 @@ export default function BathroomRemodelingPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

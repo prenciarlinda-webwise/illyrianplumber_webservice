@@ -147,7 +147,7 @@ export default function MonroeTownshipPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumber in Monroe Township, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                Need an emergency plumber in Monroe Township, NJ? Illyrian Plumber runs a 24/7 emergency line staffed by a live dispatcher, not a call center. Licensed NJ Master Plumbers are on call for burst pipes, failed water heaters, no-heat boiler calls, sewer backups, gas leaks, and flooding from any source. Typical Monroe Township response is 15 to 20 minutes from our East Brunswick base.
+                Need an emergency plumber in Monroe Township, NJ? Illyrian Plumber runs a 24/7 emergency line staffed by a live dispatcher, not a call center. Licensed NJ Master Plumbers are on call for burst pipes, failed water heaters, no-heat boiler calls, gas leaks, and flooding from any source. Typical Monroe Township response is 15 to 20 minutes from our East Brunswick base.
               </p>
               <p>
                 Weekends, nights, and holidays are included at the same rates as weekday emergency service, with no surprise surcharges tacked on to your bill. Every estimate is written down and approved before work begins.
@@ -251,7 +251,7 @@ export default function MonroeTownshipPage() {
                   Illyrian Plumber serves every Monroe Township community from our East Brunswick headquarters. Our licensed plumbers cover all Monroe Township zip codes (08831, 08850) and travel Route 18, Route 33, Applegarth Road, Prospect Plains Road, Perrineville Road, and the NJ Turnpike daily to reach Rossmoor, Concordia, Clearbrook, Greenbriar, and every other corner of the township.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving Monroe Township, we handle the full scope of residential plumbing: boiler repair and replacement, water heater installation, tankless water heater upgrades, gas line work, whole-house repiping, drain cleaning, sump pump replacement, bathroom accessibility upgrades, and 24/7 emergency plumbing. Permits are pulled from the Monroe Township Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving Monroe Township, we handle the full scope of residential plumbing: boiler repair and replacement, water heater installation, tankless water heater upgrades, gas line work, whole-house repiping, sump pump replacement, bathroom accessibility upgrades, and 24/7 emergency plumbing. Permits are pulled from the Monroe Township Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   When Monroe Township homeowners search for a boiler repair or plumber near them, they want someone licensed, respectful, and experienced with the adult communities and older housing stock. That is exactly what Illyrian Plumber delivers, from the first call to the final cleanup.

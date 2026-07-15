@@ -84,6 +84,10 @@ export default function WaterHeaterRepairPage() {
       question: "What brands of water heaters do you repair?",
       answer: "We repair all major water heater brands including Rheem, AO Smith, Bradford White, Navien, Rinnai, Noritz, State, Kenmore, GE, and Whirlpool. We service gas, electric, and tankless models. Our plumbers carry common parts for these brands on our service trucks for faster repairs.",
     },
+    {
+      question: "What water heater services does Illyrian Plumber offer in New Jersey?",
+      answer: "Illyrian Plumber offers full water heater services across New Jersey, including repair, replacement, and installation for tank and tankless units, plus dedicated tankless water heater installation for homeowners upgrading to on-demand hot water. We serve East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick, all backed by licensed NJ Master Plumbers and upfront pricing.",
+    },
   ]);
 
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -180,7 +184,7 @@ export default function WaterHeaterRepairPage() {
                 </p>
               </div>
 
-              {/* Mid-content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-gray-900 text-white rounded-xl p-6 mb-12 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <p className="font-bold text-lg">No Hot Water? We Can Help.</p>
@@ -453,6 +457,7 @@ export default function WaterHeaterRepairPage() {
                   { q: "Why does my water heater pilot light keep going out?", a: "A pilot light that keeps going out is most commonly caused by a faulty thermocouple, which is a safety sensor that detects the flame. Other causes include a dirty pilot tube, drafty location, or failing gas valve. Thermocouple replacement typically costs $150-$250 including parts and labor." },
                   { q: "Do you offer emergency water heater repair?", a: "Yes, Illyrian Plumber offers same-day and emergency water heater repair throughout Middlesex County, NJ, including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick." },
                   { q: "What brands of water heaters do you repair?", a: "We repair all major brands including Rheem, AO Smith, Bradford White, Navien, Rinnai, Noritz, State, Kenmore, GE, and Whirlpool. We service gas, electric, and tankless models." },
+                  { q: "What water heater services does Illyrian Plumber offer in New Jersey?", a: "Illyrian Plumber offers full water heater services across New Jersey, including repair, replacement, and installation for tank and tankless units, plus dedicated tankless water heater installation for on-demand hot water. We serve East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick, all backed by licensed NJ Master Plumbers and upfront pricing." },
                 ].map((faq, index) => (
                   <details key={index} className="bg-gray-50 rounded-lg group">
                     <summary className="p-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-100 rounded-lg transition">
@@ -492,13 +497,13 @@ export default function WaterHeaterRepairPage() {
                 <div className="bg-white rounded-xl shadow-md p-5">
                   <p className="font-bold text-gray-900 mb-3">Service Areas</p>
                   <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>East Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Edison</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Sayreville</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Old Bridge</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>Monroe Township</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>South Brunswick</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>North Brunswick</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link></li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link></li>
                   </ul>
                 </div>
                 {/* Services */}
@@ -543,6 +548,18 @@ export default function WaterHeaterRepairPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

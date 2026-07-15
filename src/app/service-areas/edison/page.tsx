@@ -124,7 +124,7 @@ export default function EdisonPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response, Day or Night</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a 24 hour emergency plumber in Edison, NJ</strong>, reaching most Edison addresses within 10 minutes of our East Brunswick base. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, main line backups, and boiler no-heat calls day or night, 365 days a year. Free estimates, upfront pricing, and permits pulled from Edison Township Construction on every job that requires one.
+                <strong>Illyrian Plumber is a 24 hour emergency plumber in Edison, NJ</strong>, reaching most Edison addresses within 10 minutes of our East Brunswick base. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, and boiler no-heat calls day or night, 365 days a year. Free estimates, upfront pricing, and permits pulled from Edison Township Construction on every job that requires one.
               </p>
               <p>
                 When a plumbing emergency hits an Edison home, every minute counts. Our team is the emergency plumber Edison homeowners call because we are based in neighboring East Brunswick and answer the phone with a live dispatcher, not a call center. A licensed plumber is on the road to your Edison address within minutes of your call, with real parts and real tools to fix the problem on the first visit.
@@ -193,7 +193,7 @@ export default function EdisonPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Looking for licensed plumbers in Edison, NJ?</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                Illyrian Plumber is a team of licensed NJ Master Plumbers serving Edison, NJ from our East Brunswick base, roughly 10 minutes away. Our plumbers in Edison handle emergency repairs, water heater and tankless installation, boiler service, gas lines, drain cleaning, and whole-house repiping, with upfront pricing and permits pulled from Edison Township on every job that needs one.
+                Illyrian Plumber is a team of licensed NJ Master Plumbers serving Edison, NJ from our East Brunswick base, roughly 10 minutes away. Our plumbers in Edison handle emergency repairs, water heater and tankless installation, boiler service, gas lines, and whole-house repiping, with upfront pricing and permits pulled from Edison Township on every job that needs one.
               </p>
             </div>
 
@@ -238,7 +238,7 @@ export default function EdisonPage() {
                 Our East Brunswick headquarters is approximately <strong>10 minutes</strong> from most Edison locations. We reach Clara Barton and southern Edison neighborhoods even faster via Route 18, while Stelton and northern Edison are a quick drive up Route 1 or Route 287. Raritan Center and the Oak Tree area are accessible in under 12 minutes in normal traffic.
               </p>
               <p className="text-gray-700 mb-2">
-                For Edison plumbing emergencies (burst pipe, no hot water, active leak, sewer backup, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included, at the same rates as weekday emergency service - no surprise surcharge.
+                For Edison plumbing emergencies (burst pipe, no hot water, active leak, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included, at the same rates as weekday emergency service - no surprise surcharge.
               </p>
               <p className="text-gray-700">
                 For scheduled plumbing service in Edison NJ, we offer flexible appointment windows including same-day and next-day availability when our crew has capacity. Free written estimates on any project over $500, valid for 30 days.
@@ -264,7 +264,7 @@ export default function EdisonPage() {
                   Illyrian Plumber serves every corner of Edison Township from our East Brunswick headquarters. Our licensed plumbers cover all Edison zip codes (08817, 08818, 08820, 08837) and travel the full Route 1, Route 18, Route 27, and Route 287 corridors daily. We work on residential properties near Menlo Park Mall, along the New Jersey Transit Edison Station corridor, and throughout the quieter residential grids of Clara Barton and Nixon.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving Edison NJ, we handle the full scope of residential plumbing: water heater installation and repair, tankless water heater upgrades, boiler service, gas line work, whole-house repiping, drain cleaning, sump pump replacement, and 24/7 emergency plumbing. Permits are pulled from the Edison Township Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving Edison NJ, we handle the full scope of residential plumbing: water heater installation and repair, tankless water heater upgrades, boiler service, gas line work, whole-house repiping, sump pump replacement, and 24/7 emergency plumbing. Permits are pulled from the Edison Township Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   When Edison homeowners search for a plumber Edison NJ, they want someone who knows the area, shows up quickly, and fixes the problem right the first time. That is exactly what Illyrian Plumber delivers - from Roosevelt Park to Oak Tree to the Raritan Center business district.

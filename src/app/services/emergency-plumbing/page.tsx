@@ -75,6 +75,14 @@ const faqData = [
     question: "Do you handle frozen pipe emergencies in winter?",
     answer: "Yes, frozen and burst pipe emergencies are one of our most common winter calls. We respond quickly to thaw frozen pipes before they burst and repair burst pipes that have already caused water damage. We also provide preventive advice to help you avoid frozen pipes in the future.",
   },
+  {
+    question: "How can I find a reliable emergency plumber in NJ?",
+    answer: "Illyrian Plumber is a licensed, insured NJ Master Plumber offering true 24/7 emergency service across East Brunswick, Edison, Old Bridge, Sayreville, and all of Middlesex County. Look for an active NJ Master Plumber license, real customer reviews, upfront pricing before work starts, and a live person answering the phone at 2 AM - not a call center. We meet all four and typically arrive within 30-60 minutes.",
+  },
+  {
+    question: "What are the common causes of plumbing emergencies in New Jersey?",
+    answer: "The most common causes Illyrian Plumber responds to in New Jersey are frozen and burst pipes during winter freeze-thaw cycles, failed water heaters, gas leaks from aging fittings, and sump pump failures during heavy storms. Aging galvanized and polybutylene supply lines in older Middlesex County homes are frequently the root cause behind burst-pipe calls.",
+  },
 ];
 
 const faqSchema = getFaqSchema(faqData);
@@ -179,7 +187,7 @@ export default function EmergencyPlumbingPage() {
                 ))}
               </div>
 
-              {/* Mid-content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-700 text-white rounded-xl p-6 mb-12 text-center">
                 <p className="text-2xl font-bold mb-3">Experiencing a Plumbing Emergency Right Now?</p>
                 <p className="text-red-100 mb-4">Our emergency plumbers are standing by 24/7. Fast response throughout Middlesex County.</p>
@@ -501,6 +509,18 @@ export default function EmergencyPlumbingPage() {
           <p className="mt-6 text-red-200">Available 24 hours a day, 7 days a week, including holidays</p>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

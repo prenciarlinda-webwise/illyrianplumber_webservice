@@ -122,7 +122,7 @@ export default function SouthBrunswickPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Licensed Plumbing Contractor for South Brunswick Homes</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a licensed plumber in South Brunswick, NJ</strong>, serving Kendall Park, Monmouth Junction, Dayton, Kingston, Deans, and every neighborhood along the Route 1 and Route 130 corridors. Our NJ Master Plumbers handle water heater installation, tankless upgrades, boiler repair, gas line work, drain cleaning, sump pump replacement, water filtration, bathroom remodeling, and 24/7 emergency plumbing. Free estimates and upfront written pricing on every South Brunswick job.
+                <strong>Illyrian Plumber is a licensed plumber in South Brunswick, NJ</strong>, serving Kendall Park, Monmouth Junction, Dayton, Kingston, Deans, and every neighborhood along the Route 1 and Route 130 corridors. Our NJ Master Plumbers handle water heater installation, tankless upgrades, boiler repair, gas line work, sump pump replacement, water filtration, bathroom remodeling, and 24/7 emergency plumbing. Free estimates and upfront written pricing on every South Brunswick job.
               </p>
               <p>
                 South Brunswick Township is one of the fastest-growing communities in Middlesex County, with a blend of established neighborhoods in Kendall Park and Monmouth Junction, newer developments, and the more rural character of Dayton, Kingston, and Deans. That diversity creates varied plumbing challenges, from 1950s and 60s original galvanized pipes in Kendall Park to well water and septic systems in Dayton and Kingston. Our South Brunswick plumbers know the whole range.
@@ -248,7 +248,7 @@ export default function SouthBrunswickPage() {
                   Illyrian Plumber serves every South Brunswick community from our East Brunswick headquarters. Our licensed plumbers cover all South Brunswick zip codes (08540, 08810, 08824, 08852) and travel Route 1, Route 130, Route 27, and Route 522 daily to reach Kendall Park, Monmouth Junction, Dayton, Kingston, Deans, and every other corner of the township.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving South Brunswick, we handle the full scope of residential plumbing: boiler repair and service, water heater installation, tankless water heater upgrades, well water filtration and softening, gas line work, whole-house repiping, drain cleaning, sump pump replacement, and 24/7 emergency plumbing. Permits are pulled from the South Brunswick Township Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving South Brunswick, we handle the full scope of residential plumbing: boiler repair and service, water heater installation, tankless water heater upgrades, well water filtration and softening, gas line work, whole-house repiping, sump pump replacement, and 24/7 emergency plumbing. Permits are pulled from the South Brunswick Township Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   Whether you are in a 1960s Cape in Kendall Park, a newer townhome in Monmouth Junction, or a Dayton property on well water, our South Brunswick plumbers arrive with the right parts and the right experience.

@@ -73,6 +73,14 @@ const faqData = [
     question: "What brands of tankless water heaters do you install?",
     answer: "We install all major tankless water heater brands including Navien, Rinnai, Rheem, Noritz, Bosch, and Takagi. Each brand has different features and efficiency ratings. We'll recommend the best option based on your budget, hot water needs, and home requirements.",
   },
+  {
+    question: "What are the benefits of a tankless water heater over a traditional tank water heater in New Jersey?",
+    answer: "Illyrian Plumber installs tankless water heaters across New Jersey because they deliver endless hot water on demand, use 20-34% less energy than a tank unit, last nearly twice as long (20+ years versus 10-12 years for a tank), and free up floor space by mounting on a wall. For NJ homeowners with hard water, pairing a tankless unit with a water softener protects that longer lifespan.",
+  },
+  {
+    question: "How much does it cost to install a tankless water heater in NJ?",
+    answer: "Illyrian Plumber installs tankless water heaters throughout New Jersey for $2,800 to $6,500 installed, including the unit, permit, and inspection. Cost depends on whether your home needs a gas line upgrade, new venting, or electrical work for the conversion from a tank system. We provide a free in-home estimate so you know the exact price before work begins.",
+  },
 ];
 
 export default function TanklessWaterHeaterInstallationPage() {
@@ -231,7 +239,7 @@ export default function TanklessWaterHeaterInstallationPage() {
                 ))}
               </div>
 
-              {/* Mid-Content CTA */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-700 text-white rounded-xl p-8 mb-12 text-center">
                 <h3 className="text-2xl font-bold mb-3">Ready to Go Tankless?</h3>
                 <p className="text-red-100 mb-6 max-w-xl mx-auto">Schedule your free in-home assessment. We evaluate your needs, explain options, and provide a detailed quote with no obligation.</p>
@@ -527,6 +535,18 @@ export default function TanklessWaterHeaterInstallationPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }

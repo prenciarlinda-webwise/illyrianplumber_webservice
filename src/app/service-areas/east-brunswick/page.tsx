@@ -56,6 +56,14 @@ export default function EastBrunswickPage() {
           text: "Yes. We are licensed NJ Master Plumbers and pull all required permits from the East Brunswick Township Construction Office for water heater installations, gas line work, boiler replacements, and repiping. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
         },
       },
+      {
+        "@type": "Question",
+        name: "What should I know before hiring a plumber in East Brunswick NJ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber recommends checking four things before hiring any East Brunswick plumber: an active NJ Master Plumber license, proof of liability insurance, written upfront pricing before work starts, and local response time. Illyrian Plumber meets all four - we are licensed and insured, headquartered at 697 Old Bridge Turnpike, provide written quotes before any work begins, and typically arrive within 5 to 15 minutes anywhere in East Brunswick.",
+        },
+      },
     ],
   };
 
@@ -228,7 +236,7 @@ export default function EastBrunswickPage() {
                 Our Old Bridge Turnpike office puts us 5 to 15 minutes from any East Brunswick address during business hours. For after-hours emergencies, our on-call plumbers live locally and respond faster than any out-of-town competitor.
               </p>
               <p className="text-gray-700 mb-2">
-                For East Brunswick plumbing emergencies (burst pipe, no hot water, active leak, sewer backup, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included at the same rates as weekday emergency service, no surprise surcharge.
+                For East Brunswick plumbing emergencies (burst pipe, no hot water, active leak, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included at the same rates as weekday emergency service, no surprise surcharge.
               </p>
               <p className="text-gray-700">
                 For scheduled work, we offer flexible appointment windows including same-day and next-day availability when our crew has capacity. Free written estimates on any project over $500, valid for 30 days.

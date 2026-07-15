@@ -296,6 +296,28 @@ export default function WaterHeaterInstallationPage() {
         </div>
       </section>
 
+      {/* Mid-page CTA Band */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="bg-red-700 text-white rounded-xl p-6 md:p-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+              <div>
+                <p className="text-2xl font-bold mb-1">Ready for a new water heater?</p>
+                <p className="text-red-100">Call now or request a free estimate. Same-day installation available in Middlesex County.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition text-center whitespace-nowrap">
+                  Call {BUSINESS_INFO.phone}
+                </a>
+                <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-red-700 transition text-center whitespace-nowrap">
+                  Call {BUSINESS_INFO.phone2}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Everything Included split */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">

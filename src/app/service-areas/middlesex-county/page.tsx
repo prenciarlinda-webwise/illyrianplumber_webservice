@@ -37,7 +37,7 @@ export default function MiddlesexCountyPage() {
         name: "Which Middlesex County towns do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve every major Middlesex County township including East Brunswick (our HQ), Edison, Old Bridge, Monroe Township, Sayreville, North Brunswick, South Brunswick, and surrounding areas. If you are unsure whether we cover your address, call and ask.",
+          text: "We serve every major Middlesex County township including East Brunswick (our HQ), Edison, Old Bridge, Monroe Township, Sayreville, North Brunswick, South Brunswick, Piscataway, and surrounding areas. If you are unsure whether we cover your address, call and ask.",
         },
       },
       {
@@ -78,6 +78,14 @@ export default function MiddlesexCountyPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes. We are licensed NJ Master Plumbers and pull permits from the appropriate Construction Office in every Middlesex County municipality we serve. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the common plumbing issues in Middlesex County and how to fix them?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber sees four recurring issues across Middlesex County: water heaters past their 12 to 18 year service life, galvanized or polybutylene supply pipes causing low pressure and rusty water, sump pump failures in low-elevation neighborhoods during storms, and hard water mineral buildup. We fix these with water heater replacement, whole-house repiping, sump pump installation with battery backup, and water filtration or softening systems.",
         },
       },
     ],
@@ -122,7 +130,7 @@ export default function MiddlesexCountyPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Trusted Plumbing Across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber provides full plumbing services across Middlesex County, NJ</strong>, covering the complete range of residential and light commercial plumbing in every major township in the county. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, sewer backups, no-heat boiler emergencies, tankless installations, and 24/7 emergency plumbing from East Brunswick to Monroe Township.
+                <strong>Illyrian Plumber provides full plumbing services across Middlesex County, NJ</strong>, covering the complete range of residential and light commercial plumbing in every major township in the county. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, no-heat boiler emergencies, tankless installations, and 24/7 emergency plumbing from East Brunswick to Monroe Township.
               </p>
               <p>
                 Middlesex County spans diverse housing stock, from 1950s Capes in Kendall Park and Madison Park to newer construction along the Route 1 and Route 18 corridors, and everything in between. We have worked on hundreds of homes across the county and know the common failure points for each era of construction and each township&apos;s permit process. That county-wide experience means we arrive prepared, whether your job is in Parlin, Clara Barton, Livingston Park, or Rossmoor.
@@ -158,7 +166,7 @@ export default function MiddlesexCountyPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumber Across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                Our 24/7 emergency plumber line covers every Middlesex County township. Burst pipes, failed water heaters, gas leaks, sewer backups, no-heat boiler calls, and flooding are all handled by a licensed NJ Master Plumber on call around the clock. Weekends, nights, and holidays included at standard emergency rates, no surprise surcharges.
+                Our 24/7 emergency plumber line covers every Middlesex County township. Burst pipes, failed water heaters, gas leaks, no-heat boiler calls, and flooding are all handled by a licensed NJ Master Plumber on call around the clock. Weekends, nights, and holidays included at standard emergency rates, no surprise surcharges.
               </p>
               <p>
                 Response times depend on the township but typical Middlesex County coverage is 10 to 25 minutes from our East Brunswick base. See the response time section below for town-by-town estimates.
@@ -258,10 +266,10 @@ export default function MiddlesexCountyPage() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
-                  Illyrian Plumber is a licensed NJ Master Plumber and plumbing contractor serving every community in Middlesex County, NJ. Our East Brunswick headquarters at 697 Old Bridge Turnpike gives us direct access to the major arteries of the county: Route 1, Route 18, Route 9, Route 130, Route 27, Route 35, and the NJ Turnpike.
+                  Illyrian Plumber is a licensed NJ Master Plumber and plumbing contractor serving every community in Middlesex County, NJ, including Piscataway. Our East Brunswick headquarters at 697 Old Bridge Turnpike gives us direct access to the major arteries of the county: Route 1, Route 18, Route 9, Route 130, Route 27, Route 35, and the NJ Turnpike.
                 </p>
                 <p>
-                  We handle the full scope of residential and light commercial plumbing across Middlesex County: boiler repair and replacement, water heater installation and repair, tankless water heater upgrades, gas line work, whole-house repiping, drain cleaning, sewer line repair, sump pump replacement, water filtration, bathroom remodeling, and 24/7 emergency plumbing. Permits are pulled from the appropriate township Construction Office for every job that requires one.
+                  We handle the full scope of residential and light commercial plumbing across Middlesex County: boiler repair and replacement, water heater installation and repair, tankless water heater upgrades, gas line work, whole-house repiping, sump pump replacement, water filtration, bathroom remodeling, and 24/7 emergency plumbing. Permits are pulled from the appropriate township Construction Office for every job that requires one.
                 </p>
                 <p>
                   One number, one team, county-wide coverage. That is the Illyrian Plumber promise to Middlesex County homeowners.

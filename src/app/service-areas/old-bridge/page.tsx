@@ -80,6 +80,14 @@ export default function OldBridgePage() {
           text: "We serve every Old Bridge neighborhood including Madison Park, Laurence Harbor, Brownville, Cliffwood Beach, Southwood, and the Route 9 and Route 516 corridors. No part of Old Bridge Township is outside our service area.",
         },
       },
+      {
+        "@type": "Question",
+        name: "What are the common plumbing issues in Old Bridge and how can I prevent them?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber sees four recurring plumbing issues in Old Bridge: aging galvanized supply pipes causing low pressure and rusty water, water heaters past their 10 to 12 year service life, sump pump failures in Laurence Harbor and Cliffwood Beach waterfront homes, and frozen pipes in older homes each winter. Prevention includes annual water heater flushing, testing sump pumps before storm season, and insulating exposed pipes before the first hard freeze.",
+        },
+      },
     ],
   };
 
@@ -122,7 +130,7 @@ export default function OldBridgePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response, Day or Night</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a 24 hour emergency plumber in Old Bridge, NJ</strong>, covering Madison Park, Laurence Harbor, Brownville, Cliffwood Beach, Southwood, and every Old Bridge Township neighborhood. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, main line backups, sump pump failures, and boiler no-heat calls day or night, 365 days a year. Free estimates and upfront pricing on every Old Bridge job.
+                <strong>Illyrian Plumber is a 24 hour emergency plumber in Old Bridge, NJ</strong>, covering Madison Park, Laurence Harbor, Brownville, Cliffwood Beach, Southwood, and every Old Bridge Township neighborhood. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, sump pump failures, and boiler no-heat calls day or night, 365 days a year. Free estimates and upfront pricing on every Old Bridge job.
               </p>
               <p>
                 Old Bridge Township sits close enough to our East Brunswick base that we reach most Old Bridge addresses in 10 to 15 minutes via Route 9 or Route 516. For an active plumbing emergency, that proximity matters. A burst pipe can dump hundreds of gallons into a home before sunrise, and every minute we shave off response time saves the homeowner money and stress.
@@ -233,7 +241,7 @@ export default function OldBridgePage() {
                 Our East Brunswick headquarters is approximately <strong>10 to 15 minutes</strong> from most Old Bridge locations. Madison Park and central Old Bridge are fastest via Route 9. Laurence Harbor and Cliffwood Beach run closer to 12 to 15 minutes depending on traffic on Route 35 and Route 516.
               </p>
               <p className="text-gray-700 mb-2">
-                For active Old Bridge plumbing emergencies (burst pipe, no hot water, active leak, sewer backup, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included at the same rates as weekday service, no surprise surcharge.
+                For active Old Bridge plumbing emergencies (burst pipe, no hot water, active leak, gas smell) we dispatch the nearest available licensed plumber immediately and call you with a live ETA. Weekends, nights, and holidays included at the same rates as weekday service, no surprise surcharge.
               </p>
               <p className="text-gray-700">
                 For scheduled Old Bridge plumbing service, we offer same-day and next-day appointments when our crew has capacity. Free written estimates on any project over $500, valid for 30 days.
@@ -259,7 +267,7 @@ export default function OldBridgePage() {
                   Illyrian Plumber serves every Old Bridge neighborhood from our East Brunswick headquarters. Our licensed plumbers cover all Old Bridge zip codes (08857, 07747) and travel Route 9, Route 516, Route 35, and Route 18 daily to reach Madison Park, Laurence Harbor, Brownville, Cliffwood Beach, Southwood, and every other corner of the township.
                 </p>
                 <p>
-                  As a licensed NJ Master Plumber and plumbing contractor serving Old Bridge NJ, we handle the full scope of residential plumbing: water heater replacement, tankless water heater installation, boiler repair, gas line work, whole-house repiping, drain cleaning, sump pump replacement and battery backup installation, water filtration systems, and 24/7 emergency plumbing. Permits are pulled from the Old Bridge Township Construction Office, and all inspections are coordinated on your behalf.
+                  As a licensed NJ Master Plumber and plumbing contractor serving Old Bridge NJ, we handle the full scope of residential plumbing: water heater replacement, tankless water heater installation, boiler repair, gas line work, whole-house repiping, sump pump replacement and battery backup installation, water filtration systems, and 24/7 emergency plumbing. Permits are pulled from the Old Bridge Township Construction Office, and all inspections are coordinated on your behalf.
                 </p>
                 <p>
                   Whether you live in a waterfront home in Laurence Harbor that needs a robust sump pump system, or a Madison Park split-level that needs a water heater replacement, our Old Bridge plumbers arrive with the right parts and the right expertise for the job.

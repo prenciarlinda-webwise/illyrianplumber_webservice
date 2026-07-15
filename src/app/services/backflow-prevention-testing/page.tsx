@@ -349,7 +349,7 @@ export default function BackflowPreventionPage() {
                 </div>
               </div>
 
-              {/* Mid-Content CTA 1 */}
+              {/* Mid-page CTA Band */}
               <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Schedule Your Annual Backflow Test
@@ -714,13 +714,13 @@ export default function BackflowPreventionPage() {
                   We provide certified backflow prevention testing throughout Middlesex County, NJ:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-700">
-                  <span>East Brunswick</span>
-                  <span>Edison</span>
-                  <span>Old Bridge</span>
-                  <span>Sayreville</span>
-                  <span>South Brunswick</span>
-                  <span>North Brunswick</span>
-                  <span>Monroe Township</span>
+                  <Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link>
+                  <Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link>
+                  <Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link>
+                  <Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link>
+                  <Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link>
+                  <Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link>
+                  <Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link>
                   <span>And surrounding areas</span>
                 </div>
               </div>
@@ -817,7 +817,9 @@ export default function BackflowPreventionPage() {
                     {BUSINESS_INFO.serviceAreas.map((area) => (
                       <li key={area} className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span>
-                        {area}
+                        <Link href={`/service-areas/${area.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-red-700 transition">
+                          {area}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -947,6 +949,18 @@ export default function BackflowPreventionPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-3">
+        <div className="flex gap-2">
+          <a href={BUSINESS_INFO.phoneLink} className="flex-1 bg-red-700 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phoneName}
+          </a>
+          <a href={BUSINESS_INFO.phone2Link} className="flex-1 bg-gray-900 text-white px-4 py-3 rounded-lg font-bold text-center text-sm">
+            Call {BUSINESS_INFO.phone2Name}
+          </a>
+        </div>
+      </div>
     </>
   );
 }
