@@ -46,6 +46,11 @@ export const SERVICE_AREA_ENTITIES = [
     "@id": "https://en.wikipedia.org/wiki/Piscataway,_New_Jersey",
   },
   {
+    "@type": "City",
+    name: "South Amboy",
+    "@id": "https://en.wikipedia.org/wiki/South_Amboy,_New_Jersey",
+  },
+  {
     "@type": "AdministrativeArea",
     name: "Middlesex County",
     "@id": "https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey",

@@ -37,7 +37,15 @@ export default function MiddlesexCountyPage() {
         name: "Which Middlesex County towns do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We serve every major Middlesex County township including East Brunswick (our HQ), Edison, Old Bridge, Monroe Township, Sayreville, North Brunswick, South Brunswick, Piscataway, and surrounding areas. If you are unsure whether we cover your address, call and ask.",
+          text: "We serve every major Middlesex County township including East Brunswick (our HQ), Edison, Old Bridge, Monroe Township, Sayreville, North Brunswick, South Brunswick, Piscataway, South Amboy, and surrounding areas. If you are unsure whether we cover your address, call and ask.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you serve Central New Jersey?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Illyrian Plumber is a licensed NJ Master Plumber based in East Brunswick, in the heart of Central New Jersey, and our service area covers all of Middlesex County: East Brunswick, Edison, Old Bridge, Sayreville, South Amboy, Monroe Township, North and South Brunswick, and Piscataway. If your Central New Jersey address falls outside these towns, call us and we will confirm whether we can reach you.",
         },
       },
       {
@@ -266,7 +274,7 @@ export default function MiddlesexCountyPage() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
-                  Illyrian Plumber is a licensed NJ Master Plumber and plumbing contractor serving every community in Middlesex County, NJ, including Piscataway. Our East Brunswick headquarters at 697 Old Bridge Turnpike gives us direct access to the major arteries of the county: Route 1, Route 18, Route 9, Route 130, Route 27, Route 35, and the NJ Turnpike.
+                  Illyrian Plumber is a licensed NJ Master Plumber and plumbing contractor serving every community in Middlesex County, NJ, including Piscataway and South Amboy. Our East Brunswick headquarters at 697 Old Bridge Turnpike sits in the heart of Central New Jersey, giving us direct access to the major arteries of the county: Route 1, Route 18, Route 9, Route 130, Route 27, Route 35, and the NJ Turnpike.
                 </p>
                 <p>
                   We handle the full scope of residential and light commercial plumbing across Middlesex County: boiler repair and replacement, water heater installation and repair, tankless water heater upgrades, gas line work, whole-house repiping, sump pump replacement, water filtration, bathroom remodeling, and 24/7 emergency plumbing. Permits are pulled from the appropriate township Construction Office for every job that requires one.

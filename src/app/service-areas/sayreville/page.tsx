@@ -104,6 +104,14 @@ export default function SayrevillePage() {
           text: "Illyrian Plumber sees four issues most often in Sayreville: aging water heaters past their 12 to 18 year service life, galvanized supply lines in older Parlin and Morgan homes causing low pressure, sump pump failures near the Raritan River during storms, and hard water mineral buildup. We fix each with water heater replacement, whole-house repiping, sump pump service with battery backup, and water filtration or softening.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Where can I get tankless water heater replacement near Sayreville, NJ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Illyrian Plumber installs and replaces tankless water heaters for Sayreville homeowners, including Parlin, Morgan, and Sayreville proper, from our East Brunswick base about 10 to 15 minutes away. We install gas and electric tankless units from Navien, Rinnai, and Rheem, with typical installed cost of $2,800 to $6,500 including permit and inspection. Licensed NJ Master Plumbers, upfront written pricing, and same-day scheduling in most cases.",
+        },
+      },
     ],
   };
 
