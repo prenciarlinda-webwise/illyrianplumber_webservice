@@ -95,6 +95,12 @@ function classify(
     return { priority: 0.75, changeFrequency: "monthly" };
   }
 
+  // Combo pages (/{service}-{location}, e.g. /emergency-plumber-east-brunswick) -
+  // flat top-level routes, high commercial intent, treated like a featured service.
+  if (route.startsWith("/emergency-plumber-")) {
+    return { priority: 0.9, changeFrequency: "weekly" };
+  }
+
   // Unclassified static page - safe, low-attention default.
   return { priority: 0.6, changeFrequency: "monthly" };
 }
