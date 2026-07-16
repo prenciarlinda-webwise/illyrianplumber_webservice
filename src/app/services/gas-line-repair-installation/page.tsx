@@ -370,13 +370,13 @@ export default function GasLineRepairPage() {
                 <div className="bg-gray-50 rounded-xl p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3">Service Areas</h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>East Brunswick, NJ</li>
-                    <li>Edison, NJ</li>
-                    <li>Old Bridge, NJ</li>
-                    <li>Sayreville, NJ</li>
-                    <li>South Brunswick, NJ</li>
-                    <li>North Brunswick, NJ</li>
-                    <li>Monroe Township, NJ</li>
+                    <li><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison, NJ</Link></li>
+                    <li><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge, NJ</Link></li>
+                    <li><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville, NJ</Link></li>
+                    <li><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick, NJ</Link></li>
+                    <li><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township, NJ</Link></li>
                   </ul>
                   <Link href="/service-areas" className="text-red-700 hover:text-red-800 text-sm font-medium mt-3 block">
                     View All Service Areas →

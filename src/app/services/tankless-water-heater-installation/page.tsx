@@ -482,9 +482,15 @@ export default function TanklessWaterHeaterInstallationPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-3">Service Areas</h3>
                   <p className="text-sm text-gray-600 mb-3">Tankless water heater installation throughout Middlesex County:</p>
                   <div className="flex flex-wrap gap-2">
-                    {["East Brunswick", "Edison", "North Brunswick", "South Brunswick", "Old Bridge", "Sayreville", "Monroe Township", "New Brunswick", "Highland Park", "Milltown", "South River", "Spotswood"].map((area) => (
-                      <span key={area} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 border border-gray-200">{area}</span>
-                    ))}
+                    {["East Brunswick", "Edison", "North Brunswick", "South Brunswick", "Old Bridge", "Sayreville", "Monroe Township", "New Brunswick", "Highland Park", "Milltown", "South River", "Spotswood"].map((area) => {
+                      const slug = area.toLowerCase().replace(/\s+/g, "-");
+                      const hasPage = ["east-brunswick", "edison", "north-brunswick", "south-brunswick", "old-bridge", "sayreville", "monroe-township"].includes(slug);
+                      return hasPage ? (
+                        <Link key={area} href={`/service-areas/${slug}`} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 border border-gray-200 hover:border-red-700 hover:text-red-700 transition">{area}</Link>
+                      ) : (
+                        <span key={area} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 border border-gray-200">{area}</span>
+                      );
+                    })}
                   </div>
                 </div>
 
