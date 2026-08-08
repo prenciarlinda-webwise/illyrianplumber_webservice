@@ -135,6 +135,7 @@ export function getLocalBusinessSchema() {
       BUSINESS_INFO.socialMedia.facebook,
       BUSINESS_INFO.socialMedia.instagram,
       BUSINESS_INFO.socialMedia.google,
+      "https://www.illyriangroupcorp.com/",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

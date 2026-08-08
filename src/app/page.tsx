@@ -105,6 +105,19 @@ function HeroSection() {
             </p>
 
             <TrustBadges />
+
+            <p className="text-sm text-gray-400 mt-4">
+              Need renovation or general contracting work in NYC? Our sister company{" "}
+              <a
+                href="https://www.illyriangroupcorp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-400 hover:text-red-300 underline underline-offset-2"
+              >
+                Illyrian Group Corp
+              </a>{" "}
+              handles gut renovations, kitchens, and bathrooms across Manhattan, Brooklyn, Queens, and the Bronx.
+            </p>
           </div>
 
           {/* Right: lead form */}
