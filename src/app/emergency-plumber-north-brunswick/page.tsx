@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import LeadForm from "@/components/LeadForm";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in North Brunswick, NJ - 24/7",
@@ -126,11 +129,11 @@ export default function EmergencyPlumberNorthBrunswickPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main Content */}
-            <div className="flex-1 min-w-0 max-w-3xl">
+          <div className="max-w-3xl mx-auto">
 
               {/* Real emergency calls */}
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Real emergency calls in North Brunswick</h2>
@@ -210,23 +213,33 @@ export default function EmergencyPlumberNorthBrunswickPage() {
                   </div>
                 </div>
               </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Why homeowners and landlords call */}
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why North Brunswick homeowners and landlords call us for emergencies</h2>
-              <div className="grid md:grid-cols-2 gap-4 mb-12">
-                {[
-                  "About 10 minute response from our East Brunswick headquarters",
-                  "Live dispatcher day or night, never voicemail or a call center",
-                  "Licensed NJ Master Plumbers with full insurance on every job",
-                  "Upfront written pricing before any repair begins",
-                  "Experienced coordinating access and billing with landlords and property managers",
-                  "Permits pulled from the North Brunswick Township Construction Office when the emergency requires follow-up work",
-                ].map((reason, index) => (
-                  <div key={index} className="bg-green-50 rounded-lg p-4">
-                    <span className="text-gray-700">{reason}</span>
-                  </div>
-                ))}
-              </div>
+      {/* Full-bleed differentiator band replacing flat "why us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why North Brunswick calls us first for emergencies"
+        items={[
+          { icon: "clock", title: "Fast dispatch time", description: "Our East Brunswick headquarters keeps us close, so a licensed plumber typically reaches North Brunswick within about 10 minutes of your call." },
+          { icon: "bolt", title: "Live dispatcher 24/7", description: "A real person answers every call, day or night. No voicemail, no call center, no waiting on a callback during an emergency." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber, fully insured on every emergency job." },
+          { icon: "dollar", title: "Upfront written pricing", description: "You see and approve the price before any repair begins, with no surprise charges once the work is done." },
+          { icon: "home", title: "Landlord friendly billing", description: "We coordinate access and billing directly with property managers and landlords, common near the Rutgers area's rental-heavy blocks." },
+          { icon: "wrench", title: "Permits handled for you", description: "When an emergency repair needs a follow-up permit, we pull it from the North Brunswick Township Construction Office and manage the inspection." },
+        ]}
+      />
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="Trusted for North Brunswick plumbing emergencies"
+        subheading="Real reviews from real burst pipes, no-heat calls, and gas line emergencies."
+      />
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
 
               {/* Neighborhoods */}
               <h2 className="text-3xl font-bold text-gray-900 mb-6">North Brunswick neighborhoods we cover</h2>
@@ -278,51 +291,30 @@ export default function EmergencyPlumberNorthBrunswickPage() {
                   <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
                   <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
                 </Link>
+                <Link href="/services/tankless-water-heater-installation" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
+                  <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless Water Heater Installation</p>
+                  <p className="text-gray-600 text-sm">On-demand hot water, no tank to fail.</p>
+                </Link>
+                <Link href="/services/boiler-repair-service" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
+                  <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Boiler Repair Service</p>
+                  <p className="text-gray-600 text-sm">Same-day boiler repair across Middlesex County.</p>
+                </Link>
               </div>
-            </div>
 
-            {/* Sidebar */}
-            <aside className="hidden lg:block lg:w-72 flex-shrink-0">
-              <div className="sticky top-[6rem] space-y-6">
-                <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
-                  <p className="text-lg font-bold text-gray-900 mb-1">Emergency in North Brunswick?</p>
-                  <p className="text-gray-600 text-sm mb-4">About 10 minute response, 24/7.</p>
-                  <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">
-                    Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-                  </a>
-                  <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">
-                    Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-                  </a>
-                  <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Service Areas</p>
-                  <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link></li>
-                  </ul>
-                  <Link href="/service-areas" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Service Areas</Link>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Our Services</p>
-                  <ul className="space-y-2 text-sm">
-                    <li><Link href="/services/emergency-plumbing" className="text-gray-700 hover:text-red-700 transition">24/7 Emergency Plumbing</Link></li>
-                    <li><Link href="/services/tankless-water-heater-installation" className="text-gray-700 hover:text-red-700 transition">Tankless Water Heater Installation</Link></li>
-                    <li><Link href="/services/boiler-repair-service" className="text-gray-700 hover:text-red-700 transition">Boiler Repair Service</Link></li>
-                    <li><Link href="/services/gas-line-repair-installation" className="text-gray-700 hover:text-red-700 transition">Gas Line Repair &amp; Installation</Link></li>
-                    <li><Link href="/services/whole-house-repiping" className="text-gray-700 hover:text-red-700 transition">Whole House Repiping</Link></li>
-                  </ul>
-                  <Link href="/services" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Services</Link>
+              {/* Nearby */}
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Also serving</h3>
+                <p className="text-gray-600 mb-4">Illyrian Plumber&apos;s emergency line covers all of Middlesex County from this East Brunswick base.</p>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 font-medium">East Brunswick</Link>
+                  <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 font-medium">Edison</Link>
+                  <Link href="/service-areas/sayreville" className="text-red-700 hover:text-red-800 font-medium">Sayreville</Link>
+                  <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 font-medium">Old Bridge</Link>
+                  <Link href="/service-areas/monroe-township" className="text-red-700 hover:text-red-800 font-medium">Monroe Township</Link>
+                  <Link href="/service-areas/south-brunswick" className="text-red-700 hover:text-red-800 font-medium">South Brunswick</Link>
+                  <Link href="/service-areas/middlesex-county" className="text-red-700 hover:text-red-800 font-medium">All of Middlesex County</Link>
                 </div>
               </div>
-            </aside>
           </div>
         </div>
       </section>

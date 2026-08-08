@@ -114,7 +114,7 @@ export default function TrenchlessSewerRepairGuidePost() {
         name: "Do I need a permit for sewer line repair in New Jersey?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, New Jersey requires plumbing permits for sewer line repair and replacement. In Middlesex County, you will need a plumbing permit from your local building department. Some municipalities also require a street opening permit if the work connects to the municipal sewer main. As licensed plumbers, we handle all permit applications and coordinate inspections.",
+          text: "Yes, New Jersey requires plumbing permits for sewer line repair and replacement. In Middlesex County, you will need a plumbing permit from your local building department. Some municipalities also require a street opening permit if the work connects to the municipal sewer main. Licensed plumbers performing the work typically handle the permit applications and coordinate inspections.",
         },
       },
       {
@@ -185,7 +185,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                 When your sewer line fails, the first thing most homeowners picture is a backhoe tearing up their entire yard. But <strong>trenchless sewer repair</strong> has changed the game -allowing plumbers to repair or replace underground sewer pipes with minimal digging, often in just one day. The question is: which method is right for your situation, and what will it actually cost?
               </p>
               <p className="text-gray-700">
-                As licensed plumbers who perform sewer line repair and replacement throughout Middlesex County, we have seen firsthand how trenchless technology saves homeowners thousands of dollars in property restoration while delivering longer-lasting results. In this comprehensive guide, we will walk you through every trenchless method, compare costs and timelines, explain when traditional excavation is still necessary, and help you make an informed decision about your sewer line repair. If you suspect a sewer problem but aren&apos;t sure, our guide on <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800 underline">signs of a slab leak or sewer line issue</Link> can help you identify the warning signs.
+                Licensed plumbers who perform sewer line repair and replacement throughout Middlesex County have seen firsthand how trenchless technology saves homeowners thousands of dollars in property restoration while delivering longer-lasting results. In this comprehensive guide, we will walk you through every trenchless method, compare costs and timelines, explain when traditional excavation is still necessary, and help you make an informed decision about your sewer line repair. If you suspect a sewer problem but aren&apos;t sure, our guide on <Link href="/blog/signs-of-slab-leak-sewer-line" className="text-red-700 hover:text-red-800 underline">signs of a slab leak or sewer line issue</Link> can help you identify the warning signs.
               </p>
             </div>
 
@@ -981,11 +981,11 @@ export default function TrenchlessSewerRepairGuidePost() {
               <div className="space-y-4 mb-6">
                 <div className="bg-orange-50 border-l-4 border-orange-400 p-4">
                   <h3 className="font-bold text-gray-900 mb-2">Complete Pipe Collapse</h3>
-                  <p className="text-gray-700 text-sm">When the pipe has completely collapsed and no pathway remains, neither lining nor bursting can work. A fully collapsed section requires excavation to remove the debris and install new pipe. In some cases, we can combine methods -excavating only the collapsed section and using trenchless for the rest.</p>
+                  <p className="text-gray-700 text-sm">When the pipe has completely collapsed and no pathway remains, neither lining nor bursting can work. A fully collapsed section requires excavation to remove the debris and install new pipe. In some cases, contractors combine methods -excavating only the collapsed section and using trenchless for the rest.</p>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-400 p-4">
                   <h3 className="font-bold text-gray-900 mb-2">Severe Belly or Sag</h3>
-                  <p className="text-gray-700 text-sm">A belly is a low spot in the pipe where water and waste pool, causing chronic backups and sediment buildup. Trenchless methods follow the existing pipe path and cannot correct the grade. Traditional excavation allows us to re-slope the pipe at the correct grade (1/4 inch per foot for 4-inch pipe).</p>
+                  <p className="text-gray-700 text-sm">A belly is a low spot in the pipe where water and waste pool, causing chronic backups and sediment buildup. Trenchless methods follow the existing pipe path and cannot correct the grade. Traditional excavation allows the pipe to be re-sloped at the correct grade (1/4 inch per foot for 4-inch pipe).</p>
                 </div>
                 <div className="bg-orange-50 border-l-4 border-orange-400 p-4">
                   <h3 className="font-bold text-gray-900 mb-2">Multiple Sharp Direction Changes</h3>
@@ -1020,7 +1020,7 @@ export default function TrenchlessSewerRepairGuidePost() {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-gray-900 mb-1">Our Plumbing Services</p>
-                <p className="text-sm text-gray-600 mb-2">Expert drain and plumbing diagnostics, camera inspection, and a full range of repair services. We assess every situation before recommending the right solution.</p>
+                <p className="text-sm text-gray-600 mb-2">We don&apos;t perform sewer repair or camera inspection, but our licensed plumbers handle water heater repair, leak detection, gas line services, repiping, and more across Middlesex County.</p>
                 <Link href="/services" className="text-red-700 hover:text-red-800 font-medium text-sm">View Our Services</Link>
               </div>
             </div>
@@ -1067,7 +1067,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                   </li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-4 italic">
-                  Many plumbers, including us, will credit the camera inspection cost toward the repair if you choose to proceed with the work.
+                  Many trenchless repair companies will credit the camera inspection cost toward the repair if you choose to proceed with the work.
                 </p>
               </div>
 
@@ -1157,7 +1157,7 @@ export default function TrenchlessSewerRepairGuidePost() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Middlesex County Sewer Line Considerations</h2>
 
               <p className="text-gray-700 mb-6">
-                As plumbers who work exclusively in Middlesex County -including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick -we have detailed knowledge of the sewer conditions unique to this area. Here is what homeowners in our service area should know:
+                Trenchless sewer contractors working throughout Middlesex County -including East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick -see consistent patterns in the sewer conditions unique to this area. Here is what homeowners here should know:
               </p>
 
               <div className="space-y-4">
@@ -1171,7 +1171,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">NJ Permits and Municipal Requirements</h4>
-                  <p className="text-gray-700">New Jersey requires a plumbing permit for any sewer line repair or replacement. In most Middlesex County municipalities, you will need to submit a permit application to the local building department before work begins. If the sewer connects to a municipal main under a public road or sidewalk, a street opening permit may also be required. Some municipalities, including Edison and Old Bridge, have specific requirements for sewer lateral connections. As licensed NJ plumbers, we handle all permit applications, scheduling of inspections, and ensure the work meets NJ plumbing code requirements.</p>
+                  <p className="text-gray-700">New Jersey requires a plumbing permit for any sewer line repair or replacement. In most Middlesex County municipalities, you will need to submit a permit application to the local building department before work begins. If the sewer connects to a municipal main under a public road or sidewalk, a street opening permit may also be required. Some municipalities, including Edison and Old Bridge, have specific requirements for sewer lateral connections. As with any licensed NJ plumbing work, the contractor performing the repair typically handles the permit applications, scheduling of inspections, and ensures the work meets NJ plumbing code requirements.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Soil Conditions and Pipe Depth</h4>
@@ -1239,7 +1239,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
                   <div className="px-5 pb-5">
-                    <p className="text-gray-700">Partially collapsed pipes can be fixed with pipe bursting, which fractures the old pipe outward. Fully collapsed pipes cannot be fixed with pipe lining (no structure for the liner) and may not be passable for pipe bursting equipment. For full collapses, we often use a hybrid approach: excavate only the collapsed section (a spot repair) and use trenchless methods for the remaining line, minimizing overall disruption.</p>
+                    <p className="text-gray-700">Partially collapsed pipes can be fixed with pipe bursting, which fractures the old pipe outward. Fully collapsed pipes cannot be fixed with pipe lining (no structure for the liner) and may not be passable for pipe bursting equipment. For full collapses, contractors often use a hybrid approach: excavate only the collapsed section (a spot repair) and use trenchless methods for the remaining line, minimizing overall disruption.</p>
                   </div>
                 </details>
 
@@ -1249,7 +1249,7 @@ export default function TrenchlessSewerRepairGuidePost() {
                     <span className="text-gray-500 group-open:rotate-180 transition-transform">+</span>
                   </summary>
                   <div className="px-5 pb-5">
-                    <p className="text-gray-700">Yes, New Jersey requires a plumbing permit for sewer line repair and replacement. In Middlesex County municipalities, you submit the permit application to your local building department. If the work involves opening a public road or sidewalk, a street opening permit is also required. We handle all permit applications and coordinate municipal inspections as part of our service.</p>
+                    <p className="text-gray-700">Yes, New Jersey requires a plumbing permit for sewer line repair and replacement. In Middlesex County municipalities, you submit the permit application to your local building department. If the work involves opening a public road or sidewalk, a street opening permit is also required. The contractor performing the repair typically handles the permit applications and coordinates municipal inspections as part of the service.</p>
                   </div>
                 </details>
 

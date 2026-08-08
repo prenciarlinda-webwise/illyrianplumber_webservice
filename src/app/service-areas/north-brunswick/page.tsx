@@ -5,6 +5,10 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
   title: "Plumber in North Brunswick, NJ - 24/7",
@@ -131,6 +135,8 @@ export default function NorthBrunswickPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -178,24 +184,30 @@ export default function NorthBrunswickPage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "10-minute response time from our East Brunswick headquarters",
-                "Direct access via Route 1, Route 130, and Route 27",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Experienced with the full range of North Brunswick housing stock",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed differentiator band replacing flat "why choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="What North Brunswick homeowners get with Illyrian Plumber"
+        items={[
+          { icon: "clock", title: "Fast response time", description: "Our East Brunswick headquarters sits minutes away, so a licensed plumber typically reaches North Brunswick homes within 10 minutes." },
+          { icon: "home", title: "Direct route access", description: "Route 1, Route 130, and Route 27 connect us directly to every North Brunswick neighborhood, from Livingston Park to the Rutgers area." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber, fully insured on every job we run in North Brunswick." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Burst pipes and no-heat calls do not wait for business hours, so we answer and dispatch day or night, weekends and holidays included." },
+          { icon: "wrench", title: "Over 10 years local", description: "More than a decade of hands-on experience across Middlesex County means we have seen and fixed nearly every plumbing issue North Brunswick homes throw at us." },
+          { icon: "dollar", title: "Upfront pricing", description: "You get a written price before any work starts, with no hidden fees or surprise charges added to the invoice." },
+          { icon: "wrench", title: "Housing stock expertise", description: "From mid-century Livingston Park homes to newer Route 130 construction and Rutgers-area rentals, we know the typical failure points of each era." },
+          { icon: "dollar", title: "Free estimates", description: "Free written estimates on major plumbing projects, so you can compare before committing to any repair." },
+        ]}
+      />
+
+      {/* Continued content -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Mid-page CTA Band */}
             <div className="bg-red-700 text-white rounded-xl p-6 md:p-8 mb-12">
@@ -284,6 +296,21 @@ export default function NorthBrunswickPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="Reviews from North Brunswick homeowners"
+        subheading="See what neighbors near the Rutgers area and Livingston Park say about our plumbing work."
+      />
+
+      {/* FAQ + resources -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* FAQ Section */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4 mb-12">
@@ -301,24 +328,16 @@ export default function NorthBrunswickPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/signs-water-heater-dying" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
-                <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
-              </Link>
-              <Link href="/blog/common-boiler-problems-winter" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Common Boiler Problems in Winter</p>
-                <p className="text-gray-600 text-sm">Troubleshoot heating issues in your home.</p>
-              </Link>
-              <Link href="/blog/gas-leak-detection-safety" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Gas Leak Detection &amp; Safety</p>
-                <p className="text-gray-600 text-sm">Keep your family safe from gas leaks.</p>
-              </Link>
-              <Link href="/blog/tankless-vs-tank-water-heater" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless vs Tank Water Heaters</p>
-                <p className="text-gray-600 text-sm">Compare options for your home upgrade.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", description: "Know when it is time for a replacement." },
+                  { label: "Common Boiler Problems in Winter", href: "/blog/common-boiler-problems-winter", description: "Troubleshoot heating issues in your home." },
+                  { label: "Gas Leak Detection & Safety", href: "/blog/gas-leak-detection-safety", description: "Keep your family safe from gas leaks." },
+                  { label: "Tankless vs Tank Water Heaters", href: "/blog/tankless-vs-tank-water-heater", description: "Compare options for your home upgrade." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}

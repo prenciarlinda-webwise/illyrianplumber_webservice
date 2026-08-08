@@ -4,6 +4,9 @@ import { Metadata } from "next";
 import { BUSINESS_INFO, SERVICE_SILOS } from "@/lib/constants";
 import LeadForm from "@/components/LeadForm";
 import TrustBadges from "@/components/TrustBadges";
+import StatsStrip from "@/components/StatsStrip";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import Testimonials from "@/components/Testimonials";
 
 const homeFaqs = [
   {
@@ -108,30 +111,6 @@ function HeroSection() {
           <div className="lg:col-span-2">
             <LeadForm service="General Inquiry" />
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StatsSection() {
-  const stats = [
-    { value: BUSINESS_INFO.stats.happyClients, label: "Happy Clients" },
-    { value: BUSINESS_INFO.stats.projectsCompleted, label: "Projects Completed" },
-    { value: BUSINESS_INFO.stats.yearsExperience, label: "Years Experience" },
-    { value: BUSINESS_INFO.stats.responseTime, label: "Avg Response" },
-  ];
-
-  return (
-    <section className="bg-red-700 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">{stat.value}</div>
-              <div className="text-red-100 text-sm">{stat.label}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -257,25 +236,6 @@ function ResidentialPlumbingNJSection() {
 }
 
 function WhyChooseUsSection() {
-  const reasons = [
-    {
-      title: "24/7 Emergency Response",
-      description: "Plumbing emergencies don't wait. We're available around the clock, every day of the year.",
-    },
-    {
-      title: "Licensed & Insured",
-      description: "Fully licensed master plumbers with comprehensive insurance. Your property is protected.",
-    },
-    {
-      title: "Upfront Pricing",
-      description: "No hidden fees. Get a detailed quote before we start. What we quote is what you pay.",
-    },
-    {
-      title: "100% Satisfaction Guarantee",
-      description: "We stand behind our work. Not satisfied? We'll make it right, guaranteed.",
-    },
-  ];
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -329,17 +289,9 @@ function WhyChooseUsSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why East Brunswick homeowners trust Illyrian Plumber
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600">
               For over 15 years, we have built our reputation on honest work, fair prices, and exceptional service. When you call Illyrian Plumber, you get master plumbers who care about doing the job right.
             </p>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {reasons.map((reason, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow-sm">
-                  <p className="font-semibold text-gray-900 mb-1">{reason.title}</p>
-                  <p className="text-sm text-gray-600">{reason.description}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
@@ -390,63 +342,6 @@ function WorkGallerySection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TestimonialsSection() {
-  const testimonials = [
-    {
-      name: "Donna Penn",
-      location: "Google Review",
-      text: "Illyrian Plumbers did a fantastic job with our emergency plumbing issue. Our plumber was professional and thorough with our repair. A burst pipe is never a good situation, but the response by Illyrian Plumbers turned our messy emergency into a smooth repair.",
-      rating: 5,
-    },
-    {
-      name: "Drin Gjonbalaj",
-      location: "Google Review",
-      text: "Illyrian Plumbing replaced our old oil boiler with a Navien combi boiler, and the whole experience was great from start to finish. They showed up on time, were very professional, and clearly knew what they were doing.",
-      rating: 5,
-    },
-    {
-      name: "Sam Kadric",
-      location: "Google Review",
-      text: "Dardan and his team were amazing. They did a full renovation including all new plumbing. The professionalism and communication by the team was terrific. Dardan helped me stay in my budget and timeline.",
-      rating: 5,
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What East Brunswick homeowners say
-          </h2>
-          <p className="text-xl text-gray-400">
-            Real Google reviews from across Middlesex County, NJ.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 rounded-xl p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-gray-300 mb-6">&quot;{testimonial.text}&quot;</p>
-              <div>
-                <p className="font-semibold text-white">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.location}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -528,7 +423,7 @@ function EmergencyCTASection() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-white">
           <div className="text-center lg:text-left">
             <p className="text-3xl md:text-4xl font-bold mb-4">
-              Need a Plumber? Call Now for Fast Service
+              Need a plumber? Call now for fast service
             </p>
             <p className="text-xl text-red-100">
               24-hour emergency plumber ready to help. Free estimates on all plumbing services.
@@ -726,14 +621,28 @@ export default function HomePage() {
       />
 
       <HeroSection />
-      <StatsSection />
+      <StatsStrip />
       <EmergencyPlumberSection />
       <ServicesSection />
       <ResidentialPlumbingNJSection />
       <WhyChooseUsSection />
+      <DifferentiatorGrid
+        tone="band"
+        heading="What backs every Illyrian Plumber visit"
+        subheading="The same standards on a routine repair as on a 2 AM emergency call."
+        items={[
+          { icon: "bolt", title: "24/7 emergency response", description: "Plumbing emergencies do not wait for business hours. We answer and dispatch around the clock, every day of the year." },
+          { icon: "shield", title: "Licensed and insured", description: "Every job is performed by a licensed NJ Master Plumber, fully insured so your property is protected." },
+          { icon: "dollar", title: "Upfront pricing", description: "No hidden fees. You get a detailed written quote before we start, and what we quote is what you pay." },
+          { icon: "wrench", title: "100% satisfaction guarantee", description: "We stand behind every repair and installation. If something is not right, we come back and make it right." },
+        ]}
+      />
       <PricingSection />
       <WorkGallerySection />
-      <TestimonialsSection />
+      <Testimonials
+        heading="What Middlesex County homeowners say"
+        subheading="Real Google reviews from East Brunswick and across Middlesex County, NJ."
+      />
       <ServiceAreasSection />
       <EastBrunswickCoverageSection />
       <QuickAnswersSection />

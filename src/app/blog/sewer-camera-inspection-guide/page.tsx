@@ -192,7 +192,7 @@ export default function SewerCameraInspectionGuidePost() {
             <div className="bg-gray-50 border-l-4 border-red-700 rounded-r-lg p-5 my-8">
               <p className="font-bold text-gray-900 mb-2">About Illyrian Plumber</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Licensed master plumbers specializing in high-end mechanical plumbing and sewer diagnostics in Middlesex County, NJ. We offer <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
+                Licensed master plumbers specializing in high-end mechanical plumbing and water heating systems in Middlesex County, NJ. We offer <Link href="/services/water-leak-detection" className="text-red-700 hover:text-red-800">water leak detection</Link>, <Link href="/services/whole-house-repiping" className="text-red-700 hover:text-red-800">whole house repiping</Link>, <Link href="/services/gas-line-repair-installation" className="text-red-700 hover:text-red-800">gas line services</Link>, and <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800">24/7 emergency plumbing</Link> across East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick. 750+ projects completed since 2010.
               </p>
             </div>
 
@@ -588,7 +588,7 @@ export default function SewerCameraInspectionGuidePost() {
               </div>
               <div className="flex-1">
                 <p className="font-bold text-gray-900 mb-1">Our Plumbing Services</p>
-                <p className="text-sm text-gray-600 mb-2">Expert drain diagnostics, hydro jetting, and a full range of plumbing services. Camera inspection available to pinpoint issues before any work begins.</p>
+                <p className="text-sm text-gray-600 mb-2">We don&apos;t perform camera inspections or hydro jetting, but if an inspection uncovers a leak or repiping need, our licensed plumbers handle water leak detection, whole house repiping, gas line services, and emergency plumbing across Middlesex County.</p>
                 <Link href="/services" className="text-red-700 hover:text-red-800 font-medium text-sm">View Our Services</Link>
               </div>
             </div>
@@ -626,7 +626,7 @@ export default function SewerCameraInspectionGuidePost() {
                   </li>
                 </ul>
                 <p className="text-sm text-gray-600 mt-4 italic">
-                  Many plumbers, including us, will credit the camera inspection cost toward the repair if you choose to proceed with the work.
+                  Many sewer camera inspection companies will credit the inspection cost toward the repair if you choose to proceed with the work.
                 </p>
               </div>
 
@@ -757,7 +757,7 @@ export default function SewerCameraInspectionGuidePost() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Sewer Line Considerations for Middlesex County, NJ</h2>
 
               <p className="text-gray-700 mb-6">
-                Middlesex County has unique sewer infrastructure characteristics that every homeowner should understand. Our experience performing hundreds of camera inspections across East Brunswick, Edison, Old Bridge, Sayreville, Monroe Township, South Brunswick, and North Brunswick has taught us what to expect in this area.
+                Middlesex County has unique sewer infrastructure characteristics that every homeowner should understand. Sewer camera specialists working across East Brunswick, Edison, Old Bridge, Sayreville, Monroe Township, South Brunswick, and North Brunswick consistently report the same patterns in this area.
               </p>
 
               <div className="space-y-4 mb-6">
@@ -771,7 +771,7 @@ export default function SewerCameraInspectionGuidePost() {
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Soil Conditions and Pipe Settlement</h4>
-                  <p className="text-gray-700">Much of Middlesex County sits on clay-heavy soil that expands and contracts with moisture changes. This soil movement causes pipe settlement over time, creating bellied sections and joint separations. Areas along the Raritan River and in low-lying sections of Sayreville and Old Bridge are particularly prone to this type of ground movement. We frequently find bellied pipe sections in these neighborhoods during camera inspections.</p>
+                  <p className="text-gray-700">Much of Middlesex County sits on clay-heavy soil that expands and contracts with moisture changes. This soil movement causes pipe settlement over time, creating bellied sections and joint separations. Areas along the Raritan River and in low-lying sections of Sayreville and Old Bridge are particularly prone to this type of ground movement. Camera inspections in these neighborhoods frequently turn up bellied pipe sections.</p>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-bold text-gray-900 mb-2">Homeowner Responsibility vs Municipal</h4>

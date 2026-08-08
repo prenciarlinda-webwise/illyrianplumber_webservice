@@ -9,6 +9,24 @@ import { BUSINESS_INFO } from "@/lib/constants";
 const blogPosts = [
   // July - August 2026
   {
+    title: "How to Clean a Refrigerator Water Line: Step-by-Step (2026)",
+    slug: "how-to-clean-refrigerator-water-line",
+    excerpt: "A clogged refrigerator water line is why your ice maker slows down. Step-by-step cleaning process, tools you need, and when the problem is bigger than the line.",
+    category: "Kitchen Plumbing",
+    date: "August 2026",
+    image: "/images/pex-water-line-rough-in.jpg",
+    readTime: "9 min read",
+  },
+  {
+    title: "Why Is My Sewer Bill So High? Sewer Charges Explained (2026)",
+    slug: "why-is-my-sewer-bill-so-high",
+    excerpt: "What the sewer charge on your water bill actually pays for, how it's calculated, why it suddenly jumped, and six ways to bring it back down.",
+    category: "Guides",
+    date: "August 2026",
+    image: "/images/pex-water-line-rough-in.jpg",
+    readTime: "10 min read",
+  },
+  {
     title: "8 Signs You Need Whole House Repiping (2026 Guide)",
     slug: "signs-your-home-needs-whole-house-repiping",
     excerpt: "Galvanized and polybutylene supply lines fail from the inside out. Learn the warning signs that mean it is time for whole house repiping, not another patch repair.",

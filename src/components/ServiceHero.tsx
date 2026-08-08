@@ -22,23 +22,26 @@ export default function ServiceHero({
   bullets,
 }: Props) {
   return (
-    <section className="relative bg-gray-900 text-white py-16 md:py-20 lg:py-24">
+    <section className="relative bg-gray-900 text-white overflow-hidden">
+      {/* Background image -- lighter overlay than the homepage hero on purpose,
+          service pages don't need the same heavy dramatic wash. */}
       <div className="absolute inset-0">
         <Image
           src={backgroundImage}
           alt={backgroundAlt}
           fill
-          className="object-cover opacity-40"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/30" />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+
+      <div className="container mx-auto px-4 py-14 md:py-18 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
           {/* Left: copy + trust */}
           <div className="lg:col-span-3">
             {tagline && (
-              <p className="text-yellow-400 font-bold mb-3 text-sm md:text-base tracking-wide">
+              <p className="text-yellow-400 font-bold mb-3 text-sm tracking-wide uppercase">
                 {tagline}
               </p>
             )}

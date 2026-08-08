@@ -50,6 +50,48 @@ export const BUSINESS_INFO = {
   },
 };
 
+// Real Google reviews. Text is intentionally truncated (matches what's shown
+// in Google's own review widgets) -- do not extend/complete this copy, it must
+// stay word-for-word what the customer wrote. Full reviews link out to Google.
+export const REVIEWS = [
+  {
+    author: "York Chen",
+    rating: 5,
+    date: "2026-05-27",
+    text: "Danny was great to work with. He was very responsible, professional, and reliable throughout the whole repair process...",
+  },
+  {
+    author: "Donna Penn",
+    rating: 5,
+    date: "2026-02-18",
+    text: "Illyrian Plumbers did a fantastic job with our emergency plumbing issue. Our plumber was professional and thorough with...",
+  },
+  {
+    author: "Sam Kadric",
+    rating: 5,
+    date: "2025-12-31",
+    text: "Dardan and his team were amazing. They did a full renovation including all new plumbing. The professionalism and...",
+  },
+  {
+    author: "Sead Kastrati",
+    rating: 5,
+    date: "2025-12-17",
+    text: "When I needed someone on short notice to install new bathroom tiles and other bathroom fixtures, Dardan came through. He...",
+  },
+  {
+    author: "Shkreptim Mallaku",
+    rating: 5,
+    date: "2025-12-17",
+    text: "Illyrium Plumber team was outstanding from start to finish. I had a specific plumbing issue that needed to be handled...",
+  },
+  {
+    author: "Drin Gjonbalaj",
+    rating: 5,
+    date: "2025-12-10",
+    text: "Illyrian Plumbing replaced our old oil boiler with a Navien combi boiler, and the whole experience was great from start...",
+  },
+] as const;
+
 export const SERVICE_PAGES = {
   featured: [
     {

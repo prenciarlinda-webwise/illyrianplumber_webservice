@@ -1,4 +1,4 @@
-import { BUSINESS_INFO } from "./constants";
+import { BUSINESS_INFO, REVIEWS } from "./constants";
 
 const SITE_URL = "https://www.illyrianplumber.com";
 
@@ -124,50 +124,13 @@ export function getLocalBusinessSchema() {
       bestRating: BUSINESS_INFO.reviews.bestRating,
       reviewCount: BUSINESS_INFO.reviews.count,
     },
-    review: [
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "York Chen" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2026-05-27",
-        reviewBody: "Danny was great to work with. He was very responsible, professional, and reliable throughout the whole repair process...",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Donna Penn" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2026-02-18",
-        reviewBody: "Illyrian Plumbers did a fantastic job with our emergency plumbing issue. Our plumber was professional and thorough with...",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Sam Kadric" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2025-12-31",
-        reviewBody: "Dardan and his team were amazing. They did a full renovation including all new plumbing. The professionalism and...",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Sead Kastrati" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2025-12-17",
-        reviewBody: "When I needed someone on short notice to install new bathroom tiles and other bathroom fixtures, Dardan came through. He...",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Shkreptim Mallaku" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2025-12-17",
-        reviewBody: "Illyrium Plumber team was outstanding from start to finish. I had a specific plumbing issue that needed to be handled...",
-      },
-      {
-        "@type": "Review",
-        author: { "@type": "Person", name: "Drin Gjonbalaj" },
-        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-        datePublished: "2025-12-10",
-        reviewBody: "Illyrian Plumbing replaced our old oil boiler with a Navien combi boiler, and the whole experience was great from start...",
-      },
-    ],
+    review: REVIEWS.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5" },
+      datePublished: r.date,
+      reviewBody: r.text,
+    })),
     sameAs: [
       BUSINESS_INFO.socialMedia.facebook,
       BUSINESS_INFO.socialMedia.instagram,

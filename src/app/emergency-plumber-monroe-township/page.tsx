@@ -4,6 +4,9 @@ import { BUSINESS_INFO } from "@/lib/constants";
 import { getBreadcrumbSchema, getFaqSchema } from "@/lib/schemas";
 import LeadForm from "@/components/LeadForm";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Monroe Township, NJ - 24/7 Service",
@@ -112,6 +115,8 @@ export default function EmergencyPlumberMonroeTownshipPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -200,25 +205,33 @@ export default function EmergencyPlumberMonroeTownshipPage() {
               </div>
             </div>
 
-            {/* Why choose us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Monroe Township homeowners call us for emergencies</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "15 to 20 minute response from our East Brunswick headquarters",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency dispatch, live dispatcher, no call center",
-                "Experienced coordinating HOA and gated-community access",
-                "Upfront pricing before any work starts",
-                "Permits pulled from the Monroe Township Construction Office",
-                "Respectful of quiet hours in active-adult communities",
-                "Free estimates on non-emergency work",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Full-bleed dark differentiator band, replaces the old flat "why choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why Monroe Township homeowners call us for emergencies"
+        items={[
+          { icon: "clock", title: "15 to 20 minute response", description: "We typically reach Monroe Township within 15 to 20 minutes of your call from our East Brunswick headquarters." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber with full insurance on every emergency call." },
+          { icon: "bolt", title: "24/7 live dispatcher", description: "A real person answers day or night, never a call center, and confirms a live ETA before the truck leaves." },
+          { icon: "home", title: "HOA and gate coordination", description: "We routinely coordinate with HOA management and on-site security for after-hours access in active-adult communities." },
+          { icon: "dollar", title: "Upfront pricing", description: "You approve a written quote before any work starts, with no surprise after-hours surcharge." },
+          { icon: "wrench", title: "Permits handled for you", description: "We pull required permits from the Monroe Township Construction Office and coordinate the inspection." },
+        ]}
+      />
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="Trusted across Monroe Township's communities"
+        subheading="Real reviews from real emergency calls, including active-adult and gated communities."
+      />
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             {/* Neighborhoods */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Communities we serve</h2>
             <p className="text-lg text-gray-600 mb-6">

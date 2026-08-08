@@ -5,17 +5,27 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
 
 export const metadata: Metadata = {
-  title: "Plumbers in Monroe Township, NJ",
-  description: "Plumbers in Monroe Township, NJ. Licensed NJ master plumbers serving Rossmoor, Concordia, Clearbrook, Greenbriar. Emergency plumbing, boiler repair, tankless water heater installation. Call (347) 461-4856.",
+  title: "Plumbers in Monroe Township, NJ - Illyrian Plumber",
+  description: "Licensed NJ master plumbers serving Rossmoor, Concordia, Clearbrook and Greenbriar. Emergency plumbing, boiler repair, tankless installs. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/monroe-township",
   },
   openGraph: {
-    title: "Plumbers in Monroe Township, NJ",
+    title: "Plumbers in Monroe Township, NJ - Illyrian Plumber",
     description: "Licensed plumbers and 24/7 emergency plumbing in Monroe Township, NJ. Rossmoor, Concordia, Clearbrook and all adult communities.",
     type: "website",
+    images: ["https://www.illyrianplumber.com/images/professional-plumbing-services.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plumbers in Monroe Township, NJ - Illyrian Plumber",
+    description: "Licensed plumbers and 24/7 emergency plumbing in Monroe Township, NJ. Rossmoor, Concordia, Clearbrook and all adult communities.",
+    images: ["https://www.illyrianplumber.com/images/professional-plumbing-services.jpg"],
   },
 };
 
@@ -115,11 +125,13 @@ export default function MonroeTownshipPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Plumbing &amp; Boiler Service for Monroe Township Communities</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Plumbing and boiler service for Monroe Township communities</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 <strong>Illyrian Plumber is a trusted plumber in Monroe Township, NJ</strong>, serving every adult community and family neighborhood from Rossmoor and Concordia to Clearbrook, Greenbriar, Monroe Village, and the Jamesburg border. Licensed NJ Master Plumbers handle no-heat boiler emergencies, boiler tune-ups, water heater installations, tankless upgrades, gas line work, and 24/7 emergency plumbing. Free estimates and upfront written pricing on every Monroe Township job.
@@ -144,7 +156,7 @@ export default function MonroeTownshipPage() {
             </div>
 
             {/* Emergency Plumber H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumber in Monroe Township, NJ</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency plumber in Monroe Township, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Need an emergency plumber in Monroe Township, NJ? Illyrian Plumber runs a 24/7 emergency line staffed by a live dispatcher, not a call center. Licensed NJ Master Plumbers are on call for burst pipes, failed water heaters, no-heat boiler calls, gas leaks, and flooding from any source. Typical Monroe Township response is 15 to 20 minutes from our East Brunswick base.
@@ -155,7 +167,7 @@ export default function MonroeTownshipPage() {
             </div>
 
             {/* Tankless H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tankless Water Heater Installation in Monroe Township, NJ</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tankless water heater installation in Monroe Township, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Tankless water heater installation in Monroe Township, NJ is a popular upgrade, especially in Rossmoor and Concordia where many original tank units from the 1980s and 90s are at end-of-life. Tankless units offer endless on-demand hot water, a compact wall-mounted footprint, and a 20-plus-year lifespan. Typical installed cost for a tankless water heater in Monroe Township runs $2,800 to $6,500 depending on unit size and any gas line or venting upgrades.
@@ -163,25 +175,6 @@ export default function MonroeTownshipPage() {
               <p>
                 We install gas and electric tankless units from <strong>Navien, Rinnai, and Rheem</strong>, pull the required Monroe Township plumbing permit, coordinate the municipal inspection, and register the manufacturer warranty. Many installs qualify for NJ Clean Energy rebates. For full service details, see our <Link href="/services/tankless-water-heater-installation" className="text-red-700 hover:underline">tankless water heater installation page</Link>. For tankless water heater repair in Monroe, we service all major brands and keep replacement parts on the truck.
               </p>
-            </div>
-
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "15-20 minute response from our East Brunswick headquarters",
-                "Experienced with Monroe Township adult communities",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years serving Middlesex County homeowners",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Bathroom accessibility upgrade specialists",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
             </div>
 
             {/* Mid-page CTA Band */}
@@ -202,8 +195,30 @@ export default function MonroeTownshipPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band, replaces the old flat "why choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why Monroe Township homeowners choose us"
+        items={[
+          { icon: "clock", title: "15 to 20 minute response", description: "We typically reach Monroe Township within 15 to 20 minutes of your call from our East Brunswick headquarters." },
+          { icon: "home", title: "Adult community experience", description: "We know Rossmoor, Concordia, Clearbrook and Greenbriar well, including their quiet-hours guidelines and older housing stock." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber with full insurance on every job." },
+          { icon: "bolt", title: "24/7 emergency service", description: "A live dispatcher answers day or night for no-heat calls, burst pipes, and gas leaks." },
+          { icon: "dollar", title: "Upfront written pricing", description: "No hidden fees or surprise charges. You approve the quote before work starts." },
+          { icon: "wrench", title: "Free estimates", description: "Free estimates on boiler replacement, water heater upgrades, and other major plumbing projects." },
+        ]}
+      />
+
+      {/* Common issues -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
             {/* Common Issues */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Plumbing Issues in Monroe Township Homes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common plumbing issues in Monroe Township homes</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Monroe Township&apos;s housing mix, from adult communities to family subdivisions, creates specific plumbing challenges. Here are the issues our Monroe Township plumbers see most often on service calls and emergency dispatches.
@@ -220,7 +235,7 @@ export default function MonroeTownshipPage() {
 
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Response Time &amp; Availability</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Response time and availability</h3>
               <p className="text-gray-700 mb-2">
                 From our East Brunswick office, we reach most Monroe Township locations in <strong>15 to 20 minutes</strong> via Route 18 and the NJ Turnpike. Rossmoor, Concordia, and Clearbrook are the closest; Jamesburg-border neighborhoods and The Ponds are the farthest reach.
               </p>
@@ -233,7 +248,7 @@ export default function MonroeTownshipPage() {
             </div>
 
             {/* Neighborhoods */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods We Serve</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods we serve</h2>
             <p className="text-lg text-gray-600 mb-6">
               We provide plumbing services to every Monroe Township community, including:
             </p>
@@ -244,7 +259,7 @@ export default function MonroeTownshipPage() {
             </div>
 
             {/* Local Professional Plumbing Services with map */}
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional Plumbing Services in Monroe Township, NJ</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional plumbing services in Monroe Township, NJ</h3>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
@@ -271,8 +286,22 @@ export default function MonroeTownshipPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="What Monroe Township homeowners say"
+        subheading="Real reviews from real boiler repairs, water heater installs, and emergency calls."
+      />
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* FAQ Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
             <div className="space-y-4 mb-12">
               {faqSchema.mainEntity.map((faq, index) => (
                 <details key={index} className="bg-gray-50 rounded-lg group">
@@ -288,7 +317,7 @@ export default function MonroeTownshipPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful plumbing resources</h2>
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               <Link href="/blog/common-boiler-problems-winter" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
                 <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Common Winter Boiler Problems</p>
@@ -310,7 +339,7 @@ export default function MonroeTownshipPage() {
 
             {/* Nearby Service Areas */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby Service Areas</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby service areas</h3>
               <p className="text-gray-600 mb-4">We also serve these communities near Monroe Township.</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 font-medium">East Brunswick (HQ)</Link>
@@ -328,7 +357,7 @@ export default function MonroeTownshipPage() {
       {/* CTA Section */}
       <section className="py-12 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Boiler Repair in Monroe Township?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need boiler repair in Monroe Township?</h2>
           <p className="text-xl text-red-100 mb-8">Licensed NJ Master Plumbers. Typical Monroe Township arrival in 15 to 20 minutes.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-block">

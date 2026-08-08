@@ -5,6 +5,10 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
   title: "Plumber in Sayreville, NJ - 24/7 Service",
@@ -147,6 +151,8 @@ export default function SayrevillePage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -194,24 +200,30 @@ export default function SayrevillePage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "10-15 minute response from our East Brunswick headquarters",
-                "Easy access via Route 9, Route 35, and the Garden State Parkway",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Experienced with Sayreville's mid-century housing stock",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band, replaces the old flat "why homeowners choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="The Illyrian Plumber advantage in Sayreville"
+        items={[
+          { icon: "clock", title: "Fast response time", description: "We typically arrive within 10 to 15 minutes of your call from our East Brunswick headquarters." },
+          { icon: "home", title: "Easy local access", description: "Route 9, Route 35, and the Garden State Parkway put every Sayreville neighborhood within easy reach." },
+          { icon: "shield", title: "Licensed and insured", description: "Every plumber is a licensed NJ Master Plumber carrying full insurance coverage on every job." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Round-the-clock dispatch for burst pipes, gas leaks, and other plumbing emergencies." },
+          { icon: "wrench", title: "Years of local experience", description: `Over ${BUSINESS_INFO.stats.yearsExperience} years serving Middlesex County homeowners with hands-on plumbing expertise.` },
+          { icon: "dollar", title: "Upfront pricing", description: "You get written pricing before any work starts, with no hidden fees or surprise charges." },
+          { icon: "home", title: "Familiar with local homes", description: "We know Sayreville's mid-century housing stock, from Parlin Capes to Morgan split-levels, and the plumbing issues that come with it." },
+          { icon: "dollar", title: "Free estimates", description: "Free written estimates on all major plumbing projects, no obligation to move forward." },
+        ]}
+      />
+
+      {/* AEO block + CTA + common issues -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* AEO block - reliable plumbers in Sayreville */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Who are reliable plumbers in Sayreville, NJ?</h2>
@@ -254,6 +266,21 @@ export default function SayrevillePage() {
                 <li><strong>Frozen Pipes in Winter:</strong> Exterior walls in older Sayreville homes and uninsulated crawl spaces can freeze in January and February cold snaps. Preventive insulation is always cheaper than repair.</li>
               </ul>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="Trusted by families across Sayreville"
+        subheading="Real Google reviews from Parlin, Morgan, and Sayreville proper homeowners."
+      />
+
+      {/* Response time + neighborhoods + FAQ + resources -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
@@ -325,24 +352,16 @@ export default function SayrevillePage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/sump-pump-maintenance-guide" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Sump Pump Maintenance Guide</p>
-                <p className="text-gray-600 text-sm">Keep your sump pump running when you need it most.</p>
-              </Link>
-              <Link href="/blog/signs-water-heater-dying" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
-                <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
-              </Link>
-              <Link href="/blog/frozen-pipes-prevention-repair" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Frozen Pipe Prevention &amp; Repair</p>
-                <p className="text-gray-600 text-sm">Protect your pipes during NJ winters.</p>
-              </Link>
-              <Link href="/blog/common-boiler-problems-winter" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Common Winter Boiler Problems</p>
-                <p className="text-gray-600 text-sm">Prevent no-heat calls with these tips.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "Sump Pump Maintenance Guide", href: "/blog/sump-pump-maintenance-guide", description: "Keep your sump pump running when you need it most." },
+                  { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", description: "Know when it is time for a replacement." },
+                  { label: "Frozen Pipe Prevention & Repair", href: "/blog/frozen-pipes-prevention-repair", description: "Protect your pipes during NJ winters." },
+                  { label: "Common Winter Boiler Problems", href: "/blog/common-boiler-problems-winter", description: "Prevent no-heat calls with these tips." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}

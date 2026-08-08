@@ -5,6 +5,10 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
   title: { absolute: "Emergency Plumber East Brunswick, NJ - 24/7 Licensed" },
@@ -129,6 +133,8 @@ export default function EastBrunswickPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -148,24 +154,30 @@ export default function EastBrunswickPage() {
               <TrustBadges />
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why East Brunswick homeowners choose Illyrian Plumber</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "Based in East Brunswick at 697 Old Bridge Turnpike",
-                "5 to 15 minute response time inside the township",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront written pricing - no hidden fees or shop charges",
-                "Experienced with East Brunswick's 1960s-1990s housing stock",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why East Brunswick relies on Illyrian Plumber"
+        items={[
+          { icon: "home", title: "Local headquarters", description: "Our office sits at 697 Old Bridge Turnpike, right in East Brunswick, not in a neighboring town or county." },
+          { icon: "clock", title: "5 to 15 minute response", description: "Most East Brunswick addresses see a licensed plumber arrive within 5 to 15 minutes of your call." },
+          { icon: "shield", title: "Licensed and insured", description: "Every plumber on our team holds an active NJ Master Plumber license and carries full liability insurance." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Emergency plumbing service is available around the clock, including nights, weekends, and holidays." },
+          { icon: "wrench", title: "Decade of local experience", description: "We have worked on East Brunswick homes for more than 10 years and know the plumbing quirks of Middlesex County's older housing stock." },
+          { icon: "dollar", title: "Upfront written pricing", description: "You get a written quote before any work starts, with no hidden fees or surprise shop charges added to the bill." },
+          { icon: "wrench", title: "Housing stock expertise", description: "We are experienced with the galvanized steel and polybutylene piping common in East Brunswick homes built between the 1960s and 1990s." },
+          { icon: "dollar", title: "Free written estimates", description: "Free estimates are available on all major plumbing projects, valid for 30 days." },
+        ]}
+      />
+
+      {/* Pricing, common issues, and remaining content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Mid-page CTA Band */}
             <div className="bg-red-700 text-white rounded-xl p-6 md:p-8 mb-12">
@@ -228,6 +240,21 @@ export default function EastBrunswickPage() {
                 <li><strong>Frozen Pipes in Winter:</strong> Exterior walls in older East Brunswick homes and uninsulated basements can freeze in January and February cold snaps. Preventive insulation is always cheaper than repair.</li>
               </ul>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="What East Brunswick homeowners say"
+        subheading="Real reviews from real service calls in East Brunswick and around Middlesex County."
+      />
+
+      {/* Response time, neighborhoods, FAQ, and related links */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
@@ -301,24 +328,16 @@ export default function EastBrunswickPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful plumbing resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/how-tankless-water-heaters-work" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">How Tankless Water Heaters Work</p>
-                <p className="text-gray-600 text-sm">Learn about on-demand hot water technology.</p>
-              </Link>
-              <Link href="/blog/how-much-does-a-tankless-water-heater-cost" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless Water Heater Cost Guide</p>
-                <p className="text-gray-600 text-sm">Understand the investment before you buy.</p>
-              </Link>
-              <Link href="/blog/gas-leak-detection-safety" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Gas Leak Detection &amp; Safety</p>
-                <p className="text-gray-600 text-sm">Know the signs and stay safe.</p>
-              </Link>
-              <Link href="/blog/frozen-pipes-prevention-repair" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Frozen Pipe Prevention &amp; Repair</p>
-                <p className="text-gray-600 text-sm">Protect your pipes during NJ winters.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "How Tankless Water Heaters Work", href: "/blog/how-tankless-water-heaters-work", description: "Learn about on-demand hot water technology." },
+                  { label: "Tankless Water Heater Cost Guide", href: "/blog/how-much-does-a-tankless-water-heater-cost", description: "Understand the investment before you buy." },
+                  { label: "Gas Leak Detection & Safety", href: "/blog/gas-leak-detection-safety", description: "Know the signs and stay safe." },
+                  { label: "Frozen Pipe Prevention & Repair", href: "/blog/frozen-pipes-prevention-repair", description: "Protect your pipes during NJ winters." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}

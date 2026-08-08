@@ -9,10 +9,14 @@ import {
   getHowToSchema,
 } from "@/lib/schemas";
 import ServiceHero from "@/components/ServiceHero";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
-  title: "Water Heater Installation East Brunswick NJ - Same-Day Service",
-  description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless options. Same-day service available. Licensed plumbers. Call (347) 461-4856.",
+  title: "Same-Day Water Heater Installation NJ - Illyrian Plumber",
+  description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless options. Same-day service, licensed plumbers.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/services/water-heater-installation",
   },
@@ -34,9 +38,25 @@ export const metadata: Metadata = {
     "residential water heater installation nj",
   ],
   openGraph: {
-    title: "Water Heater Installation East Brunswick NJ - Same-Day Service",
-    description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless options. Same-day service available. Licensed plumbers.",
+    title: "Same-Day Water Heater Installation NJ - Illyrian Plumber",
+    description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless options. Same-day service, licensed plumbers.",
     type: "website",
+    url: "https://www.illyrianplumber.com/services/water-heater-installation",
+    siteName: "Illyrian Plumber",
+    images: [
+      {
+        url: "https://www.illyrianplumber.com/images/water-heater-repair-service.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illyrian Plumber water heater installation service in East Brunswick NJ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Same-Day Water Heater Installation NJ - Illyrian Plumber",
+    description: "Professional water heater installation in East Brunswick and Middlesex County, NJ. Gas, electric, and tankless options. Same-day service, licensed plumbers.",
+    images: ["https://www.illyrianplumber.com/images/water-heater-repair-service.jpg"],
   },
 };
 
@@ -50,10 +70,6 @@ const faqData = [
     answer: "A standard tank water heater installation takes 2-4 hours. Tankless water heater installation takes 4-8 hours, especially if gas line upgrades, new venting, or electrical work is required. If we are replacing an existing unit, add about 30-60 minutes for draining and removing the old water heater. Same-day installation is available for standard tank units.",
   },
   {
-    question: "Should I get a gas or electric water heater?",
-    answer: "Gas water heaters heat water faster, cost less to operate (natural gas is cheaper than electricity in NJ), and work during power outages. Electric water heaters have a lower upfront cost, do not require venting, and are easier to install. If your home already has a gas line to the water heater location, gas is typically the better choice. If you only have electric service, an electric or heat pump water heater is the most practical option.",
-  },
-  {
     question: "Do I need a permit to install a water heater in NJ?",
     answer: "Yes, New Jersey requires a plumbing permit for water heater installation. The permit ensures the installation meets NJ Uniform Construction Code requirements for safety, venting, gas connections, and water supply. As licensed plumbers, we handle all permit applications and schedule the required municipal inspection for you. The permit cost is included in our installation price.",
   },
@@ -61,25 +77,13 @@ const faqData = [
     question: "Can you install a water heater the same day I call?",
     answer: "Yes, same-day water heater installation is available for standard tank units when we have the appropriate model in stock. If you have no hot water, we prioritize your call. Tankless installations and specialty units typically require scheduling 1-2 days in advance due to the additional work involved.",
   },
-  {
-    question: "What size water heater do I need?",
-    answer: "For tank water heaters: 1-2 people need 30-40 gallons, 3-4 people need 40-50 gallons, and 5 or more people need 50-80 gallons. For tankless units, sizing is based on flow rate (GPM) and temperature rise. A typical 3-bathroom NJ home needs a unit rated for at least 8-10 GPM. We evaluate your specific needs during our free estimate.",
-  },
-  {
-    question: "What brands do you install?",
-    answer: "We install top-rated water heater brands including Rheem, Bradford White, AO Smith, Navien, and Rinnai. We select brands based on reliability, warranty coverage, energy efficiency, and value. During your free estimate, we recommend specific models based on your household size, hot water demand, and budget.",
-  },
-  {
-    question: "Is a tankless water heater worth the extra cost?",
-    answer: "Tankless water heaters cost more upfront ($2,800-$6,500 installed vs $1,200-$3,500 for tank units) but offer several long-term advantages: endless hot water on demand, up to 34% energy savings according to the DOE, a 20+ year lifespan versus 10-12 years for tanks, and they take up less space. For households with high hot water demand, a tankless unit typically pays for itself within 8-12 years through energy savings.",
-  },
 ];
 
 const installationSteps = [
-  { step: "1", title: "Free In-Home Estimate", desc: "We evaluate your hot water needs, inspect existing connections, and recommend the right unit for your household and budget." },
-  { step: "2", title: "Permit & Unit Selection", desc: "We pull the required NJ plumbing permit and order your selected unit from Rheem, Bradford White, AO Smith, Navien, or Rinnai." },
-  { step: "3", title: "Professional Installation", desc: "Old unit removed, new unit installed with code-compliant connections, expansion tank, T&P relief valve, and venting as required." },
-  { step: "4", title: "Testing & Inspection", desc: "Full leak and operation check, municipal inspection coordinated, warranty documentation and maintenance schedule handed off." },
+  { step: "1", title: "Free in-home estimate", desc: "We evaluate your hot water needs, inspect existing connections, and recommend the right unit for your household and budget." },
+  { step: "2", title: "Permit and unit selection", desc: "We pull the required NJ plumbing permit and order your selected unit from Rheem, Bradford White, AO Smith, Navien, or Rinnai." },
+  { step: "3", title: "Professional installation", desc: "Old unit removed, new unit installed with code-compliant connections, expansion tank, T&P relief valve, and venting as required." },
+  { step: "4", title: "Testing and inspection", desc: "Full leak and operation check, municipal inspection coordinated, warranty documentation and maintenance schedule handed off." },
 ];
 
 type WaterHeaterIcon = "flame" | "bolt" | "infinity" | "leaf";
@@ -93,7 +97,7 @@ const waterHeaterTypes: {
   icon: WaterHeaterIcon;
 }[] = [
   {
-    name: "Gas Tank",
+    name: "Gas tank",
     price: "$1,500 - $3,000",
     life: "10-12 yrs",
     pros: ["Faster recovery", "Lower operating cost", "Works during outages"],
@@ -101,7 +105,7 @@ const waterHeaterTypes: {
     icon: "flame",
   },
   {
-    name: "Electric Tank",
+    name: "Electric tank",
     price: "$1,200 - $2,500",
     life: "10-12 yrs",
     pros: ["Lower upfront cost", "No venting required", "Flexible placement"],
@@ -117,7 +121,7 @@ const waterHeaterTypes: {
     icon: "infinity",
   },
   {
-    name: "Heat Pump",
+    name: "Heat pump",
     price: "$2,500 - $4,500",
     life: "13-15 yrs",
     pros: ["2-3x more efficient than electric", "May qualify for NJ rebates", "Lowest monthly cost"],
@@ -216,6 +220,8 @@ export default function WaterHeaterInstallationPage() {
         bullets={["Gas & Electric Options", "Same-Day Installation", "Free Estimates", "Licensed & Insured"]}
       />
 
+      <StatsStrip />
+
       {/* Quick Answer + Cost Table */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -261,7 +267,7 @@ export default function WaterHeaterInstallationPage() {
         </div>
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Types of Water Heaters We Install</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Types of water heaters we install</h2>
             <p className="text-blue-100 max-w-2xl mx-auto">Four proven options. We match the right unit to your household size, fuel source, and budget.</p>
           </div>
 
@@ -293,6 +299,9 @@ export default function WaterHeaterInstallationPage() {
               </div>
             ))}
           </div>
+          <p className="text-blue-100 text-sm max-w-3xl mx-auto mt-8 text-center">
+            Sizing depends on your household: 1-2 people typically need a 30-40 gallon tank, 3-4 people need 40-50 gallons, and homes with 5 or more people need 50-80 gallons. Tankless units are sized by flow rate instead of tank size; a typical 3-bathroom Middlesex County home needs a unit rated for at least 8-10 GPM. We confirm the right size for your household during your free estimate.
+          </p>
         </div>
       </section>
 
@@ -318,6 +327,20 @@ export default function WaterHeaterInstallationPage() {
         </div>
       </section>
 
+      {/* Full-bleed dark differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why homeowners pick us for water heater installation"
+        items={[
+          { icon: "dollar", title: "Free in-home estimates", description: "We evaluate your hot water needs and give you an exact installation price before any work begins, no guessing and no surprise add-ons." },
+          { icon: "shield", title: "Permits and inspections handled", description: "NJ requires a plumbing permit for every water heater installation. We pull the permit, schedule the municipal inspection, and handle the paperwork." },
+          { icon: "clock", title: "Same-day installation available", description: "If you have no hot water, we prioritize your call. Standard tank installations are often completed the same day." },
+          { icon: "wrench", title: "Every major brand", description: "We install Rheem, Bradford White, AO Smith, Navien, and Rinnai units and recommend the model that fits your household and budget." },
+          { icon: "home", title: "Local Middlesex County plumbers", description: `Based in East Brunswick, not a national chain. ${BUSINESS_INFO.stats.projectsCompleted} completed projects since ${BUSINESS_INFO.founded}.` },
+          { icon: "bolt", title: "Full-system testing before we leave", description: "Every installation gets a complete leak and operation check, plus warranty registration, before we consider the job finished." },
+        ]}
+      />
+
       {/* Everything Included split */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -334,7 +357,7 @@ export default function WaterHeaterInstallationPage() {
             </div>
             <div className="order-1 lg:order-2">
               <p className="text-sm font-bold text-red-700 uppercase tracking-wide mb-2">Complete Installation</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything Included in Our Installation</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything included in our installation</h2>
               <p className="text-gray-600 mb-6">No surprise fees. No return trips for missing parts. Every installation includes the full scope below - the price we quote is the price you pay.</p>
               <ul className="space-y-3">
                 {installationIncludes.map((item) => (
@@ -357,7 +380,7 @@ export default function WaterHeaterInstallationPage() {
       <section className="py-14 bg-gray-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Installation Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our installation process</h2>
             <p className="text-gray-600">From first call to final inspection - here&apos;s what to expect.</p>
           </div>
 
@@ -393,13 +416,19 @@ export default function WaterHeaterInstallationPage() {
         </div>
       </section>
 
+      {/* Full-bleed dark testimonial band with photo backdrop */}
+      <Testimonials
+        heading="What East Brunswick homeowners say about our installs"
+        subheading="Real reviews from recent water heater installations across Middlesex County."
+      />
+
       {/* Maintenance Tips split */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <p className="text-sm font-bold text-red-700 uppercase tracking-wide mb-2">Keep It Running Longer</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">5 Maintenance Tips for Your New Water Heater</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">5 maintenance tips for your new water heater</h2>
               <p className="text-gray-600 mb-8">A well-maintained water heater lasts 30-50% longer. Here&apos;s what we recommend to Middlesex County homeowners to get the most out of your investment.</p>
               <ol className="space-y-5">
                 {maintenanceTips.map((tip, i) => (
@@ -426,64 +455,82 @@ export default function WaterHeaterInstallationPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Frequently Asked Questions &ndash; Water Heater Installation FAQs</h2>
-          <p className="text-gray-600 text-center mb-10">Everything East Brunswick homeowners ask about water heater installation cost, timing, permits, and sizing.</p>
+      {/* Service areas + FAQ + related -- narrow column */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
-          <div className="space-y-3">
-            {faqData.map((faq, index) => (
-              <details key={index} className="bg-white rounded-lg shadow-sm group">
-                <summary className="p-5 cursor-pointer list-none flex justify-between items-center">
-                  <h3 className="font-semibold text-gray-900 pr-4 text-base">{faq.question}</h3>
-                  <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">+</span>
-                </summary>
-                <div className="px-5 pb-5 text-gray-700 text-sm leading-relaxed">{faq.answer}</div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+            {/* Service Areas -- pill cloud */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Water heater installation throughout Middlesex County</h3>
+              <div className="flex flex-wrap gap-2">
+                {["East Brunswick", "Edison", "Old Bridge", "Sayreville", "South Brunswick", "North Brunswick", "Monroe Township"].map((area) => {
+                  const slug = area.toLowerCase().replace(/\s+/g, "-");
+                  const hasPage = ["east-brunswick", "edison", "old-bridge", "sayreville", "south-brunswick", "north-brunswick", "monroe-township"].includes(slug);
+                  return hasPage ? (
+                    <Link key={area} href={`/service-areas/${slug}`} className="bg-red-50 px-3 py-1.5 rounded-full text-sm font-medium text-red-700 border border-red-200 hover:bg-red-100 transition">{area}</Link>
+                  ) : (
+                    <span key={area} className="bg-gray-100 px-3 py-1.5 rounded-full text-sm text-gray-600 border border-gray-200">{area}</span>
+                  );
+                })}
+              </div>
+            </div>
 
-      {/* Related Services */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Related Plumbing Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { href: "/services/water-heater-repair", name: "Water Heater Repair" },
-              { href: "/services/water-heater-replacement", name: "Water Heater Replacement" },
-              { href: "/services/tankless-water-heater-installation", name: "Tankless Water Heater" },
-              { href: "/services/gas-line-repair-installation", name: "Gas Line Services" },
-              { href: "/services/boiler-repair-service", name: "Boiler Repair" },
-              { href: "/services/emergency-plumbing", name: "24/7 Emergency Plumbing" },
-            ].map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="flex items-center justify-between bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-lg px-5 py-4 transition group"
-              >
-                <span className="font-medium text-gray-900 group-hover:text-red-700">{s.name}</span>
-                <svg className="w-5 h-5 text-gray-400 group-hover:text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
+            {/* FAQ */}
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Frequently asked questions about water heater installation</h2>
+            <p className="text-gray-600 mb-6">Everything East Brunswick homeowners ask about water heater installation cost, timing, and permits.</p>
+            <div className="space-y-4 mb-12">
+              {faqData.map((faq, index) => (
+                <details key={index} className="bg-white rounded-lg shadow-sm group">
+                  <summary className="p-5 cursor-pointer list-none flex justify-between items-center">
+                    <h3 className="font-semibold text-gray-900 pr-4 text-base">{faq.question}</h3>
+                    <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-700 text-sm leading-relaxed">{faq.answer}</div>
+                </details>
+              ))}
+            </div>
+
+            {/* Related Services */}
+            <div className="mb-8">
+              <LinkCardGrid
+                heading="Related plumbing services"
+                items={[
+                  { label: "Water Heater Repair", href: "/services/water-heater-repair", description: "Same-day repair for all major brands" },
+                  { label: "Water Heater Replacement", href: "/services/water-heater-replacement", description: "Upgrade an aging or failing tank unit" },
+                  { label: "Tankless Water Heater", href: "/services/tankless-water-heater-installation", description: "Endless hot water in a compact wall-mounted unit" },
+                  { label: "Gas Line Services", href: "/services/gas-line-repair-installation", description: "Gas line installation, repair, and safety inspections" },
+                  { label: "Boiler Repair", href: "/services/boiler-repair-service", description: "Repair and maintenance for boiler heating systems" },
+                  { label: "24/7 Emergency Plumbing", href: "/services/emergency-plumbing", description: "Fast response for burst pipes, gas leaks, and flooding" },
+                ]}
+              />
+            </div>
+
+            {/* Related Blog Posts */}
+            <LinkCardGrid
+              heading="Learn more about water heaters"
+              tone="dark"
+              items={[
+                { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", badge: "Guide" },
+                { label: "Tankless vs Tank Water Heater", href: "/blog/tankless-vs-tank-water-heater", badge: "Guide" },
+                { label: "How Long Does a Water Heater Take to Heat Up?", href: "/blog/how-long-water-heater-heat-up", badge: "Guide" },
+              ]}
+            />
+
           </div>
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-14 bg-gray-900 text-white">
+      <section className="py-14 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Your Water Heater Installed Today</h2>
-          <p className="text-lg text-gray-300 mb-8">Licensed plumbers serving East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get your water heater installed today</h2>
+          <p className="text-lg text-red-100 mb-8">Licensed plumbers serving East Brunswick, Edison, Sayreville, Old Bridge, Monroe Township, South Brunswick, and North Brunswick.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href={BUSINESS_INFO.phoneLink} className="bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-800 transition">
+            <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
               Call {BUSINESS_INFO.phone}
             </a>
-            <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition">
+            <a href={BUSINESS_INFO.phone2Link} className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-700 transition">
               Call {BUSINESS_INFO.phone2}
             </a>
           </div>

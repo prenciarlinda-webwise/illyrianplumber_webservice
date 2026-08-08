@@ -5,6 +5,10 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
   title: "Plumber in Old Bridge, NJ - 24/7 Service",
@@ -123,6 +127,8 @@ export default function OldBridgePage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -181,24 +187,30 @@ export default function OldBridgePage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "10 to 15 minute response time from our East Brunswick headquarters",
-                "Easy access via Route 9, Route 516, and Route 18",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Familiar with Old Bridge's older home plumbing systems",
-                "Sump pump experts for flood-prone waterfront areas",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed differentiator band replacing flat "why choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="What Old Bridge homeowners can count on"
+        items={[
+          { icon: "clock", title: "Quick response time", description: "Our East Brunswick headquarters puts a licensed plumber at your Old Bridge door in about 10 to 15 minutes, even out toward Laurence Harbor and Cliffwood Beach." },
+          { icon: "home", title: "Direct route access", description: "Route 9, Route 516, and Route 18 give us a direct path to Madison Park, Brownville, and every other Old Bridge neighborhood." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber, fully insured on every Old Bridge job." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Burst pipes, no heat, and flooding calls get answered and dispatched around the clock, weekends and holidays included." },
+          { icon: "wrench", title: "Over 10 years local", description: "More than a decade of hands-on experience across Middlesex County, including the older homes common in Madison Park and Brownville." },
+          { icon: "dollar", title: "Upfront pricing", description: "You get a written price before any work starts, with no hidden fees or surprise charges added to the bill." },
+          { icon: "wrench", title: "Older home expertise", description: "We know the galvanized pipes and aging fixtures typical of Old Bridge's older housing stock and how to fix them right." },
+          { icon: "shield", title: "Sump pump experts", description: "Waterfront homes in Laurence Harbor and Cliffwood Beach rely on us for sump pump installs, repairs, and battery backup before storm season." },
+        ]}
+      />
+
+      {/* Continued content -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Mid-page CTA Band */}
             <div className="bg-red-700 text-white rounded-xl p-6 md:p-8 mb-12">
@@ -287,6 +299,21 @@ export default function OldBridgePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="Trusted by families across Old Bridge"
+        subheading="From Madison Park to Laurence Harbor, here is what homeowners say about our work."
+      />
+
+      {/* FAQ + resources -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* FAQ Section */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4 mb-12">
@@ -304,24 +331,16 @@ export default function OldBridgePage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/signs-water-heater-dying" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
-                <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
-              </Link>
-              <Link href="/blog/tankless-vs-tank-water-heater" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless vs Tank Water Heaters</p>
-                <p className="text-gray-600 text-sm">Compare options for your home upgrade.</p>
-              </Link>
-              <Link href="/blog/sump-pump-maintenance-guide" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Sump Pump Maintenance Guide</p>
-                <p className="text-gray-600 text-sm">Essential for Old Bridge waterfront homes.</p>
-              </Link>
-              <Link href="/blog/common-boiler-problems-winter" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Common Winter Boiler Problems</p>
-                <p className="text-gray-600 text-sm">Prevent no-heat calls with these tips.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", description: "Know when it is time for a replacement." },
+                  { label: "Tankless vs Tank Water Heaters", href: "/blog/tankless-vs-tank-water-heater", description: "Compare options for your home upgrade." },
+                  { label: "Sump Pump Maintenance Guide", href: "/blog/sump-pump-maintenance-guide", description: "Essential for Old Bridge waterfront homes." },
+                  { label: "Common Winter Boiler Problems", href: "/blog/common-boiler-problems-winter", description: "Prevent no-heat calls with these tips." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}

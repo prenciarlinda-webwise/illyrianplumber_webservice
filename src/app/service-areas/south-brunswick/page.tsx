@@ -5,6 +5,10 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
   title: "Plumber in South Brunswick, NJ",
@@ -115,6 +119,8 @@ export default function SouthBrunswickPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -162,24 +168,30 @@ export default function SouthBrunswickPage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "15-minute response from East Brunswick via Route 1 and 130",
-                "24/7 emergency plumbing - nights, weekends, and holidays",
-                "Licensed NJ Master Plumbers with full insurance",
-                "Over 10 years serving Middlesex County homeowners",
-                "Experienced with both municipal and well water systems",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Familiar with South Brunswick's diverse housing stock",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="What South Brunswick homeowners can count on"
+        items={[
+          { icon: "clock", title: "15-minute response", description: "Our East Brunswick base puts us about 15 minutes from most South Brunswick homes via Route 1 or Route 130." },
+          { icon: "bolt", title: "24/7 emergency dispatch", description: "We answer emergency calls nights, weekends, and holidays at the same response speed as a weekday afternoon." },
+          { icon: "shield", title: "Licensed and insured", description: "Every job is handled by a licensed NJ Master Plumber with full insurance coverage." },
+          { icon: "home", title: "10+ years local", description: "We have served Middlesex County homeowners, including South Brunswick, for more than 10 years." },
+          { icon: "wrench", title: "Municipal and well water", description: "Our plumbers carry the tools and experience for both municipal supply and well-fed systems common in Dayton and Kingston." },
+          { icon: "dollar", title: "Upfront pricing", description: "You see a written quote before any work starts, with no hidden fees or surprise charges added later." },
+          { icon: "home", title: "Knows South Brunswick homes", description: "From original construction in Kendall Park to newer builds in Monmouth Junction, we know South Brunswick's diverse housing stock." },
+          { icon: "dollar", title: "Free estimates", description: "Free written estimates are available on all major plumbing projects before we begin any work." },
+        ]}
+      />
+
+      {/* Mid-page CTA + common issues + response time + neighborhoods + map -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Mid-page CTA Band */}
             <div className="bg-red-700 text-white rounded-xl p-6 md:p-8 mb-12">
@@ -268,6 +280,21 @@ export default function SouthBrunswickPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="What South Brunswick homeowners say"
+        subheading="Real reviews from real South Brunswick plumbing jobs."
+      />
+
+      {/* FAQ + resources + nearby areas -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* FAQ Section */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4 mb-12">
@@ -285,24 +312,16 @@ export default function SouthBrunswickPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/best-whole-house-water-filtration-systems" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Best Whole-House Water Filtration Systems</p>
-                <p className="text-gray-600 text-sm">Find the right filter for your home.</p>
-              </Link>
-              <Link href="/blog/tankless-vs-tank-water-heater" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless vs Tank Water Heaters</p>
-                <p className="text-gray-600 text-sm">Compare your water heater options.</p>
-              </Link>
-              <Link href="/blog/signs-water-heater-dying" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
-                <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
-              </Link>
-              <Link href="/blog/frozen-pipes-prevention-repair" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Frozen Pipe Prevention &amp; Repair</p>
-                <p className="text-gray-600 text-sm">Protect your pipes during NJ winters.</p>
-              </Link>
+            <div className="mb-8">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "Best Whole-House Water Filtration Systems", href: "/blog/best-whole-house-water-filtration-systems", description: "Find the right filter for your home." },
+                  { label: "Tankless vs Tank Water Heaters", href: "/blog/tankless-vs-tank-water-heater", description: "Compare your water heater options." },
+                  { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", description: "Know when it is time for a replacement." },
+                  { label: "Frozen Pipe Prevention & Repair", href: "/blog/frozen-pipes-prevention-repair", description: "Protect your pipes during NJ winters." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}

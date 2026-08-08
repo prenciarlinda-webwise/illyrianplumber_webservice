@@ -5,17 +5,37 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
-  title: "Plumbing Services in Middlesex County, NJ",
-  description: "Plumbers in Middlesex County, NJ. Licensed NJ master plumbers serving East Brunswick, Edison, Old Bridge, Monroe, Sayreville, and all Middlesex County. 24/7 emergency plumbing. Call (347) 461-4856.",
+  title: "Plumbers in Middlesex County, NJ - Illyrian Plumber",
+  description: "Licensed NJ plumbers serving East Brunswick, Edison, Old Bridge, Monroe, and all Middlesex County. 24/7 emergency plumbing. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/middlesex-county",
   },
   openGraph: {
-    title: "Plumbing Services in Middlesex County, NJ",
+    title: "Plumbers in Middlesex County, NJ - Illyrian Plumber",
     description: "Licensed plumbers and 24/7 emergency plumbing services across Middlesex County, NJ. Serving every major township.",
     type: "website",
+    url: "https://www.illyrianplumber.com/service-areas/middlesex-county",
+    siteName: "Illyrian Plumber",
+    images: [
+      {
+        url: "https://www.illyrianplumber.com/images/licensed-plumber-east-brunswick-nj.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illyrian Plumber licensed plumber serving Middlesex County NJ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plumbers in Middlesex County, NJ - Illyrian Plumber",
+    description: "Licensed plumbers and 24/7 emergency plumbing services across Middlesex County, NJ. Serving every major township.",
+    images: ["https://www.illyrianplumber.com/images/licensed-plumber-east-brunswick-nj.jpg"],
   },
 };
 
@@ -24,30 +44,6 @@ export default function MiddlesexCountyPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      {
-        "@type": "Question",
-        name: "Do you do boiler repair in Middlesex County, NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Boiler repair in Middlesex County, NJ is one of our most requested services. We handle no-heat emergencies, leaking circulators, pilot and ignition faults, expansion tank replacement, zone valve overhaul, and annual tune-ups for gas and oil hydronic boilers throughout every Middlesex County township. Typical cost runs $250 to $1,200 depending on the failure.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Which Middlesex County towns do you serve?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We serve every major Middlesex County township including East Brunswick (our HQ), Edison, Old Bridge, Monroe Township, Sayreville, North Brunswick, South Brunswick, Piscataway, South Amboy, and surrounding areas. If you are unsure whether we cover your address, call and ask.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you serve Central New Jersey?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Illyrian Plumber is a licensed NJ Master Plumber based in East Brunswick, in the heart of Central New Jersey, and our service area covers all of Middlesex County: East Brunswick, Edison, Old Bridge, Sayreville, South Amboy, Monroe Township, North and South Brunswick, and Piscataway. If your Central New Jersey address falls outside these towns, call us and we will confirm whether we can reach you.",
-        },
-      },
       {
         "@type": "Question",
         name: "Are you a 24 hour emergency plumber in Middlesex County?",
@@ -74,34 +70,29 @@ export default function MiddlesexCountyPage() {
       },
       {
         "@type": "Question",
-        name: "How fast is your response time?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Response time varies by Middlesex County township. East Brunswick 5 to 15 minutes, Edison and North Brunswick about 10 minutes, Old Bridge and Sayreville 10 to 15 minutes, South Brunswick 15 minutes, Monroe Township 15 to 20 minutes. For active emergencies we dispatch immediately and call with a live ETA.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Do you pull plumbing permits across Middlesex County?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes. We are licensed NJ Master Plumbers and pull permits from the appropriate Construction Office in every Middlesex County municipality we serve. Permit costs are included in our quotes and we coordinate inspections on your behalf.",
         },
       },
-      {
-        "@type": "Question",
-        name: "What are the common plumbing issues in Middlesex County and how to fix them?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Illyrian Plumber sees four recurring issues across Middlesex County: water heaters past their 12 to 18 year service life, galvanized or polybutylene supply pipes causing low pressure and rusty water, sump pump failures in low-elevation neighborhoods during storms, and hard water mineral buildup. We fix these with water heater replacement, whole-house repiping, sump pump installation with battery backup, and water filtration or softening systems.",
-        },
-      },
     ],
+  };
+
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#quick-answer"],
+    },
+    url: "https://www.illyrianplumber.com/service-areas/middlesex-county",
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-20">
@@ -112,7 +103,7 @@ export default function MiddlesexCountyPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Plumbers in Middlesex County, NJ
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+              <p id="quick-answer" className="text-xl text-gray-300 mb-8 max-w-2xl">
                 Need a plumber in Middlesex County, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to every Middlesex County township, day or night, for emergencies, water heaters, boilers, gas lines, and full plumbing service. Based in East Brunswick with typical response times of 10 to 25 minutes depending on your town.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -131,11 +122,13 @@ export default function MiddlesexCountyPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Trusted Plumbing Across Middlesex County</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Trusted plumbing across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 <strong>Illyrian Plumber provides full plumbing services across Middlesex County, NJ</strong>, covering the complete range of residential and light commercial plumbing in every major township in the county. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, no-heat boiler emergencies, tankless installations, and 24/7 emergency plumbing from East Brunswick to Monroe Township.
@@ -147,7 +140,7 @@ export default function MiddlesexCountyPage() {
                 When a Middlesex County homeowner calls with a plumbing emergency, we answer the phone with a live dispatcher, not a call center. A licensed plumber is on the road within minutes. Our East Brunswick base lets us reach any Middlesex County address in 10 to 25 minutes depending on the town, with most urban and inner-ring addresses (Edison, North Brunswick, Old Bridge) in 15 minutes or less.
               </p>
               <p>
-                Every Middlesex County plumbing call gets upfront written pricing before work starts, full NJ Master Plumber licensing, permit pulls from the appropriate township Construction Office, and a 24/7 phone line answered by a real person. No hidden fees, no shop surcharges, no trip charges.
+                Every Middlesex County plumbing call gets upfront written pricing before work starts, full NJ Master Plumber licensing, permit pulls from the appropriate township <a href="https://www.middlesexcountynj.gov/government" target="_blank" rel="noopener" className="text-red-700 hover:underline">Construction Office</a>, and a 24/7 phone line answered by a real person. No hidden fees, no shop surcharges, no trip charges.
               </p>
             </div>
 
@@ -160,7 +153,7 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Boiler H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler Repair in Middlesex County, NJ</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler repair in Middlesex County, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Boiler repair in Middlesex County, NJ is a core service. Many homes across the county, particularly in older sections of Monroe Township, East Brunswick, Old Bridge, and South Brunswick, run on gas or oil hydronic boilers for heat and hot water. Our licensed plumbers handle no-heat emergencies, leaking circulators, pilot and ignition faults, low-pressure issues, expansion tank replacement, zone valve overhaul, and annual tune-ups.
@@ -171,7 +164,7 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Emergency Plumber H2 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency Plumber Across Middlesex County</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Emergency plumber across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Our 24/7 emergency plumber line covers every Middlesex County township. Burst pipes, failed water heaters, gas leaks, no-heat boiler calls, and flooding are all handled by a licensed NJ Master Plumber on call around the clock. Weekends, nights, and holidays included at standard emergency rates, no surprise surcharges.
@@ -181,24 +174,30 @@ export default function MiddlesexCountyPage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "Based in East Brunswick at 697 Old Bridge Turnpike",
-                "County-wide coverage from a single local office",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Familiar with every township's permit process",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="What county-wide coverage gets you"
+        items={[
+          { icon: "home", title: "East Brunswick headquarters", description: "Our office at 697 Old Bridge Turnpike in East Brunswick puts us in the heart of Middlesex County." },
+          { icon: "home", title: "County-wide coverage", description: "One local office and one phone number reach every township in Middlesex County, no subcontractors." },
+          { icon: "shield", title: "Licensed and insured", description: "Every job is handled by a licensed NJ Master Plumber with full insurance coverage." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Emergency plumbing is available around the clock, including nights, weekends, and holidays." },
+          { icon: "wrench", title: "10+ years countywide", description: "We have worked on homes across Middlesex County for more than 10 years, from East Brunswick to Monroe Township." },
+          { icon: "dollar", title: "Upfront pricing", description: "You see a written quote before any work starts, with no hidden fees or surprise charges." },
+          { icon: "wrench", title: "Every township covered", description: "We know the Construction Office and permit process for each Middlesex County municipality we serve." },
+          { icon: "dollar", title: "Free estimates", description: "Free written estimates are available on all major plumbing projects across the county." },
+        ]}
+      />
+
+      {/* Mid-page CTA + common issues + response time + townships + map -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Mid-page CTA Band */}
             <div className="bg-red-700 text-white rounded-xl p-6 md:p-8 mb-12">
@@ -219,7 +218,7 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Common Issues */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Plumbing Issues Across Middlesex County</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common plumbing issues across Middlesex County</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Middlesex County&apos;s diverse housing stock means we see a full range of plumbing issues across the county. Here are the patterns our plumbers notice most often during service calls and emergency dispatches.
@@ -236,7 +235,7 @@ export default function MiddlesexCountyPage() {
 
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Response Time &amp; Availability</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Response time &amp; availability</h3>
               <p className="text-gray-700 mb-3">
                 Response time varies by Middlesex County township. From our East Brunswick base:
               </p>
@@ -255,7 +254,7 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Towns We Serve */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Middlesex County Townships We Serve</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Middlesex County townships we serve</h2>
             <p className="text-lg text-gray-600 mb-6">
               Click any township for a town-specific page with neighborhoods, local pricing, and FAQs.
             </p>
@@ -270,7 +269,7 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Local Professional Plumbing Services with map */}
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional Plumbing Services in Middlesex County, NJ</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional plumbing services in Middlesex County, NJ</h3>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
@@ -297,8 +296,23 @@ export default function MiddlesexCountyPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="Trusted across Middlesex County"
+        subheading="Real reviews from homeowners throughout the county."
+      />
+
+      {/* FAQ + resources -- narrow column */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* FAQ Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
             <div className="space-y-4 mb-12">
               {faqSchema.mainEntity.map((faq, index) => (
                 <details key={index} className="bg-gray-50 rounded-lg group">
@@ -314,24 +328,16 @@ export default function MiddlesexCountyPage() {
             </div>
 
             {/* Blog Resources */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/common-boiler-problems-winter" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Common Winter Boiler Problems</p>
-                <p className="text-gray-600 text-sm">Prevent no-heat calls with these tips.</p>
-              </Link>
-              <Link href="/blog/signs-water-heater-dying" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs Your Water Heater Is Dying</p>
-                <p className="text-gray-600 text-sm">Know when it is time for a replacement.</p>
-              </Link>
-              <Link href="/blog/tankless-vs-tank-water-heater" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless vs Tank Water Heaters</p>
-                <p className="text-gray-600 text-sm">Compare options for your home upgrade.</p>
-              </Link>
-              <Link href="/blog/frozen-pipes-prevention-repair" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Frozen Pipe Prevention &amp; Repair</p>
-                <p className="text-gray-600 text-sm">Protect your pipes during NJ winters.</p>
-              </Link>
+            <div className="mb-8">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "Common Winter Boiler Problems", href: "/blog/common-boiler-problems-winter", description: "Prevent no-heat calls with these tips." },
+                  { label: "Signs Your Water Heater Is Dying", href: "/blog/signs-water-heater-dying", description: "Know when it is time for a replacement." },
+                  { label: "Tankless vs Tank Water Heaters", href: "/blog/tankless-vs-tank-water-heater", description: "Compare options for your home upgrade." },
+                  { label: "Frozen Pipe Prevention & Repair", href: "/blog/frozen-pipes-prevention-repair", description: "Protect your pipes during NJ winters." },
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -340,7 +346,7 @@ export default function MiddlesexCountyPage() {
       {/* CTA Section */}
       <section className="py-12 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need a Plumber in Middlesex County?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need a plumber in Middlesex County?</h2>
           <p className="text-xl text-red-100 mb-8">24/7 dispatch from our East Brunswick base. County-wide coverage.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-block">

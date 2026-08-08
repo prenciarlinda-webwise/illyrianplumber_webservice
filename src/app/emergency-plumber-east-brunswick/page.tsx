@@ -3,6 +3,10 @@ import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import { getFaqSchema, getBreadcrumbSchema } from "@/lib/schemas";
 import LeadForm from "@/components/LeadForm";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 const SITE_URL = "https://www.illyrianplumber.com";
 
@@ -107,6 +111,8 @@ export default function EmergencyPlumberEastBrunswickPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -194,22 +200,28 @@ export default function EmergencyPlumberEastBrunswickPage() {
               </table>
             </div>
 
-            {/* Why choose us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why East Brunswick homeowners call us for emergencies</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "Headquartered inside East Brunswick at 697 Old Bridge Turnpike",
-                "5 to 15 minute typical response, any hour",
-                "Live dispatcher, never a call center or voicemail",
-                "Licensed NJ Master Plumbers with full insurance",
-                "Upfront written pricing before work starts",
-                "Trucks stocked for the repairs East Brunswick homes need most",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="What makes our emergency response different"
+        items={[
+          { icon: "home", title: "Headquartered in town", description: "Our office is inside East Brunswick at 697 Old Bridge Turnpike, not dispatched from a neighboring town or call center." },
+          { icon: "clock", title: "5 to 15 minute response", description: "Most East Brunswick addresses see a licensed plumber arrive within 5 to 15 minutes, any hour of the day or night." },
+          { icon: "bolt", title: "Live dispatcher", description: "A real person answers the phone and dispatches the nearest plumber immediately, never a call center or voicemail." },
+          { icon: "shield", title: "Licensed and insured", description: "Every plumber on our team holds an active NJ Master Plumber license and carries full liability insurance." },
+          { icon: "dollar", title: "Upfront written pricing", description: "You approve a written quote before any work starts, even on a middle-of-the-night emergency call." },
+          { icon: "wrench", title: "Trucks stocked and ready", description: "Our trucks carry the parts for the repairs East Brunswick homes need most, so most jobs finish in one visit." },
+        ]}
+      />
+
+      {/* Neighborhoods, FAQ, and related links */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Neighborhoods */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods we cover</h2>
@@ -219,6 +231,21 @@ export default function EmergencyPlumberEastBrunswickPage() {
                 <div key={area} className="bg-gray-50 rounded-lg p-3 text-gray-700 font-medium">{area}</div>
               ))}
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="Real reviews from East Brunswick emergency calls"
+        subheading="What homeowners say after we showed up fast and fixed it right."
+      />
+
+      {/* FAQ and related links */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* FAQ */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
@@ -237,24 +264,16 @@ export default function EmergencyPlumberEastBrunswickPage() {
             </div>
 
             {/* Related links */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/frozen-pipes-prevention-repair" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Frozen pipe prevention and repair</p>
-                <p className="text-gray-600 text-sm">Protect your East Brunswick home before the next freeze.</p>
-              </Link>
-              <Link href="/blog/gas-leak-detection-safety" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Gas leak detection and safety</p>
-                <p className="text-gray-600 text-sm">Know the signs and what to do.</p>
-              </Link>
-              <Link href="/services/emergency-plumbing" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">24/7 emergency plumbing service</p>
-                <p className="text-gray-600 text-sm">Full emergency service details across Middlesex County.</p>
-              </Link>
-              <Link href="/service-areas/east-brunswick" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Plumber in East Brunswick, NJ</p>
-                <p className="text-gray-600 text-sm">Full range of plumbing services at our HQ location.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful resources"
+                items={[
+                  { label: "Frozen pipe prevention and repair", href: "/blog/frozen-pipes-prevention-repair", description: "Protect your East Brunswick home before the next freeze." },
+                  { label: "Gas leak detection and safety", href: "/blog/gas-leak-detection-safety", description: "Know the signs and what to do." },
+                  { label: "24/7 emergency plumbing service", href: "/services/emergency-plumbing", description: "Full emergency service details across Middlesex County." },
+                  { label: "Plumber in East Brunswick, NJ", href: "/service-areas/east-brunswick", description: "Full range of plumbing services at our HQ location." },
+                ]}
+              />
             </div>
 
             {/* Nearby */}

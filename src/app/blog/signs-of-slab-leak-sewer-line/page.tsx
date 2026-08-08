@@ -459,6 +459,12 @@ export default function SlabLeakPost() {
                   <p className="font-bold text-gray-900 mb-3">You Might Also Like</p>
                   <ul className="space-y-3 text-sm">
                     <li>
+                      <Link href="/blog/why-is-my-sewer-bill-so-high" className="text-gray-700 hover:text-red-700 transition leading-snug block">Why Is My Sewer Bill So High?</Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/how-to-clean-refrigerator-water-line" className="text-gray-700 hover:text-red-700 transition leading-snug block">How to Clean a Refrigerator Water Line</Link>
+                    </li>
+                    <li>
                       <Link href="/blog/trenchless-sewer-repair-guide" className="text-gray-700 hover:text-red-700 transition leading-snug block">Trenchless Sewer Repair Guide</Link>
                     </li>
                     <li>

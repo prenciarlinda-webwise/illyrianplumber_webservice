@@ -3,6 +3,9 @@ import Link from "next/link";
 import { BUSINESS_INFO } from "@/lib/constants";
 import { getBreadcrumbSchema, getFaqSchema } from "@/lib/schemas";
 import LeadForm from "@/components/LeadForm";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
 
 export const metadata: Metadata = {
   title: "Emergency Plumber in Edison, NJ - 24/7 Response",
@@ -104,11 +107,11 @@ export default function EmergencyPlumberEdisonPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main Content */}
-            <div className="flex-1 min-w-0 max-w-3xl">
+          <div className="max-w-3xl mx-auto">
               <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-700 leading-relaxed">
                   When a burst pipe, a failed water heater, or a gas smell turns into a middle-of-the-night crisis in an Edison home, the homeowner searching for help does not have time to wait on a call center or a next-available appointment. Illyrian Plumber&apos;s <Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800 font-semibold">emergency plumbing services</Link> cover every corner of <Link href="/service-areas/edison" className="text-red-700 hover:text-red-800 font-semibold">Edison, NJ</Link>, dispatched from our East Brunswick headquarters roughly 10 minutes away via Route 18, Route 1, or Route 287.
@@ -192,35 +195,43 @@ export default function EmergencyPlumberEdisonPage() {
                 </table>
               </div>
 
-              {/* Why choose us */}
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Edison homeowners call us for emergencies</h2>
-              <div className="grid md:grid-cols-2 gap-4 mb-12">
-                {[
-                  "10-minute typical response from our East Brunswick headquarters",
-                  "Direct access to Edison via Route 18, Route 1, and Route 287",
-                  "Licensed NJ Master Plumbers with full insurance",
-                  "True 24/7 dispatch, no answering service",
-                  "Upfront pricing before any work begins",
-                  "Stocked trucks for same-visit repairs",
-                  "Experienced with Edison's mixed housing stock, from Clara Barton Capes to Route 1 townhomes",
-                  "Permits pulled from Edison Township Construction when required",
-                ].map((reason, index) => (
-                  <div key={index} className="bg-green-50 rounded-lg p-4">
-                    <span className="text-gray-700">{reason}</span>
-                  </div>
-                ))}
-              </div>
-
               {/* Neighborhoods */}
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Edison neighborhoods we cover</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Emergency dispatch reaches every part of Edison Township, including:
               </p>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-12">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {["Clara Barton", "Nixon", "Stelton", "Menlo Park", "Bonhamtown", "Oak Tree", "Route 1 Corridor", "Route 287 Corridor", "Raritan Center"].map((area) => (
                   <div key={area} className="bg-gray-50 rounded-lg p-3 text-gray-700 font-medium">{area}</div>
                 ))}
               </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band, replaces the old flat "why choose us" grid */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why Edison homeowners call us for emergencies"
+        items={[
+          { icon: "clock", title: "10-minute typical response", description: "Our East Brunswick headquarters keeps us close, with direct access to Edison via Route 18, Route 1, or Route 287." },
+          { icon: "bolt", title: "True 24/7 dispatch", description: "A live plumber answers every call, day or night, never an answering service or automated menu." },
+          { icon: "shield", title: "Licensed and insured", description: "Every technician is a licensed NJ Master Plumber with full insurance on every Edison emergency call." },
+          { icon: "dollar", title: "Upfront pricing", description: "You approve a written quote before any work begins, with no surprise overnight surcharge." },
+          { icon: "wrench", title: "Stocked trucks", description: "Trucks carry the parts for Edison's most common failures, so most emergency repairs close on the first visit." },
+          { icon: "home", title: "Knows Edison's housing stock", description: "From Clara Barton Capes on galvanized supply lines to Route 1 corridor townhomes, we know the failure patterns by neighborhood." },
+        ]}
+      />
+
+      {/* Full-bleed testimonial band */}
+      <Testimonials
+        heading="What Edison homeowners say"
+        subheading="Real reviews from real emergency calls across Clara Barton, Stelton, and beyond."
+      />
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
 
               {/* FAQ Section */}
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
@@ -257,6 +268,14 @@ export default function EmergencyPlumberEdisonPage() {
                   <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Gas leak detection and safety</p>
                   <p className="text-gray-600 text-sm">Know the signs and what to do.</p>
                 </Link>
+                <Link href="/services/tankless-water-heater-installation" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
+                  <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless water heater installation</p>
+                  <p className="text-gray-600 text-sm">On-demand hot water, no tank to fail.</p>
+                </Link>
+                <Link href="/services/boiler-repair-service" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
+                  <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Boiler repair service</p>
+                  <p className="text-gray-600 text-sm">Same-day boiler repair across Middlesex County.</p>
+                </Link>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
@@ -268,53 +287,10 @@ export default function EmergencyPlumberEdisonPage() {
                   <Link href="/service-areas/north-brunswick" className="text-red-700 hover:text-red-800 font-medium">North Brunswick</Link>
                   <Link href="/service-areas/south-brunswick" className="text-red-700 hover:text-red-800 font-medium">South Brunswick</Link>
                   <Link href="/service-areas/old-bridge" className="text-red-700 hover:text-red-800 font-medium">Old Bridge</Link>
+                  <Link href="/service-areas/monroe-township" className="text-red-700 hover:text-red-800 font-medium">Monroe Township</Link>
                   <Link href="/service-areas/middlesex-county" className="text-red-700 hover:text-red-800 font-medium">All of Middlesex County</Link>
                 </div>
               </div>
-            </div>
-
-            {/* Sidebar */}
-            <aside className="hidden lg:block lg:w-72 flex-shrink-0">
-              <div className="sticky top-[6rem] space-y-6">
-                <div className="bg-white rounded-xl shadow-md p-5 border-t-4 border-red-700">
-                  <p className="text-lg font-bold text-gray-900 mb-1">Emergency in Edison?</p>
-                  <p className="text-gray-600 text-sm mb-4">Typical arrival in 10 minutes, 24/7.</p>
-                  <a href={BUSINESS_INFO.phoneLink} className="flex items-center justify-center gap-2 bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-red-800 transition w-full mb-2">
-                    Call {BUSINESS_INFO.phoneName}: {BUSINESS_INFO.phone}
-                  </a>
-                  <a href={BUSINESS_INFO.phone2Link} className="flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2.5 rounded-lg font-bold hover:bg-gray-800 transition w-full">
-                    Call {BUSINESS_INFO.phone2Name}: {BUSINESS_INFO.phone2}
-                  </a>
-                  <p className="text-center text-xs text-gray-500 mt-2">Available 24/7</p>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Service Areas</p>
-                  <ul className="space-y-1.5 text-sm text-gray-700">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/east-brunswick" className="hover:text-red-700 transition">East Brunswick</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/edison" className="hover:text-red-700 transition">Edison</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/sayreville" className="hover:text-red-700 transition">Sayreville</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/old-bridge" className="hover:text-red-700 transition">Old Bridge</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/monroe-township" className="hover:text-red-700 transition">Monroe Township</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/south-brunswick" className="hover:text-red-700 transition">South Brunswick</Link></li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-700 rounded-full flex-shrink-0"></span><Link href="/service-areas/north-brunswick" className="hover:text-red-700 transition">North Brunswick</Link></li>
-                  </ul>
-                  <Link href="/service-areas" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Service Areas</Link>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-5">
-                  <p className="font-bold text-gray-900 mb-3">Our Services</p>
-                  <ul className="space-y-2 text-sm">
-                    <li><Link href="/services/emergency-plumbing" className="text-red-700 hover:text-red-800 font-medium transition">Emergency Plumbing</Link></li>
-                    <li><Link href="/services/tankless-water-heater-installation" className="text-gray-700 hover:text-red-700 transition">Tankless Water Heater Installation</Link></li>
-                    <li><Link href="/services/boiler-repair-service" className="text-gray-700 hover:text-red-700 transition">Boiler Repair Service</Link></li>
-                    <li><Link href="/services/gas-line-repair-installation" className="text-gray-700 hover:text-red-700 transition">Gas Line Repair &amp; Installation</Link></li>
-                    <li><Link href="/services/whole-house-repiping" className="text-gray-700 hover:text-red-700 transition">Whole House Repiping</Link></li>
-                  </ul>
-                  <Link href="/services" className="inline-block text-red-700 hover:text-red-800 font-medium text-sm mt-3">All Services</Link>
-                </div>
-              </div>
-            </aside>
           </div>
         </div>
       </section>

@@ -5,17 +5,37 @@ import { LOCATION_DATA } from "@/lib/locationData";
 import LeadForm from "@/components/LeadForm";
 import LocationServiceDirectory from "@/components/LocationServiceDirectory";
 import TrustBadges from "@/components/TrustBadges";
+import Testimonials from "@/components/Testimonials";
+import DifferentiatorGrid from "@/components/DifferentiatorGrid";
+import StatsStrip from "@/components/StatsStrip";
+import LinkCardGrid from "@/components/LinkCardGrid";
 
 export const metadata: Metadata = {
-  title: "Plumber in Edison, NJ - 24 Hour Service",
-  description: "Licensed plumbers in Edison, NJ serving Clara Barton, Nixon, Stelton and all Edison Township. 24 hour plumber, tankless water heater installation, boiler repair, gas lines. Call (347) 461-4856.",
+  title: "Plumber in Edison, NJ - 24 Hour Service - Illyrian Plumber",
+  description: "Licensed 24 hour plumbers in Edison, NJ serving Clara Barton, Nixon, and Stelton. Tankless water heaters, boiler repair, and gas lines. Call (347) 461-4856.",
   alternates: {
     canonical: "https://www.illyrianplumber.com/service-areas/edison",
   },
   openGraph: {
-    title: "Plumber in Edison, NJ - 24 Hour Service",
+    title: "Plumber in Edison, NJ - 24 Hour Service - Illyrian Plumber",
     description: "Licensed plumbers serving Edison, NJ. 24 hour service, tankless water heater installation, boiler repair, gas lines. Licensed NJ Master Plumbers.",
     type: "website",
+    url: "https://www.illyrianplumber.com/service-areas/edison",
+    siteName: "Illyrian Plumber",
+    images: [
+      {
+        url: "https://www.illyrianplumber.com/images/licensed-plumber-east-brunswick-nj.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Illyrian Plumber licensed plumber serving Edison NJ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Plumber in Edison, NJ - 24 Hour Service - Illyrian Plumber",
+    description: "Licensed plumbers serving Edison, NJ. 24 hour service, tankless water heater installation, boiler repair, gas lines. Licensed NJ Master Plumbers.",
+    images: ["https://www.illyrianplumber.com/images/licensed-plumber-east-brunswick-nj.jpg"],
   },
 };
 
@@ -42,38 +62,6 @@ export default function EdisonPage() {
       },
       {
         "@type": "Question",
-        name: "Do you install tankless water heaters in Edison, NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Tankless water heater installation in Edison, NJ is one of our most requested services. We install gas and electric tankless units from Navien, Rinnai, and Rheem. Most Edison installations are completed in 4-8 hours and include all permits, venting, gas line sizing, and municipal inspection coordination. Pricing typically runs $2,800 to $6,500 installed.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you do boiler repair in Edison, NJ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we repair and service residential boilers throughout Edison, NJ. Many Edison homes - especially in Clara Barton and older neighborhoods - rely on gas or oil boilers for heat and hot water. We handle no-heat emergencies, pressure and leak issues, pilot and ignition faults, and annual maintenance tune-ups.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How fast is your response time?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Typical response time to Edison from our East Brunswick base is 10 minutes. Clara Barton and southern Edison via Route 18, Stelton and northern Edison via Route 1 or Route 287. For active emergencies like burst pipes or no hot water, we dispatch immediately and call you with a live arrival time.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Which neighborhoods do you serve?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We serve every Edison neighborhood - Clara Barton, Nixon, Stelton, Menlo Park, Bonhamtown, Oak Tree, the Route 1 and Route 287 corridors, and Raritan Center. Whether you are in a mid-century Clara Barton home or a newer townhome along Route 1, we can get to you fast.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Do you pull plumbing permits?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -83,9 +71,20 @@ export default function EdisonPage() {
     ],
   };
 
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#quick-answer"],
+    },
+    url: "https://www.illyrianplumber.com/service-areas/edison",
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-20">
@@ -97,7 +96,7 @@ export default function EdisonPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 24 Hour Plumber in Edison, NJ
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+              <p id="quick-answer" className="text-xl text-gray-300 mb-8 max-w-2xl">
                 Need a 24 hour emergency plumber in Edison, NJ? Illyrian Plumber dispatches licensed NJ master plumbers to Edison day or night, typically on-site within 10 minutes of our East Brunswick base via Route 18, Route 1, or Route 287.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -117,14 +116,16 @@ export default function EdisonPage() {
         </div>
       </section>
 
+      <StatsStrip />
+
       {/* Local Intro */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Response, Day or Night</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">24/7 emergency response, day or night</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
-                <strong>Illyrian Plumber is a 24 hour emergency plumber in Edison, NJ</strong>, reaching most Edison addresses within 10 minutes of our East Brunswick base. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, and boiler no-heat calls day or night, 365 days a year. Free estimates, upfront pricing, and permits pulled from Edison Township Construction on every job that requires one.
+                <strong>Illyrian Plumber is a 24 hour emergency plumber in Edison, NJ</strong>, reaching most Edison addresses within 10 minutes of our East Brunswick base. Licensed NJ Master Plumbers handle burst pipes, failed water heaters, gas leaks, and boiler no-heat calls day or night, 365 days a year. Free estimates, upfront pricing, and permits pulled from the <a href="https://www.edisonnj.org/departments/construction" target="_blank" rel="noopener" className="text-red-700 hover:underline">Edison Township Construction Office</a> on every job that requires one.
               </p>
               <p>
                 When a plumbing emergency hits an Edison home, every minute counts. Our team is the emergency plumber Edison homeowners call because we are based in neighboring East Brunswick and answer the phone with a live dispatcher, not a call center. A licensed plumber is on the road to your Edison address within minutes of your call, with real parts and real tools to fix the problem on the first visit.
@@ -146,7 +147,7 @@ export default function EdisonPage() {
             </div>
 
             {/* Tankless Water Heater Installation in Edison */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tankless Water Heater Installation in Edison, NJ</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tankless water heater installation in Edison, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Tankless water heater installation in Edison, NJ is one of the most requested upgrades we handle in the township. Edison homes, particularly smaller Capes in Clara Barton and townhomes along the Route 1 corridor, benefit from the compact wall-mounted footprint, the endless on-demand hot water, and the 20-plus-year lifespan of a tankless unit. Typical installed cost for a tankless water heater Edison NJ project runs $2,800 to $6,500 depending on unit size and any gas line or venting upgrades.
@@ -160,7 +161,7 @@ export default function EdisonPage() {
             </div>
 
             {/* Boiler Repair in Edison */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler Repair in Edison, NJ</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Boiler repair in Edison, NJ</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Boiler repair in Edison is a core service. Many Edison homes, especially older Clara Barton and Nixon properties, run on gas or oil hydronic boilers for heat and hot water. Our licensed plumbers handle no-heat emergencies, low-pressure faults, leaking circulators, pilot and ignition problems, expansion tank issues, zone valve replacements, and annual tune-ups.
@@ -170,24 +171,30 @@ export default function EdisonPage() {
               </p>
             </div>
 
-            {/* Why Choose Us */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Homeowners Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              {[
-                "10-minute response time from our East Brunswick headquarters",
-                "Easy access via Route 1, Route 18, and Route 287",
-                "Licensed NJ Master Plumbers with full insurance",
-                "24/7 emergency plumbing service available",
-                "Over 10 years of experience in Middlesex County",
-                "Upfront pricing - no hidden fees or surprise charges",
-                "Experienced with Edison's diverse housing stock",
-                "Free estimates on all major plumbing projects",
-              ].map((reason, index) => (
-                <div key={index} className="bg-green-50 rounded-lg p-4">
-                  <span className="text-gray-700">{reason}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark differentiator band */}
+      <DifferentiatorGrid
+        tone="band"
+        heading="Why Edison homeowners pick Illyrian Plumber"
+        items={[
+          { icon: "clock", title: "10-minute response", description: "Our East Brunswick headquarters puts a licensed plumber at most Edison addresses in about 10 minutes." },
+          { icon: "home", title: "Easy Edison access", description: "Route 1, Route 18, and Route 287 connect our office directly to every Edison neighborhood, from Clara Barton to Raritan Center." },
+          { icon: "shield", title: "Licensed and insured", description: "Every plumber on our team holds an active NJ Master Plumber license and carries full liability insurance." },
+          { icon: "bolt", title: "24/7 emergency service", description: "Emergency plumbing service is available around the clock, including nights, weekends, and holidays." },
+          { icon: "wrench", title: "Decade of local experience", description: "We have worked in Middlesex County for more than 10 years, including hundreds of jobs across Edison Township." },
+          { icon: "dollar", title: "Upfront pricing", description: "Every quote is written and approved before work starts, with no hidden fees or surprise charges." },
+          { icon: "wrench", title: "Housing stock expertise", description: "We know the plumbing quirks of Edison's diverse housing stock, from 1950s Clara Barton Capes to newer Route 1 corridor townhomes." },
+          { icon: "dollar", title: "Free written estimates", description: "Free estimates are available on all major plumbing projects, valid for 30 days." },
+        ]}
+      />
+
+      {/* Remaining local content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* Plural-intent AEO block */}
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Looking for licensed plumbers in Edison, NJ?</h2>
@@ -216,7 +223,7 @@ export default function EdisonPage() {
             </div>
 
             {/* Common Issues */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common Plumbing Issues in Edison Homes</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Common plumbing issues in Edison homes</h2>
             <div className="prose prose-lg max-w-none text-gray-700 mb-12">
               <p>
                 Edison homes face a range of plumbing challenges depending on the age and type of construction. From 1950s Capes in Clara Barton to newer construction along the Route 1 corridor, here are the most common issues our Edison plumbers see on emergency calls and service visits throughout the township.
@@ -231,9 +238,24 @@ export default function EdisonPage() {
               </ul>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Full-bleed dark testimonial band */}
+      <Testimonials
+        heading="Trusted by families across Edison"
+        subheading="Real reviews from Edison homeowners and neighboring Middlesex County towns."
+      />
+
+      {/* Response time, neighborhoods, FAQ, and related links */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+
             {/* Response Time */}
             <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Response Time &amp; Availability</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Response time &amp; availability</h3>
               <p className="text-gray-700 mb-2">
                 Our East Brunswick headquarters is approximately <strong>10 minutes</strong> from most Edison locations. We reach Clara Barton and southern Edison neighborhoods even faster via Route 18, while Stelton and northern Edison are a quick drive up Route 1 or Route 287. Raritan Center and the Oak Tree area are accessible in under 12 minutes in normal traffic.
               </p>
@@ -246,7 +268,7 @@ export default function EdisonPage() {
             </div>
 
             {/* Neighborhoods */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods We Serve</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Neighborhoods we serve</h2>
             <p className="text-lg text-gray-600 mb-6">
               We provide plumbing services to all Edison neighborhoods and surrounding areas, including:
             </p>
@@ -257,7 +279,7 @@ export default function EdisonPage() {
             </div>
 
             {/* Local Professional Plumbing Services with map */}
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional Plumbing Services in Edison, NJ</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Professional plumbing services in Edison, NJ</h3>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p>
@@ -285,7 +307,7 @@ export default function EdisonPage() {
             </div>
 
             {/* FAQ Section */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
             <div className="space-y-4 mb-12">
               {faqSchema.mainEntity.map((faq, index) => (
                 <details key={index} className="bg-gray-50 rounded-lg group">
@@ -301,29 +323,21 @@ export default function EdisonPage() {
             </div>
 
             {/* Blog Resources - moved after FAQ, no h3 */}
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Helpful Plumbing Resources</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
-              <Link href="/blog/how-tankless-water-heaters-work" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">How Tankless Water Heaters Work</p>
-                <p className="text-gray-600 text-sm">Learn about on-demand hot water technology.</p>
-              </Link>
-              <Link href="/blog/how-much-does-a-tankless-water-heater-cost" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Tankless Water Heater Cost Guide</p>
-                <p className="text-gray-600 text-sm">Understand the investment before you buy.</p>
-              </Link>
-              <Link href="/blog/gas-leak-detection-safety" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Gas Leak Detection &amp; Safety</p>
-                <p className="text-gray-600 text-sm">Know the signs and stay safe.</p>
-              </Link>
-              <Link href="/blog/signs-of-slab-leak-sewer-line" className="bg-gray-50 hover:bg-red-50 rounded-lg p-4 transition group">
-                <p className="font-semibold text-gray-900 group-hover:text-red-700 transition">Signs of a Slab Leak or Sewer Line Issue</p>
-                <p className="text-gray-600 text-sm">Catch hidden leaks early.</p>
-              </Link>
+            <div className="mb-12">
+              <LinkCardGrid
+                heading="Helpful plumbing resources"
+                items={[
+                  { label: "How Tankless Water Heaters Work", href: "/blog/how-tankless-water-heaters-work", description: "Learn about on-demand hot water technology." },
+                  { label: "Tankless Water Heater Cost Guide", href: "/blog/how-much-does-a-tankless-water-heater-cost", description: "Understand the investment before you buy." },
+                  { label: "Gas Leak Detection & Safety", href: "/blog/gas-leak-detection-safety", description: "Know the signs and stay safe." },
+                  { label: "Signs of a Slab Leak or Sewer Line Issue", href: "/blog/signs-of-slab-leak-sewer-line", description: "Catch hidden leaks early." },
+                ]}
+              />
             </div>
 
             {/* Nearby Service Areas */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby Service Areas</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Nearby service areas</h3>
               <p className="text-gray-600 mb-4">We also serve these communities near Edison.</p>
               <div className="grid sm:grid-cols-2 gap-3">
                 <Link href="/service-areas/east-brunswick" className="text-red-700 hover:text-red-800 font-medium">East Brunswick (HQ)</Link>
@@ -341,7 +355,7 @@ export default function EdisonPage() {
       {/* CTA Section */}
       <section className="py-12 bg-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need an Emergency Plumber in Edison?</h2>
+          <h2 className="text-3xl font-bold mb-4">Need an emergency plumber in Edison?</h2>
           <p className="text-xl text-red-100 mb-8">24/7 dispatch from our East Brunswick base. Typical Edison arrival in about 10 minutes.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={BUSINESS_INFO.phoneLink} className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-block">
