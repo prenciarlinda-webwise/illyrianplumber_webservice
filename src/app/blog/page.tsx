@@ -9,6 +9,15 @@ import { BUSINESS_INFO } from "@/lib/constants";
 const blogPosts = [
   // July - August 2026
   {
+    title: "24 Hour Plumber in NJ: Your Emergency Checklist (2026)",
+    slug: "24-hour-plumber-nj-emergency-checklist",
+    excerpt: "What actually counts as a plumbing emergency in NJ, the first steps that limit damage, and what to expect once Illyrian's 24-hour licensed plumbers arrive.",
+    category: "Emergency Plumbing",
+    date: "August 2026",
+    image: "/images/emergency-plumbing-services-nj.jpg",
+    readTime: "9 min read",
+  },
+  {
     title: "How to Clean a Refrigerator Water Line: Step-by-Step (2026)",
     slug: "how-to-clean-refrigerator-water-line",
     excerpt: "A clogged refrigerator water line is why your ice maker slows down. Step-by-step cleaning process, tools you need, and when the problem is bigger than the line.",
